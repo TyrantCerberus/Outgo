@@ -572,7 +572,6 @@
 		var/mob/living/carbon/human/H = new(get_turf(role.assigned_landmark))
 		ADD_TRAIT(H, TRAIT_NOFIRE, MAFIA_TRAIT)
 		ADD_TRAIT(H, TRAIT_NOBREATH, MAFIA_TRAIT)
-		ADD_TRAIT(H, TRAIT_CANNOT_CRYSTALIZE, MAFIA_TRAIT)
 		H.equipOutfit(player_outfit)
 		H.status_flags |= GODMODE
 		RegisterSignal(H,COMSIG_ATOM_UPDATE_OVERLAYS,PROC_REF(display_votes))

@@ -273,7 +273,6 @@
 		"Human" = /datum/species/human,
 		"Lizard" = /datum/species/lizard,
 		"Moth" = /datum/species/moth,
-		"Ethereal" = /datum/species/ethereal,
 		"Pod" = /datum/species/pod,
 		"Fly" = /datum/species/fly,
 		"Felinid" = /datum/species/human/felinid,

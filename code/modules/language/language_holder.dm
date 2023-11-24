@@ -342,12 +342,6 @@ Key procs
 	spoken_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
 							/datum/language/calcic = list(LANGUAGE_ATOM))
 
-/datum/language_holder/ethereal
-	understood_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
-								/datum/language/voltaic = list(LANGUAGE_ATOM))
-	spoken_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
-							/datum/language/voltaic = list(LANGUAGE_ATOM))
-
 /datum/language_holder/golem
 	understood_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
 								/datum/language/terrum = list(LANGUAGE_ATOM))

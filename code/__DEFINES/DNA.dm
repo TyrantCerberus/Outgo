@@ -95,7 +95,6 @@
 
 #define DNA_FEATURE_BLOCKS 15
 #define DNA_MUTANT_COLOR_BLOCK 1
-#define DNA_ETHEREAL_COLOR_BLOCK 2
 #define DNA_LIZARD_MARKINGS_BLOCK 3
 #define DNA_LIZARD_TAIL_BLOCK 4
 #define DNA_SNOUT_BLOCK 5
@@ -246,7 +245,6 @@ GLOBAL_LIST_INIT(organ_process_order, list(
 #define SPECIES_HUMAN "human"
 #define SPECIES_FELINE "felinid"
 #define SPECIES_MOTH "moth"
-#define SPECIES_ETHEREAL "ethereal"
 #define SPECIES_PLASMAMAN "plasmaman"
 #define SPECIES_FLY "fly"
 #define SPECIES_MONKEY "monkey"

@@ -16,8 +16,7 @@
 					/obj/item/food/cnds = 6,
 					/obj/item/food/cnds/random = 3,
 					/obj/item/reagent_containers/food/drinks/dry_ramen = 3,
-					/obj/item/storage/box/gum = 3,
-					/obj/item/food/energybar = 6)
+					/obj/item/storage/box/gum = 3)
 	contraband = list(/obj/item/food/syndicake = 6,
 					/obj/item/food/peanuts/ban_appeal = 3,
 					/obj/item/food/candy/bronx = 1)
