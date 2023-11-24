@@ -3593,7 +3593,6 @@
 #include "code\modules\surgery\organs\cybernetics\augments_internal.dm"
 #include "code\modules\surgery\organs\cybernetics\augments_legs.dm"
 #include "code\modules\surgery\organs\stomach\_stomach.dm"
-#include "code\modules\surgery\organs\stomach\stomach_ethereal.dm"
 #include "code\modules\surgery\organs\stomach\external\_external_organs.dm"
 #include "code\modules\surgery\organs\stomach\external\wings.dm"
 #include "code\modules\swarmers\swarmer.dm"

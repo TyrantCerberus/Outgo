@@ -298,10 +298,9 @@
 /datum/techweb_node/xenoorgan_biotech
 	id = "xenoorgan_bio"
 	display_name = "Xeno-organ Biology"
-	description = "Plasmaman, Ethereals, Lizardpeople... What makes our non-human crewmembers tick?"
+	description = "Plasmaman, Lizardpeople... What makes our non-human crewmembers tick?"
 	prereq_ids = list("adv_biotech")
 	design_ids = list(
-		"limbdesign_ethereal",
 		"limbdesign_felinid",
 		"limbdesign_lizard",
 		"limbdesign_plasmaman",

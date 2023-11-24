@@ -703,21 +703,6 @@
 		var/mob/living/carbon/human/H = user
 
 		if(istype(H))
-			var/obj/item/organ/stomach/maybe_stomach = H.getorganslot(ORGAN_SLOT_STOMACH)
-			if(istype(maybe_stomach, /obj/item/organ/stomach/ethereal))
-				var/obj/item/organ/stomach/ethereal/stomach = maybe_stomach
-				if(stomach.drain_time > world.time)
-					return
-				to_chat(H, span_notice("You start channeling some power through the [fitting] into your body."))
-				stomach.drain_time = world.time + LIGHT_DRAIN_TIME
-				if(do_after(user, LIGHT_DRAIN_TIME, target = src))
-					if(istype(stomach))
-						to_chat(H, span_notice("You receive some charge from the [fitting]."))
-						stomach.adjust_charge(LIGHT_POWER_GAIN)
-					else
-						to_chat(H, span_warning("You can't receive charge from the [fitting]!"))
-				return
-
 			if(H.gloves)
 				var/obj/item/clothing/gloves/G = H.gloves
 				if(G.max_heat_protection_temperature)
