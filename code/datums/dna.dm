@@ -134,8 +134,6 @@
 
 	if(features["mcolor"])
 		L[DNA_MUTANT_COLOR_BLOCK] = sanitize_hexcolor(features["mcolor"])
-	if(features["ethcolor"])
-		L[DNA_ETHEREAL_COLOR_BLOCK] = sanitize_hexcolor(features["ethcolor"])
 	if(features["body_markings"])
 		L[DNA_LIZARD_MARKINGS_BLOCK] = construct_block(GLOB.body_markings_list.Find(features["body_markings"]), GLOB.body_markings_list.len)
 	if(features["tail_lizard"])
@@ -256,8 +254,6 @@
 	switch(blocknumber)
 		if(DNA_MUTANT_COLOR_BLOCK)
 			setblock(unique_features, blocknumber, sanitize_hexcolor(features["mcolor"]))
-		if(DNA_ETHEREAL_COLOR_BLOCK)
-			setblock(unique_features, blocknumber, sanitize_hexcolor(features["ethcolor"]))
 		if(DNA_LIZARD_MARKINGS_BLOCK)
 			setblock(unique_features, blocknumber, construct_block(GLOB.body_markings_list.Find(features["body_markings"]), GLOB.body_markings_list.len))
 		if(DNA_LIZARD_TAIL_BLOCK)
@@ -499,8 +495,6 @@
 	var/features = dna.unique_features
 	if(dna.features["mcolor"])
 		dna.features["mcolor"] = sanitize_hexcolor(getblock(features, DNA_MUTANT_COLOR_BLOCK))
-	if(dna.features["ethcolor"])
-		dna.features["ethcolor"] = sanitize_hexcolor(getblock(features, DNA_ETHEREAL_COLOR_BLOCK))
 	if(dna.features["body_markings"])
 		dna.features["body_markings"] = GLOB.body_markings_list[deconstruct_block(getblock(features, DNA_LIZARD_MARKINGS_BLOCK), GLOB.body_markings_list.len)]
 	if(dna.features["tail_lizard"])

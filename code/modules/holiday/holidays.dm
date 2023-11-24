@@ -731,15 +731,3 @@
 
 /datum/holiday/fleet_day/getStationPrefix()
 	return pick("Moth", "Fleet", "Nomadic")
-
-//The Festival of Holy Lights is celebrated on Nov 28th, the date on which ethereals were merged (#40995)
-/datum/holiday/holy_lights
-	name = "Festival of Holy Lights"
-	begin_month = NOVEMBER
-	begin_day = 28
-
-/datum/holiday/holy_lights/greet()
-	return "The Festival of Holy Lights is the final day of the Ethereal calendar. It is typically a day of prayer followed by celebration to close out the year in style."
-
-/datum/holiday/holy_lights/getStationPrefix()
-	return pick("Ethereal", "Lantern", "Holy")
