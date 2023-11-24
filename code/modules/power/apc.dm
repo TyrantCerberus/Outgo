@@ -1500,9 +1500,6 @@
 #undef APC_CHARGING
 #undef APC_FULLY_CHARGED
 
-#undef APC_DRAIN_TIME
-#undef APC_POWER_GAIN
-
 #undef APC_RESET_EMP
 
 // update_state
