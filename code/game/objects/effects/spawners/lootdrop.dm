@@ -708,6 +708,15 @@
 		/obj/item/seeds/kudzu = 1
 	)
 
+/// Space loot spawner. A single roundstart species language book.
+/obj/effect/spawner/lootdrop/space/languagebook
+	lootcount = 1
+	loot = list(
+		/obj/item/language_manual/roundstart_species = 100,
+		/obj/item/language_manual/roundstart_species/five = 3,
+		/obj/item/language_manual/roundstart_species/unlimited = 1
+	)
+
 /// Space loot spawner. Random selecton of a few rarer materials.
 /obj/effect/spawner/lootdrop/space/material
 	lootcount = 3
