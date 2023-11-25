@@ -59,35 +59,6 @@
 	name = "deluxe codespeak manual"
 	charges = INFINITY
 
-/obj/item/language_manual/roundstart_species
-
-/obj/item/language_manual/roundstart_species/Initialize()
-	. = ..()
-	language = pick( \
-		/datum/language/voltaic, \
-		/datum/language/nekomimetic, \
-		/datum/language/draconic, \
-		/datum/language/moffic, \
-		/datum/language/calcic \
-	)
-	name = "[initial(language.name)] manual"
-	desc = "The book's cover reads: \"[initial(language.name)] for Xenos - Learn common galactic tongues in seconds.\""
-	flavour_text = "you feel empowered with a mastery over [initial(language.name)]"
-
-/obj/item/language_manual/roundstart_species/unlimited
-	charges = INFINITY
-
-/obj/item/language_manual/roundstart_species/unlimited/Initialize()
-	. = ..()
-	name = "deluxe [initial(language.name)] manual"
-
-/obj/item/language_manual/roundstart_species/five
-	charges = 5
-
-/obj/item/language_manual/roundstart_species/five/Initialize()
-	. = ..()
-	name = "extended [initial(language.name)] manual"
-
 // So drones can teach borgs and AI dronespeak. For best effect, combine with mother drone lawset.
 /obj/item/language_manual/dronespeak_manual
 	name = "dronespeak manual"
