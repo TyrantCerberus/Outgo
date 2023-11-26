@@ -23577,7 +23577,6 @@
 "blr" = (
 /obj/structure/table,
 /obj/item/folder/white,
-/obj/item/healthanalyzer,
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
@@ -24618,10 +24617,6 @@
 	pixel_y = 32
 	},
 /obj/structure/table,
-/obj/item/healthanalyzer{
-	pixel_x = 3;
-	pixel_y = 4
-	},
 /obj/item/healthanalyzer,
 /turf/open/floor/iron/white,
 /area/medical/paramedic)
@@ -25026,6 +25021,7 @@
 	name = "Medbay Front Desk";
 	req_access_txt = "5"
 	},
+/obj/item/healthanalyzer,
 /turf/open/floor/iron/white,
 /area/medical/paramedic)
 "bpU" = (
@@ -51150,6 +51146,7 @@
 	name = "Medbay Front Desk";
 	req_access_txt = "5"
 	},
+/obj/item/folder/blue,
 /turf/open/floor/iron/white,
 /area/medical/paramedic)
 "lya" = (

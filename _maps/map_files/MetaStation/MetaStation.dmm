@@ -59439,11 +59439,12 @@
 	dir = 8
 	},
 /obj/structure/table,
-/obj/item/stack/medical/mesh,
-/obj/item/stack/medical/gauze,
-/obj/item/stack/medical/suture,
 /obj/effect/mapping_helpers/simple_pipes/supply/hidden/layer4,
 /obj/effect/mapping_helpers/simple_pipes/scrubbers/hidden/layer2,
+/obj/item/stack/medical/gauze{
+	pixel_y = 6
+	},
+/obj/item/healthanalyzer,
 /turf/open/floor/iron/white,
 /area/medical/medbay/central)
 "tir" = (
@@ -60227,10 +60228,10 @@
 /obj/machinery/firealarm/directional/west,
 /obj/structure/table,
 /obj/item/folder,
-/obj/item/storage/firstaid/regular,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
+/obj/item/storage/firstaid/emergency,
 /turf/open/floor/iron,
 /area/commons/locker)
 "tvy" = (
