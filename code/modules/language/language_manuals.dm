@@ -74,3 +74,22 @@
 		return
 
 	return ..()
+
+//language manuals for "natural" (ghostrole and niche non-antag) languages
+/obj/item/language_manual/sylvan
+	name = "sylvan language manual"
+	desc = "The book's cover reads: \"Sylvan Wanderings - Learn how a plant thinks, feels and speaks!\""
+	language = /datum/language/sylvan
+	flavour_text = "you suddenly feel a lot more in tune with nature"
+
+/obj/item/language_manual/draconic
+	name = "draconic language manual"
+	desc = "The book's cover reads: \"Tipping the Scales - Learn how to survive, thrive and communicate on one of the galaxy's deadliest planets!\""
+	language = /datum/language/draconic
+	flavour_text = "you suddenly feel like a Lavaland native"
+
+/obj/item/language_manual/terrum
+	name = "terrum language manual"
+	desc = "The book's cover reads: \"Mind Like a Stone - Dr. Emmet Bukowski\""
+	language = /datum/language/terrum
+	flavour_text = "suddenly your grasp of golem speech becomes rock solid"
