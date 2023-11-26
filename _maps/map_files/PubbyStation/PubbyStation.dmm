@@ -4075,10 +4075,6 @@
 /turf/open/floor/iron/white,
 /area/security/brig)
 "akC" = (
-/obj/item/storage/firstaid/regular{
-	pixel_x = 3;
-	pixel_y = 3
-	},
 /obj/item/storage/firstaid/regular,
 /obj/structure/table/glass,
 /obj/machinery/airalarm{
@@ -23075,14 +23071,13 @@
 	dir = 1
 	},
 /obj/structure/cable,
-/obj/item/stack/medical/mesh,
-/obj/item/stack/medical/suture,
 /obj/machinery/power/apc{
 	areastring = "/area/medical/sleeper";
 	dir = 1;
 	name = "Treatment Centre APC";
 	pixel_y = 23
 	},
+/obj/item/storage/firstaid/regular,
 /turf/open/floor/iron/white,
 /area/medical/exam_room)
 "bjV" = (
@@ -23152,10 +23147,6 @@
 /area/medical/paramedic)
 "bka" = (
 /obj/structure/table,
-/obj/item/storage/firstaid/regular{
-	pixel_x = 3;
-	pixel_y = 3
-	},
 /obj/item/storage/firstaid/regular,
 /obj/machinery/light{
 	dir = 1
@@ -24670,12 +24661,12 @@
 /area/medical/medbay/central)
 "boO" = (
 /obj/structure/table/glass,
-/obj/item/stack/medical/gauze,
 /obj/item/reagent_containers/glass/bottle/epinephrine,
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
+/obj/item/reagent_containers/syringe,
 /turf/open/floor/iron/white,
 /area/medical/medbay/lobby)
 "boP" = (
@@ -27543,15 +27534,7 @@
 /area/maintenance/department/engine)
 "bwu" = (
 /obj/structure/table,
-/obj/item/storage/firstaid/fire{
-	pixel_x = 3;
-	pixel_y = 3
-	},
 /obj/item/storage/firstaid/fire,
-/obj/item/storage/firstaid/regular{
-	pixel_x = -3;
-	pixel_y = -3
-	},
 /obj/machinery/door/window/southleft{
 	name = "First-Aid Supplies";
 	req_access_txt = "5"
@@ -27634,9 +27617,7 @@
 	dir = 8
 	},
 /obj/structure/table,
-/obj/item/stack/medical/gauze,
-/obj/item/stack/medical/mesh,
-/obj/item/stack/medical/suture,
+/obj/item/storage/firstaid/regular,
 /turf/open/floor/iron/white,
 /area/medical/medbay/lobby)
 "bwS" = (
@@ -46716,15 +46697,7 @@
 /area/medical/psychology)
 "feU" = (
 /obj/structure/table,
-/obj/item/storage/firstaid/o2{
-	pixel_x = 3;
-	pixel_y = 3
-	},
 /obj/item/storage/firstaid/o2,
-/obj/item/storage/firstaid/regular{
-	pixel_x = -3;
-	pixel_y = -3
-	},
 /obj/structure/window/reinforced,
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
@@ -51172,9 +51145,6 @@
 /area/space)
 "lxx" = (
 /obj/structure/table,
-/obj/item/stack/medical/gauze{
-	pixel_x = 2
-	},
 /obj/machinery/door/window/southright{
 	dir = 8;
 	name = "Medbay Front Desk";
@@ -55632,15 +55602,7 @@
 /area/maintenance/department/engine)
 "rMZ" = (
 /obj/structure/table,
-/obj/item/storage/firstaid/toxin{
-	pixel_x = 3;
-	pixel_y = 3
-	},
 /obj/item/storage/firstaid/toxin,
-/obj/item/storage/firstaid/regular{
-	pixel_x = -3;
-	pixel_y = -3
-	},
 /obj/machinery/door/window/southright{
 	name = "First-Aid Supplies";
 	req_access_txt = "5"
@@ -56257,9 +56219,8 @@
 /area/hallway/secondary/entry)
 "sLv" = (
 /obj/structure/table,
-/obj/item/stack/medical/mesh,
-/obj/item/stack/medical/suture,
 /obj/structure/window/reinforced/spawner/west,
+/obj/item/stack/medical/gauze,
 /turf/open/floor/iron/white,
 /area/medical/paramedic)
 "sLD" = (
@@ -58886,15 +58847,7 @@
 /area/maintenance/disposal/incinerator)
 "wiy" = (
 /obj/structure/table,
-/obj/item/storage/firstaid/brute{
-	pixel_x = 3;
-	pixel_y = 3
-	},
 /obj/item/storage/firstaid/brute,
-/obj/item/storage/firstaid/regular{
-	pixel_x = -3;
-	pixel_y = -3
-	},
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 8
