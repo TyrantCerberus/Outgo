@@ -2567,6 +2567,39 @@
 					/obj/item/book/random)
 	crate_type = /obj/structure/closet/crate/wooden
 
+/datum/supply_pack/misc/language_manuals/sylvan
+	name = "Language Manuals (Sylvan)"
+	desc = "A five pack of language manuals for learning the plant language Sylvan."
+	cost = CARGO_CRATE_VALUE * 15
+	contains = list(/obj/item/language_manual/sylvan,
+					/obj/item/language_manual/sylvan,
+					/obj/item/language_manual/sylvan,
+					/obj/item/language_manual/sylvan,
+					/obj/item/language_manual/sylvan)
+	crate_type = /obj/structure/closet/crate/wooden
+
+/datum/supply_pack/misc/language_manuals/draconic
+	name = "Language Manuals (Draconic)"
+	desc = "A five pack of language manuals for learning the ashwalker language Draconic."
+	cost = CARGO_CRATE_VALUE * 15
+	contains = list(/obj/item/language_manual/draconic,
+					/obj/item/language_manual/draconic,
+					/obj/item/language_manual/draconic,
+					/obj/item/language_manual/draconic,
+					/obj/item/language_manual/draconic)
+	crate_type = /obj/structure/closet/crate/wooden
+
+/datum/supply_pack/misc/language_manuals/terrum
+	name = "Language Manuals (Terrum)"
+	desc = "A five pack of language manuals for learning the golem language Terrum."
+	cost = CARGO_CRATE_VALUE * 15
+	contains = list(/obj/item/language_manual/terrum,
+					/obj/item/language_manual/terrum,
+					/obj/item/language_manual/terrum,
+					/obj/item/language_manual/terrum,
+					/obj/item/language_manual/terrum)
+	crate_type = /obj/structure/closet/crate/wooden
+
 /datum/supply_pack/misc/exploration_drone
 	name = "Exploration Drone"
 	desc = "A replacement long-range exploration drone."
