@@ -2303,10 +2303,6 @@
 	dir = 1
 	},
 /obj/item/clothing/under/rank/medical/doctor/purple,
-/obj/item/storage/firstaid/regular,
-/obj/item/healthanalyzer{
-	pixel_y = -2
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -39164,9 +39160,11 @@
 	pixel_x = -4;
 	pixel_y = 2
 	},
-/obj/item/healthanalyzer,
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 1
+	},
+/obj/item/healthanalyzer{
+	pixel_y = -2
 	},
 /turf/open/floor/iron/white,
 /area/security/brig)
