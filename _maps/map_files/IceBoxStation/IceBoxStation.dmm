@@ -1266,10 +1266,6 @@
 /turf/open/floor/iron/white,
 /area/security/brig)
 "agN" = (
-/obj/item/storage/firstaid/regular{
-	pixel_x = 3;
-	pixel_y = 3
-	},
 /obj/item/storage/firstaid/regular,
 /obj/structure/table/glass,
 /obj/effect/turf_decal/tile/red{
@@ -2204,11 +2200,6 @@
 /obj/effect/mapping_helpers/simple_pipes/supply/hidden/layer4,
 /turf/open/floor/iron,
 /area/security/brig)
-"akP" = (
-/obj/structure/table,
-/obj/item/food/energybar,
-/turf/open/floor/iron,
-/area/security/prison)
 "akR" = (
 /obj/machinery/door/window/brigdoor/security/cell{
 	id = "Cell 2";
@@ -12011,15 +12002,7 @@
 "bBw" = (
 /obj/structure/table/glass,
 /obj/structure/window/reinforced,
-/obj/item/storage/firstaid/toxin{
-	pixel_x = 3;
-	pixel_y = 3
-	},
 /obj/item/storage/firstaid/toxin,
-/obj/item/storage/firstaid/regular{
-	pixel_x = -3;
-	pixel_y = -3
-	},
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
@@ -12370,15 +12353,7 @@
 	red_alert_access = 1;
 	req_access_txt = "5"
 	},
-/obj/item/storage/firstaid/brute{
-	pixel_x = 3;
-	pixel_y = 3
-	},
 /obj/item/storage/firstaid/brute,
-/obj/item/storage/firstaid/regular{
-	pixel_x = -3;
-	pixel_y = -3
-	},
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
@@ -12526,15 +12501,7 @@
 "bEl" = (
 /obj/structure/table/glass,
 /obj/structure/window/reinforced,
-/obj/item/storage/firstaid/fire{
-	pixel_x = 3;
-	pixel_y = 3
-	},
 /obj/item/storage/firstaid/fire,
-/obj/item/storage/firstaid/regular{
-	pixel_x = -3;
-	pixel_y = -3
-	},
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
@@ -25814,10 +25781,6 @@
 	},
 /obj/structure/table,
 /obj/item/storage/firstaid/regular,
-/obj/item/storage/firstaid/regular{
-	pixel_x = -3;
-	pixel_y = -3
-	},
 /turf/open/floor/iron/white,
 /area/medical/medbay/lobby)
 "hXo" = (
@@ -29848,15 +29811,7 @@
 	red_alert_access = 1;
 	req_access_txt = "5"
 	},
-/obj/item/storage/firstaid/o2{
-	pixel_x = 3;
-	pixel_y = 3
-	},
 /obj/item/storage/firstaid/o2,
-/obj/item/storage/firstaid/regular{
-	pixel_x = -3;
-	pixel_y = -3
-	},
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
@@ -39606,7 +39561,7 @@
 /area/commons/storage/tools)
 "qru" = (
 /obj/structure/table/wood,
-/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/emergency,
 /turf/open/floor/iron,
 /area/commons/dorms)
 "qrU" = (
@@ -50154,6 +50109,7 @@
 	},
 /obj/structure/table/glass,
 /obj/item/radio/intercom/directional/west,
+/obj/item/storage/firstaid/regular,
 /turf/open/floor/iron,
 /area/medical/medbay/central)
 "wVm" = (
@@ -79700,7 +79656,7 @@ skK
 adD
 abz
 afG
-akP
+arD
 aaw
 abg
 arD

@@ -10710,15 +10710,10 @@
 	},
 /obj/structure/table,
 /obj/item/reagent_containers/chem_pack{
-	pixel_x = 10;
 	pixel_y = 10
 	},
 /obj/item/stack/medical/gauze{
-	pixel_x = 8
-	},
-/obj/item/stack/medical/mesh{
-	pixel_x = -4;
-	pixel_y = 3
+	pixel_x = 1
 	},
 /turf/open/floor/iron/dark,
 /area/medical/exam_room)
@@ -11300,19 +11295,7 @@
 /turf/open/floor/iron,
 /area/hallway/primary/fore)
 "aPR" = (
-/obj/item/storage/firstaid/regular{
-	pixel_x = 3;
-	pixel_y = -3
-	},
-/obj/item/storage/firstaid/o2{
-	pixel_x = 3;
-	pixel_y = 3
-	},
 /obj/item/storage/firstaid/o2,
-/obj/item/storage/firstaid/o2{
-	pixel_x = -3;
-	pixel_y = -3
-	},
 /obj/structure/table/glass,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
@@ -12448,9 +12431,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/obj/item/stack/medical/gauze,
-/obj/item/stack/medical/mesh,
-/obj/item/stack/medical/suture,
+/obj/item/healthanalyzer,
 /turf/open/floor/iron/dark,
 /area/medical/medbay/lobby)
 "aSz" = (
@@ -30048,7 +30029,6 @@
 /area/security/prison)
 "cjE" = (
 /obj/structure/table,
-/obj/item/food/energybar,
 /obj/structure/cable,
 /turf/open/floor/iron/white,
 /area/security/prison)
@@ -46538,19 +46518,7 @@
 /turf/open/floor/iron/dark,
 /area/engineering/break_room)
 "hwo" = (
-/obj/item/storage/firstaid/regular{
-	pixel_x = 3;
-	pixel_y = -3
-	},
-/obj/item/storage/firstaid/toxin{
-	pixel_x = 3;
-	pixel_y = 3
-	},
 /obj/item/storage/firstaid/toxin,
-/obj/item/storage/firstaid/toxin{
-	pixel_x = -3;
-	pixel_y = -3
-	},
 /obj/structure/table/glass,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
@@ -48110,7 +48078,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
-/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/emergency,
 /turf/open/floor/iron,
 /area/commons/locker)
 "ikV" = (
@@ -76839,19 +76807,7 @@
 /turf/open/floor/plating/airless,
 /area/space/nearstation)
 "vte" = (
-/obj/item/storage/firstaid/regular{
-	pixel_x = 3;
-	pixel_y = -3
-	},
-/obj/item/storage/firstaid/brute{
-	pixel_x = 3;
-	pixel_y = 3
-	},
 /obj/item/storage/firstaid/brute,
-/obj/item/storage/firstaid/brute{
-	pixel_x = -3;
-	pixel_y = -3
-	},
 /obj/structure/table/glass,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
@@ -79781,19 +79737,7 @@
 	},
 /area/ai_monitored/command/nuke_storage)
 "wMM" = (
-/obj/item/storage/firstaid/regular{
-	pixel_x = 3;
-	pixel_y = -3
-	},
-/obj/item/storage/firstaid/fire{
-	pixel_x = 3;
-	pixel_y = 3
-	},
 /obj/item/storage/firstaid/fire,
-/obj/item/storage/firstaid/fire{
-	pixel_x = -3;
-	pixel_y = -3
-	},
 /obj/structure/table/glass,
 /obj/effect/turf_decal/tile/neutral,
 /obj/structure/window/reinforced{
@@ -82056,7 +82000,6 @@
 /area/engineering/main)
 "xKT" = (
 /obj/structure/table,
-/obj/item/storage/firstaid/regular,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
@@ -82065,6 +82008,7 @@
 /obj/structure/sign/poster/official/random{
 	pixel_y = 32
 	},
+/obj/item/storage/firstaid/advanced,
 /turf/open/floor/iron/dark,
 /area/commons/fitness/recreation)
 "xKX" = (

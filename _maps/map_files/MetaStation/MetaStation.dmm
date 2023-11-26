@@ -2303,10 +2303,6 @@
 	dir = 1
 	},
 /obj/item/clothing/under/rank/medical/doctor/purple,
-/obj/item/storage/firstaid/regular,
-/obj/item/healthanalyzer{
-	pixel_y = -2
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -5433,19 +5429,7 @@
 	dir = 8
 	},
 /obj/structure/table/glass,
-/obj/item/storage/firstaid/regular{
-	pixel_x = 3;
-	pixel_y = -3
-	},
-/obj/item/storage/firstaid/toxin{
-	pixel_x = 3;
-	pixel_y = 3
-	},
 /obj/item/storage/firstaid/toxin,
-/obj/item/storage/firstaid/toxin{
-	pixel_x = -3;
-	pixel_y = -3
-	},
 /obj/structure/window/reinforced,
 /obj/effect/turf_decal/trimline/blue/filled/corner,
 /turf/open/floor/iron/dark,
@@ -6794,15 +6778,13 @@
 /area/security/checkpoint/engineering)
 "bgk" = (
 /obj/structure/table,
-/obj/item/stack/medical/gauze,
-/obj/item/stack/medical/mesh,
-/obj/item/stack/medical/suture,
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
+/obj/item/storage/firstaid/regular,
 /turf/open/floor/iron/white,
 /area/medical/medbay/central)
 "bgn" = (
@@ -10276,7 +10258,6 @@
 /obj/item/reagent_containers/blood/a_plus,
 /obj/item/reagent_containers/blood/a_minus,
 /obj/item/reagent_containers/blood/lizard,
-/obj/item/reagent_containers/blood/ethereal,
 /obj/item/reagent_containers/blood{
 	pixel_x = -3;
 	pixel_y = -3
@@ -21741,19 +21722,7 @@
 	dir = 8
 	},
 /obj/structure/table/glass,
-/obj/item/storage/firstaid/regular{
-	pixel_x = 3;
-	pixel_y = -3
-	},
-/obj/item/storage/firstaid/o2{
-	pixel_x = 3;
-	pixel_y = 3
-	},
 /obj/item/storage/firstaid/o2,
-/obj/item/storage/firstaid/o2{
-	pixel_x = -3;
-	pixel_y = -3
-	},
 /obj/structure/window/reinforced{
 	dir = 4
 	},
@@ -39191,9 +39160,11 @@
 	pixel_x = -4;
 	pixel_y = 2
 	},
-/obj/item/healthanalyzer,
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 1
+	},
+/obj/item/healthanalyzer{
+	pixel_y = -2
 	},
 /turf/open/floor/iron/white,
 /area/security/brig)
@@ -43638,19 +43609,7 @@
 	name = "First-Aid Supplies";
 	req_access_txt = "5"
 	},
-/obj/item/storage/firstaid/regular{
-	pixel_x = 3;
-	pixel_y = -3
-	},
-/obj/item/storage/firstaid/fire{
-	pixel_x = 3;
-	pixel_y = 3
-	},
 /obj/item/storage/firstaid/fire,
-/obj/item/storage/firstaid/fire{
-	pixel_x = -3;
-	pixel_y = -3
-	},
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 4
 	},
@@ -54114,19 +54073,7 @@
 /area/security/office)
 "rmM" = (
 /obj/structure/table/glass,
-/obj/item/storage/firstaid/regular{
-	pixel_x = 3;
-	pixel_y = -3
-	},
-/obj/item/storage/firstaid/brute{
-	pixel_x = 3;
-	pixel_y = 3
-	},
 /obj/item/storage/firstaid/brute,
-/obj/item/storage/firstaid/brute{
-	pixel_x = -3;
-	pixel_y = -3
-	},
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 4
@@ -56668,7 +56615,6 @@
 	dir = 4;
 	network = list("ss13","prison")
 	},
-/obj/item/food/energybar,
 /obj/effect/turf_decal/tile/red,
 /obj/effect/turf_decal/tile/red{
 	dir = 1
@@ -59493,11 +59439,12 @@
 	dir = 8
 	},
 /obj/structure/table,
-/obj/item/stack/medical/mesh,
-/obj/item/stack/medical/gauze,
-/obj/item/stack/medical/suture,
 /obj/effect/mapping_helpers/simple_pipes/supply/hidden/layer4,
 /obj/effect/mapping_helpers/simple_pipes/scrubbers/hidden/layer2,
+/obj/item/stack/medical/gauze{
+	pixel_y = 6
+	},
+/obj/item/healthanalyzer,
 /turf/open/floor/iron/white,
 /area/medical/medbay/central)
 "tir" = (
@@ -60281,10 +60228,10 @@
 /obj/machinery/firealarm/directional/west,
 /obj/structure/table,
 /obj/item/folder,
-/obj/item/storage/firstaid/regular,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
+/obj/item/storage/firstaid/emergency,
 /turf/open/floor/iron,
 /area/commons/locker)
 "tvy" = (
@@ -65165,10 +65112,6 @@
 "viJ" = (
 /obj/structure/table,
 /obj/machinery/light,
-/obj/item/storage/firstaid/regular{
-	pixel_x = 4;
-	pixel_y = 4
-	},
 /obj/item/storage/firstaid/regular,
 /obj/effect/turf_decal/tile/blue{
 	dir = 8

@@ -20932,19 +20932,7 @@
 /area/medical/storage)
 "cST" = (
 /obj/structure/table/glass,
-/obj/item/storage/firstaid/fire{
-	pixel_x = 6;
-	pixel_y = 6
-	},
-/obj/item/storage/firstaid/fire{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/storage/firstaid/regular,
-/obj/item/storage/firstaid/fire{
-	pixel_x = -3;
-	pixel_y = -3
-	},
+/obj/item/storage/firstaid/fire,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
@@ -20969,19 +20957,7 @@
 /area/medical/storage)
 "cSW" = (
 /obj/structure/table/glass,
-/obj/item/storage/firstaid/toxin{
-	pixel_x = 6;
-	pixel_y = 6
-	},
-/obj/item/storage/firstaid/toxin{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/storage/firstaid/regular,
-/obj/item/storage/firstaid/toxin{
-	pixel_x = -3;
-	pixel_y = -3
-	},
+/obj/item/storage/firstaid/toxin,
 /obj/machinery/light/directional/east,
 /obj/structure/window/reinforced{
 	dir = 1
@@ -21361,19 +21337,7 @@
 /area/security/checkpoint/medical)
 "cUM" = (
 /obj/structure/table/glass,
-/obj/item/storage/firstaid/brute{
-	pixel_x = 6;
-	pixel_y = 6
-	},
-/obj/item/storage/firstaid/brute{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/storage/firstaid/regular,
-/obj/item/storage/firstaid/brute{
-	pixel_x = -3;
-	pixel_y = -3
-	},
+/obj/item/storage/firstaid/brute,
 /obj/machinery/door/window/eastleft{
 	name = "First-Aid Supplies";
 	red_alert_access = 1;
@@ -21399,19 +21363,7 @@
 /area/medical/storage)
 "cUO" = (
 /obj/structure/table/glass,
-/obj/item/storage/firstaid/o2{
-	pixel_x = 6;
-	pixel_y = 6
-	},
-/obj/item/storage/firstaid/o2{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/storage/firstaid/regular,
-/obj/item/storage/firstaid/o2{
-	pixel_x = -3;
-	pixel_y = -3
-	},
+/obj/item/storage/firstaid/o2,
 /obj/machinery/door/window/westleft{
 	name = "First-Aid Supplies";
 	red_alert_access = 1;
@@ -40219,9 +40171,6 @@
 	pixel_x = -4;
 	pixel_y = 8
 	},
-/obj/item/stack/medical/gauze{
-	pixel_x = 8
-	},
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
@@ -40756,12 +40705,10 @@
 /area/security/prison)
 "fBo" = (
 /obj/structure/table,
-/obj/item/stack/medical/gauze,
-/obj/item/stack/medical/suture,
-/obj/item/stack/medical/mesh,
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
+/obj/item/storage/firstaid/regular,
 /turf/open/floor/iron/white,
 /area/hallway/primary/central/aft)
 "fBp" = (
@@ -67442,8 +67389,6 @@
 /area/command/meeting_room/council)
 "nOf" = (
 /obj/structure/table/glass,
-/obj/item/stack/medical/suture,
-/obj/item/stack/medical/mesh,
 /obj/machinery/camera{
 	c_tag = "Medbay - Treatment Center";
 	name = "medbay camera";
@@ -67459,6 +67404,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
+/obj/item/storage/firstaid/regular,
 /turf/open/floor/iron/white,
 /area/medical/treatment_center)
 "nOg" = (
@@ -77095,7 +77041,6 @@
 /area/engineering/gravity_generator)
 "qBW" = (
 /obj/structure/table,
-/obj/item/storage/firstaid/regular,
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
