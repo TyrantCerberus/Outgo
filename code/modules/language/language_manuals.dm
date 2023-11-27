@@ -41,7 +41,7 @@
 
 /obj/item/language_manual/proc/use_charge(mob/user)
 	charges--
-	if(!charges)
+	if(charges <= 0)
 		var/turf/T = get_turf(src)
 		T.visible_message(span_warning("The [src] disintegrates, blasted cheap paper!"))
 
@@ -56,7 +56,7 @@
 
 /obj/item/language_manual/codespeak_manual/use_charge(mob/user)
 	charges--
-	if(!charges)
+	if(charges <= 0)
 		var/turf/T = get_turf(src)
 		T.visible_message(span_warning("The cover and contents of [src] start shifting and changing!"))
 
