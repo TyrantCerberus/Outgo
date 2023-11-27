@@ -197,6 +197,8 @@
 	w_class = WEIGHT_CLASS_SMALL
 	toolspeed = 0.5
 
+/obj/item/circular_saw/cyborg
+	force = 10
 
 /obj/item/surgical_drapes
 	name = "surgical drapes"

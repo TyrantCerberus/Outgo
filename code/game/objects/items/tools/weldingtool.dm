@@ -323,11 +323,29 @@
 	icon_state = "indwelder_cyborg"
 	toolspeed = 0.5
 
+/obj/item/weldingtool/largetank/cyborg/switched_on(mob/user)
+	set_welding(!welding)
+	if(welding)
+		if(get_fuel() >= 1)
+			to_chat(user, span_notice("You switch [src] on."))
+			playsound(loc, acti_sound, 50, TRUE)
+			force = 10
+			damtype = BURN
+			hitsound = 'sound/items/welder.ogg'
+			update_appearance()
+			START_PROCESSING(SSobj, src)
+		else
+			to_chat(user, span_warning("You need more fuel!"))
+			switched_off(user)
+	else
+		to_chat(user, span_notice("You switch [src] off."))
+		playsound(loc, deac_sound, 50, TRUE)
+		switched_off(user)
+
 /obj/item/weldingtool/largetank/cyborg/cyborg_unequip(mob/user)
 	if(!isOn())
 		return
 	switched_on(user)
-
 
 /obj/item/weldingtool/mini
 	name = "emergency welding tool"
