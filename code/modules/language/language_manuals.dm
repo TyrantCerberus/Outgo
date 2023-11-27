@@ -46,7 +46,7 @@
 		T.visible_message(span_warning("The [src] disintegrates, blasted cheap paper!"))
 
 		qdel(src)
-		new /obj/effect/decal/cleanable/shreds(T)
+		new /obj/effect/decal/cleanable/ash(T)
 
 /obj/item/language_manual/codespeak_manual
 	name = "codespeak manual"
