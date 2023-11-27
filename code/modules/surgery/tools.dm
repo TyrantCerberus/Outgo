@@ -127,6 +127,8 @@
 	w_class = WEIGHT_CLASS_SMALL
 	toolspeed = 0.5
 
+/obj/item/surgicaldrill/cyborg
+	force = 10
 
 /obj/item/scalpel
 	name = "scalpel"
