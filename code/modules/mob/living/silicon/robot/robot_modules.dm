@@ -278,7 +278,6 @@
 		/obj/item/stack/tile/iron/base/cyborg,
 		/obj/item/stack/cable_coil)
 	radio_channels = list(RADIO_CHANNEL_ENGINEERING)
-	emag_modules = list(/obj/item/borg/stun)
 	cyborg_base_icon = "engineer"
 	model_select_icon = "engineer"
 	magpulsing = TRUE
@@ -349,7 +348,7 @@
 		/obj/item/cautery,
 		/obj/item/surgicaldrill,
 		/obj/item/scalpel,
-		/obj/item/circular_saw,
+		/obj/item/circular_saw/cyborg,
 		/obj/item/extinguisher/mini,
 		/obj/item/roller/robo,
 		/obj/item/borg/cyborghug/medical,
@@ -380,7 +379,6 @@
 		/obj/item/gps/cyborg,
 		/obj/item/stack/marker_beacon)
 	radio_channels = list(RADIO_CHANNEL_SCIENCE, RADIO_CHANNEL_SUPPLY)
-	emag_modules = list(/obj/item/borg/stun)
 	cyborg_base_icon = "miner"
 	model_select_icon = "miner"
 	hat_offset = 0
