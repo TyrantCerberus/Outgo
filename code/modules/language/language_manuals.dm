@@ -43,17 +43,26 @@
 	charges--
 	if(!charges)
 		var/turf/T = get_turf(src)
-		T.visible_message(span_warning("The cover and contents of [src] start shifting and changing!"))
+		T.visible_message(span_warning("The [src] disintegrates, blasted cheap paper!"))
 
 		qdel(src)
-		var/obj/item/book/manual/random/book = new(T)
-		user.put_in_active_hand(book)
+		new /obj/effect/decal/cleanable/shreds(T)
 
 /obj/item/language_manual/codespeak_manual
 	name = "codespeak manual"
 	desc = "The book's cover reads: \"Codespeak(tm) - Secure your communication with metaphors so elaborate, they seem randomly generated!\""
 	language = /datum/language/codespeak
 	flavour_text = "suddenly your mind is filled with codewords and responses"
+
+/obj/item/language_manual/codespeak_manual/use_charge(mob/user)
+	charges--
+	if(!charges)
+		var/turf/T = get_turf(src)
+		T.visible_message(span_warning("The cover and contents of [src] start shifting and changing!"))
+
+		qdel(src)
+		var/obj/item/book/manual/random/book = new(T)
+		user.put_in_active_hand(book)
 
 /obj/item/language_manual/codespeak_manual/unlimited
 	name = "deluxe codespeak manual"
