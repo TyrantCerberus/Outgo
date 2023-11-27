@@ -269,17 +269,11 @@
 	active_item.set_light_on(FALSE)
 	return ..()
 
-/obj/item/organ/cyberimp/arm/item_set/baton
-	name = "arm electrification implant"
-	desc = "An illegal combat implant that allows the user to administer disabling shocks from their arm."
-	encode_info = AUGMENT_TG_LEVEL
-	contents = newlist(/obj/item/borg/stun)
-
 /obj/item/organ/cyberimp/arm/item_set/combat
 	name = "combat cybernetics implant"
 	desc = "A powerful cybernetic implant that contains combat modules built into the user's arm."
 	encode_info = AUGMENT_TG_LEVEL
-	contents = newlist(/obj/item/melee/transforming/energy/blade/hardlight, /obj/item/gun/medbeam, /obj/item/borg/stun, /obj/item/assembly/flash/armimplant)
+	contents = newlist(/obj/item/melee/transforming/energy/blade/hardlight, /obj/item/gun/medbeam, /obj/item/assembly/flash/armimplant)
 
 /obj/item/organ/cyberimp/arm/item_set/combat/Initialize()
 	. = ..()
