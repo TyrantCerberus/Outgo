@@ -32,14 +32,6 @@
 
 //Current stations
 
-// Icebox Station: added May 13, 2020 (#51090)
-/obj/structure/plaque/static_plaque/golden/commission/icebox
-	desc = "Spinward Sector Station SS-13\n'Box' Class Outpost (Revision 2.2: 'Icebox')\nCommissioned 13/05/2560\n'Cold Reliable'"
-
-// Metastation: added Mar 11, 2013 (best estimate, pre-git)
-/obj/structure/plaque/static_plaque/golden/commission/meta
-	desc = "Spinward Sector Station SS-13\n'Meta' Class Outpost\nCommissioned 11/03/2553\n'Theseus' Station'"
-
 // Deltastation: added Dec 17, 2016 (#22066)
 /obj/structure/plaque/static_plaque/golden/commission/delta
 	desc = "Spinward Sector Station SS-13\n'Delta' Class Outpost\nCommissioned 17/12/2556\n'Efficiency Through Redundancy'"
@@ -48,9 +40,13 @@
 /obj/structure/plaque/static_plaque/golden/commission/kilo
 	desc = "Spinward Sector Station SS-13\n'Kilo' Class Outpost\nCommissioned 13/11/2559\n'Forever Different'"
 
-// Tramstation: added Mar 11, 2021 (#56509)
-/obj/structure/plaque/static_plaque/golden/commission/tram
-	desc = "Spinward Sector Station SS-13\n'Tram' Class Outpost\nCommissioned 11/03/2561\n'Making Moves'"
+// Metastation: added Mar 11, 2013 (best estimate, pre-git)
+/obj/structure/plaque/static_plaque/golden/commission/meta
+	desc = "Spinward Sector Station SS-13\n'Meta' Class Outpost\nCommissioned 11/03/2553\n'Theseus' Station'"
+
+// Pubbystation: added Oct 19, 2016 (#20925)
+/obj/structure/plaque/static_plaque/golden/commission/pubby
+	desc = "Spinward Sector Station SS-06\n'Pubby' Class Outpost\nCommissioned 19/10/2556\n'No Law But Ours'"
 
 //Removed stations
 
@@ -65,10 +61,6 @@
 // Boxstation: added Nov 15, 2010 (pre-git), removed Jul 06, 2020 (#52017)- 9 years, 7 months, 21 days
 /obj/structure/plaque/static_plaque/golden/commission/box
 	desc = "Spinward Sector Station SS-02\n'Box' Class Outpost\nCommissioned 15/11/2550\nDecommissioned 06/07/2560\n'Old Faithful'"
-
-// Pubbystation: added Oct 19, 2016 (#20925), removed Dec 10, 2020 (#54588)- 4 years, 1 month, 21 days
-/obj/structure/plaque/static_plaque/golden/commission/pubby
-	desc = "Spinward Sector Station SS-06\n'Pubby' Class Outpost\nCommissioned 19/10/2556\nDecommissioned 10/12/2560\n'No Law But Ours'"
 
 // Cerestation: added Mar 29, 2017 (#24665), removed Aug 26th, 2017 (#30196)- 4 months, 28 days
 /obj/structure/plaque/static_plaque/golden/commission/cere
@@ -90,6 +82,10 @@
 /obj/structure/plaque/static_plaque/golden/commission/efficiency
 	desc = "Spinward Sector Station SS-07\n'Efficiency' Class Outpost\nCommissioned 28/01/2556\nDecommissioned 20/12/2556\n'Work Smarter, Not Harder'"
 
+// Icebox Station: added May 13, 2020 (#51090), removed Nov 27, 2023
+/obj/structure/plaque/static_plaque/golden/commission/icebox
+	desc = "Spinward Sector Station SS-13\n'Box' Class Outpost (Revision 2.2: 'Icebox')\nCommissioned 13/05/2560\n'Cold Reliable'"
+
 // Ministation: added Jan 29, 2014 (7a76e9456b782e6626bf81e27a912d8232c76b18), removed Dec 27, 2016 (#22453)- 2 years, 10 months, 28 days
 /obj/structure/plaque/static_plaque/golden/commission/mini
 	desc = "Spinward Sector Station SS-08\n'Mini' Class Outpost\nCommissioned 29/01/2554\nDecommissioned 27/12/2556\n'The Littlest Station'"
@@ -97,6 +93,10 @@
 // Omegastation: added Dec 27, 2016 (#22453), removed Sep 20, 2018 (#40352)- 1 year, 8 months, 24 days
 /obj/structure/plaque/static_plaque/golden/commission/omega
 	desc = "Spinward Sector Station SS-09\n'Omega' Class Outpost\nCommissioned 27/12/2556\nDecommissioned 20/09/2558\n'Tiny Take Two'"
+
+// Tramstation: added Mar 11, 2021 (#56509), removed Jun 1, 2022
+/obj/structure/plaque/static_plaque/golden/commission/tram
+	desc = "Spinward Sector Station SS-13\n'Tram' Class Outpost\nCommissioned 11/03/2561\n'Making Moves'"
 
 // Uterusstation: added Sep 03, 2011 (bbd6db9ce2d6341892b89a620593fc8877f5a817), removed Jun 21, 2012 (72d72f7ce522c2d2ad4863f44ee9f5054413c489)- 9 months, 18 days
 /obj/structure/plaque/static_plaque/golden/commission/uterus
