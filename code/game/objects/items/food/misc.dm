@@ -15,7 +15,7 @@
 	AddComponent(/datum/component/food_storage)
 
 /obj/item/food/cheese/wheel/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cheese, 5, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cheese, 5, TIME_TO_PROCESS_CHEESE)
 
 /obj/item/food/cheese/royal
 	name = "royal cheese"

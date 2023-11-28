@@ -37,7 +37,7 @@
 	AddComponent(/datum/component/customizable_reagent_holder, /obj/item/food/bread/empty, CUSTOM_INGREDIENT_ICON_FILL, max_ingredients = 8)
 
 /obj/item/food/bread/plain/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/breadslice/plain, 5, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/breadslice/plain, 5, TIME_TO_PROCESS_BREAD)
 
 /obj/item/food/breadslice/plain
 	name = "bread slice"
@@ -75,7 +75,7 @@
 
 
 /obj/item/food/bread/meat/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/breadslice/meat, 5, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/breadslice/meat, 5, TIME_TO_PROCESS_BREAD)
 
 /obj/item/food/breadslice/meat
 	name = "meatbread slice"
@@ -93,7 +93,7 @@
 	foodtypes = GRAIN | MEAT
 
 /obj/item/food/bread/xenomeat/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/breadslice/xenomeat, 5, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/breadslice/xenomeat, 5, TIME_TO_PROCESS_BREAD)
 
 /obj/item/food/breadslice/xenomeat
 	name = "xenomeatbread slice"
@@ -111,7 +111,7 @@
 	foodtypes = GRAIN | MEAT | TOXIC
 
 /obj/item/food/bread/spidermeat/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/breadslice/spidermeat, 5, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/breadslice/spidermeat, 5, TIME_TO_PROCESS_BREAD)
 
 /obj/item/food/breadslice/spidermeat
 	name = "spider meat bread slice"
@@ -129,7 +129,7 @@
 	foodtypes = GRAIN | FRUIT
 
 /obj/item/food/bread/banana/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/breadslice/banana, 5, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/breadslice/banana, 5, TIME_TO_PROCESS_BREAD)
 
 /obj/item/food/breadslice/banana
 	name = "banana-nut bread slice"
@@ -148,7 +148,7 @@
 	venue_value = FOOD_PRICE_TRASH
 
 /obj/item/food/bread/tofu/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/breadslice/tofu, 5, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/breadslice/tofu, 5, TIME_TO_PROCESS_BREAD)
 
 /obj/item/food/breadslice/tofu
 	name = "tofubread slice"
@@ -166,7 +166,7 @@
 	foodtypes = GRAIN | DAIRY
 
 /obj/item/food/bread/creamcheese/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/breadslice/creamcheese, 5, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/breadslice/creamcheese, 5, TIME_TO_PROCESS_BREAD)
 
 /obj/item/food/breadslice/creamcheese
 	name = "cream cheese bread slice"
@@ -180,7 +180,7 @@
 	desc = "It's bread, customized to your wildest dreams."
 
 /obj/item/food/bread/empty/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/breadslice/empty, 5, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/breadslice/empty, 5, TIME_TO_PROCESS_BREAD)
 
 /obj/item/food/bread/mimana
 	name = "mimana bread"
@@ -191,7 +191,7 @@
 	foodtypes = GRAIN | FRUIT
 
 /obj/item/food/bread/mimana/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/breadslice/mimana, 5, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/breadslice/mimana, 5, TIME_TO_PROCESS_BREAD)
 
 /obj/item/food/breadslice/mimana
 	name = "mimana bread slice"
