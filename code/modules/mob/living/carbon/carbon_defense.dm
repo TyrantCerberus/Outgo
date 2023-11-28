@@ -419,7 +419,7 @@
 
 /mob/living/carbon/proc/help_shake_act(mob/living/carbon/M)
 	if(on_fire)
-		M.visible_message(span_notice("[M] rapidly pats [src], attempting to put out the fire enwreathing [p_them()] body!"))
+		M.visible_message(span_notice("[M] rapidly pats [src], attempting to put out the fire enwreathing [p_their()] body!"))
 		src.adjust_fire_stacks(-0.25)
 		return
 
