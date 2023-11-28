@@ -419,9 +419,12 @@
 
 /mob/living/carbon/proc/help_shake_act(mob/living/carbon/M)
 	if(on_fire)
-		M.visible_message(span_notice("[M] rapidly pats [src], attempting to put out the fire enwreathing [p_their()] body!"))
-		src.adjust_fire_stacks(-0.25)
-		return
+		if (M == src)
+			to_chat(M, span_warning("You can't pat out the flames; you need to stop, drop and roll!"))
+		else
+			M.visible_message(span_notice("[M] rapidly pats [src], attempting to put out the fire enwreathing [p_their()] body!"))
+			src.adjust_fire_stacks(-0.25)
+			return
 
 	if(M == src && check_self_for_injuries())
 		return
