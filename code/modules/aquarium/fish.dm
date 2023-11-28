@@ -18,7 +18,7 @@
 		var/datum/aquarium_behaviour/fish/fish_behaviour = behaviour_type
 		var/fillet_type = initial(fish_behaviour.fillet_type)
 		if(fillet_type)
-			fish.AddElement(/datum/element/processable, TOOL_KNIFE, fillet_type, 1, 5)
+			fish.AddElement(/datum/element/processable, TOOL_KNIFE, fillet_type, 1, TIME_TO_PROCESS_FISH)
 	fish.AddElement(/datum/element/deferred_aquarium_content, behaviour_type)
 	return fish
 

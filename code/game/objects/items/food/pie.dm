@@ -153,7 +153,7 @@
 	foodtypes = GRAIN | VEGETABLES | SUGAR
 
 /obj/item/food/pie/pumpkinpie/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/pieslice/pumpkin, 5, 20)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/pieslice/pumpkin, 5, TIME_TO_PROCESS_PIE)
 
 /obj/item/food/pieslice/pumpkin
 	name = "pumpkin pie slice"
@@ -212,7 +212,7 @@
 	foodtypes = GRAIN | VEGETABLES
 
 /obj/item/food/pie/blumpkinpie/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/pieslice/blumpkin, 5, 20)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/pieslice/blumpkin, 5, TIME_TO_PROCESS_PIE)
 
 /obj/item/food/pieslice/blumpkin
 	name = "blumpkin pie slice"
@@ -232,7 +232,7 @@
 	venue_value = FOOD_PRICE_EXOTIC
 
 /obj/item/food/pie/dulcedebatata/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/pieslice/dulcedebatata, 5, 20)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/pieslice/dulcedebatata, 5, TIME_TO_PROCESS_PIE)
 
 /obj/item/food/pieslice/dulcedebatata
 	name = "dulce de batata slice"
@@ -259,7 +259,7 @@
 	foodtypes = NUTS | SUGAR
 
 /obj/item/food/pie/baklava/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/pieslice/baklava, 6, 20)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/pieslice/baklava, 6, TIME_TO_PROCESS_PIE)
 
 /obj/item/food/pieslice/baklava
 	name = "baklava dish"

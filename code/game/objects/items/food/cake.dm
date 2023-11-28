@@ -26,7 +26,7 @@
 	foodtypes = GRAIN | DAIRY | SUGAR
 
 /obj/item/food/cake/plain/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/plain, 5, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/plain, 5, TIME_TO_PROCESS_CAKE)
 
 /obj/item/food/cakeslice/plain
 	name = "plain cake slice"
@@ -46,7 +46,7 @@
 
 
 /obj/item/food/cake/carrot/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/carrot, 5, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/carrot, 5, TIME_TO_PROCESS_CAKE)
 
 /obj/item/food/cakeslice/carrot
 	name = "carrot cake slice"
@@ -65,7 +65,7 @@
 	foodtypes = GRAIN | DAIRY | MEAT | GROSS | SUGAR
 
 /obj/item/food/cake/brain/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/brain, 5, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/brain, 5, TIME_TO_PROCESS_CAKE)
 
 /obj/item/food/cakeslice/brain
 	name = "brain cake slice"
@@ -86,7 +86,7 @@
 
 
 /obj/item/food/cake/cheese/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/cheese, 5, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/cheese, 5, TIME_TO_PROCESS_CAKE)
 
 /obj/item/food/cakeslice/cheese
 	name = "cheese cake slice"
@@ -106,7 +106,7 @@
 	venue_value = FOOD_PRICE_CHEAP
 
 /obj/item/food/cake/orange/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/orange, 5, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/orange, 5, TIME_TO_PROCESS_CAKE)
 
 /obj/item/food/cakeslice/orange
 	name = "orange cake slice"
@@ -125,7 +125,7 @@
 	venue_value = FOOD_PRICE_CHEAP
 
 /obj/item/food/cake/lime/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/lime, 5, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/lime, 5, TIME_TO_PROCESS_CAKE)
 
 /obj/item/food/cakeslice/lime
 	name = "lime cake slice"
@@ -144,7 +144,7 @@
 	venue_value = FOOD_PRICE_CHEAP
 
 /obj/item/food/cake/lemon/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/lemon, 5, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/lemon, 5, TIME_TO_PROCESS_CAKE)
 
 /obj/item/food/cakeslice/lemon
 	name = "lemon cake slice"
@@ -163,7 +163,7 @@
 	venue_value = FOOD_PRICE_CHEAP
 
 /obj/item/food/cake/chocolate/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/chocolate, 5, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/chocolate, 5, TIME_TO_PROCESS_CAKE)
 
 /obj/item/food/cakeslice/chocolate
 	name = "chocolate cake slice"
@@ -181,7 +181,7 @@
 	foodtypes = GRAIN | DAIRY | JUNKFOOD | SUGAR
 
 /obj/item/food/cake/birthday/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/birthday, 5, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/birthday, 5, TIME_TO_PROCESS_CAKE)
 
 /obj/item/food/cake/birthday/microwave_act(obj/machinery/microwave/M) //super sekrit club
 	new /obj/item/clothing/head/hardhat/cakehat(get_turf(src))
@@ -205,7 +205,7 @@
 	tastes = list("cake" = 3, "a Vlad's Salad" = 1)
 
 /obj/item/food/cake/birthday/energy/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/birthday/energy, 5, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/birthday/energy, 5, TIME_TO_PROCESS_CAKE)
 
 /obj/item/food/cake/birthday/energy/proc/energy_bite(mob/living/user)
 	to_chat(user, "<font color='red' size='5'>As you eat the cake, you accidentally hurt yourself on the embedded energy sword!</font>")
@@ -253,7 +253,7 @@
 	venue_value = FOOD_PRICE_CHEAP
 
 /obj/item/food/cake/apple/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/apple, 5, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/apple, 5, TIME_TO_PROCESS_CAKE)
 
 /obj/item/food/cakeslice/apple
 	name = "apple cake slice"
@@ -271,7 +271,7 @@
 	foodtypes = GRAIN | DAIRY | SUGAR
 
 /obj/item/food/cake/slimecake/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/slimecake, 5, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/slimecake, 5, TIME_TO_PROCESS_CAKE)
 
 /obj/item/food/cakeslice/slimecake
 	name = "slime cake slice"
@@ -290,7 +290,7 @@
 	venue_value = FOOD_PRICE_CHEAP
 
 /obj/item/food/cake/pumpkinspice/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/pumpkinspice, 5, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/pumpkinspice, 5, TIME_TO_PROCESS_CAKE)
 
 /obj/item/food/cakeslice/pumpkinspice
 	name = "pumpkin spice cake slice"
@@ -308,7 +308,7 @@
 	foodtypes = GRAIN | DAIRY | FRUIT | SUGAR
 
 /obj/item/food/cake/bsvc/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/bsvc, 5, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/bsvc, 5, TIME_TO_PROCESS_CAKE)
 
 /obj/item/food/cakeslice/bsvc
 	name = "blackberry and strawberry vanilla cake slice"
@@ -326,7 +326,7 @@
 	foodtypes = GRAIN | DAIRY | FRUIT | SUGAR
 
 /obj/item/food/cake/bscc/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/bscc, 5, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/bscc, 5, TIME_TO_PROCESS_CAKE)
 
 /obj/item/food/cakeslice/bscc
 	name = "strawberry chocolate cake slice"
@@ -344,7 +344,7 @@
 	foodtypes = GRAIN | DAIRY | SUGAR
 
 /obj/item/food/cake/holy_cake/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/holy_cake_slice, 5, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/holy_cake_slice, 5, TIME_TO_PROCESS_CAKE)
 
 /obj/item/food/cakeslice/holy_cake_slice
 	name = "angel food cake slice"
@@ -363,7 +363,7 @@
 	venue_value = FOOD_PRICE_CHEAP
 
 /obj/item/food/cake/pound_cake/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/pound_cake_slice, 7, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/pound_cake_slice, 7, TIME_TO_PROCESS_CAKE)
 
 /obj/item/food/cakeslice/pound_cake_slice
 	name = "pound cake slice"
@@ -382,7 +382,7 @@
 	foodtypes = GRAIN | GROSS
 
 /obj/item/food/cake/hardware_cake/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/hardware_cake_slice, 5, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/hardware_cake_slice, 5, TIME_TO_PROCESS_CAKE)
 
 /obj/item/food/cakeslice/hardware_cake_slice
 	name = "hardware cake slice"
@@ -401,7 +401,7 @@
 	foodtypes = GRAIN | SUGAR | DAIRY
 
 /obj/item/food/cake/vanilla_cake/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/vanilla_slice, 5, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/vanilla_slice, 5, TIME_TO_PROCESS_CAKE)
 
 /obj/item/food/cakeslice/vanilla_slice
 	name = "vanilla cake slice"
@@ -420,7 +420,7 @@
 	foodtypes = GRAIN | SUGAR | DAIRY
 
 /obj/item/food/cake/clown_cake/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/clown_slice, 5, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/clown_slice, 5, TIME_TO_PROCESS_CAKE)
 
 /obj/item/food/cakeslice/clown_slice
 	name = "clown cake slice"
@@ -439,7 +439,7 @@
 	foodtypes = GRAIN | DAIRY | FRUIT | SUGAR
 
 /obj/item/food/cake/trumpet/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/trumpet, 5, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/trumpet, 5, TIME_TO_PROCESS_CAKE)
 
 /obj/item/food/cakeslice/trumpet
 	name = "spaceman's cake"
@@ -458,7 +458,7 @@
 	foodtypes = GRAIN | DAIRY | SUGAR
 
 /obj/item/food/cake/brioche/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/brioche, 6, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/brioche, 6, TIME_TO_PROCESS_CAKE)
 
 /obj/item/food/cakeslice/brioche
 	name = "brioche cake slice"
@@ -477,7 +477,7 @@
 	foodtypes = DAIRY | FRUIT | SUGAR
 
 /obj/item/food/cake/pavlovacream/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/pavlovacream, 5, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/pavlovacream, 5, TIME_TO_PROCESS_CAKE)
 
 /obj/item/food/cakeslice/pavlovacream
 	name = "Pavlova slice"
@@ -495,7 +495,7 @@
 	foodtypes = NUTS | FRUIT | SUGAR
 
 /obj/item/food/cake/pavlovakorta/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/pavlovakorta, 5, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/pavlovakorta, 5, TIME_TO_PROCESS_CAKE)
 
 /obj/item/food/cakeslice/pavlovakorta
 	name = "pavlova slice"

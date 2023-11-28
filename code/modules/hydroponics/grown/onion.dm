@@ -26,7 +26,7 @@
 	wine_power = 30
 
 /obj/item/food/grown/onion/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/onion_slice, 2, 15)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/onion_slice, 2, TIME_TO_PROCESS_VEGETABLE)
 
 /obj/item/seeds/onion/red
 	name = "pack of red onion seeds"
@@ -46,7 +46,7 @@
 	wine_power = 60
 
 /obj/item/food/grown/onion/red/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/onion_slice/red, 2, 15)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/onion_slice/red, 2, TIME_TO_PROCESS_VEGETABLE)
 
 /obj/item/food/grown/onion/UsedforProcessing(mob/living/user, obj/item/I, list/chosen_option)
 	var/datum/effect_system/smoke_spread/chem/S = new //Since the onion is destroyed when it's sliced,

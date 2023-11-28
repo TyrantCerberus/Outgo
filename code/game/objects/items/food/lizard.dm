@@ -51,7 +51,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/food/headcheese/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/headcheese_slice, 5, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/headcheese_slice, 5, TIME_TO_PROCESS_CHEESE)
 
 /obj/item/food/headcheese_slice
 	name = "headcheese slice"
@@ -292,7 +292,7 @@
 	foodtypes = VEGETABLES | NUTS
 
 /obj/item/food/rootdough/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_ROLLINGPIN, /obj/item/food/flatrootdough, 1, 30)
+	AddElement(/datum/element/processable, TOOL_ROLLINGPIN, /obj/item/food/flatrootdough, 1, TIME_TO_PROCESS_DOUGH)
 
 /obj/item/food/flatrootdough
 	name = "flat rootdough"
@@ -305,7 +305,7 @@
 	foodtypes = VEGETABLES | NUTS
 
 /obj/item/food/flatrootdough/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/rootdoughslice, 3, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/rootdoughslice, 3, TIME_TO_PROCESS_DOUGH)
 
 /obj/item/food/flatrootdough/MakeGrillable()
 	AddComponent(/datum/component/grillable, /obj/item/food/root_flatbread, rand(25 SECONDS, 35 SECONDS), TRUE, TRUE)
@@ -322,7 +322,7 @@
 	foodtypes = VEGETABLES | NUTS
 
 /obj/item/food/rootdoughslice/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/spaghetti/nizaya, 1, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/spaghetti/nizaya, 1, TIME_TO_PROCESS_DOUGH)
 
 /obj/item/food/root_flatbread
 	name = "root flatbread"
@@ -362,7 +362,7 @@
 	AddComponent(/datum/component/customizable_reagent_holder, /obj/item/food/bread/empty, CUSTOM_INGREDIENT_ICON_FILL, max_ingredients = 8)
 
 /obj/item/food/bread/root/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/breadslice/root, 5, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/breadslice/root, 5, TIME_TO_PROCESS_BREAD)
 
 /obj/item/food/breadslice/root
 	name = "rootbread slice"
@@ -512,7 +512,7 @@
 	foodtypes = NUTS | SUGAR
 
 /obj/item/food/cake/korta_brittle/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/korta_brittle, 5, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cakeslice/korta_brittle, 5, TIME_TO_PROCESS_CAKE)
 
 /obj/item/food/cakeslice/korta_brittle
 	name = "korta brittle slice"

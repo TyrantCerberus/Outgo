@@ -15,7 +15,7 @@
 
 // Dough + rolling pin = flat dough
 /obj/item/food/dough/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_ROLLINGPIN, /obj/item/food/flatdough, 1, 30)
+	AddElement(/datum/element/processable, TOOL_ROLLINGPIN, /obj/item/food/flatdough, 1, TIME_TO_PROCESS_DOUGH)
 
 /obj/item/food/flatdough
 	name = "flat dough"
@@ -29,7 +29,7 @@
 
 // sliceable into 3xdoughslices
 /obj/item/food/flatdough/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/doughslice, 3, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/doughslice, 3, TIME_TO_PROCESS_DOUGH)
 
 /obj/item/food/pizzabread
 	name = "pizza bread"
@@ -81,7 +81,7 @@
 	foodtypes = GRAIN | DAIRY
 
 /obj/item/food/cakebatter/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_ROLLINGPIN, /obj/item/food/piedough, 1, 30)
+	AddElement(/datum/element/processable, TOOL_ROLLINGPIN, /obj/item/food/piedough, 1, TIME_TO_PROCESS_CAKE) //potential skub alert!
 
 /obj/item/food/piedough
 	name = "pie dough"
@@ -94,7 +94,7 @@
 	foodtypes = GRAIN | DAIRY
 
 /obj/item/food/piedough/MakeProcessable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/rawpastrybase, 3, 30)
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/rawpastrybase, 3, TIME_TO_PROCESS_DOUGH)
 
 /obj/item/food/rawpastrybase
 	name = "raw pastry base"
