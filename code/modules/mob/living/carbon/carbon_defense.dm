@@ -421,7 +421,7 @@
 	var/obj/item/clothing/gloves/G = M.gloves
 	if(on_fire)
 		if(M == src)
-			to_chat(M, span_warning("You can't pat out the flames; you need to stop, drop and roll!"))
+			to_chat(M, span_warning("You can't reach to pat out the flames; you need to stop, drop and roll!"))
 
 		else if(HAS_TRAIT(M, TRAIT_RESISTHEAT) || HAS_TRAIT(M, TRAIT_RESISTHEATHANDS) || (G?.max_heat_protection_temperature > 360))
 			M.visible_message(span_notice("[M] rapidly pats [src], attempting to put out the fire enwreathing [p_their()] body!"))
