@@ -418,12 +418,28 @@
 		Paralyze(60)
 
 /mob/living/carbon/proc/help_shake_act(mob/living/carbon/M)
+	var/obj/item/clothing/gloves/G = M.gloves
 	if(on_fire)
-		if (M == src)
+		if(M == src)
 			to_chat(M, span_warning("You can't pat out the flames; you need to stop, drop and roll!"))
-		else
+
+		else if(HAS_TRAIT(M, TRAIT_RESISTHEAT) || HAS_TRAIT(M, TRAIT_RESISTHEATHANDS) || (G?.max_heat_protection_temperature > 360))
 			M.visible_message(span_notice("[M] rapidly pats [src], attempting to put out the fire enwreathing [p_their()] body!"))
 			src.adjust_fire_stacks(-0.25)
+			return
+
+		else if(prob(10))
+			//transfer fire
+			to_chat(M, span_danger("You accidentally light yourself on fire attempting to pat out [src]'s flames!"))
+			src.spreadFire(M)
+			return
+		else
+			//check if left or right hand is being used for interaction and apply burn damage
+			to_chat(M, span_danger("You burn yourself attempting to pat out [src]'s flames!"))
+			if (M.active_hand_index == 1) //1 for left
+				M.apply_damage(5, BURN, BODY_ZONE_PRECISE_L_HAND)
+			else
+				M.apply_damage(5, BURN, BODY_ZONE_PRECISE_R_HAND)
 			return
 
 	if(M == src && check_self_for_injuries())
