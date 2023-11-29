@@ -293,7 +293,7 @@ TOGGLE_CHECKBOX(/datum/verbs/menu/settings, listen_ooc)()
 /datum/verbs/menu/settings/listen_ooc/Get_checked(client/C)
 	return C.prefs.chat_toggles & CHAT_OOC
 
-TOGGLE_CHECKBOX(datum/verbs/menu/settings, listen_looc)()
+TOGGLE_CHECKBOX(/datum/verbs/menu/settings, listen_looc)()
 	set name = "Show/Hide LOOC"
 	set category = "Preferences"
 	set desc = "Toggles seeing Local Out Of Character chat"
