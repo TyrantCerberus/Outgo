@@ -680,8 +680,9 @@
 				to_chat(src, span_notice("You succesfuly remove the durathread strand."))
 				remove_status_effect(STATUS_EFFECT_CHOKINGSTRAND)
 			return
+		if(src.on_fire)
+			to_chat(src, span_userdanger("You can't reach to pat out the flames; you need to stop, drop and roll!"))
 		check_self_for_injuries()
-
 
 	else
 		if(wear_suit)
