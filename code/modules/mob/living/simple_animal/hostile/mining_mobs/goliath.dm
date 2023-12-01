@@ -218,14 +218,21 @@
 		if((!QDELETED(spawner) && spawner.faction_check_mob(L)) || L.stat == DEAD)
 			continue
 		visible_message(span_danger("[src] grabs hold of [L]!"))
-		L.Stun(100)
-		L.adjustBruteLoss(rand(10,15))
+		INVOKE_ASYNC(src, PROC_REF(handle_tendril_grab), L)
 		latched = TRUE
 	if(!latched)
 		retract()
 	else
 		deltimer(timerid)
 		timerid = addtimer(CALLBACK(src, PROC_REF(retract)), 10, TIMER_STOPPABLE)
+
+/obj/effect/temp_visual/goliath_tentacle/proc/handle_tendril_grab(mob/living/L)
+	L.adjustBruteLoss(rand(10,15))
+	L.Knockdown(5 SECONDS)
+	L.Stun(3 SECONDS)
+	L.add_movespeed_modifier(/datum/movespeed_modifier/goliath_tendril)
+	sleep(8.5 SECONDS)
+	L.remove_movespeed_modifier(/datum/movespeed_modifier/goliath_tendril)
 
 /obj/effect/temp_visual/goliath_tentacle/proc/retract()
 	icon_state = "Goliath_tentacle_retract"

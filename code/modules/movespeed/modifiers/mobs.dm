@@ -126,3 +126,6 @@
 
 /datum/movespeed_modifier/morph_disguised
 	multiplicative_slowdown = 1
+
+/datum/movespeed_modifier/goliath_tendril
+	multiplicative_slowdown = 0.5
