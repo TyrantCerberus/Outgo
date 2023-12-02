@@ -22,13 +22,16 @@
 	response_harm_continuous = "kicks"
 	response_harm_simple = "kick"
 	density = FALSE
-	ventcrawler = VENTCRAWLER_ALWAYS
 	pass_flags = PASSTABLE | PASSMOB
 	mob_size = MOB_SIZE_TINY
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
 	gold_core_spawnable = FRIENDLY_SPAWN
 
-/mob/living/simple_animal/opossum/poppy
+/mob/living/simple_animal/possum/Initialize()
+	. = ..()
+	ADD_TRAIT(src, TRAIT_VENTCRAWLER_ALWAYS, INNATE_TRAIT)
+
+/mob/living/simple_animal/possum/poppy
 	name = "Poppy the Safety Possum"
 	desc = "Safety first!"
 	icon_state = "poppypossum"
