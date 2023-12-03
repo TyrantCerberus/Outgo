@@ -159,8 +159,8 @@
 			body += "\[ Construct: <A href='?_src_=holder;[HrefToken()];simplemake=constructjuggernaut;mob=[REF(M)]'>Juggernaut</A> , "
 			body += "<A href='?_src_=holder;[HrefToken()];simplemake=constructartificer;mob=[REF(M)]'>Artificer</A> , "
 			body += "<A href='?_src_=holder;[HrefToken()];simplemake=constructwraith;mob=[REF(M)]'>Wraith</A> \] "
-			body += "<A href='?_src_=holder;[HrefToken()];simplemake=shade;mob=[REF(M)]'>Shade</A>"
-			body += "<A href='?_src_=holder;[HrefToken()];simplemake=possum;mob=[REF(M)]'>Possum</A>"
+			body += "<A href='?_src_=holder;[HrefToken()];simplemake=shade;mob=[REF(M)]'>Shade</A> | "
+			body += "<A href='?_src_=holder;[HrefToken()];simplemake=possum;mob=[REF(M)]'>Possum</A> | "
 			body += "<A href='?_src_=holder;[HrefToken()];simplemake=poppypossum;mob=[REF(M)]'>Poppy</A>"
 			body += "<br>"
 
