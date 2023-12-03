@@ -285,6 +285,10 @@
 				M.change_mob_type( /mob/living/simple_animal/hostile/construct/wraith , null, null, delmob )
 			if("shade")
 				M.change_mob_type( /mob/living/simple_animal/shade , null, null, delmob )
+			if("possum")
+				M.change_mob_type( /mob/living/simple_animal/possum , null, null, delmob )
+			if("poppypossum")
+				M.change_mob_type( /mob/living/simple_animal/possum/poppy , null, null, delmob )
 
 	else if(href_list["boot2"])
 		if(!check_rights(R_ADMIN))
