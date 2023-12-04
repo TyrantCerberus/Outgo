@@ -484,6 +484,9 @@
 	var/obj/item/organ/brain/brain = owner.getorganslot(ORGAN_SLOT_BRAIN)
 	if(brain)
 		brain.zone = BODY_ZONE_CHEST
+		for (var/datum/brain_trauma/trauma in brain.traumas)
+			if !(istype(trauma, /datum/brain_trauma/magic) || (istype(trauma, /datum/brain_trauma/mild/phobia) && (/datum/quirk/phobia in owner.quirks)) || istype(trauma, /datum/brain_trauma/mild/phobia/ocky_icky) || /datum/brain_trauma/severe/paralysis/paraplegic)
+				qdel(trauma)
 
 	var/obj/item/bodypart/head/head = owner.get_bodypart(BODY_ZONE_HEAD)
 	if(head)
