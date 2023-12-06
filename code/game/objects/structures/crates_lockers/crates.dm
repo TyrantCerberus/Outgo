@@ -115,6 +115,8 @@
 		new /obj/effect/spawner/lootdrop/garbage_spawner(src)
 		if(prob(12))
 			new /obj/item/storage/bag/trash/filled(src)
+	if(prob(5))
+		new /mob/living/simple_animal/possum(src)
 	new /obj/effect/spawner/scatter/grime(loc)
 
 /obj/structure/closet/crate/internals
