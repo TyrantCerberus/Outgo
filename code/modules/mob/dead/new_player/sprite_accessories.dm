@@ -2076,6 +2076,50 @@
 	name = "Witch Wing"
 	icon_state = "witchwing"
 
+/datum/sprite_accessory/moth_wings/rosy
+	name = "Rosy"
+	icon_state = "rosy"
+
+/datum/sprite_accessory/moth_wings/feathery
+	name = "Feathery"
+	icon_state = "feathery"
+
+/datum/sprite_accessory/moth_wings/brown
+	name = "Brown"
+	icon_state = "brown"
+
+/datum/sprite_accessory/moth_wings/plasmafire
+	name = "Plasmafire"
+	icon_state = "plasmafire"
+
+/datum/sprite_accessory/moth_wings/moffra
+	name = "Moffra"
+	icon_state = "moffra"
+
+/datum/sprite_accessory/moth_wings/aspen
+	name = "Aspen"
+	icon_state = "aspen"
+
+/datum/sprite_accessory/moth_wings/twilight
+	name = "Twilight"
+	icon_state = "twilight"
+
+/datum/sprite_accessory/moth_wings/metamorphosis
+	name = "Metamorphosis"
+	icon_state = "metamorphosis"
+
+/datum/sprite_accessory/moth_wings/cyberbliss
+	name = "Cyberbliss"
+	icon_state = "cyber"
+
+/datum/sprite_accessory/moth_wings/maple
+	name = "Maple"
+	icon_state = "maple"
+
+/datum/sprite_accessory/moth_wings/tetractys
+	name = "Tetractys"
+	icon_state = "tetractys"
+
 /datum/sprite_accessory/moth_antennae //Finally splitting the sprite
 	icon = 'icons/mob/moth_antennae.dmi'
 	color_src = null
@@ -2143,6 +2187,54 @@
 /datum/sprite_accessory/moth_antennae/regal
 	name = "Regal"
 	icon_state = "regal"
+
+/datum/sprite_accessory/moth_antennae/rosy
+	name = "Rosy"
+	icon_state = "rosy"
+
+/datum/sprite_accessory/moth_antennae/feathery
+	name = "Feathery"
+	icon_state = "feathery"
+
+/datum/sprite_accessory/moth_antennae/brown
+	name = "Brown"
+	icon_state = "brown"
+
+/datum/sprite_accessory/moth_antennae/plasmafire
+	name = "Plasmafire"
+	icon_state = "plasmafire"
+
+/datum/sprite_accessory/moth_antennae/moffra
+	name = "Moffra"
+	icon_state = "moffra"
+
+/datum/sprite_accessory/moth_antennae/aspen
+	name = "Aspen"
+	icon_state = "aspen"
+
+/datum/sprite_accessory/moth_antennae/twilight
+	name = "Twilight"
+	icon_state = "twilight"
+
+/datum/sprite_accessory/moth_antennae/metamorphosis_pink
+	name = "Metamorphosis (Pink)"
+	icon_state = "metamorphosis_p"
+
+/datum/sprite_accessory/moth_antennae/metamorphosis_blue
+	name = "Metamorphosis (Blue)"
+	icon_state = "metamorphosis_b"
+
+/datum/sprite_accessory/moth_antennae/cyberbliss
+	name = "Cyberbliss"
+	icon_state = "cyber"
+
+/datum/sprite_accessory/moth_antennae/maple
+	name = "Maple"
+	icon_state = "maple"
+
+/datum/sprite_accessory/moth_antennae/tetractys
+	name = "Tetractys"
+	icon_state = "tetractys"
 
 /datum/sprite_accessory/moth_markings // the markings that moths can have. finally something other than the boring tan
 	icon = 'icons/mob/moth_markings.dmi'
