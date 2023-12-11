@@ -2092,6 +2092,10 @@
 	name = "Plasmafire"
 	icon_state = "plasmafire"
 
+/datum/sprite_accessory/moth_wings/moffra
+	name = "Moffra"
+	icon_state = "moffra"
+
 /datum/sprite_accessory/moth_antennae //Finally splitting the sprite
 	icon = 'icons/mob/moth_antennae.dmi'
 	color_src = null
@@ -2175,6 +2179,10 @@
 /datum/sprite_accessory/moth_antennae/plasmafire
 	name = "Plasmafire"
 	icon_state = "plasmafire"
+
+/datum/sprite_accessory/moth_antennae/moffra
+	name = "Moffra"
+	icon_state = "moffra"
 
 /datum/sprite_accessory/moth_markings // the markings that moths can have. finally something other than the boring tan
 	icon = 'icons/mob/moth_markings.dmi'
