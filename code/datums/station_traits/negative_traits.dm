@@ -235,3 +235,25 @@
 			new blood_type(get_turf(pick(orange(location, 2))))
 
 	new /obj/effect/decal/cleanable/blood/gibs/torso(last_location)
+
+/datum/station_trait/ultraparanoia
+	name = "Ultraparanoia"
+	trait_type = STATION_TRAIT_NEGATIVE
+	weight = 1 //should hopefully be rare
+	show_in_report = TRUE
+	report_message = "Due to rising security concerns, Nanotrasen have made a deal with the space-military space-industrial complex to provide all on-station employees with personal firearms."
+
+/datum/station_trait/ultraparanoia/New()
+	. = ..()
+	RegisterSignal(SSdcs, COMSIG_GLOB_JOB_AFTER_SPAWN, PROC_REF(on_job_after_spawn))
+
+/datum/station_trait/ultraparanoia/proc/on_job_after_spawn(datum/source, datum/job/job, mob/living/spawned_mob)
+	SIGNAL_HANDLER
+
+	//give them the gat
+	var/obj/item/gun/ballistic/automatic/pistol/m1911/gun = new /obj/item/gun/ballistic/automatic/pistol/m1911(spawned_mob)
+	spawned_mob.equip_to_slot_if_possible(gun, ITEM_SLOT_BACKPACK, FALSE, TRUE)
+
+	//give them bullets
+	var/obj/item/ammo_box/magazine/m45/ammo = new /obj/item/ammo_box/magazine/m45(spawned_mob)
+	spawned_mob.equip_to_slot_if_possible(ammo, ITEM_SLOT_BACKPACK, FALSE, TRUE)
