@@ -2112,6 +2112,14 @@
 	name = "Cyberbliss"
 	icon_state = "cyber"
 
+/datum/sprite_accessory/moth_wings/maple
+	name = "Maple"
+	icon_state = "maple"
+
+/datum/sprite_accessory/moth_wings/tetractys
+	name = "Tetractys"
+	icon_state = "tetractys"
+
 /datum/sprite_accessory/moth_antennae //Finally splitting the sprite
 	icon = 'icons/mob/moth_antennae.dmi'
 	color_src = null
@@ -2219,6 +2227,14 @@
 /datum/sprite_accessory/moth_antennae/cyberbliss
 	name = "Cyberbliss"
 	icon_state = "cyber"
+
+/datum/sprite_accessory/moth_antennae/maple
+	name = "Maple"
+	icon_state = "maple"
+
+/datum/sprite_accessory/moth_antennae/tetractys
+	name = "Tetractys"
+	icon_state = "tetractys"
 
 /datum/sprite_accessory/moth_markings // the markings that moths can have. finally something other than the boring tan
 	icon = 'icons/mob/moth_markings.dmi'
