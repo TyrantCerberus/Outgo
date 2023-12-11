@@ -2100,6 +2100,18 @@
 	name = "Aspen"
 	icon_state = "aspen"
 
+/datum/sprite_accessory/moth_wings/twilight
+	name = "Twilight"
+	icon_state = "twilight"
+
+/datum/sprite_accessory/moth_wings/metamorphosis
+	name = "Metamorphosis"
+	icon_state = "metamorphosis"
+
+/datum/sprite_accessory/moth_wings/cyberbliss
+	name = "Cyberbliss"
+	icon_state = "cyber"
+
 /datum/sprite_accessory/moth_antennae //Finally splitting the sprite
 	icon = 'icons/mob/moth_antennae.dmi'
 	color_src = null
@@ -2188,9 +2200,25 @@
 	name = "Moffra"
 	icon_state = "moffra"
 
-/datum/sprite_accessory/moth_wings/aspen
+/datum/sprite_accessory/moth_antennae/aspen
 	name = "Aspen"
 	icon_state = "aspen"
+
+/datum/sprite_accessory/moth_antennae/twilight
+	name = "Twilight"
+	icon_state = "twilight"
+
+/datum/sprite_accessory/moth_antennae/metamorphosis_pink
+	name = "Metamorphosis (Pink)"
+	icon_state = "metamorphosis_p"
+
+/datum/sprite_accessory/moth_antennae/metamorphosis_blue
+	name = "Metamorphosis (Blue)"
+	icon_state = "metamorphosis_b"
+
+/datum/sprite_accessory/moth_antennae/cyberbliss
+	name = "Cyberbliss"
+	icon_state = "cyber"
 
 /datum/sprite_accessory/moth_markings // the markings that moths can have. finally something other than the boring tan
 	icon = 'icons/mob/moth_markings.dmi'
