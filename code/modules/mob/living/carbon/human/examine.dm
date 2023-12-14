@@ -111,6 +111,9 @@
 		if(100 to 200)
 			. += span_warning("[t_He] [t_is] twitching ever so slightly.")
 
+	if(HAS_TRAIT(src, TRAIT_FULL_OF_PILK))
+		. += span_notice("[t_He] [t_is] is noticably full of pilk.")
+
 	var/appears_dead = FALSE
 	var/just_sleeping = FALSE
 

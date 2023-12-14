@@ -1049,6 +1049,14 @@
 	glass_desc = "White and nutritious goodness mixed with some refreshing cola."
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
+/datum/reagent/consumable/pilk/on_mob_metabolize(mob/living/L)
+	..()
+	ADD_TRAIT(L, TRAIT_FULL_OF_PILK, src)
+
+/datum/reagent/consumable/pilk/on_mob_end_metabolize(mob/living/L)
+	REMOVE_TRAIT(L, TRAIT_FULL_OF_PILK, src)
+	..()
+
 /datum/reagent/consumable/pilk/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
 	if(M.getBruteLoss() && DT_PROB(10, delta_time))
 		M.heal_bodypart_damage(brute = 1)
