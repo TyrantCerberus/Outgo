@@ -1038,3 +1038,21 @@
 		M.adjustOxyLoss(-0.5 * REM * delta_time, 0)
 	..()
 	. = TRUE
+
+/datum/reagent/consumable/pilk
+	name = "Pilk"
+	description = "A mixture of milk and space cola."
+	color = "#d6b99c" // rgb: 214, 185, 156
+	taste_description = "sweet cream"
+	glass_icon_state = "glass_offwhite"
+	glass_name = "glass of pilk"
+	glass_desc = "White and nutritious goodness mixed with some refreshing cola."
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+
+/datum/reagent/consumable/pilk/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
+	if(M.getBruteLoss() && DT_PROB(10, delta_time))
+		M.heal_bodypart_damage(brute = 1)
+		. = TRUE
+	if(prob(10))
+		M.say(pick("Doridoridoridori!", "Burenya~!"), forced = /datum/reagent/consumable/pilk)
+	return ..() || .
