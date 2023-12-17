@@ -1044,7 +1044,7 @@
 	description = "A mixture of milk and space cola."
 	color = "#d6b99c" // rgb: 214, 185, 156
 	taste_description = "sweet cream"
-	glass_icon_state = "glass_pilk"
+	glass_icon_state = "pilk"
 	glass_name = "glass of pilk"
 	glass_desc = "White and nutritious goodness mixed with some refreshing cola. Rumored to be a favorite of a certain short, vampiric felinid."
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
