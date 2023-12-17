@@ -321,6 +321,8 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_CULT_EYES "cult_eyes"
 /// Special examine if eyes are visible
 #define TRAIT_BLOODSHOT_EYES "bloodshot_eyes"
+/// Special examine if pilk has been ingested
+#define TRAIT_FULL_OF_PILK "full_of_pilk"
 /// This mob should never close UI even if it doesn't have a client
 #define TRAIT_PRESERVE_UI_WITHOUT_CLIENT "preserve_ui_without_client"
 /// Lets the mob use flight potions

@@ -614,6 +614,10 @@
 	required_reagents = list(/datum/reagent/consumable/ethanol/mushi_kombucha = 5, /datum/reagent/consumable/ethanol/grappa = 2, /datum/reagent/consumable/lemonjuice = 2, /datum/reagent/gold = 1)
 	mix_message = "The mixture turns a deep golden hue."
 
-/datum/chemical_reaction/justicar_juice
+/datum/chemical_reaction/drink/justicar_juice
 	results = list(/datum/reagent/consumable/ethanol/coggernac = 4)
 	required_reagents = list(/datum/reagent/consumable/lemonjuice = 1, /datum/reagent/consumable/ethanol/cognac = 1, /datum/reagent/iron = 1, /datum/reagent/consumable/ethanol/tequila_sunrise = 1)
+
+/datum/chemical_reaction/drink/pilk
+	results = list(/datum/reagent/consumable/pilk = 2)
+	required_reagents = list(/datum/reagent/consumable/space_cola = 1, /datum/reagent/consumable/milk = 1)
