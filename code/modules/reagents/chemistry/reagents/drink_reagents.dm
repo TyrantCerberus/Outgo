@@ -1062,5 +1062,5 @@
 		M.heal_bodypart_damage(brute = 1)
 		. = TRUE
 	if(prob(5))
-		M.say(pick("Doridoridoridori!", "Burenya~!"), forced = /datum/reagent/consumable/pilk)
+		M.say(pick("Doridoridoridori!", "Burenya~!", "Nyanyanya!", "Mm-mudamuda!", "Myahaha..."), forced = /datum/reagent/consumable/pilk)
 	return ..() || .
