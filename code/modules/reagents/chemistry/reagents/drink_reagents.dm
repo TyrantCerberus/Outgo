@@ -1061,6 +1061,6 @@
 	if(M.getBruteLoss() && DT_PROB(10, delta_time))
 		M.heal_bodypart_damage(brute = 1)
 		. = TRUE
-	if(prob(10))
+	if(prob(5))
 		M.say(pick("Doridoridoridori!", "Burenya~!"), forced = /datum/reagent/consumable/pilk)
 	return ..() || .
