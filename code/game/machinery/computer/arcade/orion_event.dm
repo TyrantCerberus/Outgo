@@ -507,7 +507,7 @@
 		fuel = rand(5 + gamer_skill_rands,15 + gamer_skill_rands)
 		food = rand(5 + gamer_skill_rands,15 + gamer_skill_rands)
 		text = "You successfully raided the spaceport! You gained [fuel] Fuel and [food] Food! (+[fuel] fuel, +[food] food)"
-		usr?.mind?.adjust_experience(/datum/skill/gaming, 10)
+		usr?.mind?.adjust_experience(/datum/skill/gaming, 20)
 	else
 		fuel = rand(-5,-15)
 		food = rand(-5,-15)

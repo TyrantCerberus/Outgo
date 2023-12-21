@@ -135,7 +135,7 @@ GLOBAL_LIST_INIT(orion_events, generate_orion_events())
 		gamers[gamer] = ORION_GAMER_PAMPHLET //next report send a pamph
 
 		gamer.client.give_award(/datum/award/achievement/misc/gamer, gamer) // PSYCH REPORT NOTE: patient kept rambling about how they did it for an "achievement", recommend continued holding for observation
-		gamer.mind?.adjust_experience(/datum/skill/gaming, 50) // cheevos make u better
+		gamer.mind?.adjust_experience(/datum/skill/gaming, 100) // cheevos make u better
 
 		if(!isnull(GLOB.data_core.general))
 			for(var/datum/data/record/insanity_records in GLOB.data_core.general)
@@ -239,7 +239,7 @@ GLOBAL_LIST_INIT(orion_events, generate_orion_events())
 				win(gamer)
 				xp_gained += 34
 				return
-			gamer.mind.adjust_experience(/datum/skill/gaming, xp_gained+1)
+			gamer.mind.adjust_experience(/datum/skill/gaming, xp_gained+2)
 			food -= (alive+lings_aboard)*2
 			fuel -= 5
 			turns += 1
@@ -370,7 +370,7 @@ GLOBAL_LIST_INIT(orion_events, generate_orion_events())
 		name = "The Orion Trail"
 		desc = "Learn how our ancestors got to Orion, and have fun in the process!"
 
-	gamer?.mind?.adjust_experience(/datum/skill/gaming, 10)//learning from your mistakes is the first rule of roguelikes
+	gamer?.mind?.adjust_experience(/datum/skill/gaming, 20)//learning from your mistakes is the first rule of roguelikes
 	return reason
 
 //Add Random/Specific crewmember
