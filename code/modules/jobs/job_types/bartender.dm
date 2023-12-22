@@ -39,8 +39,3 @@
 	suit = /obj/item/clothing/suit/armor/vest
 	backpack_contents = list(/obj/item/storage/box/beanbag=1)
 	shoes = /obj/item/clothing/shoes/laceup
-
-/datum/outfit/job/bartender/post_equip(mob/living/carbon/human/H, visualsOnly)
-	. = ..()
-
-	var/obj/item/card/id/W = H.wear_id

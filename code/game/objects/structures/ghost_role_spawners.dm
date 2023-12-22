@@ -803,10 +803,6 @@
 	id = /obj/item/card/id
 	card_access = /datum/card_access/job/bartender
 
-/datum/outfit/spacebartender/post_equip(mob/living/carbon/human/H, visualsOnly)
-	. = ..()
-	var/obj/item/card/id/id_card = H.wear_id
-
 /obj/effect/mob_spawn/human/skeleton/alive
 	death = FALSE
 	roundstart = FALSE
