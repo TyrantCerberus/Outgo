@@ -185,7 +185,6 @@
 	slot_flags = ITEM_SLOT_BELT
 	spawn_type = /obj/item/clothing/mask/cigarette/space_cigarette
 	custom_price = PAYCHECK_MEDIUM
-	age_restricted = TRUE
 	contents_tag = "cigarette"
 	///for cigarette overlay
 	var/candy = FALSE
@@ -342,7 +341,6 @@
 	contents_tag = "candy cigarette"
 	spawn_type = /obj/item/clothing/mask/cigarette/candy
 	candy = TRUE
-	age_restricted = FALSE
 
 /obj/item/storage/fancy/cigarettes/cigpack_candy/Initialize()
 	. = ..()
