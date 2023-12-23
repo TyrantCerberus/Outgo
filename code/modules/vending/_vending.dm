@@ -32,8 +32,6 @@
 	var/custom_price
 	///Does the item have a custom premium price override
 	var/custom_premium_price
-	///Whether spessmen with an ID with an age below AGE_MINOR (20 by default) can buy this item
-	var/age_restricted = FALSE
 	///Whether the product can be recolored by the GAGS system
 	var/colorable
 
@@ -323,7 +321,6 @@ GLOBAL_LIST_EMPTY(vending_products)
 		///Prices of vending machines are all increased uniformly.
 		R.custom_price = initial(temp.custom_price)
 		R.custom_premium_price = initial(temp.custom_premium_price)
-		R.age_restricted = initial(temp.age_restricted)
 		R.colorable = !!(initial(temp.greyscale_config) && initial(temp.greyscale_colors) && (initial(temp.flags_1) & IS_PLAYER_COLORABLE_1))
 		recordlist += R
 
@@ -869,15 +866,6 @@ GLOBAL_LIST_EMPTY(vending_products)
 			return
 		else if (!C.registered_account)
 			say("No account found.")
-			flick(icon_deny,src)
-			vend_ready = TRUE
-			return
-		else if(age_restrictions && R.age_restricted && (!C.registered_age || C.registered_age < AGE_MINOR))
-			say("You are not of legal age to purchase [R.name].")
-			if(!(usr in GLOB.narcd_underages))
-				Radio.set_frequency(FREQ_SECURITY)
-				Radio.talk_into(src, "SECURITY ALERT: Underaged crewmember [usr] recorded attempting to purchase [R.name] in [get_area(src)]. Please watch for substance abuse.", FREQ_SECURITY)
-				GLOB.narcd_underages += usr
 			flick(icon_deny,src)
 			vend_ready = TRUE
 			return
