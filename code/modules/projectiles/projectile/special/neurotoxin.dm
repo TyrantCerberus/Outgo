@@ -12,4 +12,7 @@
 	if(isalien(target))
 		paralyze = 0
 		nodamage = TRUE
+	if(ishuman(target))
+		var/mob/living/carbon/human/H = target
+		paralyze = clamp((paralyze - H.getarmor(null, BIO)), 10, 100) //minimum stun time can be reduced to is 1 second
 	return ..()
