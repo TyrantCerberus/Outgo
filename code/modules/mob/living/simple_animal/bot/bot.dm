@@ -1084,6 +1084,3 @@ Pass a positive integer as an argument to override a bot's default speed.
 
 	if(!length(path))
 		set_path(null)
-
-/mob/living/simple_animal/bot/rust_heretic_act()
-	adjustBruteLoss(400)

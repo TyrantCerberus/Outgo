@@ -23,8 +23,7 @@
  * Toy Daggers
  * Squeaky Brain
  * Broken Radio
- * Fake heretic codex
- * Fake Pierced Reality
+ * Fake heretic codex (not removed on purpose)
  * Intento
  */
 
@@ -1547,25 +1546,6 @@
 /obj/item/toy/eldritch_book/update_icon_state()
 	icon_state = book_open ? "book_open" : "book"
 	return ..()
-
-/*
- * Fake tear
- */
-
-/obj/item/toy/reality_pierce
-	name = "Pierced reality"
-	desc = "Hah. You thought it was the real deal!"
-	icon = 'icons/effects/eldritch.dmi'
-	icon_state = "pierced_illusion"
-	item_flags = NO_PIXEL_RANDOM_DROP
-
-/obj/item/storage/box/heretic_box
-	name = "box of pierced realities"
-	desc = "A box containing toys resembling pierced realities."
-
-/obj/item/storage/box/heretic_box/PopulateContents()
-	for(var/i in 1 to rand(1,4))
-		new /obj/item/toy/reality_pierce(src)
 
 /obj/item/toy/foamfinger
 	name = "foam finger"

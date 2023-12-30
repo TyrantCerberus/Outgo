@@ -73,7 +73,7 @@
 	var/delay = 0
 
 	/// Judges the amount of antagonists to apply, for both solo and teams.
-	/// Note that some antagonists (such as traitors, lings, heretics, etc) will add more based on how many times they've been scaled.
+	/// Note that some antagonists (such as traitors, lings, etc) will add more based on how many times they've been scaled.
 	/// Written as a linear equation--ceil(x/denominator) + offset, or as a fixed constant.
 	/// If written as a linear equation, will be in the form of `list("denominator" = denominator, "offset" = offset).
 	var/antag_cap = 0
