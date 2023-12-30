@@ -231,7 +231,7 @@ In my current plan for it, 'solid' will be defined as anything with density == 1
 		if(ishuman(clong))
 			var/mob/living/carbon/human/H = clong
 			if(H.body_position == LYING_DOWN) // Unless they're specifically lying down.
-				return ..()
+				return
 		penetrate(clong)
 		return ..()
 
