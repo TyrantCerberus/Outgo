@@ -1,5 +1,3 @@
-#define THERMAL_REGULATOR_COST 18 // the cost per tick for the thermal regulator
-
 //Note: Everything in modules/clothing/spacesuits should have the entire suit grouped together.
 //      Meaning the the suit is defined directly after the corrisponding helmet. Just like below!
 /obj/item/clothing/head/helmet/space
@@ -45,3 +43,107 @@
 	strip_delay = 80
 	equip_delay_other = 80
 	resistance_flags = NONE
+
+//////// Softsuits ////////
+
+/obj/item/clothing/head/helmet/space/soft
+	name = "\improper EVA softsuit helmet"
+	desc = "A fitted helmet providing temporary protection from the vaccuum of space, this one is intended to accompany a suit of the same make. \
+			It is rated as having a maximum exposure time of 5 minutes, after which it will need to 'recharge' in a pressurised environment. \
+			A quirk of its design means it must be worn in order to recharge."
+	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 100, RAD = 30, FIRE = 0, ACID = 0)
+	var/suit_integrity = 300 //at a loss rate of 1 per second exposed, this amounts to 5 minutes maximum exposure duration
+	var/integrity_has_failed = FALSE //has this suit lost its protections?
+	var/regeneration_timer
+
+/obj/item/clothing/head/helmet/space/soft/Initialize()
+	. = ..()
+	RegisterSignal(src, COMSIG_ITEM_EQUIPPED, PROC_REF(on_equip))
+	RegisterSignal(src, COMSIG_ITEM_POST_UNEQUIP, PROC_REF(on_unequip))
+
+/obj/item/clothing/head/helmet/space/soft/proc/on_equip()
+	SIGNAL_HANDLER
+	START_PROCESSING(SSprocessing, src)
+
+/obj/item/clothing/head/helmet/space/soft/proc/on_unequip()
+	SIGNAL_HANDLER
+	STOP_PROCESSING(SSprocessing, src)
+	if(regeneration_timer)
+		deltimer(regeneration_timer)
+
+/obj/item/clothing/head/helmet/space/soft/process()
+	var/turf/open/T = get_turf(src)
+	var/pressure = T.air.return_pressure()
+	if(pressure < WARNING_LOW_PRESSURE)
+		if(suit_integrity > 0)
+			suit_integrity--
+			if(suit_integrity == 60) //1 minute of protection left
+				src.audible_message(span_warning("The [src] squeaks unnervingly."))
+			if(suit_integrity <= 0 && !(integrity_has_failed))
+				src.audible_message(span_boldwarning("The [src] creaks and hisses, its protections have failed!"))
+				clothing_flags = THICKMATERIAL | SNUG_FIT
+				cold_protection = null
+				integrity_has_failed = TRUE
+		if(regeneration_timer)
+			deltimer(regeneration_timer)
+	else if(pressure >= 101 && !(regeneration_timer)) //pressure requirement set slightly lower than ONE_ATMOSPHERE
+		regeneration_timer = addtimer(CALLBACK(src, PROC_REF(on_timer_expire)), 60 SECONDS, TIMER_STOPPABLE)
+		src.audible_message(span_notice("The [src] sounds as if it's inhaling as it begins to recharge."))
+
+/obj/item/clothing/head/helmet/space/soft/proc/on_timer_expire()
+	clothing_flags = STOPSPRESSUREDAMAGE | THICKMATERIAL | SNUG_FIT
+	cold_protection = HEAD
+	suit_integrity = 300
+	integrity_has_failed = FALSE
+	src.audible_message(span_notice("The [src] warbles like rubber. It seems to have recharged."))
+
+/obj/item/clothing/suit/space/soft
+	name = "\improper EVA softsuit"
+	desc = "A tight, flexible suit that uses microcell technology to provide temporary protection from exposure to the vaccuum of space. \
+			This one is rated as having a maximum exposure time of 5 minutes, after which it will need to 'recharge' in a pressurised environment. \
+			A quirk of its design means it must be worn in order to recharge."
+	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 100, RAD = 30, FIRE = 0, ACID = 0)
+	var/suit_integrity = 300
+	var/integrity_has_failed = FALSE
+	var/regeneration_timer
+
+/obj/item/clothing/suit/space/soft/Initialize()
+	. = ..()
+	RegisterSignal(src, COMSIG_ITEM_EQUIPPED, PROC_REF(on_equip))
+	RegisterSignal(src, COMSIG_ITEM_POST_UNEQUIP, PROC_REF(on_unequip))
+
+/obj/item/clothing/suit/space/soft/proc/on_equip()
+	SIGNAL_HANDLER
+	START_PROCESSING(SSprocessing, src)
+
+/obj/item/clothing/suit/space/soft/proc/on_unequip()
+	SIGNAL_HANDLER
+	STOP_PROCESSING(SSprocessing, src)
+	if(regeneration_timer)
+		deltimer(regeneration_timer)
+
+/obj/item/clothing/suit/space/soft/process()
+	var/turf/open/T = get_turf(src)
+	var/pressure = T.air.return_pressure()
+	if(pressure < WARNING_LOW_PRESSURE)
+		if(suit_integrity > 0)
+			suit_integrity--
+			if(suit_integrity == 60)
+				src.visible_message(span_warning("The [src] has begun to visibly deflate."))
+			if(suit_integrity <= 0 && !(integrity_has_failed))
+				src.audible_message(span_boldwarning("The [src] creaks and hisses, its protections have failed!"))
+				clothing_flags = THICKMATERIAL
+				cold_protection = null
+				integrity_has_failed = TRUE
+		if(regeneration_timer)
+			deltimer(regeneration_timer)
+	else if(pressure >= 101 && !(regeneration_timer))
+		regeneration_timer = addtimer(CALLBACK(src, PROC_REF(on_timer_expire)), 60 SECONDS, TIMER_STOPPABLE)
+		src.audible_message(span_notice("The [src] sounds as if it's inhaling as it begins to recharge."))
+
+/obj/item/clothing/suit/space/soft/proc/on_timer_expire()
+	clothing_flags = STOPSPRESSUREDAMAGE | THICKMATERIAL
+	cold_protection = CHEST | GROIN | LEGS | FEET | ARMS | HANDS
+	suit_integrity = 300
+	integrity_has_failed = FALSE
+	src.visible_message(span_notice("The [src] bulks back up. It seems to have recharged."))
