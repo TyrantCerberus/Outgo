@@ -88,7 +88,7 @@
 			deltimer(regeneration_timer)
 	else if(pressure >= 101 && !(regeneration_timer)) //pressure requirement set slightly lower than ONE_ATMOSPHERE
 		regeneration_timer = addtimer(CALLBACK(src, PROC_REF(on_timer_expire)), 60 SECONDS, TIMER_STOPPABLE)
-		src.audible_message(span_notice"The [src] sounds as if it's inhaling as it begins to recharge."))
+		src.audible_message(span_notice("The [src] sounds as if it's inhaling as it begins to recharge."))
 
 /obj/item/clothing/head/helmet/space/soft/proc/on_timer_expire()
 	clothing_flags = STOPSPRESSUREDAMAGE | THICKMATERIAL | SNUG_FIT
@@ -139,7 +139,7 @@
 			deltimer(regeneration_timer)
 	else if(pressure >= 101 && !(regeneration_timer))
 		regeneration_timer = addtimer(CALLBACK(src, PROC_REF(on_timer_expire)), 60 SECONDS, TIMER_STOPPABLE)
-		src.audible_message(span_notice"The [src] sounds as if it's inhaling as it begins to recharge."))
+		src.audible_message(span_notice("The [src] sounds as if it's inhaling as it begins to recharge."))
 
 /obj/item/clothing/suit/space/soft/proc/on_timer_expire()
 	clothing_flags = STOPSPRESSUREDAMAGE | THICKMATERIAL
