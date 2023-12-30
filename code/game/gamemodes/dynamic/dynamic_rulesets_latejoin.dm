@@ -140,30 +140,12 @@
 
 //////////////////////////////////////////////
 //                                          //
-//             HERETIC SMUGGLER             //
-//                                          //
-//////////////////////////////////////////////
-
-/datum/dynamic_ruleset/latejoin/heretic_smuggler
-	name = "Heretic Smuggler"
-	antag_datum = /datum/antagonist/heretic
-	antag_flag = ROLE_HERETIC
-	protected_roles = list("Security Officer", "Warden", "Head of Personnel", "Detective", "Head of Security", "Captain","Prisoner")
-	restricted_roles = list("AI","Cyborg")
-	required_candidates = 1
-	weight = 4
-	cost = 10
-	requirements = list(101,101,101,10,10,10,10,10,10,10)
-	repeatable = TRUE
-
-//////////////////////////////////////////////
-//                                          //
 //               CHANGELING                 //
 //                                          //
 //////////////////////////////////////////////
 
 /datum/dynamic_ruleset/latejoin/changeling
-	name = "Changeling Infiltrator"   //Sorry no idea for a normal name 
+	name = "Changeling Infiltrator"   //Sorry no idea for a normal name
 	antag_datum = /datum/antagonist/changeling
 	antag_flag = ROLE_CHANGELING
 	protected_roles = list("Security Officer", "Warden", "Head of Personnel", "Detective", "Head of Security", "Captain")

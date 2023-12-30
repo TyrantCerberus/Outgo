@@ -93,10 +93,6 @@
 
 #define STATUS_EFFECT_LIMP /datum/status_effect/limp //For when you have a busted leg (or two!) and want additional slowdown when walking on that leg
 
-#define STATUS_EFFECT_AMOK /datum/status_effect/amok //Makes the target automatically strike out at adjecent non-heretics.
-
-#define STATUS_EFFECT_CLOUDSTRUCK /datum/status_effect/cloudstruck //blinds and applies an overlay.
-
 ///Raises click cooldowns for everything you do.
 #define STATUS_EFFECT_WOOZY /datum/status_effect/woozy
 
@@ -151,8 +147,6 @@
 #define STASIS_MACHINE_EFFECT "stasis_machine"
 
 #define STASIS_CHEMICAL_EFFECT "stasis_chemical"
-
-#define STASIS_ASCENSION_EFFECT "heretic_ascension"
 
 // Stasis helpers
 
