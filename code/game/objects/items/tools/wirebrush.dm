@@ -1,6 +1,5 @@
 /**
  * The wirebrush is a tool whose sole purpose is to remove rust from anything that is rusty.
- * Because of the inherent nature of hard countering rust heretics it does it very slowly.
  */
 /obj/item/wirebrush
 	name = "wirebrush"

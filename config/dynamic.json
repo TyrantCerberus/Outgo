@@ -43,10 +43,6 @@
 			"weight": 0
 		},
 
-		"Heretics": {
-			"weight": 0
-		},
-
 		"Wizard": {
 			"weight": 0
 		},
@@ -132,10 +128,6 @@
 		},
 
 		"Provocateur": {
-			"weight": 0
-		},
-
-		"Heretic Smuggler": {
 			"weight": 0
 		}
 	}
