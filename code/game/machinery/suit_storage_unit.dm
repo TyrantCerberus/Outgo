@@ -55,6 +55,12 @@
 	helmet_type = /obj/item/clothing/head/helmet/space/eva
 	mask_type = /obj/item/clothing/mask/breath
 
+/obj/machinery/suit_storage_unit/softsuit
+	name = "softsuit storage unit"
+	suit_type = /obj/item/clothing/suit/space/soft
+	helmet_type = /obj/item/clothing/head/helmet/space/soft
+	mask_type = /obj/item/clothing/mask/breath
+
 /obj/machinery/suit_storage_unit/captain
 	suit_type = /obj/item/clothing/suit/space/hardsuit/swat/captain
 	mask_type = /obj/item/clothing/mask/gas/atmos/captain
