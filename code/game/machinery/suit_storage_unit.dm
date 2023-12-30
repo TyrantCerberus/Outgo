@@ -60,6 +60,7 @@
 	suit_type = /obj/item/clothing/suit/space/soft
 	helmet_type = /obj/item/clothing/head/helmet/space/soft
 	mask_type = /obj/item/clothing/mask/breath
+	storage_type = /obj/item/tank/internals/oxygen
 
 /obj/machinery/suit_storage_unit/captain
 	suit_type = /obj/item/clothing/suit/space/hardsuit/swat/captain
