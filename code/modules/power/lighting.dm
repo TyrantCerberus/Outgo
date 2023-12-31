@@ -437,10 +437,10 @@
 			//We check where the lightsource is located and update the nightshift variables accordingly
 			var/station_area = get_area_name(src)
 			switch(station_area)
-				if("Hydroponics", "Exam Room", "Cryogenics")
+				if("Hydroponics", "Exam Room", "Cryogenics", "Surgery A", "Surgery B", "Surgery C", "Surgery D")
 					nightshift_brightness = NIGHTSHIFT_FULL_BRIGHTNESS
 					nightshift_light_power = NIGHTSHIFT_FULL_LIGHTPOWER
-				if("Kitchen", "Cargo Bay")
+				if("Kitchen", "Cargo Bay", "Robotics Lab")
 					nightshift_brightness = NIGHTSHIFT_INCREASED_BRIGHTNESS
 					nightshift_light_power = NIGHTSHIFT_INCREASED_LIGHTPOWER
 			//Set the nightshift variables
