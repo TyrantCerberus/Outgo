@@ -18,6 +18,16 @@
 //How many reagents the lights can hold
 #define LIGHT_REAGENT_CAPACITY 5
 
+//For variable nightshift lighting
+#define NIGHTSHIFT_DEFAULT_BRIGHTNESS 4
+#define NIGHTSHIFT_DEFAULT_LIGHTPOWER 0.25
+//Used in the kitchen and cargo
+#define NIGHTSHIFT_INCREASED_BRIGHTNESS 6
+#define NIGHTSHIFT_INCREASED_LIGHTPOWER 0.35
+//Used in hydroponics and medbay
+#define NIGHTSHIFT_FULL_BRIGHTNESS 8
+#define NIGHTSHIFT_FULL_LIGHTPOWER 0.45
+
 /obj/item/wallframe/light_fixture
 	name = "light fixture frame"
 	desc = "Used for building lights."
@@ -240,8 +250,8 @@
 
 	var/nightshift_enabled = FALSE //Currently in night shift mode?
 	var/nightshift_allowed = TRUE //Set to FALSE to never let this light get switched to night mode.
-	var/nightshift_brightness = 8
-	var/nightshift_light_power = 0.45
+	var/nightshift_brightness = NIGHTSHIFT_DEFAULT_BRIGHTNESS
+	var/nightshift_light_power = NIGHTSHIFT_DEFAULT_LIGHTPOWER
 	var/nightshift_light_color = "#FFDDCC"
 
 	var/emergency_mode = FALSE // if true, the light is in emergency mode
