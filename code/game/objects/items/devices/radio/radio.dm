@@ -350,6 +350,17 @@
 			to_chat(user, span_notice("The radio can now be attached and modified!"))
 		else
 			to_chat(user, span_notice("The radio can no longer be modified or attached!"))
+	else if(unscrewed && (W.tool_behaviour == TOOL_MULTITOOL))
+		if(!(user.held_items.Find(src)))
+			to_chat(user, span_notice("You must be holding the [src] in order to modify it."))
+			return
+		if(do_after(user, 3 SECONDS, src))
+			var/obj/item/blackmarket_uplink/BMU = new /obj/item/blackmarket_uplink
+			to_chat(user, span_notice("You modify the [src], enabling it to act as a [BMU]."))
+			qdel(src)
+			user.put_in_inactive_hand(BMU)
+		else
+			to_chat(user, span_notice("You fail to modify the [src]."))
 	else
 		return ..()
 
