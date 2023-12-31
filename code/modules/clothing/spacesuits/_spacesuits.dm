@@ -51,6 +51,8 @@
 	desc = "A fitted helmet providing temporary protection from the vaccuum of space, this one is intended to accompany a suit of the same make. \
 			It is rated as having a maximum exposure time of 5 minutes, after which it will need to 'recharge' in a pressurised environment. \
 			A quirk of its design means it must be worn in order to recharge."
+	icon_state = "softsuit_helm"
+	inhand_icon_state = "softsuit_helm"
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 100, RAD = 30, FIRE = 0, ACID = 0)
 	var/suit_integrity = 300 //at a loss rate of 1 per second exposed, this amounts to 5 minutes maximum exposure duration
 	var/integrity_has_failed = FALSE //has this suit lost its protections?
@@ -102,6 +104,8 @@
 	desc = "A tight, flexible suit that uses microcell technology to provide temporary protection from exposure to the vaccuum of space. \
 			This one is rated as having a maximum exposure time of 5 minutes, after which it will need to 'recharge' in a pressurised environment. \
 			A quirk of its design means it must be worn in order to recharge."
+	icon_state = "softsuit"
+	inhand_icon_state = "softsuit"
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 100, RAD = 30, FIRE = 0, ACID = 0)
 	var/suit_integrity = 300
 	var/integrity_has_failed = FALSE
