@@ -48,7 +48,6 @@
 /obj/machinery/computer/cargo/Initialize()
 	. = ..()
 	radio = new /obj/item/radio/headset/headset_cargo(src)
-	SSblackmarket.linked_console = src
 
 /obj/machinery/computer/cargo/Destroy()
 	QDEL_NULL(radio)

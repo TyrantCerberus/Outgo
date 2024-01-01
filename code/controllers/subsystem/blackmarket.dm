@@ -16,8 +16,6 @@ SUBSYSTEM_DEF(blackmarket)
 	var/list/obj/machinery/ltsrbt/telepads = list()
 	/// Currently queued purchases.
 	var/list/queued_purchases = list()
-	/// Linked cargo console for deliveries.
-	var/obj/machinery/computer/cargo/linked_console
 
 /datum/controller/subsystem/blackmarket/Initialize(timeofday)
 	for(var/market in subtypesof(/datum/blackmarket_market))
@@ -88,7 +86,6 @@ SUBSYSTEM_DEF(blackmarket)
 				var/datum/supply_pack/goody/blackmarket/our_order = new /datum/supply_pack/goody/blackmarket
 				our_order.contains = list(purchase.entry.get_item_path())
 				var/datum/supply_order/SO = new(our_order, purchase.buyer, purchase.buyer.GetJob(), purchase.buyer.ckey, "None required.", purchase.buyer.get_bank_account())
-				SO.generateRequisition(get_turf(linked_console))
 				SSshuttle.shoppinglist += SO
 
 				to_chat(recursive_loc_check(purchase.uplink.loc, /mob), span_notice("[purchase.uplink] flashes a message noting that the order will be dispatched aboard the next inbound cargo shuttle, additional 25cr charge pending."))
