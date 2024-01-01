@@ -50,7 +50,7 @@
 		return FALSE
 
 	// Alright, the item has been purchased.
-	var/datum/blackmarket_purchase/purchase = new(src, uplink, shipping_method)
+	var/datum/blackmarket_purchase/purchase = new(src, uplink, buyer, shipping_method)
 
 	// SSblackmarket takes care of the shipping.
 	if(SSblackmarket.queue_item(purchase))
@@ -67,12 +67,15 @@
 	var/item
 	/// The uplink where this purchase was done from.
 	var/obj/item/blackmarket_uplink/uplink
+	/// The person making the purchase.
+	var/mob/living/buyer
 	/// Shipping method used to buy this item.
 	var/method
 
-/datum/blackmarket_purchase/New(_entry, _uplink, _method)
+/datum/blackmarket_purchase/New(_entry, _uplink, _buyer, _method)
 	entry = _entry
 	if(!ispath(entry.item))
 		item = entry.item
 	uplink = _uplink
+	buyer = _buyer
 	method = _method

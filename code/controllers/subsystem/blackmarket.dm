@@ -5,6 +5,7 @@ SUBSYSTEM_DEF(blackmarket)
 
 	/// Descriptions for each shipping methods.
 	var/shipping_method_descriptions = list(
+		SHIPPING_METHOD_LTSRBT="Long-To-Short-Range-Bluespace-Transceiver, a machine that receives items outside the station and then teleports them to the location of the uplink.",
 		SHIPPING_METHOD_LAUNCH="Launches the item at the station from space, cheap but you might not receive your item at all.",
 		SHIPPING_METHOD_CARGO="Sends the item to the station on the next cargo shuttle, discretely disguised as a standard personal purchase."
 	)
@@ -15,7 +16,8 @@ SUBSYSTEM_DEF(blackmarket)
 	var/list/obj/machinery/ltsrbt/telepads = list()
 	/// Currently queued purchases.
 	var/list/queued_purchases = list()
-
+	/// Linked cargo console for deliveries.
+	var/obj/machinery/computer/cargo/linked_console
 
 /datum/controller/subsystem/blackmarket/Initialize(timeofday)
 	for(var/market in subtypesof(/datum/blackmarket_market))
@@ -47,6 +49,29 @@ SUBSYSTEM_DEF(blackmarket)
 			continue
 
 		switch(purchase.method)
+			// Find a ltsrbt pad and make it handle the shipping.
+			if(SHIPPING_METHOD_LTSRBT)
+				if(!telepads.len)
+					continue
+				// Prioritize pads that don't have a cooldown active.
+				var/free_pad_found = FALSE
+				for(var/obj/machinery/ltsrbt/pad in telepads)
+					if(pad.recharge_cooldown)
+						continue
+					pad.add_to_queue(purchase)
+					queued_purchases -= purchase
+					free_pad_found = TRUE
+					break
+
+				if(free_pad_found)
+					continue
+
+				var/obj/machinery/ltsrbt/pad = pick(telepads)
+
+				to_chat(recursive_loc_check(purchase.uplink.loc, /mob), span_notice("[purchase.uplink] flashes a message noting that the order is being processed by [pad]."))
+
+				queued_purchases -= purchase
+				pad.add_to_queue(purchase)
 			if(SHIPPING_METHOD_LAUNCH)
 				var/startSide = pick(GLOB.cardinals)
 				var/turf/T = get_turf(purchase.uplink)
@@ -60,7 +85,12 @@ SUBSYSTEM_DEF(blackmarket)
 				queued_purchases -= purchase
 				qdel(purchase)
 			if(SHIPPING_METHOD_CARGO)
-
+				var/datum/supply_pack/goody/blackmarket/our_order = new /datum/supply_pack/goody/blackmarket
+				our_order.contains += purchase.item
+				var/datum/supply_order/SO = new(our_order, purchase.buyer, purchase.buyer.GetJob(), purchase.buyer.ckey, "None required.", purchase.buyer.get_bank_account())
+				SSshuttle.shoppinglist += SO
+				queued_purchases -= purchase
+				qdel(purchase)
 		if(MC_TICK_CHECK)
 			break
 
@@ -74,6 +104,8 @@ SUBSYSTEM_DEF(blackmarket)
 
 /// Used to add /datum/blackmarket_purchase to queued_purchases var. Returns TRUE when queued.
 /datum/controller/subsystem/blackmarket/proc/queue_item(datum/blackmarket_purchase/P)
+	if(P.method == SHIPPING_METHOD_LTSRBT && !telepads.len)
+		return FALSE
 	queued_purchases += P
 	return TRUE
 
