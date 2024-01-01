@@ -89,6 +89,9 @@ SUBSYSTEM_DEF(blackmarket)
 				our_order.contains = list(purchase.item)
 				var/datum/supply_order/SO = new(our_order, purchase.buyer, purchase.buyer.GetJob(), purchase.buyer.ckey, "None required.", purchase.buyer.get_bank_account())
 				SSshuttle.shoppinglist += SO
+
+				to_chat(recursive_loc_check(purchase.uplink.loc, /mob), span_notice("[purchase.uplink] flashes a message noting that the order will be dispatched aboard the next inbound cargo shuttle."))
+
 				queued_purchases -= purchase
 				qdel(purchase)
 		if(MC_TICK_CHECK)

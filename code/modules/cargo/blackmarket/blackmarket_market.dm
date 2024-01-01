@@ -71,13 +71,13 @@
 	name = "Black Market"
 	shipping = list(SHIPPING_METHOD_LTSRBT = 0,
 					SHIPPING_METHOD_LAUNCH = 0,
-					SHIPPING_METHOD_CARGO = 50)
+					SHIPPING_METHOD_CARGO = 49)
 
 /datum/blackmarket_market/cybernetics
 	name = "Monorail Cybernetics Auction"
 	shipping = list(SHIPPING_METHOD_LTSRBT = 0,
 					SHIPPING_METHOD_LAUNCH = 0,
-					SHIPPING_METHOD_CARGO = 100)
+					SHIPPING_METHOD_CARGO = 99)
 	max_time_left = 3 MINUTES
 
 
