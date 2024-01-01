@@ -86,8 +86,9 @@ SUBSYSTEM_DEF(blackmarket)
 				qdel(purchase)
 			if(SHIPPING_METHOD_CARGO)
 				var/datum/supply_pack/goody/blackmarket/our_order = new /datum/supply_pack/goody/blackmarket
-				our_order.contains = list(purchase.item)
+				our_order.contains = list(purchase.entry)
 				var/datum/supply_order/SO = new(our_order, purchase.buyer, purchase.buyer.GetJob(), purchase.buyer.ckey, "None required.", purchase.buyer.get_bank_account())
+				SO.generateRequisition(get_turf(linked_console))
 				SSshuttle.shoppinglist += SO
 
 				to_chat(recursive_loc_check(purchase.uplink.loc, /mob), span_notice("[purchase.uplink] flashes a message noting that the order will be dispatched aboard the next inbound cargo shuttle."))
