@@ -35,6 +35,10 @@
 	if(isnull(stock))
 		stock = rand(stock_min, stock_max)
 
+// Gets the path for this item.
+/datum/blackmarket_item/proc/get_item_path()
+	return src.item
+
 /// Used for spawning the wanted item, override if you need to do something special with the item.
 /datum/blackmarket_item/proc/spawn_item(loc)
 	return new item(loc)
