@@ -7,7 +7,7 @@ SUBSYSTEM_DEF(blackmarket)
 	var/shipping_method_descriptions = list(
 		SHIPPING_METHOD_LTSRBT="Long-To-Short-Range-Bluespace-Transceiver, a machine that receives items outside the station and then teleports them to the location of the uplink.",
 		SHIPPING_METHOD_LAUNCH="Launches the item at the station from space, cheap but you might not receive your item at all.",
-		SHIPPING_METHOD_CARGO="Sends the item to the station on the next cargo shuttle, discretely disguised as a standard personal purchase."
+		SHIPPING_METHOD_CARGO="Sends the item to the station on the next cargo shuttle, discretely disguised as a standard personal purchase. An additional 25cr fee will be charged upon arrival."
 	)
 
 	/// List of all existing markets.
