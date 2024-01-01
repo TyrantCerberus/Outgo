@@ -8,7 +8,7 @@
 	name = "Speedy's Legitimate Goods Delivery"
 	desc = "Contains 100% genuine non-contraband items."
 	cost = 0
-	contains = list()
+	contains = list(/obj/item/paper/fluff/blackmarket) //This is just a placeholder, it shouldn't be possible to receive it.
 
 /datum/supply_pack/goody/dumdum38
 	name = ".38 DumDum Speedloader"

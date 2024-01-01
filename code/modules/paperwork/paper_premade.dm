@@ -20,6 +20,9 @@
 	<br>Please stay safe,
 	<br>-Love, <i>Your Dearest</i>"}
 
+/obj/item/paper/fluff/blackmarket
+	name = "iou"
+	info = "Looks like we didn't have it in stock. Thanks for the money, sucker!"
 
 //////////// Job guides n' fluff
 

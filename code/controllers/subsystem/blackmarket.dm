@@ -86,7 +86,7 @@ SUBSYSTEM_DEF(blackmarket)
 				qdel(purchase)
 			if(SHIPPING_METHOD_CARGO)
 				var/datum/supply_pack/goody/blackmarket/our_order = new /datum/supply_pack/goody/blackmarket
-				our_order.contains += purchase.item
+				our_order.contains = list(purchase.item)
 				var/datum/supply_order/SO = new(our_order, purchase.buyer, purchase.buyer.GetJob(), purchase.buyer.ckey, "None required.", purchase.buyer.get_bank_account())
 				SSshuttle.shoppinglist += SO
 				queued_purchases -= purchase
