@@ -9,6 +9,7 @@
 	desc = "Contains 100% genuine non-contraband items."
 	cost = 25
 	contains = list(/obj/item/paper/fluff/blackmarket) //This is just a placeholder, it shouldn't be possible to receive it.
+	special = TRUE
 
 /datum/supply_pack/goody/dumdum38
 	name = ".38 DumDum Speedloader"
