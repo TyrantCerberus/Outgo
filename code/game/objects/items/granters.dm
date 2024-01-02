@@ -338,48 +338,6 @@
 	user.log_message("learned the martial art [martialname] ([MA])", LOG_ATTACK, color="orange")
 	onlearned(user)
 
-/obj/item/book/granter/martial/cqc
-	martial = /datum/martial_art/cqc
-	name = "old manual"
-	martialname = "close quarters combat"
-	desc = "A small, black manual. There are drawn instructions of tactical hand-to-hand combat."
-	greet = "<span class='boldannounce'>You've mastered the basics of CQC.</span>"
-	icon_state = "cqcmanual"
-	remarks = list("Kick... Slam...", "Lock... Kick...", "Strike their abdomen, neck and back for critical damage...", "Slam... Lock...", "I could probably combine this with some other martial arts!", "Words that kill...", "The last and final moment is yours...")
-
-/obj/item/book/granter/martial/cqc/onlearned(mob/living/carbon/user)
-	..()
-	if(oneuse == TRUE)
-		to_chat(user, span_warning("[src] beeps ominously..."))
-
-/obj/item/book/granter/martial/cqc/recoil(mob/living/carbon/user)
-	to_chat(user, span_warning("[src] explodes!"))
-	playsound(src,'sound/effects/explosion1.ogg',40,TRUE)
-	user.flash_act(1, 1)
-	user.adjustBruteLoss(6)
-	user.adjustFireLoss(6)
-	qdel(src)
-
-/obj/item/book/granter/martial/carp
-	martial = /datum/martial_art/the_sleeping_carp
-	name = "mysterious scroll"
-	martialname = "sleeping carp"
-	desc = "A scroll filled with strange markings. It seems to be drawings of some sort of martial art."
-	greet = "<span class='sciradio'>You have learned the ancient martial art of the Sleeping Carp! Your hand-to-hand combat has become much more effective, and you are now able to deflect any projectiles \
-	directed toward you while in Throw Mode. Your body has also hardened itself, granting extra protection against lasting wounds that would otherwise mount during extended combat. \
-	However, you are also unable to use any ranged weaponry. You can learn more about your newfound art by using the Recall Teachings verb in the Sleeping Carp tab.</span>"
-	icon = 'icons/obj/wizard.dmi'
-	icon_state = "scroll2"
-	worn_icon_state = "scroll"
-	remarks = list("Wait, a high protein diet is really all it takes to become stabproof...?", "Overwhelming force, immovable object...", "Focus... And you'll be able to incapacitate any foe in seconds...", "I must pierce armor for maximum damage...", "I don't think this would combine with other martial arts...", "Become one with the carp...", "Glub...")
-
-/obj/item/book/granter/martial/carp/onlearned(mob/living/carbon/user)
-	..()
-	if(oneuse == TRUE)
-		desc = "It's completely blank."
-		name = "empty scroll"
-		icon_state = "blankscroll"
-
 /obj/item/book/granter/martial/plasma_fist
 	martial = /datum/martial_art/plasma_fist
 	name = "frayed scroll"
