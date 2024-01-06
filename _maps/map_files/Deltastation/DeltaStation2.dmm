@@ -99953,7 +99953,6 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/obj/effect/landmark/start/paramedic,
 /turf/open/floor/iron,
 /area/medical/medbay/central)
 "xuC" = (
@@ -100317,7 +100316,6 @@
 /turf/open/floor/iron,
 /area/hallway/secondary/entry)
 "xAZ" = (
-/obj/effect/landmark/start/paramedic,
 /obj/structure/cable,
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 9

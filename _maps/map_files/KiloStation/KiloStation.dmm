@@ -8820,7 +8820,6 @@
 	},
 /obj/structure/cable,
 /obj/effect/mapping_helpers/simple_pipes/scrubbers/hidden/layer2,
-/obj/effect/landmark/start/paramedic,
 /turf/open/floor/iron/showroomfloor,
 /area/medical/paramedic)
 "aFv" = (
@@ -12450,7 +12449,6 @@
 	dir = 1
 	},
 /obj/effect/mapping_helpers/simple_pipes/supply/hidden/layer4,
-/obj/effect/landmark/start/paramedic,
 /turf/open/floor/iron,
 /area/medical/medbay/central)
 "aSB" = (
@@ -81049,7 +81047,6 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/blue,
-/obj/effect/landmark/start/paramedic,
 /obj/structure/chair/office/light,
 /obj/structure/cable,
 /turf/open/floor/iron/showroomfloor,
