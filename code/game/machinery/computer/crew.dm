@@ -120,7 +120,6 @@ GLOBAL_DATUM_INIT(crewmonitor, /datum/crewmonitor, new)
 		"Chemist" = 21,
 		"Virologist" = 22,
 		"Medical Doctor" = 23,
-		"Paramedic" = 24,
 		// 30-39: Science
 		"Research Director" = 30,
 		"Scientist" = 31,

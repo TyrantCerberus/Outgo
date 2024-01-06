@@ -33,7 +33,7 @@
 	window_name = "Automatic Medical Unit v1.1"
 	data_hud_type = DATA_HUD_MEDICAL_ADVANCED
 	path_image_color = "#DDDDFF"
-	card_access = /datum/card_access/job/paramedic
+	card_access = /datum/card_access/job/medical_doctor
 
 	/// drop determining variable
 	var/healthanalyzer = /obj/item/healthanalyzer
