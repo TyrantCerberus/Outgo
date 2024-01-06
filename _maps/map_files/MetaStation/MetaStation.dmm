@@ -15841,14 +15841,6 @@
 /obj/machinery/power/apc/auto_name/north,
 /turf/open/floor/iron,
 /area/maintenance/starboard)
-"dmO" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/effect/landmark/start/paramedic,
-/obj/effect/mapping_helpers/simple_pipes/scrubbers/hidden/layer2,
-/turf/open/floor/iron/white,
-/area/medical/medbay/central)
 "dmU" = (
 /obj/machinery/computer/security{
 	dir = 8
@@ -29508,13 +29500,6 @@
 	},
 /turf/open/floor/wood,
 /area/service/bar)
-"inc" = (
-/obj/effect/turf_decal/trimline/blue/filled/warning{
-	dir = 4
-	},
-/obj/effect/landmark/start/paramedic,
-/turf/open/floor/iron/white,
-/area/medical/medbay/central)
 "ind" = (
 /turf/open/floor/iron/white,
 /area/medical/abandoned)
@@ -37209,7 +37194,6 @@
 /area/science/mixing)
 "lhp" = (
 /obj/structure/chair/stool,
-/obj/effect/landmark/start/paramedic,
 /turf/open/floor/iron/white,
 /area/medical/break_room)
 "lhI" = (
@@ -44981,7 +44965,6 @@
 /turf/open/floor/iron/dark,
 /area/science/genetics)
 "nTj" = (
-/obj/effect/landmark/start/paramedic,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 8
 	},
@@ -47977,16 +47960,6 @@
 /obj/effect/mapping_helpers/simple_pipes/scrubbers/hidden/layer2,
 /turf/open/floor/iron,
 /area/hallway/secondary/command)
-"oXV" = (
-/obj/effect/turf_decal/tile/blue{
-	dir = 8
-	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 1
-	},
-/obj/effect/landmark/start/paramedic,
-/turf/open/floor/iron/white,
-/area/medical/storage)
 "oXY" = (
 /obj/structure/rack,
 /obj/item/radio/off{
@@ -48625,11 +48598,6 @@
 /obj/machinery/light_switch/directional/north,
 /turf/open/floor/wood,
 /area/maintenance/port/aft)
-"pmC" = (
-/obj/structure/cable,
-/obj/effect/landmark/start/paramedic,
-/turf/open/floor/iron/white,
-/area/medical/medbay/central)
 "pmN" = (
 /obj/structure/disposalpipe/segment{
 	dir = 6
@@ -53949,7 +53917,6 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
-/obj/effect/landmark/start/paramedic,
 /obj/effect/mapping_helpers/simple_pipes/supply/hidden/layer4,
 /obj/machinery/duct,
 /turf/open/floor/iron/white,
@@ -56963,7 +56930,6 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/effect/landmark/start/paramedic,
 /turf/open/floor/iron/white,
 /area/medical/paramedic)
 "sml" = (
@@ -92363,7 +92329,7 @@ fjR
 sSe
 gZL
 gZL
-oXV
+gZL
 gZL
 ezi
 pSi
@@ -95459,7 +95425,7 @@ lhp
 gzr
 pqM
 xoU
-pmC
+cvr
 cca
 aCK
 fQH
@@ -97523,7 +97489,7 @@ nQm
 fMy
 jBH
 oqv
-dmO
+jcy
 ylU
 cZf
 kHx
@@ -99036,7 +99002,7 @@ bXN
 iwT
 tdQ
 gwC
-inc
+cBX
 hOJ
 cfV
 uGS

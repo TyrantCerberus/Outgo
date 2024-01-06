@@ -23537,7 +23537,6 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/blue,
-/obj/effect/landmark/start/paramedic,
 /turf/open/floor/iron/white,
 /area/medical/paramedic)
 "blo" = (
@@ -58537,10 +58536,6 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
 /turf/open/floor/iron/dark,
 /area/service/library)
-"vOB" = (
-/obj/effect/landmark/start/paramedic,
-/turf/open/floor/iron/white,
-/area/medical/storage)
 "vPE" = (
 /obj/structure/chair/office/light,
 /obj/effect/turf_decal/tile/blue{
@@ -58553,7 +58548,6 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
-/obj/effect/landmark/start/paramedic,
 /obj/machinery/button/door{
 	id = "MedbayFoyer";
 	name = "Medbay Foyer Doors";
@@ -83903,7 +83897,7 @@ bsq
 tqC
 rMZ
 bye
-vOB
+bye
 bzF
 bAP
 vfw

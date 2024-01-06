@@ -168,13 +168,6 @@
 	region = REGION_GENERAL
 	minimal_access = list(ACCESS_THEATRE)
 
-/datum/card_access/job/paramedic
-	assignment = "Paramedic"
-	region = REGION_MEDBAY
-	full_access = list(ACCESS_SURGERY)
-	minimal_access = list(ACCESS_MEDICAL, ACCESS_MORGUE, ACCESS_MECH_MEDICAL, ACCESS_MINERAL_STOREROOM, ACCESS_MAINT_TUNNELS, ACCESS_EVA,
-						ACCESS_ENGINE, ACCESS_CONSTRUCTION, ACCESS_CARGO, ACCESS_HYDROPONICS, ACCESS_RESEARCH, ACCESS_AUX_BASE)
-
 /datum/card_access/job/prisoner
 	assignment = "Prisoner"
 	region = REGION_GENERAL
