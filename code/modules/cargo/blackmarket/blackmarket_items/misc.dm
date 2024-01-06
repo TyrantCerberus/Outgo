@@ -95,3 +95,45 @@
 	if (prob(1)) //Made in China, OOPS!
 		return new /obj/item/melee/transforming/energy/sword(loc)
 	return ..()
+
+///// B.E.P.I.S. Minor Rewards /////
+
+/datum/blackmarket_item/misc/circuit_stack
+	name = "Polycircuit Aggregate"
+	desc = "Multiuse circuitboard set. High-quality. Guaranteed tested."
+	item = /obj/item/stack/circuit_stack/full
+
+	price_min = 300
+	price_max = 700
+	stock_max = 2
+	availability_prob = 40
+
+/datum/blackmarket_item/misc/survival_pen
+	name = "Survival Pen"
+	desc = "Combination writing and digging tool. Great gift."
+	item = /obj/item/pen/survival
+
+	price_min = 150
+	price_max = 200
+	stock_max = 1
+	availability_prob = 50
+
+/datum/blackmarket_item/misc/party_sleeper
+	name = "Salvaged Sleeper Unit"
+	desc = "Retro sleep unit. Excellent rest guaranteed. Medical standards compliant. Suitable for pensioners."
+	item = /obj/item/circuitboard/machine/sleeper/party
+
+	price_min = 1000
+	price_max = 2000
+	stock_max = 3
+	availability_prob = 30
+
+/datum/blackmarket_item/misc/sprayoncan
+	name = "Spray-On Insulation"
+	desc = "Portable. Effective. Dermatologically tested rubber."
+	item = /obj/item/toy/sprayoncan
+
+	price_min = 300
+	price_max = 450
+	stock_max = 4
+	availability_prob = 45
