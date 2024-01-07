@@ -1964,6 +1964,7 @@
 #include "code\modules\cargo\blackmarket\blackmarket_items\consumables.dm"
 #include "code\modules\cargo\blackmarket\blackmarket_items\cybernetics.dm"
 #include "code\modules\cargo\blackmarket\blackmarket_items\misc.dm"
+#include "code\modules\cargo\blackmarket\blackmarket_items\tech_disks.dm"
 #include "code\modules\cargo\blackmarket\blackmarket_items\tools.dm"
 #include "code\modules\cargo\blackmarket\blackmarket_items\weapons.dm"
 #include "code\modules\cargo\bounties\assistant.dm"
