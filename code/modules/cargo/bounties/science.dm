@@ -15,7 +15,7 @@
 
 /datum/bounty/item/science/bepis_disc
 	name = "Reformatted Tech Disk"
-	description = "It turns out the diskettes the BEPIS prints experimental nodes on are extremely space-efficient. Send us one of your spares when you're done with it."
+	description = "It turns out that the diskettes the BEPIS printed experimental nodes on were extremely space-efficient. Send us one if you're able to find one."
 	reward = CARGO_CRATE_VALUE * 8
 	wanted_types = list(/obj/item/disk/tech_disk/major, /obj/item/disk/tech_disk/spaceloot)
 
