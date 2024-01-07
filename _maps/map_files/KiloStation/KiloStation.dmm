@@ -55302,7 +55302,6 @@
 /obj/effect/turf_decal/stripes/corner{
 	dir = 4
 	},
-/obj/machinery/rnd/bepis,
 /turf/open/floor/iron/dark,
 /area/command/heads_quarters/rd)
 "ltY" = (
@@ -67356,7 +67355,6 @@
 /obj/machinery/bounty_board/directional/south{
 	pixel_x = 32
 	},
-/obj/machinery/rnd/bepis,
 /turf/open/floor/iron,
 /area/cargo/storage)
 "rcA" = (

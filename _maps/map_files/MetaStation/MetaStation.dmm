@@ -35130,7 +35130,6 @@
 /turf/open/floor/engine,
 /area/engineering/supermatter/room)
 "kvc" = (
-/obj/machinery/rnd/bepis,
 /obj/effect/turf_decal/stripes/end{
 	dir = 4
 	},

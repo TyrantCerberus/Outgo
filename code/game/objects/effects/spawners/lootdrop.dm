@@ -629,7 +629,7 @@
 		/obj/item/stack/spacecash/c10000 = 1
 	)
 
-/// Space loot spawner. Couple of random bits of technology-adjacent stuff including anomaly cores and BEPIS techs.
+/// Space loot spawner. Couple of random bits of technology-adjacent stuff including anomaly cores and (former) BEPIS techs.
 /obj/effect/spawner/lootdrop/space/fancytech
 	lootcount = 2
 	loot = list(

@@ -23865,10 +23865,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /turf/open/floor/engine,
 /area/science/explab)
-"blS" = (
-/obj/machinery/rnd/bepis,
-/turf/open/floor/engine,
-/area/science/explab)
 "blX" = (
 /turf/open/floor/engine,
 /area/science/xenobiology)
@@ -54088,7 +54084,6 @@
 /turf/open/floor/iron/white,
 /area/medical/medbay/central)
 "pMg" = (
-/obj/machinery/rnd/bepis,
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 10
 	},
@@ -100592,7 +100587,7 @@ bbI
 asG
 bjw
 bky
-blS
+bky
 bky
 bnY
 bpg
