@@ -112,6 +112,14 @@
 //Grab breakout odds
 #define BASE_GRAB_RESIST_CHANCE 60 //base chance for whether or not you can escape from a grab
 
+//crit related
+#define SOFTCRIT_DROP_CHANCE 20 //how likely a person is to drop an item they're holding when in softcrit (per process tick)
+#define SOFTCRIT_STUMBLE_CHANCE 20 //how likely a person is to fall over when in softcrit (per process tick)
+#define SOFTCRIT_PASSOUT_CHANCE 0 //how likely a person is to fall unconscious when in softcrit (per process tick)
+//(hardcrit ticks occur twice as often)
+#define HARDCRIT_DROP_CHANCE 20
+#define HARDCRIT_STUMBLE_CHANCE 20
+#define HARDCRIT_PASSOUT_CHANCE 5
 //maximum slowdown accruable through unmitigated pain buildup
 #define PAIN_SLOWDOWN_CAP 3
 //slowdown when crawling
