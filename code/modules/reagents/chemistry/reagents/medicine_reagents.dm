@@ -1493,3 +1493,26 @@
 	clot_rate = 0.4 //slightly better than regular coagulant
 	passive_bleed_modifier = 0.5
 	overdose_threshold = 10 //but easier to overdose on
+
+/* Painkillers */
+
+/datum/reagent/paracetamol
+	name = "Paracetamol"
+	description = "A simple painkiller, effective at relieving mild aches and pains."
+	taste_description = "sickness"
+	color = "#c8a5dc"
+	reagent_state = LIQUID
+
+/datum/reagent/tramadol
+	name = "Tramadol"
+	description = "A moderately effective painkiller for treating more substantial pains."
+	taste_description = "sourness"
+	color = "#cb68fc"
+	reagent_state = LIQUID
+
+/datum/reagent/oxycodone
+	name = "Oxycodone"
+	description = "A highly effective painkiller for severe pain."
+	taste_description = "bitterness"
+	color = "#800080"
+	reagent_state = LIQUID
