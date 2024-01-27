@@ -39,7 +39,7 @@
 	var/text_buffer = ""
 
 	var/static/list/graffiti = list("amyjon","face","matt","revolution","engie","guy","end","dwarf","uboa","body","cyka","star","poseur tag","prolizard","antilizard")
-	var/static/list/symbols = list("danger","firedanger","electricdanger","biohazard","radiation","safe","evac","space","med","trade","shop","food","peace","like","skull","nay","heart","credit")
+	var/static/list/symbols = list("danger","firedanger","electricdanger","biohazard","radiation","safe","evac","space","med","trade","shop","food","peace","like","skull","nay","heart","credit","StayQuiet","DoesNotStayDead","RoomClear","DoNotSleepHere","NotHostileIfLeftAlone","PrayWhileShooting","BeingWatched","SymbolsCompromised","DoNotTrustThem","ProceedWithCaution","ContactLost","MemberKilled","DontLookAway","HostileEnvironment","SomeoneIsHere","CannotBeDamaged","VoicesHeard","MemberVanished","GunsNoGood","NotHuman","DontGiveUp","StayInDark","StayInLight","EquipmentFailure","SafePlace","GetOut","StayTogether","HostileBeing","NoEyeContact","RoomsMove","DangerOnOtherSide","DoNotMakeContact","SpaceDistortion","UnsafePlace")
 	var/static/list/drawings = list("smallbrush","brush","largebrush","splatter","snake","stickman","carp","ghost","clown","taser","disk","fireaxe","toolbox","corgi","cat","toilet","blueprint","beepsky","scroll","bottle","shotgun")
 	var/static/list/oriented = list("arrow","line","thinline","shortline","body","chevron","footprint","clawprint","pawprint") // These turn to face the same way as the drawer
 	var/static/list/runes = list("rune1","rune2","rune3","rune4","rune5","rune6")
