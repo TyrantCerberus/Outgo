@@ -970,8 +970,8 @@
 		remove_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown)
 		remove_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown_flying)
 		return
-	var/pain = max((maxHealth - health), staminaloss)
-	var/pain_multiplier = (1 - clamp(painkilling_power_in_system, 0, 1))
+	var/pain = maxHealth - health
+	var/pain_multiplier = 1 - clamp(painkilling_power_in_system, 0, 1)
 	var/pain_slowdown = 0
 	if(pain > 0)
 		if (pain_multiplier != 0)
