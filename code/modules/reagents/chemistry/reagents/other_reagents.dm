@@ -1153,7 +1153,7 @@
 	description = "Impedrezene is a narcotic that impedes one's ability by slowing down the higher brain cell functions."
 	color = "#E07DDD" // pink = happy = dumb
 	taste_description = "numbness"
-	addiction_types = list(/datum/addiction/opiods = 10)
+	addiction_types = list(/datum/addiction/opioids = 10)
 
 /datum/reagent/impedrezene/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
 	M.jitteriness = max(M.jitteriness - (2.5*delta_time),0)

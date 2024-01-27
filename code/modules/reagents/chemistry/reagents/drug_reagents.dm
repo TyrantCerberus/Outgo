@@ -132,7 +132,7 @@
 	color = "#0064B4"
 	overdose_threshold = 20
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	addiction_types = list(/datum/addiction/opiods = 18) //7.2 per 2 seconds
+	addiction_types = list(/datum/addiction/opioids = 18) //7.2 per 2 seconds
 
 
 /datum/reagent/drug/krokodil/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
