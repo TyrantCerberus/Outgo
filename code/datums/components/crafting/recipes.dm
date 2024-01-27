@@ -1013,16 +1013,6 @@
 	category = CAT_MISC
 	one_per_turf = TRUE
 
-/datum/crafting_recipe/aquarium
-	name = "Aquarium"
-	result = /obj/structure/aquarium
-	time = 10 SECONDS
-	reqs = list(/obj/item/stack/sheet/iron = 15,
-				/obj/item/stack/sheet/glass = 10,
-				/obj/item/aquarium_kit = 1
-				)
-	category = CAT_MISC
-
 /datum/crafting_recipe/alcohol_burner
 	name = "Alcohol burner"
 	result = /obj/item/burner
