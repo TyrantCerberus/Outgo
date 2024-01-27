@@ -105,7 +105,14 @@
 	name = "morphine pill"
 	desc = "Commonly used to treat insomnia."
 	icon_state = "pill8"
-	list_reagents = list(/datum/reagent/medicine/morphine = 30)
+	list_reagents = list(/datum/reagent/medicine/painkiller/morphine = 30)
+	rename_with_volume = TRUE
+
+/obj/item/reagent_containers/pill/paracetamol
+	name = "paracetamol pill"
+	desc = "Commonly used to combat mild pain."
+	icon_state = "pill8"
+	list_reagents = list(/datum/reagent/medicine/painkiller/paracetamol = 20)
 	rename_with_volume = TRUE
 
 /obj/item/reagent_containers/pill/stimulant
