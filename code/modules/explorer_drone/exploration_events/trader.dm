@@ -74,16 +74,6 @@
 	traded_path = list(/obj/item/seeds/tomato/killer,/obj/item/seeds/orange_3d,/obj/item/seeds/firelemon,/obj/item/seeds/gatfruit)
 	amount = 1
 
-/datum/exploration_event/simple/trader/fish
-	name = "interstellar fish trader"
-	requires_translator = FALSE
-	deep_scan_description = "You spot gian \"FRESH FISH\" sign on the site."
-	required_site_traits = list(EXPLORATION_SITE_HABITABLE,EXPLORATION_SITE_SURFACE)
-	band_values = list(EXOSCANNER_BAND_LIFE=2)
-	required_path = /obj/item/stock_parts/cell/high
-	traded_path = /obj/item/storage/fish_case/random
-	amount = 3
-
 /datum/exploration_event/simple/trader/shady_merchant
 	name = "shady merchant"
 	requires_translator = FALSE
