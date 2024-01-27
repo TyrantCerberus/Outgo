@@ -1496,23 +1496,45 @@
 
 /* Painkillers */
 
-/datum/reagent/paracetamol
+/datum/reagent/medicine/painkiller
+	name = "Generic Painkiller"
+	description = "An unidentifiable painkiller. (You shouldn't be seeing this.)"
+	var/painkilling_power = 0
+
+/datum/reagent/medicine/painkiller/on_mob_metabolize(mob/living/M)
+	if(!ishuman(M))
+		return
+
+	var/mob/living/carbon/human/H = M
+	H.painkilling_power_in_system += painkilling_power
+
+/datum/reagent/medicine/painkiller/on_mob_metabolize(mob/living/M)
+	if(!ishuman(M))
+		return
+
+	var/mob/living/carbon/human/H = M
+	H.painkilling_power_in_system -= painkilling_power
+
+/datum/reagent/medicine/painkiller/paracetamol
 	name = "Paracetamol"
 	description = "A simple painkiller, effective at relieving mild aches and pains."
 	taste_description = "sickness"
 	color = "#c8a5dc"
 	reagent_state = LIQUID
+	painkilling_power = 0.25
 
-/datum/reagent/tramadol
+/datum/reagent/medicine/painkiller/tramadol
 	name = "Tramadol"
 	description = "A moderately effective painkiller for treating more substantial pains."
 	taste_description = "sourness"
 	color = "#cb68fc"
 	reagent_state = LIQUID
+	painkilling_power = 0.5
 
-/datum/reagent/oxycodone
+/datum/reagent/medicine/painkiller/oxycodone
 	name = "Oxycodone"
 	description = "A highly effective painkiller for severe pain."
 	taste_description = "bitterness"
 	color = "#800080"
 	reagent_state = LIQUID
+	painkilling_power = 0.75
