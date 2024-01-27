@@ -810,13 +810,13 @@
 	result = /obj/item/clothing/mask/mummy
 	time = 10
 	tool_paths = list(/obj/item/nullrod/egyptian)
-	reqs = list(/obj/item/stack/sheet/cloth = 2)
+	reqs = list(/obj/item/stack/medical/gauze = 2)
 	category = CAT_CLOTHING
 
 /datum/crafting_recipe/mummy/body
 	name = "Mummification Bandages (Body)"
 	result = /obj/item/clothing/under/costume/mummy
-	reqs = list(/obj/item/stack/sheet/cloth = 5)
+	reqs = list(/obj/item/stack/medical/gauze = 5)
 
 /datum/crafting_recipe/chaplain_hood
 	name = "Follower Hoodie"
