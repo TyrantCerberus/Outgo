@@ -1496,7 +1496,7 @@
 
 /datum/reagent/medicine/painkiller/oxycodone
 	name = "Oxycodone"
-	description = "A highly effective painkiller for severe pain."
+	description = "A highly effective painkiller for relieving severe pain."
 	taste_description = "bitterness"
 	color = "#800080"
 	reagent_state = LIQUID
