@@ -1508,7 +1508,7 @@
 	var/mob/living/carbon/human/H = M
 	H.painkilling_power_in_system += painkilling_power
 
-/datum/reagent/medicine/painkiller/on_mob_metabolize(mob/living/M)
+/datum/reagent/medicine/painkiller/on_mob_end_metabolize(mob/living/M)
 	if(!ishuman(M))
 		return
 
