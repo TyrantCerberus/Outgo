@@ -62,6 +62,7 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 	var/atom/movable/screen/movable/action_button/hide_toggle/hide_actions_toggle
 	var/action_buttons_hidden = FALSE
 
+	var/atom/movable/screen/pain
 	var/atom/movable/screen/healths
 	var/atom/movable/screen/stamina
 	var/atom/movable/screen/healthdoll
@@ -119,6 +120,7 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 	throw_icon = null
 	QDEL_LIST(infodisplay)
 
+	pain = null
 	healths = null
 	stamina = null
 	healthdoll = null

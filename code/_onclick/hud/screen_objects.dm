@@ -627,6 +627,11 @@
 	layer = UI_DAMAGE_LAYER
 	plane = FULLSCREEN_PLANE
 
+/atom/movable/screen/pain
+	name = "pain"
+	icon_state = "no_pain"
+	screen_loc = ui_pain
+
 /atom/movable/screen/healths
 	name = "health"
 	icon_state = "health0"
