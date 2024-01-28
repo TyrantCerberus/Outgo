@@ -35,7 +35,7 @@
 		/obj/item/reagent_containers/pill/patch/libital = 2,
 		/obj/item/reagent_containers/pill/patch/aiuri = 2,
 		/obj/item/reagent_containers/hypospray/medipen = 1,
-		/obj/item/reagent_containers/pill/paracetamol = 1)
+		/obj/item/storage/pill_bottle/paracetamol = 1)
 	generate_items_inside(items_inside,src)
 
 /obj/item/storage/firstaid/emergency
@@ -326,6 +326,14 @@
 /obj/item/storage/pill_bottle/suicide_act(mob/user)
 	user.visible_message(span_suicide("[user] is trying to get the cap off [src]! It looks like [user.p_theyre()] trying to commit suicide!"))
 	return (TOXLOSS)
+
+/obj/item/storage/pill_bottle/paracetamol
+	name = "bottle of paracetamol pills"
+	desc = "Contains pills used to combat mild pain."
+
+/obj/item/storage/pill_bottle/paracetamol/PopulateContents()
+	for(var/i in 1 to 7)
+		new /obj/item/reagent_containers/pill/paracetamol(src)
 
 /obj/item/storage/pill_bottle/multiver
 	name = "bottle of multiver pills"
