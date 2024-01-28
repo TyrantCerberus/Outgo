@@ -163,6 +163,19 @@
 	required_reagents = list(/datum/reagent/consumable/salt = 1, /datum/reagent/carbon = 1, /datum/reagent/toxin/acid = 1)
 	required_catalysts = list(/datum/reagent/iron = 5)
 
+/datum/chemical_reaction/medicine/paracetamol
+	results = list(/datum/reagent/medicine/painkiller/paracetamol = 3)
+	required_reagents = list(/datum/reagent/acetone = 1, /datum/reagent/consumable/sugar = 1, /datum/reagent/consumable/ethanol = 1)
+
+/datum/chemical_reaction/medicine/tramadol
+	results = list(/datum/reagent/medicine/painkiller/tramadol = 5)
+	required_reagents = list(/datum/reagent/consumable/salt = 1, /datum/reagent/hydrogen = 1, /datum/reagent/chlorine = 1, /datum/reagent/consumable/ethanol = 1, /datum/reagent/potassium = 1)
+
+/datum/chemical_reaction/medicine/oxycodone
+	results = list(/datum/reagent/medicine/painkiller/oxycodone = 2)
+	required_reagents = list(/datum/reagent/medicine/painkiller/tramadol = 1, /datum/reagent/medicine/painkiller/morphine = 1)
+	required_catalysts = list(/datum/reagent/toxin/plasma = 5)
+
 ///medical stacks
 
 /datum/chemical_reaction/medicine/medsuture
