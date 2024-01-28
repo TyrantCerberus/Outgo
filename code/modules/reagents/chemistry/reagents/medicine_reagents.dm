@@ -1469,6 +1469,7 @@
 
 	var/mob/living/carbon/human/H = M
 	H.painkilling_power_in_system += painkilling_power
+	H.updatehealth()
 
 /datum/reagent/medicine/painkiller/on_mob_end_metabolize(mob/living/M)
 	..()
@@ -1477,6 +1478,7 @@
 
 	var/mob/living/carbon/human/H = M
 	H.painkilling_power_in_system -= painkilling_power
+	H.updatehealth()
 
 /datum/reagent/medicine/painkiller/paracetamol
 	name = "Paracetamol"
