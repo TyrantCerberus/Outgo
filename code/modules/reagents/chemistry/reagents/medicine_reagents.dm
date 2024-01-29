@@ -1487,6 +1487,7 @@
 	color = "#c8a5dc"
 	reagent_state = LIQUID
 	painkilling_power = 0.25
+	overdose_threshold = 60
 
 /datum/reagent/medicine/painkiller/tramadol
 	name = "Tramadol"
@@ -1495,6 +1496,7 @@
 	color = "#cb68fc"
 	reagent_state = LIQUID
 	painkilling_power = 0.5
+	overdose_threshold = 30
 
 /datum/reagent/medicine/painkiller/oxycodone
 	name = "Oxycodone"
@@ -1503,6 +1505,7 @@
 	color = "#800080"
 	reagent_state = LIQUID
 	painkilling_power = 0.75
+	overdose_threshold = 30
 
 /datum/reagent/medicine/painkiller/morphine
 	name = "Morphine"
