@@ -1480,6 +1480,19 @@
 	H.painkilling_power_in_system -= painkilling_power
 	H.updatehealth()
 
+/datum/reagent/medicine/painkiller/overdose_process(mob/living/M, delta_time, times_fired)
+	if(DT_PROB(75, delta_time))
+		if(prob(50))
+			M.emote("cough")
+		M.adjustOxyLoss(rand(1,3))
+		M.adjustToxLoss(1)
+	if(DT_PROB(10, delta_time))
+		if(prob(20))
+			M.vomit(blood = TRUE, stun = TRUE)
+		else
+			M.vomit()
+	..()
+
 /datum/reagent/medicine/painkiller/paracetamol
 	name = "Paracetamol"
 	description = "A simple painkiller, effective at relieving mild aches and pains."
@@ -1506,6 +1519,12 @@
 	reagent_state = LIQUID
 	painkilling_power = 0.75
 	overdose_threshold = 30
+
+/datum/reagent/medicine/painkiller/oxycodone/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
+	if(M.reagents.Find(/datum/reagent/medicine/painkiller/tramadol))
+		M.adjustOxyLoss(rand(2,5))
+		M.adjustToxLoss(2)
+	..()
 
 /datum/reagent/medicine/painkiller/morphine
 	name = "Morphine"
