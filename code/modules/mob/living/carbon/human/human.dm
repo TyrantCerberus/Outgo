@@ -978,24 +978,10 @@
 			pain_slowdown = clamp(((pain * pain_multiplier) / 50), 0, PAIN_SLOWDOWN_CAP)
 		add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown, TRUE, multiplicative_slowdown = pain_slowdown)
 		add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown_flying, TRUE, multiplicative_slowdown = pain_slowdown)
-		src.update_hud_pain_meter(pain_slowdown)
+		//src.hud_used.infodisplay.Find(/atom/movable/screen/pain)
 	else
 		remove_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown)
 		remove_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown_flying)
-
-/mob/living/carbon/human/proc/update_hud_pain_meter(var/pain_slowdown_level)
-	var/atom/movable/screen/pain/hud_element_to_modify = src.hud_used.infodisplay.Find(/atom/movable/screen/pain)
-	switch(pain_slowdown_level)
-		if(0)
-			hud_element_to_modify.icon_state = "no_pain"
-		if(0 to 1)
-			hud_element_to_modify.icon_state = "mild_pain"
-		if(1 to 2)
-			hud_element_to_modify.icon_state = "moderate_pain"
-		if(2 to 3)
-			hud_element_to_modify.icon_state = "severe_pain"
-		if(3 to 4)
-			hud_element_to_modify.icon_state = "extreme_pain"
 
 /mob/living/carbon/human/adjust_nutrition(change) //Honestly FUCK the oldcoders for putting nutrition on /mob someone else can move it up because holy hell I'd have to fix SO many typechecks
 	if(HAS_TRAIT(src, TRAIT_NOHUNGER))
