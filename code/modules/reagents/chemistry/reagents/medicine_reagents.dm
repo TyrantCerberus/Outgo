@@ -1482,7 +1482,7 @@
 
 /datum/reagent/medicine/painkiller/overdose_process(mob/living/carbon/M, delta_time, times_fired)
 	if(DT_PROB(75, delta_time))
-		if(prob(50))
+		if(prob(25))
 			M.emote("cough")
 		M.adjustOxyLoss(rand(1,3))
 		M.adjustToxLoss(1)
@@ -1521,8 +1521,7 @@
 	overdose_threshold = 30
 
 /datum/reagent/medicine/painkiller/oxycodone/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
-	var/list/reagents_list = SANITIZE_LIST(M.reagents)
-	if(reagents_list.Find(/datum/reagent/medicine/painkiller/tramadol))
+	if(M.reagents.has_reagent(/datum/reagent/medicine/painkiller/tramadol))
 		M.adjustOxyLoss(rand(2,5))
 		M.adjustToxLoss(2)
 	..()
