@@ -983,7 +983,7 @@
 		remove_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown)
 		remove_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown_flying)
 
-/mob/living/carbon/human/update_hud_pain_meter(var/pain_slowdown_level)
+/mob/living/carbon/human/proc/update_hud_pain_meter(var/pain_slowdown_level)
 	var/atom/movable/screen/pain/hud_element_to_modify = src.hud_used.infodisplay.Find(/atom/movable/screen/pain)
 	switch(pain_slowdown_level)
 		if(0)
