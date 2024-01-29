@@ -339,7 +339,7 @@
 
 /obj/item/storage/pill_bottle/tramadol
 	name = "bottle of tramadol pills"
-	desc = "Contains pills used to combat moderate pain."
+	desc = "Contains pills used to combat moderate pain. WARNING: Do not mix with oxycodone!"
 
 /obj/item/storage/pill_bottle/tramadol/PopulateContents()
 	for(var/i in 1 to 7)
@@ -347,7 +347,7 @@
 
 /obj/item/storage/pill_bottle/oxycodone
 	name = "bottle of oxycodone pills"
-	desc = "Contains pills used to combat severe pain."
+	desc = "Contains pills used to combat severe pain. WARNING: Do not mix with tramadol!"
 
 /obj/item/storage/pill_bottle/oxycodone/PopulateContents()
 	for(var/i in 1 to 7)
