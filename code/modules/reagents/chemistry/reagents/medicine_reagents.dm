@@ -1460,7 +1460,7 @@
 /datum/reagent/medicine/painkiller
 	name = "Generic Painkiller"
 	description = "An unidentifiable painkiller. (You shouldn't be seeing this.)"
-	var/painkilling_power = 0
+	var/painkilling_power = 0 //needs to be between 0 and 1 on subtypes
 
 /datum/reagent/medicine/painkiller/on_mob_metabolize(mob/living/M)
 	..()
@@ -1491,7 +1491,7 @@
 
 /datum/reagent/medicine/painkiller/tramadol
 	name = "Tramadol"
-	description = "A moderately effective painkiller for treating more substantial pains."
+	description = "A moderately effective painkiller for treating more substantial pains. Should not be taken with oxycodone."
 	taste_description = "sourness"
 	color = "#cb68fc"
 	reagent_state = LIQUID
@@ -1500,7 +1500,7 @@
 
 /datum/reagent/medicine/painkiller/oxycodone
 	name = "Oxycodone"
-	description = "A highly effective painkiller for relieving severe pain."
+	description = "A highly effective painkiller for relieving severe pain. Should not be taken with tramadol."
 	taste_description = "bitterness"
 	color = "#800080"
 	reagent_state = LIQUID
