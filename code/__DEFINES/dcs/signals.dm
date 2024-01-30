@@ -551,6 +551,10 @@
 	#define COMPONENT_BLOCK_SWAP (1<<0)
 ///from base of /mob/verb/pointed: (atom/A)
 #define COMSIG_MOB_POINTED "mob_pointed"
+//from base of /mob/transfer_ckey(): (new_character, old_character)
+#define COMSIG_MOB_KEY_CHANGE "mob_key_change"
+//sent to the target mob from base of /mob/transfer_ckey() and /mind/transfer_to(): (our_character, their_character)
+#define COMSIG_MOB_PRE_PLAYER_CHANGE "mob_pre_player_change"
 ///Mob is trying to open the wires of a target [/atom], from /datum/wires/interactable(): (atom/target)
 #define COMSIG_TRY_WIRES_INTERACT "try_wires_interact"
 	#define COMPONENT_CANT_INTERACT_WIRES (1<<0)
