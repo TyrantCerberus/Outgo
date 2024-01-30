@@ -809,12 +809,24 @@
 	name = "Mummification Bandages (Mask)"
 	result = /obj/item/clothing/mask/mummy
 	time = 10
-	tool_paths = list(/obj/item/nullrod/egyptian)
 	reqs = list(/obj/item/stack/sheet/cloth = 2)
 	category = CAT_CLOTHING
 
 /datum/crafting_recipe/mummy/body
 	name = "Mummification Bandages (Body)"
+	result = /obj/item/clothing/under/costume/mummy
+	reqs = list(/obj/item/stack/sheet/cloth = 5)
+
+/datum/crafting_recipe/mummy/magic
+	name = "Imbued Mummification Bandages (Mask)"
+	result = /obj/item/clothing/mask/mummy
+	time = 10
+	tool_paths = list(/obj/item/nullrod/egyptian)
+	reqs = list(/obj/item/stack/sheet/cloth = 2)
+	category = CAT_CLOTHING
+
+/datum/crafting_recipe/mummy/body/magic
+	name = "Imbued Mummification Bandages (Body)"
 	result = /obj/item/clothing/under/costume/mummy
 	reqs = list(/obj/item/stack/sheet/cloth = 5)
 
