@@ -99,4 +99,6 @@
 	if (client)
 		client.move_delay = initial(client.move_delay)
 
+	set_ssd_indicator(FALSE)
+
 	return TRUE
