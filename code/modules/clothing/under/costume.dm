@@ -167,6 +167,11 @@
 	can_adjust = FALSE
 	resistance_flags = NONE
 
+/obj/item/clothing/under/costume/mummy/magic
+	name = "imbued mummy wrapping"
+	desc = "The wraps are faintly glowing with the light of Ra. At least, you hope it's the light of Ra."
+	armor = list(MELEE = 10, LASER = 20, FIRE = 30)
+
 /obj/item/clothing/under/costume/scarecrow
 	name = "scarecrow clothes"
 	desc = "Perfect camouflage for hiding in botany."
