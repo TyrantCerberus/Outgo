@@ -978,7 +978,17 @@
 			pain_slowdown = clamp(((pain * pain_multiplier) / 50), 0, PAIN_SLOWDOWN_CAP)
 		add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown, TRUE, multiplicative_slowdown = pain_slowdown)
 		add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown_flying, TRUE, multiplicative_slowdown = pain_slowdown)
-		//src.hud_used.infodisplay.Find(/atom/movable/screen/pain)
+		switch(pain_slowdown)
+			if(0)
+				return
+			if(0 to 1)
+				src.throw_alert("pain", /atom/movable/screen/alert/mild_pain)
+			if(1 to 2)
+				src.throw_alert("pain", /atom/movable/screen/alert/moderate_pain)
+			if(2 to 3)
+				src.throw_alert("pain", /atom/movable/screen/alert/severe_pain)
+			if(3 to 4)
+				src.throw_alert("pain", /atom/movable/screen/alert/extreme_pain)
 	else
 		remove_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown)
 		remove_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown_flying)
