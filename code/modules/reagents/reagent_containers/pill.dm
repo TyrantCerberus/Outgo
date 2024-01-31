@@ -111,21 +111,21 @@
 /obj/item/reagent_containers/pill/paracetamol
 	name = "paracetamol pill"
 	desc = "Commonly used to combat mild pain."
-	icon_state = "pill8"
+	icon_state = "pill18"
 	list_reagents = list(/datum/reagent/medicine/painkiller/paracetamol = 10)
 	rename_with_volume = TRUE
 
 /obj/item/reagent_containers/pill/tramadol
 	name = "tramadol pill"
 	desc = "Used to combat moderate pain."
-	icon_state = "pill8"
+	icon_state = "pill9"
 	list_reagents = list(/datum/reagent/medicine/painkiller/tramadol = 10)
 	rename_with_volume = TRUE
 
 /obj/item/reagent_containers/pill/oxycodone
 	name = "oxycodone pill"
 	desc = "Used to combat severe pain."
-	icon_state = "pill8"
+	icon_state = "pill16"
 	list_reagents = list(/datum/reagent/medicine/painkiller/oxycodone = 10)
 	rename_with_volume = TRUE
 
