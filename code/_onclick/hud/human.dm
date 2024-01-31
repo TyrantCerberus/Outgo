@@ -275,10 +275,6 @@
 	internals.hud = src
 	infodisplay += internals
 
-	pain = new /atom/movable/screen/pain()
-	pain.hud = src
-	infodisplay += pain
-
 	healths = new /atom/movable/screen/healths()
 	healths.hud = src
 	infodisplay += healths

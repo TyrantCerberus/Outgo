@@ -627,24 +627,6 @@
 	layer = UI_DAMAGE_LAYER
 	plane = FULLSCREEN_PLANE
 
-/atom/movable/screen/pain
-	name = "pain"
-	icon_state = "no_pain"
-	screen_loc = ui_pain
-
-/atom/movable/screen/pain/proc/update_hud_pain_meter(var/pain_slowdown_level = 0)
-	switch(pain_slowdown_level)
-		if(0)
-			icon_state = "no_pain"
-		if(0 to 1)
-			icon_state = "mild_pain"
-		if(1 to 2)
-			icon_state = "moderate_pain"
-		if(2 to 3)
-			icon_state = "severe_pain"
-		if(3 to 4)
-			icon_state = "extreme_pain"
-
 /atom/movable/screen/healths
 	name = "health"
 	icon_state = "health0"
