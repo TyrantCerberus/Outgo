@@ -29713,6 +29713,7 @@
 	},
 /obj/structure/table/glass,
 /obj/structure/disposalpipe/segment,
+/obj/item/paper/fluff/jobs/chemistry/painkiller_recipes,
 /turf/open/floor/iron/white,
 /area/medical/chemistry)
 "bCv" = (

@@ -24460,6 +24460,7 @@
 	},
 /obj/item/folder/white,
 /obj/effect/turf_decal/delivery,
+/obj/item/paper/fluff/jobs/chemistry/painkiller_recipes,
 /turf/open/floor/iron,
 /area/medical/pharmacy)
 "dhc" = (
