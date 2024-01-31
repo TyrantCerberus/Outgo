@@ -979,9 +979,6 @@
 		add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown, TRUE, multiplicative_slowdown = pain_slowdown)
 		add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown_flying, TRUE, multiplicative_slowdown = pain_slowdown)
 		switch(pain_slowdown)
-			if(0)
-				src.clear_alert("pain", TRUE)
-				return
 			if(0 to 1)
 				src.throw_alert("pain", /atom/movable/screen/alert/mild_pain)
 			if(1 to 2)
@@ -990,6 +987,8 @@
 				src.throw_alert("pain", /atom/movable/screen/alert/severe_pain)
 			if(3 to 4)
 				src.throw_alert("pain", /atom/movable/screen/alert/extreme_pain)
+			if(0)
+				src.clear_alert("pain")
 	else
 		remove_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown)
 		remove_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown_flying)
