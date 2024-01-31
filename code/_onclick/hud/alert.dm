@@ -169,6 +169,25 @@
 
 //End gas alerts
 
+/atom/movable/screen/alert/mild_pain
+	name = "Mild Pain"
+	desc = "You're experiencing mild pain, it's slightly slowing your movements."
+	icon_state = "mild_pain"
+
+/atom/movable/screen/alert/moderate_pain
+	name = "Moderate Pain"
+	desc = "You're experiencing moderate pain, it's slowing your movements."
+	icon_state = "moderate_pain"
+
+/atom/movable/screen/alert/severe_pain
+	name = "Severe Pain"
+	desc = "You're experiencing severe pain, it's majorly slowing your movements."
+	icon_state = "severe_pain"
+
+/atom/movable/screen/alert/extreme_pain
+	name = "Extreme Pain"
+	desc = "You're experiencing extreme pain, it's hard to move at all."
+	icon_state = "extreme_pain"
 
 /atom/movable/screen/alert/fat
 	name = "Fat"
