@@ -433,3 +433,13 @@
 	skill_icon = "lungs"
 	activate_message = "<span class='notice'>You feel that you know a lot about interpreting organs.</span>"
 	deactivate_message = "<span class='notice'>Knowledge of liver damage, heart strain and lung scars fades from your mind.</span>"
+
+/obj/item/skillchip/quicker_carry
+	name = "RES-Q skillchip"
+	auto_traits = list(TRAIT_QUICKER_CARRY)
+	skill_name = "RES-Q"
+	skillchip_flags = SKILLCHIP_RESTRICTED_CATEGORIES
+	skill_description = "Learn how to fireman carry like a professional, and haul the injured, sick or dying with speed!"
+	skill_icon = "hand-holding"
+	activate_message = "<span class='notice'>Carrying people across your back feels like second nature to you.</span>"
+	deactivate_message = "<span class='notice'>Your expert knowledge in fireman carrying fades from your mind.</span>"

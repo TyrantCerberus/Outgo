@@ -915,14 +915,11 @@
 		to_chat(src, span_warning("You can't fireman carry [target] while [target.p_they()] [target.p_are()] standing!"))
 		return
 
-	var/carrydelay = 5 SECONDS //if you have latex you are faster at grabbing
+	var/carrydelay = 5 SECONDS //if you have the right skillchip or infiltrator gloves you are faster at grabbing
 	var/skills_space = "" //cobby told me to do this
 	if(HAS_TRAIT(src, TRAIT_QUICKER_CARRY))
 		carrydelay = 3 SECONDS
 		skills_space = " very quickly"
-	else if(HAS_TRAIT(src, TRAIT_QUICK_CARRY))
-		carrydelay = 4 SECONDS
-		skills_space = " quickly"
 
 	visible_message(span_notice("[src] starts[skills_space] lifting [target] onto [p_their()] back..."),
 		span_notice("You[skills_space] start to lift [target] onto your back..."))

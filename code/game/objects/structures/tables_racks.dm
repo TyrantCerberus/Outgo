@@ -200,9 +200,6 @@
 			if(HAS_TRAIT(user, TRAIT_QUICKER_CARRY))
 				tableplace_delay = 2 SECONDS
 				skills_space = " expertly"
-			else if(HAS_TRAIT(user, TRAIT_QUICK_CARRY))
-				tableplace_delay = 2.75 SECONDS
-				skills_space = " quickly"
 			carried_mob.visible_message(span_notice("[user] begins to[skills_space] place [carried_mob] onto [src]..."),
 				span_userdanger("[user] begins to[skills_space] place [carried_mob] onto [src]..."))
 			if(do_after(user, tableplace_delay, target = carried_mob))
