@@ -123,8 +123,8 @@
 	var/static/items_inside = list(
 		/obj/item/healthanalyzer = 1,
 		/obj/item/stack/medical/gauze/twelve = 1,
-		/obj/item/reagent_containers/pill/patch/libital = 2,
-		/obj/item/reagent_containers/pill/patch/aiuri = 2,
+		/obj/item/reagent_containers/pill/patch/libital = 1,
+		/obj/item/reagent_containers/pill/patch/aiuri = 1,
 		/obj/item/reagent_containers/hypospray/medipen = 1,
 		/obj/item/surgical_drapes = 1,
 		/obj/item/scalpel = 1,
