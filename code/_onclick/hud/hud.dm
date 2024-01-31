@@ -119,7 +119,6 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 	throw_icon = null
 	QDEL_LIST(infodisplay)
 
-	pain = null
 	healths = null
 	stamina = null
 	healthdoll = null
