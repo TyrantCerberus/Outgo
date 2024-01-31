@@ -980,7 +980,7 @@
 		add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown_flying, TRUE, multiplicative_slowdown = pain_slowdown)
 		switch(pain_slowdown)
 			if(0)
-				src.clear_alert("pain")
+				src.clear_alert("pain", TRUE)
 				return
 			if(0 to 1)
 				src.throw_alert("pain", /atom/movable/screen/alert/mild_pain)
