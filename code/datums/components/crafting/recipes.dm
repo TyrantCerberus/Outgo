@@ -809,7 +809,6 @@
 	name = "Mummification Bandages (Mask)"
 	result = /obj/item/clothing/mask/mummy
 	time = 10
-	tool_paths = list(/obj/item/nullrod/egyptian)
 	reqs = list(/obj/item/stack/medical/gauze = 2)
 	category = CAT_CLOTHING
 
@@ -817,6 +816,19 @@
 	name = "Mummification Bandages (Body)"
 	result = /obj/item/clothing/under/costume/mummy
 	reqs = list(/obj/item/stack/medical/gauze = 5)
+
+/datum/crafting_recipe/imbued_mummy
+	name = "Imbued Mummification Bandages (Mask)"
+	result = /obj/item/clothing/mask/mummy/magic
+	time = 10
+	tool_paths = list(/obj/item/nullrod/egyptian)
+	reqs = list(/obj/item/stack/medical/gauze = 2, /obj/item/stack/ore/glass = 1)
+	category = CAT_CLOTHING
+
+/datum/crafting_recipe/imbued_mummy/body
+	name = "Imbued Mummification Bandages (Body)"
+	result = /obj/item/clothing/under/costume/mummy/magic
+	reqs = list(/obj/item/stack/medical/gauze = 5, /obj/item/stack/ore/glass = 2)
 
 /datum/crafting_recipe/chaplain_hood
 	name = "Follower Hoodie"
@@ -1012,16 +1024,6 @@
 	time = 30 SECONDS
 	category = CAT_MISC
 	one_per_turf = TRUE
-
-/datum/crafting_recipe/aquarium
-	name = "Aquarium"
-	result = /obj/structure/aquarium
-	time = 10 SECONDS
-	reqs = list(/obj/item/stack/sheet/iron = 15,
-				/obj/item/stack/sheet/glass = 10,
-				/obj/item/aquarium_kit = 1
-				)
-	category = CAT_MISC
 
 /datum/crafting_recipe/alcohol_burner
 	name = "Alcohol burner"
