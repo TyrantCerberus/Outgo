@@ -83,6 +83,9 @@
 #define HEALTH_THRESHOLD_FULLCRIT -30
 #define HEALTH_THRESHOLD_DEAD -100
 
+//maximum slowdown accruable through unmitigated pain buildup
+#define PAIN_SLOWDOWN_CAP 4
+
 #define HEALTH_THRESHOLD_NEARDEATH -90 //Not used mechanically, but to determine if someone is so close to death they hear the other side
 
 //Actual combat defines
@@ -112,8 +115,6 @@
 //Grab breakout odds
 #define BASE_GRAB_RESIST_CHANCE 60 //base chance for whether or not you can escape from a grab
 
-//slowdown when in softcrit. Note that crawling slowdown will also apply at the same time!
-#define SOFTCRIT_ADD_SLOWDOWN 2
 //slowdown when crawling
 #define CRAWLING_ADD_SLOWDOWN 4
 

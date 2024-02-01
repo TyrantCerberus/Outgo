@@ -144,8 +144,8 @@
 	results = list(/datum/reagent/medicine/higadrite = 3)
 	required_reagents = list(/datum/reagent/phenol = 2, /datum/reagent/lithium = 1)
 
-/datum/chemical_reaction/medicine/morphine
-	results = list(/datum/reagent/medicine/morphine = 2)
+/datum/chemical_reaction/medicine/painkiller/morphine
+	results = list(/datum/reagent/medicine/painkiller/morphine = 2)
 	required_reagents = list(/datum/reagent/carbon = 2, /datum/reagent/hydrogen = 2, /datum/reagent/consumable/ethanol = 1, /datum/reagent/oxygen = 1)
 	required_temp = 480
 
@@ -162,6 +162,19 @@
 	results = list(/datum/reagent/medicine/granibitaluri = 3)
 	required_reagents = list(/datum/reagent/consumable/salt = 1, /datum/reagent/carbon = 1, /datum/reagent/toxin/acid = 1)
 	required_catalysts = list(/datum/reagent/iron = 5)
+
+/datum/chemical_reaction/medicine/paracetamol
+	results = list(/datum/reagent/medicine/painkiller/paracetamol = 3)
+	required_reagents = list(/datum/reagent/acetone = 1, /datum/reagent/consumable/sugar = 1, /datum/reagent/consumable/ethanol = 1)
+
+/datum/chemical_reaction/medicine/tramadol
+	results = list(/datum/reagent/medicine/painkiller/tramadol = 5)
+	required_reagents = list(/datum/reagent/consumable/salt = 1, /datum/reagent/hydrogen = 1, /datum/reagent/chlorine = 1, /datum/reagent/consumable/ethanol = 1, /datum/reagent/potassium = 1)
+
+/datum/chemical_reaction/medicine/oxycodone
+	results = list(/datum/reagent/medicine/painkiller/oxycodone = 2)
+	required_reagents = list(/datum/reagent/medicine/painkiller/tramadol = 1, /datum/reagent/medicine/painkiller/morphine = 1)
+	required_catalysts = list(/datum/reagent/toxin/plasma = 5)
 
 ///medical stacks
 

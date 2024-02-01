@@ -5065,11 +5065,6 @@
 /obj/effect/mapping_helpers/simple_pipes/scrubbers/hidden,
 /turf/open/floor/iron,
 /area/engineering/atmos)
-"aPt" = (
-/obj/structure/table,
-/obj/structure/cable,
-/turf/open/floor/iron/dark,
-/area/ai_monitored/turret_protected/ai_upload)
 "aPv" = (
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
@@ -6517,6 +6512,14 @@
 	},
 /turf/open/space,
 /area/space/nearstation)
+"bcW" = (
+/obj/structure/table,
+/obj/machinery/flasher/directional/north{
+	id = "AI"
+	},
+/obj/item/ai_module/reset,
+/turf/open/floor/iron/dark,
+/area/ai_monitored/turret_protected/ai_upload)
 "bcY" = (
 /obj/effect/turf_decal/tile/red{
 	dir = 1
@@ -16348,15 +16351,6 @@
 /obj/effect/mapping_helpers/simple_pipes/supply/hidden,
 /turf/open/floor/iron,
 /area/hallway/primary/starboard)
-"dvk" = (
-/obj/structure/table,
-/obj/machinery/light/directional/west,
-/obj/machinery/status_display/ai/directional/west,
-/obj/machinery/flasher/directional/south{
-	id = "AI"
-	},
-/turf/open/floor/iron/dark,
-/area/ai_monitored/turret_protected/ai_upload)
 "dvt" = (
 /turf/open/floor/plating{
 	icon_state = "panelscorched"
@@ -16502,6 +16496,11 @@
 	icon_state = "platingdmg3"
 	},
 /area/security/prison)
+"dxR" = (
+/obj/structure/table,
+/obj/structure/cable,
+/turf/open/floor/iron/dark,
+/area/ai_monitored/turret_protected/ai_upload)
 "dxS" = (
 /obj/effect/mapping_helpers/simple_pipes/scrubbers/hidden/layer2,
 /turf/open/floor/iron,
@@ -23522,29 +23521,6 @@
 /obj/structure/extinguisher_cabinet/directional/south,
 /turf/open/floor/iron,
 /area/science/nanite)
-"fRh" = (
-/obj/item/radio/intercom/directional/west,
-/obj/structure/table/glass,
-/obj/machinery/camera{
-	c_tag = "Pharmacy";
-	dir = 4;
-	network = list("ss13","medbay")
-	},
-/obj/machinery/light/directional/west,
-/obj/item/book/manual/wiki/chemistry{
-	pixel_x = -4;
-	pixel_y = 4
-	},
-/obj/item/book/manual/wiki/grenades,
-/obj/effect/turf_decal/tile/yellow{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/yellow,
-/obj/effect/turf_decal/tile/yellow{
-	dir = 8
-	},
-/turf/open/floor/iron/white,
-/area/medical/pharmacy)
 "fRN" = (
 /obj/structure/table/wood,
 /obj/item/toy/plush/carpplushie{
@@ -23653,25 +23629,6 @@
 	icon_state = "platingdmg3"
 	},
 /area/maintenance/port/fore)
-"fVr" = (
-/obj/structure/table,
-/obj/item/ai_module/core/full/asimov,
-/obj/effect/spawner/lootdrop/aimodule_harmless,
-/obj/machinery/door/window{
-	base_state = "right";
-	dir = 4;
-	icon_state = "right";
-	name = "Core Modules";
-	req_access_txt = "20"
-	},
-/obj/structure/window/reinforced,
-/obj/effect/spawner/lootdrop/aimodule_neutral,
-/obj/item/ai_module/core/full/custom,
-/obj/machinery/flasher/directional/north{
-	id = "AI"
-	},
-/turf/open/floor/iron/dark,
-/area/ai_monitored/turret_protected/ai_upload)
 "fVx" = (
 /obj/effect/turf_decal/tile/yellow,
 /obj/effect/turf_decal/tile/yellow{
@@ -31529,6 +31486,25 @@
 	},
 /turf/open/floor/iron/dark,
 /area/engineering/supermatter/room)
+"jdm" = (
+/obj/structure/table,
+/obj/item/ai_module/core/full/asimov,
+/obj/effect/spawner/lootdrop/aimodule_harmless,
+/obj/machinery/door/window{
+	base_state = "right";
+	dir = 4;
+	icon_state = "right";
+	name = "Core Modules";
+	req_access_txt = "20"
+	},
+/obj/structure/window/reinforced,
+/obj/effect/spawner/lootdrop/aimodule_neutral,
+/obj/item/ai_module/core/full/custom,
+/obj/machinery/flasher/directional/north{
+	id = "AI"
+	},
+/turf/open/floor/iron/dark,
+/area/ai_monitored/turret_protected/ai_upload)
 "jdA" = (
 /obj/effect/turf_decal/trimline/red/filled/line,
 /obj/structure/disposalpipe/segment{
@@ -39277,6 +39253,15 @@
 	},
 /turf/open/floor/iron/white,
 /area/medical/medbay/central)
+"lZb" = (
+/obj/structure/table,
+/obj/machinery/light/directional/west,
+/obj/machinery/status_display/ai/directional/west,
+/obj/machinery/flasher/directional/south{
+	id = "AI"
+	},
+/turf/open/floor/iron/dark,
+/area/ai_monitored/turret_protected/ai_upload)
 "lZi" = (
 /obj/structure/chair{
 	dir = 8
@@ -46245,14 +46230,6 @@
 /obj/effect/mapping_helpers/simple_pipes/scrubbers/hidden/layer2,
 /turf/open/floor/iron/white,
 /area/medical/pharmacy)
-"oug" = (
-/obj/structure/table,
-/obj/machinery/flasher/directional/north{
-	id = "AI"
-	},
-/obj/item/ai_module/reset,
-/turf/open/floor/iron/dark,
-/area/ai_monitored/turret_protected/ai_upload)
 "out" = (
 /obj/structure/lattice,
 /obj/item/reagent_containers/food/drinks/bottle/goldschlager,
@@ -69021,6 +68998,30 @@
 /obj/machinery/light/directional/south,
 /turf/open/floor/iron,
 /area/hallway/primary/central)
+"wGV" = (
+/obj/item/radio/intercom/directional/west,
+/obj/structure/table/glass,
+/obj/machinery/camera{
+	c_tag = "Pharmacy";
+	dir = 4;
+	network = list("ss13","medbay")
+	},
+/obj/machinery/light/directional/west,
+/obj/item/book/manual/wiki/chemistry{
+	pixel_x = -4;
+	pixel_y = 4
+	},
+/obj/item/book/manual/wiki/grenades,
+/obj/effect/turf_decal/tile/yellow{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/yellow,
+/obj/effect/turf_decal/tile/yellow{
+	dir = 8
+	},
+/obj/item/paper/fluff/jobs/chemistry/painkiller_recipes,
+/turf/open/floor/iron/white,
+/area/medical/pharmacy)
 "wHb" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -98162,10 +98163,10 @@ aHx
 aaa
 aJS
 aJS
-fVr
+jdm
 aOa
-aPt
-dvk
+dxR
+lZb
 aJS
 aaa
 aUv
@@ -99242,7 +99243,7 @@ xfN
 cjS
 clt
 vsI
-fRh
+wGV
 coT
 xvY
 uGS
@@ -99704,9 +99705,9 @@ aHx
 aaa
 aJS
 aJS
-oug
+bcW
 aOe
-aPt
+dxR
 ikn
 aJS
 aaa
