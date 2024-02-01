@@ -52,9 +52,10 @@ GLOBAL_LIST_INIT(blacklisted_cargo_types, typecacheof(list(
 	height = 7
 	movement_force = list("KNOCKDOWN" = 0, "THROW" = 0)
 
-
 	//Export categories for this run, this is set by console sending the shuttle.
 	var/export_categories = EXPORT_CARGO
+	//Are we going to generate mail? (also set in the console)
+	var/receive_mail = FALSE
 
 /obj/docking_port/mobile/supply/register()
 	. = ..()
@@ -82,7 +83,8 @@ GLOBAL_LIST_INIT(blacklisted_cargo_types, typecacheof(list(
 /obj/docking_port/mobile/supply/initiate_docking()
 	if(getDockedId() == "supply_away") // Buy when we leave home.
 		buy()
-		create_mail()
+		if(receive_mail)
+			create_mail()
 	. = ..() // Fly/enter transit.
 	if(. != DOCKING_SUCCESS)
 		return
