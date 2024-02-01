@@ -19237,31 +19237,6 @@
 /obj/effect/mapping_helpers/simple_pipes/scrubbers/hidden/layer2,
 /turf/open/floor/iron,
 /area/hallway/primary/port)
-"bsI" = (
-/obj/machinery/door/window/brigdoor{
-	dir = 4;
-	name = "Core Modules";
-	req_access_txt = "20"
-	},
-/obj/item/ai_module/supplied/protect_station{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/ai_module/zeroth/onehuman,
-/obj/item/ai_module/reset/purge{
-	pixel_x = -3;
-	pixel_y = -3
-	},
-/obj/structure/table,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1;
-	pixel_y = 1
-	},
-/turf/open/floor/circuit/green{
-	luminosity = 2
-	},
-/area/ai_monitored/turret_protected/ai_upload)
 "bsK" = (
 /obj/effect/turf_decal/delivery,
 /obj/effect/turf_decal/tile/green{
@@ -20009,31 +19984,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/dark,
 /area/maintenance/port)
-"byP" = (
-/obj/machinery/door/window/brigdoor/westright{
-	dir = 4;
-	name = "Core Modules";
-	req_access_txt = "20"
-	},
-/obj/effect/spawner/lootdrop/aimodule_harmful{
-	fan_out_items = 1;
-	lootcount = 2;
-	lootdoubles = 0
-	},
-/obj/item/ai_module/supplied/oxygen{
-	pixel_x = -3;
-	pixel_y = -3
-	},
-/obj/structure/table,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1;
-	pixel_y = 1
-	},
-/turf/open/floor/circuit/green{
-	luminosity = 2
-	},
-/area/ai_monitored/turret_protected/ai_upload)
 "byS" = (
 /obj/machinery/computer/upload/borg,
 /obj/structure/window/reinforced{
@@ -20122,7 +20072,6 @@
 /area/ai_monitored/turret_protected/ai_upload)
 "bzb" = (
 /obj/structure/table,
-/obj/item/ai_module/supplied/freeform,
 /turf/open/floor/circuit/green{
 	luminosity = 2
 	},
@@ -68799,10 +68748,6 @@
 	name = "Core Modules";
 	req_access_txt = "20"
 	},
-/obj/item/ai_module/core/freeformcore{
-	pixel_x = 3;
-	pixel_y = 3
-	},
 /obj/item/ai_module/core/full/custom,
 /obj/item/ai_module/core/full/asimov{
 	pixel_x = -3;
@@ -75012,7 +74957,6 @@
 /area/security/office)
 "uCh" = (
 /obj/structure/table,
-/obj/item/ai_module/supplied/quarantine,
 /obj/machinery/flasher/directional/east{
 	id = "AI";
 	name = "Meatbag Pacifier";
@@ -112305,8 +112249,8 @@ acm
 arl
 arl
 rIf
-bsI
-byP
+bzb
+bzb
 tuU
 bdQ
 axf

@@ -5067,7 +5067,6 @@
 /area/engineering/atmos)
 "aPt" = (
 /obj/structure/table,
-/obj/item/ai_module/supplied/quarantine,
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/ai_upload)
@@ -5079,12 +5078,6 @@
 /obj/machinery/ai_slipper{
 	uses = 8
 	},
-/obj/structure/cable,
-/turf/open/floor/iron/dark,
-/area/ai_monitored/turret_protected/ai_upload)
-"aPx" = (
-/obj/structure/table,
-/obj/item/ai_module/supplied/freeform,
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/ai_upload)
@@ -16357,7 +16350,6 @@
 /area/hallway/primary/starboard)
 "dvk" = (
 /obj/structure/table,
-/obj/item/ai_module/reset,
 /obj/machinery/light/directional/west,
 /obj/machinery/status_display/ai/directional/west,
 /obj/machinery/flasher/directional/south{
@@ -23665,7 +23657,6 @@
 /obj/structure/table,
 /obj/item/ai_module/core/full/asimov,
 /obj/effect/spawner/lootdrop/aimodule_harmless,
-/obj/item/ai_module/core/freeformcore,
 /obj/machinery/door/window{
 	base_state = "right";
 	dir = 4;
@@ -46256,20 +46247,10 @@
 /area/medical/pharmacy)
 "oug" = (
 /obj/structure/table,
-/obj/machinery/door/window{
-	dir = 8;
-	name = "High-Risk Modules";
-	req_access_txt = "20"
-	},
-/obj/structure/window/reinforced,
 /obj/machinery/flasher/directional/north{
 	id = "AI"
 	},
-/obj/effect/spawner/lootdrop/aimodule_harmful,
-/obj/item/ai_module/supplied/oxygen,
-/obj/item/ai_module/supplied/protect_station,
-/obj/item/ai_module/zeroth/onehuman,
-/obj/item/ai_module/reset/purge,
+/obj/item/ai_module/reset,
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/ai_upload)
 "out" = (
@@ -48854,11 +48835,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
 /area/engineering/atmos)
-"pqI" = (
-/obj/structure/lattice/catwalk,
-/obj/item/fish_feed,
-/turf/open/space/basic,
-/area/space/nearstation)
 "pqJ" = (
 /obj/machinery/door/airlock/maintenance{
 	req_one_access_txt = "1;4;38;12"
@@ -99730,7 +99706,7 @@ aJS
 aJS
 oug
 aOe
-aPx
+aPt
 ikn
 aJS
 aaa
@@ -115480,7 +115456,7 @@ vqh
 aox
 aox
 aox
-pqI
+aox
 aaa
 aaa
 aaa

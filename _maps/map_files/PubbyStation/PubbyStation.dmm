@@ -11327,13 +11327,11 @@
 /area/medical/medbay/central)
 "aCG" = (
 /obj/structure/table,
-/obj/item/ai_module/supplied/quarantine,
 /obj/machinery/camera/motion{
 	c_tag = "AI Upload Port";
 	dir = 4;
 	network = list("aiupload")
 	},
-/obj/item/ai_module/reset,
 /obj/machinery/flasher{
 	id = "brigentry";
 	pixel_x = -28
@@ -11387,7 +11385,6 @@
 /area/ai_monitored/turret_protected/ai_upload)
 "aCM" = (
 /obj/structure/table,
-/obj/item/ai_module/supplied/freeform,
 /obj/machinery/camera/motion{
 	c_tag = "AI Upload Starboard";
 	dir = 8;
@@ -12165,7 +12162,6 @@
 /obj/structure/table,
 /obj/item/ai_module/core/full/asimov,
 /obj/effect/spawner/lootdrop/aimodule_harmless,
-/obj/item/ai_module/core/freeformcore,
 /obj/machinery/door/window{
 	base_state = "right";
 	dir = 4;
@@ -12221,20 +12217,6 @@
 /area/ai_monitored/turret_protected/ai_upload)
 "aEI" = (
 /obj/structure/table,
-/obj/item/ai_module/supplied/oxygen,
-/obj/item/ai_module/zeroth/onehuman,
-/obj/machinery/door/window{
-	dir = 8;
-	name = "High-Risk Modules";
-	req_access_txt = "20"
-	},
-/obj/item/ai_module/reset/purge,
-/obj/effect/spawner/lootdrop/aimodule_harmful,
-/obj/item/ai_module/supplied/protect_station,
-/obj/structure/window/reinforced{
-	dir = 1;
-	pixel_y = 1
-	},
 /obj/machinery/flasher{
 	id = "brigentry";
 	pixel_x = 28
@@ -12246,6 +12228,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
+/obj/item/ai_module/reset,
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/ai_upload)
 "aEJ" = (
