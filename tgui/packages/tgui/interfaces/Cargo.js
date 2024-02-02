@@ -124,10 +124,12 @@ const CargoStatus = (props, context) => {
             )}
           </LabeledList.Item>
         )}
-        <Button.Checkbox
-          content="Receive mail?"
-          checked={receive_mail}
-          onClick={() => act('togglemail')} />
+        <LabeledList.Item label="Mail Options">
+          {<Button.Checkbox
+            content="Receive mail?"
+            checked={receive_mail}
+            onClick={() => act('togglemail')} />}
+        </LabeledList.Item>
       </LabeledList>
     </Section>
   );
