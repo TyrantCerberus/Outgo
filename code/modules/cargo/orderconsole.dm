@@ -203,7 +203,7 @@
 		if("togglemail")
 			if(is_express)
 				return
-			SSshuttle.supply.receive_mail = !(SShuttle.supply.receive_mail)
+			SSshuttle.supply.receive_mail = !(SSshuttle.supply.receive_mail)
 			. = TRUE
 		if("add")
 			if(is_express)
