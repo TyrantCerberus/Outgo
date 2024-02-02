@@ -97,6 +97,7 @@
 /obj/machinery/computer/cargo/ui_data()
 	var/list/data = list()
 	data["location"] = SSshuttle.supply.getStatusText()
+	data["receive_mail"] = SSshuttle.supply.receive_mail
 	var/datum/bank_account/D = SSeconomy.get_dep_account(cargo_account)
 	if(D)
 		data["points"] = D.account_balance
@@ -199,6 +200,11 @@
 				investigate_log("[key_name(usr)] accepted a shuttle loan event.", INVESTIGATE_CARGO)
 				log_game("[key_name(usr)] accepted a shuttle loan event.")
 				. = TRUE
+		if("togglemail")
+			if(is_express)
+				return
+			SSshuttle.supply.receive_mail = !(SShuttle.supply.receive_mail)
+			. = TRUE
 		if("add")
 			if(is_express)
 				return
