@@ -80,8 +80,13 @@
 
 //Health Defines
 #define HEALTH_THRESHOLD_CRIT 0
-#define HEALTH_THRESHOLD_FULLCRIT -30
+#define HEALTH_THRESHOLD_FULLCRIT -80
 #define HEALTH_THRESHOLD_DEAD -100
+
+//crit related, baseline chance
+#define SOFTCRIT_DROP_CHANCE 10 //how likely a person is to drop an item they're holding when in crit (per process tick)
+#define SOFTCRIT_STUMBLE_CHANCE 10 //how likely a person is to fall over when in crit (per process tick)
+#define SOFTCRIT_PASSOUT_CHANCE 3 //how likely a person is to fall unconscious when in crit (per process tick), skipped if they have epinephrine or atropine in their system
 
 //maximum slowdown accruable through unmitigated pain buildup
 #define PAIN_SLOWDOWN_CAP 4
