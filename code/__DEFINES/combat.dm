@@ -80,7 +80,7 @@
 
 //Health Defines
 #define HEALTH_THRESHOLD_CRIT 0
-#define HEALTH_THRESHOLD_FULLCRIT -60
+#define HEALTH_THRESHOLD_FULLCRIT -80
 #define HEALTH_THRESHOLD_DEAD -100
 
 //crit related, baseline chance per process tick
