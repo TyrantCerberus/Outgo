@@ -1,5 +1,5 @@
 #define BLOOD_DRIP_RATE_MOD 90 //Greater number means creating blood drips more often while bleeding
-#define BLEED_RATE_MODIFIER 0.2 //Bleedstacks on bodyparts are multiplied by this number, increased from 0.1
+#define BLEED_RATE_MODIFIER 0.1 //Bleedstacks on bodyparts are multiplied by this number
 #define HAEMOPHILIA_MODIFIER 2 //Bleed rate is multiplied by this number if the bleeder has the haemophilia trait
 
 /****************************************************
