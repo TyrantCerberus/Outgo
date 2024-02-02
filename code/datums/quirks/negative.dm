@@ -822,3 +822,13 @@
 	if(!user.istate.harm)
 		return
 	user.adjustStaminaLoss(7.5)
+
+/datum/quirk/haemophilia
+	name = "Haemophilia"
+	desc = "You bleed out much faster than others."
+	value = -4
+	mob_trait = TRAIT_HAEMOPHILIA
+	gain_text = "<span class='notice'>You feel your blood racing through your veins.</span>"
+	lose_text = "<span class='danger'>Your blood feels as if it slows down.</span>"
+	medical_record_text = "Patient suffers from haemophilia and will bleed out rapidly when injured."
+	hardcore_value = 4
