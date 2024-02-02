@@ -833,6 +833,7 @@
 	hardcore_value = 4
 
 /datum/quirk/haemophilia/add()
-	if(NOBLOOD in quirk_holder.dna.species.species_traits || HAS_TRAIT(quirk_holder, TRAIT_NOBLEED))
+	var/mob/living/carbon/human/H = quirk_holder
+	if(NOBLOOD in H.dna.species.species_traits || HAS_TRAIT(H, TRAIT_NOBLEED))
 		return
 	. = ..()
