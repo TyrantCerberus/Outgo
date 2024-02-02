@@ -807,7 +807,6 @@
 	RegisterSignal(quirk_holder,COMSIG_MOB_ATTACK_HAND,PROC_REF(apply_harm_averse_hand))
 	RegisterSignal(quirk_holder,COMSIG_MOB_ITEM_ATTACK,PROC_REF(apply_harm_averse_item))
 
-
 /datum/quirk/harm_averse/remove()
 	. = ..()
 	UnregisterSignal(quirk_holder,COMSIG_MOB_ATTACK_HAND)
@@ -832,3 +831,8 @@
 	lose_text = "<span class='danger'>Your blood feels as if it slows down.</span>"
 	medical_record_text = "Patient suffers from haemophilia and will bleed out rapidly when injured."
 	hardcore_value = 4
+
+/datum/quirk/haemophilia/add()
+	if(NOBLOOD in quirk_holder.dna.species.species_traits || HAS_TRAIT(quirk_holder, TRAIT_NOBLEED))
+		return
+	. = ..()
