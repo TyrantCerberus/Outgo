@@ -57,13 +57,20 @@
 		suffocation_damage = 0
 	//Handle other effects of being in softcrit
 	var/health_derived_modifier = (0 - health) / 4
+	switch(health_derived_modifier)
+		if(0 to 20)
+			prog_crit_shaking("low")
+		if(20 to 40)
+			prog_crit_shaking("medium")
+		if(40 to 60)
+			prog_crit_shaking("high")
+		if(60 to 80)
+			prog_crit_shaking("intense")
 	if(prob(SOFTCRIT_DROP_CHANCE + health_derived_modifier))
-		//visible_message(span_danger("[src]'s hands spasm, causing [p_them()] to drop everything!"))
 		emote("twitch")
 		drop_all_held_items()
 		to_chat(src, span_danger("You drop everything you were carrying!"))
 	if(prob(SOFTCRIT_STUMBLE_CHANCE + health_derived_modifier))
-		//visible_message(span_danger("[src] trips and falls!"))
 		Knockdown(1 SECONDS, TRUE)
 		to_chat(src, span_danger("You stumble and fall!"))
 	var/chance_of_falling_unconscious = SOFTCRIT_PASSOUT_CHANCE + health_derived_modifier
@@ -80,6 +87,19 @@
 		chance_of_falling_unconscious = 0
 	if(prob(chance_of_falling_unconscious))
 		Unconscious(2 SECONDS, TRUE)
+
+/mob/living/carbon/proc/prog_crit_shaking(var/intensity = "low", var/duration = 20 SECONDS)
+	var/pixel_movement = 0
+	switch(intensity)
+		if("low")
+			pixel_movement = 1
+		if("medium")
+			pixel_movement = 2
+		if("high")
+			pixel_movement = 3
+		if("intense")
+			pixel_movement = 4
+
 
 ///////////////
 // BREATHING //
