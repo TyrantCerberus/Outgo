@@ -67,8 +67,8 @@
 		if(60 to 80)
 			prog_crit_shaking("intense")
 	if(prob(SOFTCRIT_DROP_CHANCE + health_derived_modifier))
-		animate(user, pixel_y = user.pixel_y + 2, time = 0.1 SECONDS)
-		animate(pixel_y = user.pixel_y - 2, time = 0.1 SECONDS)
+		animate(src, pixel_y = src.pixel_y + 2, time = 0.1 SECONDS)
+		animate(pixel_y = src.pixel_y - 2, time = 0.1 SECONDS)
 		drop_all_held_items()
 		to_chat(src, span_danger("You drop everything you were carrying!"))
 	if(prob(SOFTCRIT_STUMBLE_CHANCE + health_derived_modifier))
@@ -101,8 +101,8 @@
 		if("intense")
 			pixel_movement = 4
 	for(var/i in 1 to duration / (0.2 SECONDS))
-		animate(pixel_x = user.pixel_x - pixel_movement, time = 0.1 SECONDS)
-		animate(pixel_x = user.pixel_x + pixel_movement, time = 0.1 SECONDS)
+		animate(pixel_x = src.pixel_x - pixel_movement, time = 0.1 SECONDS)
+		animate(pixel_x = src.pixel_x + pixel_movement, time = 0.1 SECONDS)
 
 ///////////////
 // BREATHING //
