@@ -58,12 +58,12 @@
 	//Handle other effects of being in softcrit
 	var/health_derived_modifier = (0 - health) / 4
 	if(prob(SOFTCRIT_DROP_CHANCE + health_derived_modifier))
-		visible_message(span_danger("[src]'s hands spasm causing [p_them()] to drop everything!"))
+		//visible_message(span_danger("[src]'s hands spasm, causing [p_them()] to drop everything!"))
 		emote("twitch")
 		drop_all_held_items()
 		to_chat(src, span_danger("You drop everything you were carrying!"))
 	if(prob(SOFTCRIT_STUMBLE_CHANCE + health_derived_modifier))
-		visible_message(span_danger("[src] trips and falls!"))
+		//visible_message(span_danger("[src] trips and falls!"))
 		Knockdown(1 SECONDS, TRUE)
 		to_chat(src, span_danger("You stumble and fall!"))
 	var/chance_of_falling_unconscious = SOFTCRIT_PASSOUT_CHANCE + health_derived_modifier
