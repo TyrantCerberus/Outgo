@@ -101,7 +101,7 @@
 		if("intense")
 			pixel_movement = 4
 	for(var/i in 1 to duration / (0.2 SECONDS))
-		animate(pixel_x = src.pixel_x - pixel_movement, time = 0.1 SECONDS)
+		animate(src, pixel_x = src.pixel_x - pixel_movement, time = 0.1 SECONDS)
 		animate(pixel_x = src.pixel_x + pixel_movement, time = 0.1 SECONDS)
 
 ///////////////
