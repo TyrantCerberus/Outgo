@@ -66,6 +66,20 @@
 		visible_message(span_danger("[src] trips and falls!"))
 		Knockdown(1 SECONDS, TRUE)
 		to_chat(src, span_danger("You stumble and fall!"))
+	var/chance_of_falling_unconscious = SOFTCRIT_PASSOUT_CHANCE + health_derived_modifier
+	var/datum/reagents/R = reagents
+	if( R.has_reagent(/datum/reagent/medicine/painkiller/paracetamol) || \
+		R.has_reagent(/datum/reagent/medicine/painkiller/tramadol)    || \
+		R.has_reagent(/datum/reagent/medicine/painkiller/oxycodone)   || \
+		R.has_reagent(/datum/reagent/medicine/painkiller/morphine)    || \
+		R.has_reagent(/datum/reagent/drug/methamphetamine)            || \
+		R.has_reagent(/datum/reagent/consumable/coffee)
+		)
+		chance_of_falling_unconscious *= 0.5
+	if(R.has_reagent(/datum/reagent/medicine/epinephrine) || R.has_reagent(/datum/reagent/medicine/atropine))
+		chance_of_falling_unconscious = 0
+	if(prob(chance_of_falling_unconscious))
+		Unconscious(2 SECONDS, TRUE)
 
 ///////////////
 // BREATHING //

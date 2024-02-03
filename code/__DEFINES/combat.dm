@@ -86,7 +86,7 @@
 //crit related, baseline chance per process tick
 #define SOFTCRIT_DROP_CHANCE 10 //how likely a person is to drop an item they're holding when in crit
 #define SOFTCRIT_STUMBLE_CHANCE 10 //how likely a person is to fall over when in crit
-#define SOFTCRIT_PASSOUT_CHANCE 3 //how likely a person is to fall unconscious when in crit, skipped if they have epinephrine or atropine in their system, halved if they have coffee or meth
+#define SOFTCRIT_PASSOUT_CHANCE 3 //how likely a person is to fall unconscious when in crit, skipped if they have epinephrine or atropine in their system, halved if they have a painkiller, coffee or meth
 //softcrit suffocation damage defines
 #define SUFFOCATION_DAMAGE_ACCUMULATION_PER_TICK 0.5 //how much do we add to the counter per process tick
 #define SUFFOCATION_DAMAGE_APPLICATION_THRESHOLD 1 //what value does the counter have to reach before we apply the damage it stores
