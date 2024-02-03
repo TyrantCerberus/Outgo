@@ -44,6 +44,29 @@
 	if(stat != DEAD)
 		return 1
 
+//////////////////////
+// PROGRESSIVE CRIT //
+//////////////////////
+
+/mob/living/carbon/handle_progressive_crit(delta_time, times_fired)
+	//Handle gradual oxyloss from being in softcrit (ensures mobs never get stuck between living and dying)
+	var/static/suffocation_damage = 0
+	suffocation_damage += SUFFOCATION_DAMAGE_ACCUMULATION_PER_TICK
+	if(suffocation_damage >= SUFFOCATION_DAMAGE_APPLICATION_THRESHOLD)
+		adjustOxyLoss(suffocation_damage)
+		suffocation_damage = 0
+	//Handle other effects of being in softcrit
+	var/health_derived_modifier = (0 - health) / 4
+	if(prob(SOFTCRIT_DROP_CHANCE + health_derived_modifier))
+		visible_message(span_danger("[src]'s hands spasm causing [p_them()] to drop everything!"))
+		emote("twitch")
+		drop_all_held_items()
+		to_chat(src, span_danger("You drop everything you were carrying!"))
+	if(prob(SOFTCRIT_STUMBLE_CHANCE + health_derived_modifier))
+		visible_message(span_danger("[src] trips and falls!"))
+		Knockdown(1 SECONDS, TRUE)
+		to_chat(src, span_danger("You stumble and fall!"))
+
 ///////////////
 // BREATHING //
 ///////////////
