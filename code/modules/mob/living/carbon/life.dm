@@ -57,7 +57,7 @@
 		suffocation_damage = 0
 	//Handle other effects of being in softcrit
 	var/health_derived_modifier = (0 - health) / 4
-	switch(health_derived_modifier)
+	switch(health_derived_modifier) //If you change the hard crit threshold, you'll need to update this switch
 		if(0 to 20)
 			prog_crit_shaking("low")
 		if(20 to 40)
