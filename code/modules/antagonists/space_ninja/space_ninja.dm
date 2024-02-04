@@ -42,13 +42,6 @@
 	antag_memory += "I am an elite mercenary of the mighty Spider Clan. A <font color='red'><B>SPACE NINJA</B></font>!<br>"
 	antag_memory += "Surprise is my weapon. Shadows are my armor. Without them, I am nothing. (//initialize your suit by clicking the initialize UI button, to use abilities like stealth)!<br>"
 
-/datum/objective/cyborg_hijack
-	explanation_text = "Use your gloves to convert at least one cyborg to aide you in sabotaging the station."
-
-/datum/objective/door_jack
-	///How many doors that need to be opened using the gloves to pass the objective
-	var/doors_required = 0
-
 /datum/objective/plant_explosive
 	var/area/detonation_location
 
@@ -64,21 +57,11 @@
  * Proc that adds all the ninja's objectives to the antag datum.  Called when the datum is gained.
  */
 /datum/antagonist/ninja/proc/addObjectives()
-	//Cyborg Hijack: Flag set to complete in the DrainAct in ninjaDrainAct.dm
-	var/datum/objective/hijack = new /datum/objective/cyborg_hijack()
-	objectives += hijack
-
 	//Research stealing
 	var/datum/objective/download/research = new /datum/objective/download()
 	research.owner = owner
 	research.gen_amount_goal()
 	objectives += research
-
-	//Door jacks, flag will be set to complete on when the last door is hijacked
-	var/datum/objective/door_jack/doorobjective = new /datum/objective/door_jack()
-	doorobjective.doors_required = rand(15,40)
-	doorobjective.explanation_text = "Use your gloves to doorjack [doorobjective.doors_required] airlocks on the station."
-	objectives += doorobjective
 
 	//Explosive plant, the bomb will register its completion on priming
 	var/datum/objective/plant_explosive/bombobjective = new /datum/objective/plant_explosive()
