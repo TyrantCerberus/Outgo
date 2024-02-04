@@ -101,7 +101,7 @@
 
 //Throwing stuff
 /mob/living/carbon/proc/toggle_throw_mode()
-	if(stat)
+	if(stat >= UNCONSCIOUS)
 		return
 	if(throw_mode)
 		throw_mode_off(THROW_MODE_TOGGLE)
