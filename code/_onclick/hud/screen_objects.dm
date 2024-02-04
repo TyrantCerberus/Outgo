@@ -89,10 +89,6 @@
 	icon_state = "craft"
 	screen_loc = ui_crafting
 
-/atom/movable/screen/craft/Click()
-	if(usr.stat == SOFT_CRIT)
-		to_chat(usr, span_warning("You can't craft while in critical condition!"))
-
 /atom/movable/screen/area_creator
 	name = "create new area"
 	icon = 'icons/hud/screen_midnight.dmi'
