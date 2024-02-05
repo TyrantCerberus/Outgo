@@ -680,7 +680,9 @@
 	if(status != BODYPART_ORGANIC) // maybe in the future we can bleed oil from aug parts, but not now
 		return
 
-	var/bleed_rate = bleedstacks * 0.1
+	var/bleed_rate = bleedstacks * BLEED_RATE_MODIFIER
+	if(HAS_TRAIT(owner, TRAIT_HAEMOPHILIA))
+		bleed_rate *= HAEMOPHILIA_MODIFIER
 
 	//We want an accurate reading of .len
 	list_clear_nulls(embedded_objects)

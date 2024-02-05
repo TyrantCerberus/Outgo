@@ -169,6 +169,11 @@
 
 //End gas alerts
 
+/atom/movable/screen/alert/critical_condition
+	name = "Critical Condition"
+	desc = "You're dying!"
+	icon_state = "critical"
+
 /atom/movable/screen/alert/mild_pain
 	name = "Mild Pain"
 	desc = "You're experiencing mild pain, it's slightly slowing your movements."
