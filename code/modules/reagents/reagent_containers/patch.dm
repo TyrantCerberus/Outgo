@@ -29,7 +29,7 @@
 
 /obj/item/reagent_containers/pill/patch/libital
 	name = "libital patch (brute)"
-	desc = "A pain reliever. Does minor liver damage. Diluted with Granibitaluri."
+	desc = "Alleviates bruising. Does minor liver damage. Diluted with Granibitaluri."
 	list_reagents = list(/datum/reagent/medicine/c2/libital = 2, /datum/reagent/medicine/granibitaluri = 8) //10 iterations
 	icon_state = "bandaid_brute"
 
