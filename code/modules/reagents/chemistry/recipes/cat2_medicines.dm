@@ -13,6 +13,10 @@
 	required_reagents = list(/datum/reagent/phenol = 1, /datum/reagent/oxygen = 1, /datum/reagent/nitrogen = 1)
 	required_temp = 225
 
+/datum/chemical_reaction/medicine/colpisbital
+	results = list(/datum/reagent/medicine/c2/libital/colpisbital = 4)
+	required_reagents = list(/datum/reagent/medicine/c2/libital = 2, /datum/reagent/water = 1, /datum/reagent/consumable/ethanol = 1)
+
 /datum/chemical_reaction/medicine/probital
 	results = list(/datum/reagent/medicine/c2/probital = 4)
 	required_reagents = list(/datum/reagent/copper = 1, /datum/reagent/acetone = 2,  /datum/reagent/phosphorus = 1)
@@ -32,6 +36,10 @@
 	results = list(/datum/reagent/medicine/c2/aiuri = 4)
 	required_reagents = list(/datum/reagent/ammonia = 1, /datum/reagent/toxin/acid = 1, /datum/reagent/hydrogen = 2)
 	required_temp = 50
+
+/datum/chemical_reaction/medicine/cremiisuri
+	results = list(/datum/reagent/medicine/c2/aiuri/cremiisuri = 4)
+	required_reagents = list(/datum/reagent/medicine/c2/aiuri = 2, /datum/reagent/water = 1, /datum/reagent/consumable/ethanol = 1)
 
 /datum/chemical_reaction/medicine/hercuri
 	results = list(/datum/reagent/medicine/c2/hercuri = 5)
