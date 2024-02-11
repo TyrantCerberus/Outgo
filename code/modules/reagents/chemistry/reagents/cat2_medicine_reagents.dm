@@ -86,12 +86,21 @@
 	taste_description = "bitter with a hint of alcohol"
 	reagent_state = SOLID
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	var/brute_heal_amount = -3
+	var/liver_damage_amount = 0.3
 
 /datum/reagent/medicine/c2/libital/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
-	M.adjustOrganLoss(ORGAN_SLOT_LIVER, 0.3 * REM * delta_time)
-	M.adjustBruteLoss(-3 * REM * delta_time)
+	M.adjustOrganLoss(ORGAN_SLOT_LIVER, liver_damage_amount * REM * delta_time)
+	M.adjustBruteLoss(brute_heal_amount * REM * delta_time)
 	..()
 	return TRUE
+
+/datum/reagent/medicine/c2/libital/colpisbital //diluted libital, half as effective
+	name = "Colpisbital"
+	description = "Diluted medicine used to treat brute. Does minor liver damage."
+	color = "#ebebbe"
+	brute_heal_amount = -1.5
+	liver_damage_amount = 0.15
 
 /datum/reagent/medicine/c2/probital
 	name = "Probital"
@@ -160,12 +169,21 @@
 	var/resetting_probability = 0
 	var/message_cd = 0
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	var/burn_heal_amount = -2
+	var/eye_damage_amount = 0.25
 
 /datum/reagent/medicine/c2/aiuri/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
-	M.adjustFireLoss(-2 * REM * delta_time)
-	M.adjustOrganLoss(ORGAN_SLOT_EYES, 0.25 * REM * delta_time)
+	M.adjustFireLoss(burn_heal_amount * REM * delta_time)
+	M.adjustOrganLoss(ORGAN_SLOT_EYES, eye_damage_amount * REM * delta_time)
 	..()
 	return TRUE
+
+/datum/reagent/medicine/c2/aiuri/cremiisuri //diluted aiuri, half as effective
+	name = "Cremiisuri"
+	description = "Diluted medicine used to treat burns. Does minor eye damage."
+	color = "#9aa0fc"
+	burn_heal_amount = -1
+	eye_damage_amount = 0.125
 
 /datum/reagent/medicine/c2/hercuri
 	name = "Hercuri"
