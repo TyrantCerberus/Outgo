@@ -93,6 +93,10 @@
 			return
 		var/armor = run_armor_check(zone, MELEE, "Your armor has protected your [parse_zone(zone)].", "Your armor has softened hit to your [parse_zone(zone)].", thrown_item.armour_penetration, "", FALSE, thrown_item.weak_against_armour)
 		apply_damage(thrown_item.throwforce, thrown_item.damtype, zone, armor, sharpness = thrown_item.get_sharpness())
+		if(thrown_item.get_sharpness() == NONE)
+			thrown_by?.do_attack_animation(src, ATTACK_EFFECT_PUNCH)
+		else
+			thrown_by?.do_attack_animation(src, ATTACK_EFFECT_SLASH)
 		if(QDELETED(src)) //Damage can delete the mob.
 			return
 		return ..()

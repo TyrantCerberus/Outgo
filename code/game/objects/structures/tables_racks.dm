@@ -137,6 +137,7 @@
 	pushed_mob.Knockdown(30)
 	pushed_mob.apply_damage(10, BRUTE)
 	pushed_mob.apply_damage(40, STAMINA)
+	user.do_attack_animation(src, ATTACK_EFFECT_SMASH) //do effect on the table because otherwise delay can make it look weird
 	if(user.mind?.martial_art.smashes_tables && user.mind?.martial_art.can_use(user))
 		deconstruct(FALSE)
 	playsound(pushed_mob, 'sound/effects/tableslam.ogg', 90, TRUE)
@@ -150,7 +151,7 @@
 	var/obj/item/bodypart/banged_limb = pushed_mob.get_bodypart(user.zone_selected) || pushed_mob.get_bodypart(BODY_ZONE_HEAD)
 	banged_limb?.receive_damage(30)
 	pushed_mob.apply_damage(60, STAMINA)
-	take_damage(50)
+	user.do_attack_animation(src, ATTACK_EFFECT_PUNCH)
 	if(user.mind?.martial_art.smashes_tables && user.mind?.martial_art.can_use(user))
 		deconstruct(FALSE)
 	playsound(pushed_mob, 'sound/effects/bang.ogg', 90, TRUE)
