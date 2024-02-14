@@ -107,18 +107,18 @@
 
 /obj/item/clothing/shoes/thanatologist
 	name = "thanatologist's boots"
-	desc = "heavy black boots for walking through diseased terrain unharmed"
+	desc = "Heavy black boots for walking through diseased terrain unharmed."
 	icon_state = "thanatologists_boots"
 	inhand_icon_state = "thanatologists_boots"
 
 /obj/item/clothing/shoes/physician
 	name = "physician's boots"
-	desc = "a pair of brown boots"
+	desc = "A pair of brown boots."
 	icon_state = "physicians_boots"
 	inhand_icon_state = "physicians_boots"
 
 /obj/item/clothing/shoes/miraculist
 	name = "miraculist's boots"
-	desc = "a pair of light brown boots with ankle high socks"
+	desc = "A pair of light brown boots with ankle high socks."
 	icon_state = "miraculists_boots"
 	inhand_icon_state = "miraculists_boots"
