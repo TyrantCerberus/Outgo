@@ -29,18 +29,30 @@
 
 /obj/item/reagent_containers/pill/patch/libital
 	name = "libital patch (brute)"
-	desc = "A pain reliever. Does minor liver damage. Diluted with Granibitaluri."
-	list_reagents = list(/datum/reagent/medicine/c2/libital = 2, /datum/reagent/medicine/granibitaluri = 8) //10 iterations
+	desc = "Alleviates bruising; does minor liver damage. Diluted with Granibitaluri."
+	list_reagents = list(/datum/reagent/medicine/c2/libital = 4, /datum/reagent/medicine/granibitaluri = 6)
+	icon_state = "bandaid_brute"
+
+/obj/item/reagent_containers/pill/patch/colpisbital
+	name = "colpisbital patch (brute)"
+	desc = "Alleviates light bruising but does minor liver damage. Also contains: Granibitaluri."
+	list_reagents = list(/datum/reagent/medicine/c2/libital/colpisbital = 4, /datum/reagent/medicine/granibitaluri = 6)
 	icon_state = "bandaid_brute"
 
 /obj/item/reagent_containers/pill/patch/aiuri
 	name = "aiuri patch (burn)"
-	desc = "Helps with burn injuries. Does minor eye damage. Diluted with Granibitaluri."
-	list_reagents = list(/datum/reagent/medicine/c2/aiuri = 2, /datum/reagent/medicine/granibitaluri = 8)
+	desc = "Heals burn injuries; does minor eye damage. Diluted with Granibitaluri."
+	list_reagents = list(/datum/reagent/medicine/c2/aiuri = 6, /datum/reagent/medicine/granibitaluri = 4)
+	icon_state = "bandaid_burn"
+
+/obj/item/reagent_containers/pill/patch/cremiisuri
+	name = "cremiisuri patch (burn)"
+	desc = "Heals mild burn injuries but does minor eye damage. Also contains: Granibitaluri."
+	list_reagents = list(/datum/reagent/medicine/c2/aiuri/cremiisuri = 6, /datum/reagent/medicine/granibitaluri = 4)
 	icon_state = "bandaid_burn"
 
 /obj/item/reagent_containers/pill/patch/synthflesh
 	name = "synthflesh patch"
-	desc = "Helps with brute and burn injuries. Slightly toxic."
+	desc = "Heals both brute and burn injuries. Toxic."
 	list_reagents = list(/datum/reagent/medicine/c2/synthflesh = 20)
 	icon_state = "bandaid_both"

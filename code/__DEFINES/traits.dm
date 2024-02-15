@@ -246,9 +246,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_MAGIC_CHOKE "magic_choke"
 #define TRAIT_SOOTHED_THROAT "soothed-throat"
 #define TRAIT_BOOZE_SLIDER "booze-slider"
-/// We place people into a fireman carry quicker than standard
-#define TRAIT_QUICK_CARRY "quick-carry"
-/// We place people into a fireman carry especially quickly compared to quick_carry
+/// We place people into a fireman carry especially quickly
 #define TRAIT_QUICKER_CARRY "quicker-carry"
 #define TRAIT_QUICK_BUILD "quick-build"
 /// We can handle 'dangerous' plants in botany safely
@@ -438,10 +436,6 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_FOOD_GRILLED "food_grilled"
 /// The items needs two hands to be carried
 #define TRAIT_NEEDS_TWO_HANDS "needstwohands"
-/// Fish in this won't die
-#define TRAIT_FISH_SAFE_STORAGE "fish_case"
-/// Stuff that can go inside fish cases
-#define TRAIT_FISH_CASE_COMPATIBILE "fish_case_compatibile"
 /// Plants that were mutated as a result of passive instability, not a mutation threshold.
 #define TRAIT_PLANT_WILDMUTATE "wildmutation"
 /// If you hit an APC with exposed internals with this item it will try to shock you
@@ -481,6 +475,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_INTROVERT "introvert"
 #define TRAIT_ANXIOUS "anxious"
 #define TRAIT_INSANITY "insanity"
+#define TRAIT_HAEMOPHILIA "haemophilia"
 
 ///Trait for dryable items
 #define TRAIT_DRYABLE "trait_dryable"
@@ -623,7 +618,6 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define CHRONOSUIT_TRAIT "chronosuit"
 #define LOCKED_HELMET_TRAIT "locked-helmet"
 #define NINJA_SUIT_TRAIT "ninja-suit"
-#define SLEEPING_CARP_TRAIT "sleeping_carp"
 #define MADE_UNCLONEABLE "made-uncloneable"
 #define TIMESTOP_TRAIT "timestop"
 #define LIFECANDLE_TRAIT "lifecandle"

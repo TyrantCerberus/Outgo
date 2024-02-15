@@ -32,9 +32,10 @@
 		return
 	var/static/items_inside = list(
 		/obj/item/stack/medical/gauze = 1,
-		/obj/item/reagent_containers/pill/patch/libital = 2,
-		/obj/item/reagent_containers/pill/patch/aiuri = 2,
-		/obj/item/reagent_containers/hypospray/medipen = 1)
+		/obj/item/reagent_containers/pill/patch/colpisbital = 2,
+		/obj/item/reagent_containers/pill/patch/cremiisuri = 2,
+		/obj/item/reagent_containers/hypospray/medipen = 1,
+		/obj/item/storage/pill_bottle/paracetamol = 1)
 	generate_items_inside(items_inside,src)
 
 /obj/item/storage/firstaid/emergency
@@ -122,8 +123,8 @@
 	var/static/items_inside = list(
 		/obj/item/healthanalyzer = 1,
 		/obj/item/stack/medical/gauze/twelve = 1,
-		/obj/item/reagent_containers/pill/patch/libital = 2,
-		/obj/item/reagent_containers/pill/patch/aiuri = 2,
+		/obj/item/reagent_containers/pill/patch/libital = 1,
+		/obj/item/reagent_containers/pill/patch/aiuri = 1,
 		/obj/item/reagent_containers/hypospray/medipen = 1,
 		/obj/item/surgical_drapes = 1,
 		/obj/item/scalpel = 1,
@@ -166,7 +167,8 @@
 		/obj/item/reagent_containers/pill/patch/aiuri = 3,
 		/obj/item/reagent_containers/spray/hercuri = 1,
 		/obj/item/reagent_containers/hypospray/medipen/oxandrolone = 1,
-		/obj/item/reagent_containers/hypospray/medipen = 1)
+		/obj/item/reagent_containers/hypospray/medipen = 1,
+		/obj/item/storage/pill_bottle/tramadol = 1)
 	generate_items_inside(items_inside,src)
 
 /obj/item/storage/firstaid/toxin
@@ -229,7 +231,8 @@
 		/obj/item/reagent_containers/pill/patch/libital = 3,
 		/obj/item/stack/medical/gauze = 1,
 		/obj/item/storage/pill_bottle/probital = 1,
-		/obj/item/reagent_containers/hypospray/medipen/salacid = 1)
+		/obj/item/reagent_containers/hypospray/medipen/salacid = 1,
+		/obj/item/storage/pill_bottle/tramadol = 1)
 	generate_items_inside(items_inside,src)
 
 /obj/item/storage/firstaid/advanced
@@ -246,8 +249,8 @@
 	var/static/items_inside = list(
 		/obj/item/reagent_containers/pill/patch/synthflesh = 3,
 		/obj/item/reagent_containers/hypospray/medipen/atropine = 2,
-		/obj/item/stack/medical/gauze = 1,
-		/obj/item/storage/pill_bottle/penacid = 1)
+		/obj/item/storage/pill_bottle/penacid = 1,
+		/obj/item/storage/pill_bottle/oxycodone = 1)
 	generate_items_inside(items_inside,src)
 
 /obj/item/storage/firstaid/tactical
@@ -325,6 +328,30 @@
 /obj/item/storage/pill_bottle/suicide_act(mob/user)
 	user.visible_message(span_suicide("[user] is trying to get the cap off [src]! It looks like [user.p_theyre()] trying to commit suicide!"))
 	return (TOXLOSS)
+
+/obj/item/storage/pill_bottle/paracetamol
+	name = "bottle of paracetamol pills"
+	desc = "Contains pills used to combat mild pain."
+
+/obj/item/storage/pill_bottle/paracetamol/PopulateContents()
+	for(var/i in 1 to 7)
+		new /obj/item/reagent_containers/pill/paracetamol(src)
+
+/obj/item/storage/pill_bottle/tramadol
+	name = "bottle of tramadol pills"
+	desc = "Contains pills used to combat moderate pain. WARNING: Do not mix with oxycodone!"
+
+/obj/item/storage/pill_bottle/tramadol/PopulateContents()
+	for(var/i in 1 to 7)
+		new /obj/item/reagent_containers/pill/tramadol(src)
+
+/obj/item/storage/pill_bottle/oxycodone
+	name = "bottle of oxycodone pills"
+	desc = "Contains pills used to combat severe pain. WARNING: Do not mix with tramadol!"
+
+/obj/item/storage/pill_bottle/oxycodone/PopulateContents()
+	for(var/i in 1 to 7)
+		new /obj/item/reagent_containers/pill/oxycodone(src)
 
 /obj/item/storage/pill_bottle/multiver
 	name = "bottle of multiver pills"

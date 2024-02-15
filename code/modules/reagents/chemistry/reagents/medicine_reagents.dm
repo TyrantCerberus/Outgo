@@ -328,7 +328,7 @@
 
 /datum/reagent/medicine/mine_salve
 	name = "Miner's Salve"
-	description = "A powerful painkiller. Restores bruising and burns in addition to making the patient believe they are fully healed. Also great for treating severe burn wounds in a pinch."
+	description = "Restores bruising and burns in addition to making the patient believe they are fully healed. Great for treating severe burn wounds in a pinch."
 	reagent_state = LIQUID
 	color = "#6D6374"
 	metabolization_rate = 0.4 * REAGENTS_METABOLISM
@@ -546,45 +546,6 @@
 	M.jitteriness -= 1 * REM * delta_time
 	holder.remove_reagent(/datum/reagent/toxin/histamine, 3 * REM * delta_time)
 	..()
-
-/datum/reagent/medicine/morphine
-	name = "Morphine"
-	description = "A painkiller that allows the patient to move at full speed even when injured. Causes drowsiness and eventually unconsciousness in high doses. Overdose will cause a variety of effects, ranging from minor to lethal."
-	reagent_state = LIQUID
-	color = "#A9FBFB"
-	metabolization_rate = 0.5 * REAGENTS_METABOLISM
-	overdose_threshold = 30
-	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	addiction_types = list(/datum/addiction/opiods = 10)
-
-/datum/reagent/medicine/morphine/on_mob_metabolize(mob/living/L)
-	..()
-	L.add_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
-
-/datum/reagent/medicine/morphine/on_mob_end_metabolize(mob/living/L)
-	L.remove_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
-	..()
-
-/datum/reagent/medicine/morphine/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
-	if(current_cycle >= 5)
-		SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "numb", /datum/mood_event/narcotic_medium, name)
-	switch(current_cycle)
-		if(11)
-			to_chat(M, span_warning("You start to feel tired...") )
-		if(12 to 24)
-			M.drowsyness += 1 * REM * delta_time
-		if(24 to INFINITY)
-			M.Sleeping(40 * REM * delta_time)
-			. = TRUE
-	..()
-
-/datum/reagent/medicine/morphine/overdose_process(mob/living/M, delta_time, times_fired)
-	if(DT_PROB(18, delta_time))
-		M.drop_all_held_items()
-		M.Dizzy(2)
-		M.Jitter(2)
-	..()
-
 
 /datum/reagent/medicine/oculine
 	name = "Oculine"
@@ -1378,7 +1339,7 @@
 
 /datum/reagent/medicine/granibitaluri
 	name = "Granibitaluri" //achieve "GRANular" amounts of C2
-	description = "A mild painkiller useful as an additive alongside more potent medicines. Speeds up the healing of small wounds and burns, but is ineffective at treating severe injuries. Extremely large doses are toxic, and may eventually cause liver failure."
+	description = "Speeds up the healing of small wounds and burns, but is ineffective at treating severe injuries. Useful as an additive alongside more potent medicines.  Extremely large doses are toxic, and may eventually cause liver failure."
 	color = "#E0E0E0"
 	reagent_state = LIQUID
 	overdose_threshold = 50
@@ -1493,3 +1454,108 @@
 	clot_rate = 0.4 //slightly better than regular coagulant
 	passive_bleed_modifier = 0.5
 	overdose_threshold = 10 //but easier to overdose on
+
+/* Painkillers */
+
+/datum/reagent/medicine/painkiller
+	name = "Generic Painkiller"
+	description = "An unidentifiable painkiller. (You shouldn't be seeing this.)"
+	var/painkilling_power = 0 //needs to be between 0 and 1 on subtypes
+
+/datum/reagent/medicine/painkiller/on_mob_metabolize(mob/living/M)
+	..()
+	if(!ishuman(M))
+		return
+
+	var/mob/living/carbon/human/H = M
+	H.painkilling_power_in_system += painkilling_power
+	H.updatehealth()
+
+/datum/reagent/medicine/painkiller/on_mob_end_metabolize(mob/living/M)
+	..()
+	if(!ishuman(M))
+		return
+
+	var/mob/living/carbon/human/H = M
+	H.painkilling_power_in_system -= painkilling_power
+	H.updatehealth()
+
+/datum/reagent/medicine/painkiller/overdose_process(mob/living/carbon/M, delta_time, times_fired)
+	if(DT_PROB(75, delta_time))
+		if(prob(25))
+			M.emote("cough")
+		M.adjustOxyLoss(rand(1,3))
+		M.adjustToxLoss(1)
+	if(DT_PROB(10, delta_time))
+		if(prob(20))
+			M.vomit(blood = TRUE)
+		else
+			M.vomit(stun = FALSE)
+	..()
+
+/datum/reagent/medicine/painkiller/paracetamol
+	name = "Paracetamol"
+	description = "A simple painkiller, effective at relieving mild aches and pains."
+	taste_description = "sickness"
+	color = "#c8a5dc"
+	reagent_state = LIQUID
+	painkilling_power = 0.25
+	overdose_threshold = 60
+
+/datum/reagent/medicine/painkiller/tramadol
+	name = "Tramadol"
+	description = "A moderately effective painkiller for treating more substantial pains. Should not be taken with oxycodone."
+	taste_description = "sourness"
+	color = "#cb68fc"
+	reagent_state = LIQUID
+	painkilling_power = 0.5
+	overdose_threshold = 30
+
+/datum/reagent/medicine/painkiller/oxycodone
+	name = "Oxycodone"
+	description = "A highly effective painkiller for relieving severe pain. Should not be taken with tramadol."
+	taste_description = "bitterness"
+	color = "#800080"
+	reagent_state = LIQUID
+	painkilling_power = 0.75
+	overdose_threshold = 30
+
+/datum/reagent/medicine/painkiller/oxycodone/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
+	if(M.reagents.has_reagent(/datum/reagent/medicine/painkiller/tramadol))
+		if(DT_PROB(75, delta_time))
+			if(prob(25))
+				M.emote("cough")
+			M.adjustOxyLoss(rand(2,5))
+			M.adjustToxLoss(2)
+	..()
+
+/datum/reagent/medicine/painkiller/morphine
+	name = "Morphine"
+	description = "A painkiller that allows the patient to move at full speed even when injured. Causes drowsiness and eventually unconsciousness in high doses. Overdose will cause a variety of effects, ranging from minor to lethal."
+	reagent_state = LIQUID
+	color = "#A9FBFB"
+	metabolization_rate = 0.5 * REAGENTS_METABOLISM
+	overdose_threshold = 30
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	addiction_types = list(/datum/addiction/opioids = 10)
+	painkilling_power = 1
+
+/datum/reagent/medicine/painkiller/morphine/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
+	if(current_cycle >= 5)
+		SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "numb", /datum/mood_event/narcotic_medium, name)
+	switch(current_cycle)
+		if(11)
+			to_chat(M, span_warning("You start to feel tired...") )
+		if(12 to 24)
+			M.drowsyness += 1 * REM * delta_time
+		if(24 to INFINITY)
+			M.Sleeping(40 * REM * delta_time)
+			. = TRUE
+	..()
+
+/datum/reagent/medicine/painkiller/morphine/overdose_process(mob/living/M, delta_time, times_fired)
+	if(DT_PROB(18, delta_time))
+		M.drop_all_held_items()
+		M.Dizzy(2)
+		M.Jitter(2)
+	..()

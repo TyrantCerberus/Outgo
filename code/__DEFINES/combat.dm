@@ -80,8 +80,19 @@
 
 //Health Defines
 #define HEALTH_THRESHOLD_CRIT 0
-#define HEALTH_THRESHOLD_FULLCRIT -30
+#define HEALTH_THRESHOLD_FULLCRIT -80
 #define HEALTH_THRESHOLD_DEAD -100
+
+//crit related, baseline chance per process tick
+#define SOFTCRIT_DROP_CHANCE 10 //how likely a person is to drop an item they're holding when in crit
+#define SOFTCRIT_STUMBLE_CHANCE 10 //how likely a person is to fall over when in crit
+#define SOFTCRIT_PASSOUT_CHANCE 3 //how likely a person is to fall unconscious when in crit, skipped if they have epinephrine or atropine in their system, halved if they have a painkiller, coffee or meth
+//softcrit suffocation damage defines
+#define SUFFOCATION_DAMAGE_ACCUMULATION_PER_TICK 0.5 //how much do we add to the counter per process tick
+#define SUFFOCATION_DAMAGE_APPLICATION_THRESHOLD 1 //what value does the counter have to reach before we apply the damage it stores
+
+//maximum slowdown accruable through unmitigated pain buildup
+#define PAIN_SLOWDOWN_CAP 4
 
 #define HEALTH_THRESHOLD_NEARDEATH -90 //Not used mechanically, but to determine if someone is so close to death they hear the other side
 
@@ -112,8 +123,6 @@
 //Grab breakout odds
 #define BASE_GRAB_RESIST_CHANCE 60 //base chance for whether or not you can escape from a grab
 
-//slowdown when in softcrit. Note that crawling slowdown will also apply at the same time!
-#define SOFTCRIT_ADD_SLOWDOWN 2
 //slowdown when crawling
 #define CRAWLING_ADD_SLOWDOWN 4
 

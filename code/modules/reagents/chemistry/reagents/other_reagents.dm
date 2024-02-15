@@ -1153,7 +1153,7 @@
 	description = "Impedrezene is a narcotic that impedes one's ability by slowing down the higher brain cell functions."
 	color = "#E07DDD" // pink = happy = dumb
 	taste_description = "numbness"
-	addiction_types = list(/datum/addiction/opiods = 10)
+	addiction_types = list(/datum/addiction/opioids = 10)
 
 /datum/reagent/impedrezene/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
 	M.jitteriness = max(M.jitteriness - (2.5*delta_time),0)
@@ -2466,32 +2466,6 @@
 	reagent_state = SOLID
 	color = "#E6E6DA"
 	taste_mult = 0
-
-/datum/reagent/eldritch //unholy water, but for eldritch cultists. why couldn't they have both just used the same reagent? who knows. maybe nar'sie is considered to be too "mainstream" of a god to worship in the cultist community.
-	name = "Eldritch Essence"
-	description = "A strange liquid that defies the laws of physics. It re-energizes and heals those who can see beyond this fragile reality, but is incredibly harmful to the closed-minded. It metabolizes very quickly."
-	taste_description = "Ag'hsj'saje'sh"
-	color = "#1f8016"
-	metabolization_rate = 2.5 * REAGENTS_METABOLISM  //0.5u/second
-
-/datum/reagent/eldritch/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
-	if(IS_HERETIC(M))
-		M.drowsyness = max(M.drowsyness - (5 * REM * delta_time), 0)
-		M.AdjustAllImmobility(-40 * REM * delta_time)
-		M.adjustStaminaLoss(-10 * REM * delta_time, FALSE)
-		M.adjustToxLoss(-2 * REM * delta_time, FALSE, forced = TRUE)
-		M.adjustOxyLoss(-2 * REM * delta_time, FALSE)
-		M.adjustBruteLoss(-2 * REM * delta_time, FALSE)
-		M.adjustFireLoss(-2 * REM * delta_time, FALSE)
-		if(ishuman(M) && M.blood_volume < BLOOD_VOLUME_NORMAL)
-			M.blood_volume += 3 * REM * delta_time
-	else
-		M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 3 * REM * delta_time, 150)
-		M.adjustToxLoss(2 * REM * delta_time, FALSE)
-		M.adjustFireLoss(2 * REM * delta_time, FALSE)
-		M.adjustOxyLoss(2 * REM * delta_time, FALSE)
-		M.adjustBruteLoss(2 * REM * delta_time, FALSE)
-	..()
 
 // [Original ants concept by Keelin on Goon]
 /datum/reagent/ants

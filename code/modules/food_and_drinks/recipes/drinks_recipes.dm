@@ -281,7 +281,7 @@
 
 /datum/chemical_reaction/drink/neurotoxin
 	results = list(/datum/reagent/consumable/ethanol/neurotoxin = 2)
-	required_reagents = list(/datum/reagent/consumable/ethanol/gargle_blaster = 1, /datum/reagent/medicine/morphine = 1)
+	required_reagents = list(/datum/reagent/consumable/ethanol/gargle_blaster = 1, /datum/reagent/medicine/painkiller/morphine = 1)
 
 /datum/chemical_reaction/drink/snowwhite
 	results = list(/datum/reagent/consumable/ethanol/snowwhite = 2)

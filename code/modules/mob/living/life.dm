@@ -40,6 +40,9 @@
 
 	if(!IS_IN_STASIS(src))
 
+		if(stat == SOFT_CRIT)
+			handle_progressive_crit(delta_time, times_fired)
+
 		if(stat != DEAD)
 			//Mutations and radiation
 			handle_mutations_and_radiation(delta_time, times_fired)
@@ -87,6 +90,9 @@
 	return
 
 /mob/living/proc/handle_random_events(delta_time, times_fired)
+	return
+
+/mob/living/proc/handle_progressive_crit(delta_time, times_fired)
 	return
 
 // Base mob environment handler for body temperature

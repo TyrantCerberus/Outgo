@@ -2396,6 +2396,12 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /turf/open/floor/iron/dark,
 /area/maintenance/fore)
+"aib" = (
+/obj/structure/table,
+/turf/open/floor/circuit/green{
+	luminosity = 2
+	},
+/area/ai_monitored/turret_protected/ai_upload)
 "aid" = (
 /obj/effect/turf_decal/delivery,
 /obj/structure/reagent_dispensers/fueltank,
@@ -8820,7 +8826,6 @@
 	},
 /obj/structure/cable,
 /obj/effect/mapping_helpers/simple_pipes/scrubbers/hidden/layer2,
-/obj/effect/landmark/start/paramedic,
 /turf/open/floor/iron/showroomfloor,
 /area/medical/paramedic)
 "aFv" = (
@@ -12450,7 +12455,6 @@
 	dir = 1
 	},
 /obj/effect/mapping_helpers/simple_pipes/supply/hidden/layer4,
-/obj/effect/landmark/start/paramedic,
 /turf/open/floor/iron,
 /area/medical/medbay/central)
 "aSB" = (
@@ -12966,26 +12970,6 @@
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/ai_monitored/turret_protected/ai_upload)
-"aTW" = (
-/obj/structure/table/glass,
-/obj/item/folder/white,
-/obj/item/stack/sheet/mineral/plasma,
-/obj/item/stack/sheet/mineral/plasma,
-/obj/item/reagent_containers/glass/bottle/epinephrine{
-	pixel_x = -6
-	},
-/obj/item/reagent_containers/syringe,
-/obj/effect/turf_decal/tile/neutral{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/neutral{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/neutral{
-	dir = 8
-	},
-/turf/open/floor/iron/dark,
-/area/medical/pharmacy)
 "aTX" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -19239,31 +19223,6 @@
 /obj/effect/mapping_helpers/simple_pipes/scrubbers/hidden/layer2,
 /turf/open/floor/iron,
 /area/hallway/primary/port)
-"bsI" = (
-/obj/machinery/door/window/brigdoor{
-	dir = 4;
-	name = "Core Modules";
-	req_access_txt = "20"
-	},
-/obj/item/ai_module/supplied/protect_station{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/ai_module/zeroth/onehuman,
-/obj/item/ai_module/reset/purge{
-	pixel_x = -3;
-	pixel_y = -3
-	},
-/obj/structure/table,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1;
-	pixel_y = 1
-	},
-/turf/open/floor/circuit/green{
-	luminosity = 2
-	},
-/area/ai_monitored/turret_protected/ai_upload)
 "bsK" = (
 /obj/effect/turf_decal/delivery,
 /obj/effect/turf_decal/tile/green{
@@ -20011,31 +19970,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/dark,
 /area/maintenance/port)
-"byP" = (
-/obj/machinery/door/window/brigdoor/westright{
-	dir = 4;
-	name = "Core Modules";
-	req_access_txt = "20"
-	},
-/obj/effect/spawner/lootdrop/aimodule_harmful{
-	fan_out_items = 1;
-	lootcount = 2;
-	lootdoubles = 0
-	},
-/obj/item/ai_module/supplied/oxygen{
-	pixel_x = -3;
-	pixel_y = -3
-	},
-/obj/structure/table,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1;
-	pixel_y = 1
-	},
-/turf/open/floor/circuit/green{
-	luminosity = 2
-	},
-/area/ai_monitored/turret_protected/ai_upload)
 "byS" = (
 /obj/machinery/computer/upload/borg,
 /obj/structure/window/reinforced{
@@ -20121,13 +20055,6 @@
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/mapping_helpers/simple_pipes/scrubbers/hidden/layer2,
 /turf/open/floor/engine,
-/area/ai_monitored/turret_protected/ai_upload)
-"bzb" = (
-/obj/structure/table,
-/obj/item/ai_module/supplied/freeform,
-/turf/open/floor/circuit/green{
-	luminosity = 2
-	},
 /area/ai_monitored/turret_protected/ai_upload)
 "bzd" = (
 /obj/structure/sign/warning/electricshock,
@@ -22501,6 +22428,27 @@
 "bLa" = (
 /turf/open/floor/iron/dark,
 /area/hallway/secondary/exit/departure_lounge)
+"bLb" = (
+/obj/structure/table/glass,
+/obj/item/folder/white,
+/obj/item/stack/sheet/mineral/plasma,
+/obj/item/stack/sheet/mineral/plasma,
+/obj/item/reagent_containers/glass/bottle/epinephrine{
+	pixel_x = -6
+	},
+/obj/item/reagent_containers/syringe,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/item/paper/fluff/jobs/chemistry/painkiller_recipes,
+/turf/open/floor/iron/dark,
+/area/medical/pharmacy)
 "bLg" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
@@ -41178,6 +41126,32 @@
 /obj/effect/turf_decal/stripes/corner,
 /turf/open/floor/iron/dark,
 /area/engineering/atmos)
+"eOf" = (
+/obj/machinery/door/window/brigdoor/westright{
+	dir = 4;
+	name = "Core Modules";
+	req_access_txt = "20"
+	},
+/obj/item/ai_module/core/full/custom,
+/obj/item/ai_module/core/full/asimov{
+	pixel_x = -3;
+	pixel_y = -3
+	},
+/obj/structure/table,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1;
+	pixel_y = 1
+	},
+/obj/machinery/flasher/directional/west{
+	id = "AI";
+	name = "Meatbag Pacifier"
+	},
+/obj/machinery/light/directional/west,
+/turf/open/floor/circuit/green{
+	luminosity = 2
+	},
+/area/ai_monitored/turret_protected/ai_upload)
 "eOk" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/light/directional/west,
@@ -55304,7 +55278,6 @@
 /obj/effect/turf_decal/stripes/corner{
 	dir = 4
 	},
-/obj/machinery/rnd/bepis,
 /turf/open/floor/iron/dark,
 /area/command/heads_quarters/rd)
 "ltY" = (
@@ -62723,6 +62696,23 @@
 	},
 /turf/open/floor/iron/dark,
 /area/maintenance/disposal/incinerator)
+"pag" = (
+/obj/structure/table,
+/obj/machinery/flasher/directional/east{
+	id = "AI";
+	name = "Meatbag Pacifier";
+	pixel_y = -26
+	},
+/obj/machinery/light/directional/east,
+/obj/item/radio/intercom/directional/east{
+	broadcasting = 1;
+	frequency = 1447;
+	name = "Private Channel"
+	},
+/turf/open/floor/circuit/green{
+	luminosity = 2
+	},
+/area/ai_monitored/turret_protected/ai_upload)
 "pal" = (
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/tile/neutral{
@@ -67358,7 +67348,6 @@
 /obj/machinery/bounty_board/directional/south{
 	pixel_x = 32
 	},
-/obj/machinery/rnd/bepis,
 /turf/open/floor/iron,
 /area/cargo/storage)
 "rcA" = (
@@ -68797,36 +68786,6 @@
 /obj/structure/closet/firecloset,
 /turf/open/floor/iron/dark,
 /area/hallway/primary/fore)
-"rIf" = (
-/obj/machinery/door/window/brigdoor/westright{
-	dir = 4;
-	name = "Core Modules";
-	req_access_txt = "20"
-	},
-/obj/item/ai_module/core/freeformcore{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/ai_module/core/full/custom,
-/obj/item/ai_module/core/full/asimov{
-	pixel_x = -3;
-	pixel_y = -3
-	},
-/obj/structure/table,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1;
-	pixel_y = 1
-	},
-/obj/machinery/flasher/directional/west{
-	id = "AI";
-	name = "Meatbag Pacifier"
-	},
-/obj/machinery/light/directional/west,
-/turf/open/floor/circuit/green{
-	luminosity = 2
-	},
-/area/ai_monitored/turret_protected/ai_upload)
 "rIm" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/mapping_helpers/simple_pipes/general/visible,
@@ -75014,24 +74973,6 @@
 	},
 /turf/open/floor/iron/dark,
 /area/security/office)
-"uCh" = (
-/obj/structure/table,
-/obj/item/ai_module/supplied/quarantine,
-/obj/machinery/flasher/directional/east{
-	id = "AI";
-	name = "Meatbag Pacifier";
-	pixel_y = -26
-	},
-/obj/machinery/light/directional/east,
-/obj/item/radio/intercom/directional/east{
-	broadcasting = 1;
-	frequency = 1447;
-	name = "Private Channel"
-	},
-/turf/open/floor/circuit/green{
-	luminosity = 2
-	},
-/area/ai_monitored/turret_protected/ai_upload)
 "uCt" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
@@ -81049,7 +80990,6 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/blue,
-/obj/effect/landmark/start/paramedic,
 /obj/structure/chair/office/light,
 /obj/structure/cable,
 /turf/open/floor/iron/showroomfloor,
@@ -105115,7 +105055,7 @@ aRn
 aRG
 aRN
 beC
-aTW
+bLb
 uxR
 aPf
 biD
@@ -112309,9 +112249,9 @@ aTR
 acm
 arl
 arl
-rIf
-bsI
-byP
+eOf
+aib
+aib
 tuU
 bdQ
 axf
@@ -113597,7 +113537,7 @@ sfh
 qIK
 bza
 bzg
-bzb
+aib
 bze
 vsF
 eeu
@@ -113854,7 +113794,7 @@ arl
 oQC
 aZH
 bas
-uCh
+pag
 bdQ
 axf
 tPZ

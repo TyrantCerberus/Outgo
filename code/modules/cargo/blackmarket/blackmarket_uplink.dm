@@ -1,5 +1,5 @@
 /obj/item/blackmarket_uplink
-	name = "Black Market Uplink"
+	name = "black market uplink"
 	icon = 'icons/obj/blackmarket.dmi'
 	icon_state = "uplink"
 
@@ -150,21 +150,3 @@
 
 			buying = FALSE
 			selected_item = null
-
-/datum/crafting_recipe/blackmarket_uplink
-	name = "Black Market Uplink"
-	result = /obj/item/blackmarket_uplink
-	time = 30
-	tool_behaviors = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER, TOOL_MULTITOOL)
-	reqs = list(
-		/obj/item/stock_parts/subspace/amplifier = 1,
-		/obj/item/stack/cable_coil = 15,
-		/obj/item/radio = 1,
-		/obj/item/analyzer = 1
-	)
-	category = CAT_MISC
-
-/datum/crafting_recipe/blackmarket_uplink/New()
-	..()
-	blacklist |= typesof(/obj/item/radio/headset) // because we got shit like /obj/item/radio/off ... WHY!?!
-	blacklist |= typesof(/obj/item/radio/intercom)

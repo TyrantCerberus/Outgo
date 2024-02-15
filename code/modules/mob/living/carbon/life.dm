@@ -44,6 +44,68 @@
 	if(stat != DEAD)
 		return 1
 
+//////////////////////
+// PROGRESSIVE CRIT //
+//////////////////////
+
+/mob/living/carbon/handle_progressive_crit(delta_time, times_fired)
+	//Handle gradual oxyloss from being in softcrit (ensures mobs never get stuck between living and dying)
+	var/static/suffocation_damage = 0
+	suffocation_damage += SUFFOCATION_DAMAGE_ACCUMULATION_PER_TICK
+	if(suffocation_damage >= SUFFOCATION_DAMAGE_APPLICATION_THRESHOLD)
+		adjustOxyLoss(suffocation_damage)
+		suffocation_damage = 0
+	//Handle other effects of being in softcrit
+	var/health_derived_modifier = (0 - health) / 4
+	switch(health_derived_modifier) //If you change the hard crit threshold, you'll need to update this switch
+		if(0 to 20)
+			prog_crit_shaking("low")
+		if(20 to 40)
+			prog_crit_shaking("medium")
+		if(40 to 60)
+			prog_crit_shaking("high")
+		if(60 to 80)
+			prog_crit_shaking("intense")
+	if(prob(SOFTCRIT_DROP_CHANCE + health_derived_modifier))
+		animate(src, pixel_y = src.pixel_y + 1, time = 0.1 SECONDS, flags = ANIMATION_PARALLEL)
+		animate(pixel_y = src.pixel_y - 1, time = 0.1 SECONDS)
+		drop_all_held_items()
+		to_chat(src, span_danger("You drop everything you were carrying!"))
+	if(prob(SOFTCRIT_STUMBLE_CHANCE + health_derived_modifier))
+		Knockdown(1 SECONDS, TRUE)
+		to_chat(src, span_danger("You stumble and fall!"))
+	var/chance_of_falling_unconscious = SOFTCRIT_PASSOUT_CHANCE + health_derived_modifier
+	var/datum/reagents/R = reagents
+	if( R.has_reagent(/datum/reagent/medicine/painkiller/paracetamol) || \
+		R.has_reagent(/datum/reagent/medicine/painkiller/tramadol)    || \
+		R.has_reagent(/datum/reagent/medicine/painkiller/oxycodone)   || \
+		R.has_reagent(/datum/reagent/medicine/painkiller/morphine)    || \
+		R.has_reagent(/datum/reagent/drug/methamphetamine)            || \
+		R.has_reagent(/datum/reagent/consumable/coffee)
+		)
+		chance_of_falling_unconscious *= 0.5
+	if(R.has_reagent(/datum/reagent/medicine/epinephrine) || R.has_reagent(/datum/reagent/medicine/atropine))
+		chance_of_falling_unconscious = 0
+	if(prob(chance_of_falling_unconscious))
+		Unconscious(2 SECONDS, TRUE)
+
+/mob/living/carbon/proc/prog_crit_shaking(var/intensity = "low", var/duration = 20 SECONDS)
+	var/pixel_movement = 0
+	switch(intensity)
+		if("low")
+			pixel_movement = 2
+		if("medium")
+			pixel_movement = 4
+		if("high")
+			pixel_movement = 6
+		if("intense")
+			pixel_movement = 8
+	animate(src, pixel_x = src.pixel_x + pixel_movement, time = 0.1 SECONDS)
+	for(var/i in 1 to duration / (0.2 SECONDS))
+		animate(pixel_x = src.pixel_x - pixel_movement, time = 0.1 SECONDS, easing = ELASTIC_EASING | EASE_OUT)
+		animate(pixel_x = src.pixel_x + pixel_movement, time = 0.1 SECONDS, easing = ELASTIC_EASING | EASE_IN)
+	animate(pixel_x = src.pixel_x - pixel_movement, time = 0.1 SECONDS)
+
 ///////////////
 // BREATHING //
 ///////////////

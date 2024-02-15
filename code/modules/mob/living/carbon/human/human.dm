@@ -915,14 +915,11 @@
 		to_chat(src, span_warning("You can't fireman carry [target] while [target.p_they()] [target.p_are()] standing!"))
 		return
 
-	var/carrydelay = 5 SECONDS //if you have latex you are faster at grabbing
+	var/carrydelay = 5 SECONDS //if you have the right skillchip or infiltrator gloves you are faster at grabbing
 	var/skills_space = "" //cobby told me to do this
 	if(HAS_TRAIT(src, TRAIT_QUICKER_CARRY))
 		carrydelay = 3 SECONDS
 		skills_space = " very quickly"
-	else if(HAS_TRAIT(src, TRAIT_QUICK_CARRY))
-		carrydelay = 4 SECONDS
-		skills_space = " quickly"
 
 	visible_message(span_notice("[src] starts[skills_space] lifting [target] onto [p_their()] back..."),
 		span_notice("You[skills_space] start to lift [target] onto your back..."))
@@ -970,13 +967,30 @@
 		remove_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown)
 		remove_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown_flying)
 		return
-	var/health_deficiency = max((maxHealth - health), staminaloss)
-	if(health_deficiency >= 40)
-		add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown, TRUE, multiplicative_slowdown = health_deficiency / 75)
-		add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown_flying, TRUE, multiplicative_slowdown = health_deficiency / 25)
+	var/pain = maxHealth - health
+	var/pain_multiplier = 1 - clamp(painkilling_power_in_system, 0, 1)
+	var/pain_slowdown = 0
+	if(pain > 0)
+		if(pain_multiplier != 0)
+			pain_slowdown = clamp(((pain * pain_multiplier) / 50), 0, PAIN_SLOWDOWN_CAP)
+		add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown, TRUE, multiplicative_slowdown = pain_slowdown)
+		add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown_flying, TRUE, multiplicative_slowdown = pain_slowdown)
+		if(pain_slowdown == 0)
+			src.clear_alert("pain")
+		else
+			switch(pain_slowdown)
+				if(0 to 1)
+					src.throw_alert("pain", /atom/movable/screen/alert/mild_pain)
+				if(1 to 2)
+					src.throw_alert("pain", /atom/movable/screen/alert/moderate_pain)
+				if(2 to 3)
+					src.throw_alert("pain", /atom/movable/screen/alert/severe_pain)
+				if(3 to 4)
+					src.throw_alert("pain", /atom/movable/screen/alert/extreme_pain)
 	else
 		remove_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown)
 		remove_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown_flying)
+		src.clear_alert("pain")
 
 /mob/living/carbon/human/adjust_nutrition(change) //Honestly FUCK the oldcoders for putting nutrition on /mob someone else can move it up because holy hell I'd have to fix SO many typechecks
 	if(HAS_TRAIT(src, TRAIT_NOHUNGER))

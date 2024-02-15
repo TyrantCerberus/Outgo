@@ -14,7 +14,6 @@
 		"basic_matter_bin",
 		"basic_micro_laser",
 		"basic_scanning",
-		"bepis",
 		"bucket",
 		"c-reader",
 		"circuit_imprinter",

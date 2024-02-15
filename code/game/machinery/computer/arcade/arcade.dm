@@ -61,7 +61,6 @@ GLOBAL_LIST_INIT(arcade_prize_pool, list(
 		/obj/item/toy/brokenradio = 2,
 		/obj/item/toy/braintoy = 2,
 		/obj/item/toy/eldritch_book = 2,
-		/obj/item/storage/box/heretic_box = 1,
 		/obj/item/toy/foamfinger = 2,
 		/obj/item/clothing/glasses/trickblindfold = 2))
 
@@ -575,7 +574,7 @@ GLOBAL_LIST_INIT(arcade_prize_pool, list(
 		SSblackbox.record_feedback("nested tally", "arcade_results", 1, list("loss", "hp", (obj_flags & EMAGGED ? "emagged":"normal")))
 
 	if(gameover)
-		user?.mind?.adjust_experience(/datum/skill/gaming, xp_gained+1)//always gain at least 1 point of XP
+		user?.mind?.adjust_experience(/datum/skill/gaming, xp_gained+2)//always gain at least 2 points of XP
 
 
 ///used to check if the last three move of the player are the one we want in the right order and if the passive's weakpoint has been triggered yet
@@ -656,7 +655,7 @@ GLOBAL_LIST_INIT(arcade_prize_pool, list(
 		var/obj/item/bodypart/chopchop = c_user.get_bodypart(which_hand)
 		chopchop.dismember()
 		qdel(chopchop)
-		user.mind?.adjust_experience(/datum/skill/gaming, 100)
+		user.mind?.adjust_experience(/datum/skill/gaming, 200)
 		playsound(loc, 'sound/arcade/win.ogg', 50, TRUE)
 		prizevend(user, rand(3,5))
 	else

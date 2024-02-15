@@ -69,8 +69,6 @@
 	var/custom_price
 	///Price of an item in a vending machine, overriding the premium vending machine price. Define in terms of paycheck defines as opposed to raw numbers.
 	var/custom_premium_price
-	///Whether spessmen with an ID with an age below AGE_MINOR (20 by default) can buy this item
-	var/age_restricted = FALSE
 
 	//List of datums orbiting this atom
 	var/datum/component/orbiter/orbiters
@@ -1895,13 +1893,6 @@
 				max_grav = max(G.setting,max_grav)
 			return max_grav
 	return SSmapping.level_trait(T.z, ZTRAIT_GRAVITY)
-
-/**
- * Causes effects when the atom gets hit by a rust effect from heretics
- *
- * Override this if you want custom behaviour in whatever gets hit by the rust
- */
-/atom/proc/rust_heretic_act()
 
 /**
  * Used to set something as 'open' if it's being used as a supplypod

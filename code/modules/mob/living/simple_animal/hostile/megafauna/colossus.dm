@@ -129,9 +129,6 @@
 /mob/living/simple_animal/hostile/megafauna/colossus/proc/enrage(mob/living/L)
 	if(ishuman(L))
 		var/mob/living/carbon/human/H = L
-		if(H.mind)
-			if(istype(H.mind.martial_art, /datum/martial_art/the_sleeping_carp))
-				. = TRUE
 		if (is_species(H, /datum/species/golem/sand))
 			. = TRUE
 

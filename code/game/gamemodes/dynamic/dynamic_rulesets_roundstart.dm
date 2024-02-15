@@ -175,50 +175,6 @@
 		GLOB.pre_setup_antags -= changeling
 	return TRUE
 
-//////////////////////////////////////////////
-//                                          //
-//              ELDRITCH CULT               //
-//                                          //
-//////////////////////////////////////////////
-
-/datum/dynamic_ruleset/roundstart/heretics
-	name = "Heretics"
-	antag_flag = ROLE_HERETIC
-	antag_datum = /datum/antagonist/heretic
-	protected_roles = list("Prisoner","Security Officer", "Warden", "Detective", "Head of Security", "Captain")
-	restricted_roles = list("AI", "Cyborg")
-	required_candidates = 1
-	weight = 3
-	cost = 15
-	scaling_cost = 9
-	requirements = list(101,101,101,40,35,20,20,15,10,10)
-	antag_cap = list("denominator" = 24)
-
-
-/datum/dynamic_ruleset/roundstart/heretics/pre_execute(population)
-	. = ..()
-	var/num_ecult = get_antag_cap(population) * (scaled_times + 1)
-
-	for (var/i = 1 to num_ecult)
-		if(candidates.len <= 0)
-			break
-		var/mob/picked_candidate = pick_n_take(candidates)
-		assigned += picked_candidate.mind
-		picked_candidate.mind.restricted_roles = restricted_roles
-		picked_candidate.mind.special_role = ROLE_HERETIC
-		GLOB.pre_setup_antags += picked_candidate.mind
-	return TRUE
-
-/datum/dynamic_ruleset/roundstart/heretics/execute()
-
-	for(var/c in assigned)
-		var/datum/mind/cultie = c
-		var/datum/antagonist/heretic/new_antag = new antag_datum()
-		cultie.add_antag_datum(new_antag)
-		GLOB.pre_setup_antags -= cultie
-
-	return TRUE
-
 
 //////////////////////////////////////////////
 //                                          //

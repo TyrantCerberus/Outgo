@@ -137,6 +137,7 @@
 	pushed_mob.Knockdown(30)
 	pushed_mob.apply_damage(10, BRUTE)
 	pushed_mob.apply_damage(40, STAMINA)
+	user.do_attack_animation(src, ATTACK_EFFECT_SMASH) //do effect on the table because otherwise delay can make it look weird
 	if(user.mind?.martial_art.smashes_tables && user.mind?.martial_art.can_use(user))
 		deconstruct(FALSE)
 	playsound(pushed_mob, 'sound/effects/tableslam.ogg', 90, TRUE)
@@ -150,7 +151,7 @@
 	var/obj/item/bodypart/banged_limb = pushed_mob.get_bodypart(user.zone_selected) || pushed_mob.get_bodypart(BODY_ZONE_HEAD)
 	banged_limb?.receive_damage(30)
 	pushed_mob.apply_damage(60, STAMINA)
-	take_damage(50)
+	user.do_attack_animation(src, ATTACK_EFFECT_PUNCH)
 	if(user.mind?.martial_art.smashes_tables && user.mind?.martial_art.can_use(user))
 		deconstruct(FALSE)
 	playsound(pushed_mob, 'sound/effects/bang.ogg', 90, TRUE)
@@ -200,9 +201,6 @@
 			if(HAS_TRAIT(user, TRAIT_QUICKER_CARRY))
 				tableplace_delay = 2 SECONDS
 				skills_space = " expertly"
-			else if(HAS_TRAIT(user, TRAIT_QUICK_CARRY))
-				tableplace_delay = 2.75 SECONDS
-				skills_space = " quickly"
 			carried_mob.visible_message(span_notice("[user] begins to[skills_space] place [carried_mob] onto [src]..."),
 				span_userdanger("[user] begins to[skills_space] place [carried_mob] onto [src]..."))
 			if(do_after(user, tableplace_delay, target = carried_mob))

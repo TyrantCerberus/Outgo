@@ -17,7 +17,7 @@
 
 //EVIL SPELLS (instant smite + banishment)
 #define SCHOOL_NECROMANCY "necromancy" //>>>necromancy
-#define SCHOOL_FORBIDDEN "forbidden" //>heretic shit and other fucked up magic
+#define SCHOOL_FORBIDDEN "forbidden" //other evil stuff
 
 //invocation types - what does the wizard need to do to invoke (cast) the spell?
 

@@ -133,7 +133,7 @@ Note: Comments are not possible in this format, and are just in this document fo
 Rulesets have the following variables notable to developers and those interested in tuning.
 
 - `required_candidates` - The number of people that *must be willing* (in their preferences) to be an antagonist with this ruleset. If the candidates do not meet this requirement, then the ruleset will not bother to be drafted.
-- `antag_cap` - Judges the amount of antagonists to apply, for both solo and teams. Note that some antagonists (such as traitors, lings, heretics, etc) will add more based on how many times they've been scaled. Written as a linear equation--ceil(x/denominator) + offset, or as a fixed constant. If written as a linear equation, will be in the form of `list("denominator" = denominator, "offset" = offset)`.
+- `antag_cap` - Judges the amount of antagonists to apply, for both solo and teams. Note that some antagonists (such as traitors, lings, etc) will add more based on how many times they've been scaled. Written as a linear equation--ceil(x/denominator) + offset, or as a fixed constant. If written as a linear equation, will be in the form of `list("denominator" = denominator, "offset" = offset)`.
 	- Examples include:
 		- Traitor: `antag_cap = list("denominator" = 24)`. This means that for every 24 players, 1 traitor will be added (assuming no scaling).
 		- Nuclear Emergency: `antag_cap = list("denominator" = 18, "offset" = 1)`. For every 18 players, 1 nuke op will be added. Starts at 1, meaning at 30 players, 3 nuke ops will be created, rather than 2.

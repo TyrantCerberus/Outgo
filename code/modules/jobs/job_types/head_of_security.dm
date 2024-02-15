@@ -63,6 +63,7 @@
 	box = /obj/item/storage/box/survival/security
 
 	implants = list(/obj/item/implant/mindshield)
+	skillchips = list(/obj/item/skillchip/quicker_carry)
 
 	chameleon_extras = list(/obj/item/gun/energy/e_gun/hos, /obj/item/stamp/hos)
 

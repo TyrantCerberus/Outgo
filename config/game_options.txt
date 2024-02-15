@@ -418,8 +418,9 @@ ROUNDSTART_RACES human
 ROUNDSTART_RACES lizard
 #ROUNDSTART_RACES fly
 ROUNDSTART_RACES moth
-ROUNDSTART_RACES plasmaman
+#ROUNDSTART_RACES plasmaman
 #ROUNDSTART_RACES shadow
+ROUNDSTART_RACES felinid
 
 ## Races that are better than humans in some ways, but worse in others
 #ROUNDSTART_RACES jelly
@@ -534,7 +535,7 @@ ROUNDSTART_TRAITS
 #DISABLE_HUMAN_MOOD
 
 ## Enable night shifts ##
-#ENABLE_NIGHT_SHIFTS
+ENABLE_NIGHT_SHIFTS
 
 ## Enable randomized shift start times##
 #RANDOMIZE_SHIFT_TIME

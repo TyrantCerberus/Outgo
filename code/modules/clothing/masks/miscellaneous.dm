@@ -180,10 +180,15 @@
 
 /obj/item/clothing/mask/mummy
 	name = "mummy mask"
-	desc = "Ancient bandages."
+	desc = "Allegedly, ancient bandages."
 	icon_state = "mummy_mask"
 	inhand_icon_state = "mummy_mask"
 	flags_inv = HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
+
+/obj/item/clothing/mask/mummy/magic
+	name = "imbued mummy mask"
+	desc = "A headwrap of bandages, twinkling with forgotten power."
+	armor = list(MELEE = 10, LASER = 20, FIRE = 30)
 
 /obj/item/clothing/mask/scarecrow
 	name = "sack mask"

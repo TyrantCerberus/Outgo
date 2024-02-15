@@ -583,7 +583,7 @@
 	medical_record_text = "Patient has a history of hard drugs."
 	hardcore_value = 4
 	processing_quirk = TRUE
-	var/drug_list = list(/datum/reagent/drug/crank, /datum/reagent/drug/krokodil, /datum/reagent/medicine/morphine, /datum/reagent/drug/happiness, /datum/reagent/drug/methamphetamine) //List of possible IDs
+	var/drug_list = list(/datum/reagent/drug/crank, /datum/reagent/drug/krokodil, /datum/reagent/medicine/painkiller/morphine, /datum/reagent/drug/happiness, /datum/reagent/drug/methamphetamine) //List of possible IDs
 	var/datum/reagent/reagent_type //!If this is defined, reagent_id will be unused and the defined reagent type will be instead.
 	var/datum/reagent/reagent_instance //! actual instanced version of the reagent
 	var/where_drug //! Where the drug spawned
@@ -807,7 +807,6 @@
 	RegisterSignal(quirk_holder,COMSIG_MOB_ATTACK_HAND,PROC_REF(apply_harm_averse_hand))
 	RegisterSignal(quirk_holder,COMSIG_MOB_ITEM_ATTACK,PROC_REF(apply_harm_averse_item))
 
-
 /datum/quirk/harm_averse/remove()
 	. = ..()
 	UnregisterSignal(quirk_holder,COMSIG_MOB_ATTACK_HAND)
@@ -822,3 +821,19 @@
 	if(!user.istate.harm)
 		return
 	user.adjustStaminaLoss(7.5)
+
+/datum/quirk/haemophilia
+	name = "Haemophilia"
+	desc = "You bleed out much faster than others."
+	value = -4
+	mob_trait = TRAIT_HAEMOPHILIA
+	gain_text = "<span class='notice'>You feel your blood racing through your veins.</span>"
+	lose_text = "<span class='danger'>Your blood feels as if it slows down.</span>"
+	medical_record_text = "Patient suffers from haemophilia and will bleed out rapidly when injured."
+	hardcore_value = 4
+
+/datum/quirk/haemophilia/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	if(NOBLOOD in H.dna.species.species_traits || HAS_TRAIT(H, TRAIT_NOBLEED))
+		return
+	. = ..()

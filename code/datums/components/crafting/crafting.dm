@@ -365,6 +365,10 @@
 
 //For the UI related things we're going to assume the user is a mob rather than typesetting it to an atom as the UI isn't generated if the parent is an atom
 /datum/component/personal_crafting/ui_interact(mob/user, datum/tgui/ui)
+	if(user.stat == SOFT_CRIT)
+		to_chat(user, span_warning("You can't craft while in critical condition!"))
+		return
+
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
 		cur_category = categories[1]

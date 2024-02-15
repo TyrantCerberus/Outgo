@@ -573,14 +573,6 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
 	surplus = 0
 
-/datum/uplink_item/stealthy_weapons/cqc
-	name = "CQC Manual"
-	desc = "A manual that teaches a single user tactical Close-Quarters Combat before self-destructing."
-	item = /obj/item/book/granter/martial/cqc
-	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
-	cost = 13
-	surplus = 0
-
 /datum/uplink_item/stealthy_weapons/dart_pistol
 	name = "Dart Pistol"
 	desc = "A miniaturized version of a normal syringe gun. It is very quiet when fired and can fit into any \
@@ -601,16 +593,6 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	desc = "A dagger made of energy that looks and functions as a pen when off."
 	item = /obj/item/pen/edagger
 	cost = 2
-
-/datum/uplink_item/stealthy_weapons/martialarts
-	name = "Martial Arts Scroll"
-	desc = "This scroll contains the secrets of an ancient martial arts technique. You will master unarmed combat \
-			and gain the ability to swat bullets from the air, but you will also refuse to use dishonorable ranged weaponry."
-	item = /obj/item/book/granter/martial/carp
-	player_minimum = 25
-	cost = 13
-	surplus = 0
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
 
 /datum/uplink_item/stealthy_weapons/crossbow
 	name = "Miniature Energy Crossbow"
@@ -1464,7 +1446,8 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	desc = "When used with an upload console, this module allows you to upload priority laws to an artificial intelligence. \
 			Be careful with wording, as artificial intelligences may look for loopholes to exploit."
 	item = /obj/item/ai_module/syndicate
-	cost = 4
+	cost = 9
+	restricted_roles = list("Scientist", "Roboticist", "Research Director")
 
 /datum/uplink_item/device_tools/hypnotic_flash
 	name = "Hypnotic Flash"

@@ -83,6 +83,7 @@ const CargoStatus = (props, context) => {
     points,
     requestonly,
     can_send,
+    receive_mail,
   } = data;
   return (
     <Section
@@ -123,6 +124,12 @@ const CargoStatus = (props, context) => {
             )}
           </LabeledList.Item>
         )}
+        <LabeledList.Item label="Mail Options">
+          {<Button.Checkbox
+            content="Receive mail?"
+            checked={receive_mail}
+            onClick={() => act('togglemail')} />}
+        </LabeledList.Item>
       </LabeledList>
     </Section>
   );

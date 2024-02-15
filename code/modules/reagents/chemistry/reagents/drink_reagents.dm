@@ -563,7 +563,7 @@
 /datum/reagent/consumable/pwr_game/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
 	M.adjust_bodytemperature(-8 * REM * TEMPERATURE_DAMAGE_COEFFICIENT * delta_time, M.get_body_temp_normal())
 	if(DT_PROB(5, delta_time))
-		M.mind?.adjust_experience(/datum/skill/gaming, 5)
+		M.mind?.adjust_experience(/datum/skill/gaming, 10)
 	..()
 
 /datum/reagent/consumable/shamblers
@@ -1010,7 +1010,7 @@
 	glass_icon_state = "lean"
 	glass_name = "Lean"
 	glass_desc = "A drink that makes your life less miserable."
-	addiction_types = list(/datum/addiction/opiods = 6)
+	addiction_types = list(/datum/addiction/opioids = 6)
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/consumable/lean/on_mob_life(mob/living/carbon/M, delta_time, times_fired)

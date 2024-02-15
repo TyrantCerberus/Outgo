@@ -43,8 +43,11 @@
 /obj/machinery/computer/bank_machine/process(delta_time)
 	..()
 	if(siphoning)
-		if (machine_stat & (BROKEN|NOPOWER))
+		if(machine_stat & (BROKEN|NOPOWER))
 			say("Insufficient power. Halting siphon.")
+			end_syphon()
+		else if(!(is_station_level(src.z) || is_centcom_level(src.z)))
+			say("Error: Console not in reach of station. Siphon halted.")
 			end_syphon()
 		var/siphon_am = 100 * delta_time
 		var/datum/bank_account/D = SSeconomy.get_dep_account(ACCOUNT_CAR)
@@ -88,8 +91,11 @@
 
 	switch(action)
 		if("siphon")
-			say("Siphon of station credits has begun!")
-			siphoning = TRUE
+			if(is_station_level(src.z) || is_centcom_level(src.z))
+				say("Siphon of station credits has begun!")
+				siphoning = TRUE
+			else
+				say("Error: Console not in reach of station, withdrawal cannot begin.")
 			. = TRUE
 		if("halt")
 			say("Station credit withdrawal halted.")
@@ -98,5 +104,6 @@
 
 /obj/machinery/computer/bank_machine/proc/end_syphon()
 	siphoning = FALSE
-	new /obj/item/holochip(drop_location(), syphoning_credits) //get the loot
+	if(syphoning_credits > 0)
+		new /obj/item/holochip(drop_location(), syphoning_credits) //get the loot
 	syphoning_credits = 0
