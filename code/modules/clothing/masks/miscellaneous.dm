@@ -219,3 +219,17 @@
 			message = replacetextEx(message,regex(capitalize(key),"g"), "[capitalize(value)]")
 			message = replacetextEx(message,regex(key,"g"), "[value]")
 	speech_args[SPEECH_MESSAGE] = trim(message)
+
+/obj/item/clothing/mask/tragedian
+	name = "tragedian mask"
+	desc = "A simple white mask often used in tragic plays."
+	icon_state = "tragedian_mask"
+	inhand_icon_state = "tragedian_mask"
+	flags_inv = HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
+
+/obj/item/clothing/mask/orderly
+	name = "orderly mask"
+	desc = "Birdies, birdies... gather ye here 'round the marble nest."
+	icon_state = "orderly_mask"
+	inhand_icon_state = "orderly_mask"
+	flags_inv = HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT

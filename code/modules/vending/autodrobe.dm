@@ -122,7 +122,17 @@
 					/obj/item/clothing/suit/changshan_blue = 1,
 					/obj/item/clothing/suit/cheongsam_red = 1,
 					/obj/item/clothing/suit/cheongsam_blue = 1,
-					/obj/item/gohei = 1)
+					/obj/item/gohei = 1,
+					/obj/item/clothing/suit/thanatologist = 1,
+					/obj/item/clothing/shoes/thanatologist = 1,
+					/obj/item/clothing/suit/physician = 1,
+					/obj/item/clothing/shoes/physician = 1,
+					/obj/item/clothing/suit/miraculist = 1,
+					/obj/item/clothing/shoes/miraculist = 1,
+					/obj/item/clothing/suit/orderly = 1,
+					/obj/item/clothing/mask/orderly = 1,
+					/obj/item/clothing/suit/tragedian = 1,
+					/obj/item/clothing/mask/tragedian = 1)
 	contraband = list(/obj/item/clothing/suit/judgerobe = 1,
 					  /obj/item/clothing/head/powdered_wig = 1,
 					  /obj/item/gun/magic/wand/nothing = 2,

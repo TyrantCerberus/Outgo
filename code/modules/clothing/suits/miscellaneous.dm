@@ -693,3 +693,40 @@
 	inhand_icon_state = "DutchJacket"
 	body_parts_covered = ARMS
 
+/obj/item/clothing/suit/orderly
+	name = "orderly's costume"
+	desc = "A heavy cloak used in plays, often repurposed to help protect against disease."
+	icon_state = "orderly_costume"
+	inhand_icon_state = "orderly_costume"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	flags_inv = HIDEJUMPSUIT
+	alternate_worn_layer = ABOVE_BODY_FRONT_LAYER
+
+/obj/item/clothing/suit/tragedian
+	name = "tragedian's suit"
+	desc = "A form fitting black suit used by certain actors in tragic plays."
+	icon_state = "tragedian_suit"
+	inhand_icon_state = "tragedian_suit"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	flags_inv = HIDEJUMPSUIT
+
+/obj/item/clothing/suit/thanatologist
+	name = "thanatologist's coat"
+	desc = "The clothes of the prickliest prick who'd have us all buried."
+	icon_state = "thanatologists_coat"
+	inhand_icon_state = "thanatologists_coat"
+	body_parts_covered = ARMS
+
+/obj/item/clothing/suit/physician
+	name = "physician's coat"
+	desc = "A coat to which clings the pungent odor of twire."
+	icon_state = "physicians_coat"
+	inhand_icon_state = "physicians_coat"
+	body_parts_covered = ARMS
+
+/obj/item/clothing/suit/miraculist
+	name = "miraculist's coat"
+	desc = "The coat of a thief, or perhaps not."
+	icon_state = "miraculists_coat"
+	inhand_icon_state = "miraculists_coat"
+	body_parts_covered = ARMS
