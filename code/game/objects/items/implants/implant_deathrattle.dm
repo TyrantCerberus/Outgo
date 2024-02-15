@@ -1,6 +1,7 @@
 /datum/deathrattle_group
 	var/name
 	var/list/implants = list()
+	var/reveal_death_location = TRUE
 
 /datum/deathrattle_group/New(name)
 	if(name)
@@ -70,8 +71,11 @@
 
 		// Deliberately the same message framing as nanite message + ghost deathrattle
 		var/mob/living/recipient = implant.imp_in
-		to_chat(recipient, "<i>You hear a strange, robotic voice in your head...</i> \"[span_robot("<b>[name]</b> has died at <b>[area]</b>.")]\"")
+		to_chat(recipient, "<i>You hear a strange, robotic voice in your head...</i> \"[span_robot("<b>[name]</b> has died[reveal_death_location  ? "" : " at <b>[area]</b>"].")]\"")
 		recipient.playsound_local(get_turf(recipient), sound, vol = 75, vary = FALSE, pressure_affected = FALSE, use_reverb = FALSE)
+
+/datum/deathrattle_group/crew
+	reveal_death_location = FALSE
 
 /obj/item/implant/deathrattle
 	name = "deathrattle implant"

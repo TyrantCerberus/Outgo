@@ -43,7 +43,6 @@
 		dog.forceMove(adventure_turf)
 		do_smoke(location=adventure_turf)
 
-
 /datum/station_trait/glitched_pdas
 	name = "PDA glitch"
 	trait_type = STATION_TRAIT_NEUTRAL
