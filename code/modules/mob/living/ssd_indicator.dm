@@ -6,7 +6,7 @@
 		icon_state = "default0"
 		layer = FLY_LAYER
 
-/mob/living/var/static/obj/effect/decal/ssd_indicator/indicator
+/mob/living/var/obj/effect/decal/ssd_indicator/indicator
 
 /mob/living/proc/set_ssd_indicator(var/state)
 	if(!indicator)
@@ -16,6 +16,7 @@
 		vis_contents += indicator
 	else
 		vis_contents -= indicator
+		qdel(indicator)
 	return state
 
 //This proc should stop mobs from having the overlay when someone keeps jumping control of mobs, unfortunately it causes Aghosts to have their character without the SSD overlay, I wasn't able to find a better proc unfortunately
