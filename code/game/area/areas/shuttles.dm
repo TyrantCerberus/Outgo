@@ -106,6 +106,7 @@
 
 
 /area/shuttle/arrival/on_joining_game(mob/living/boarder)
+	give_achievement_reward(boarder, TRUE) //give the latejoiner their achievement reward, if they have one selected
 	if(SSshuttle.arrivals?.mode == SHUTTLE_CALL)
 		var/atom/movable/screen/splash/Spl = new(boarder.client, TRUE)
 		Spl.Fade(TRUE)

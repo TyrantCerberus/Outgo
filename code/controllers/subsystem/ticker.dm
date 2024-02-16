@@ -408,6 +408,8 @@ SUBSYSTEM_DEF(ticker)
 	for(var/I in livings)
 		var/mob/living/L = I
 		L.notransform = FALSE
+		//Handle achievement rewards
+		give_achievement_reward(L)
 
 /datum/controller/subsystem/ticker/proc/send_tip_of_the_round()
 	var/m
