@@ -79,6 +79,7 @@
 /datum/award/achievement/on_unlock(mob/user)
 	. = ..()
 	to_chat(user, span_greenannounce("<B>Achievement unlocked: [name]!</B>"))
+	user.client?.prefs.update_achievements_list = TRUE //used to check if we need to regenerate the achievement rewards list for this player
 
 ///Scores are for leaderboarded things, such as killcount of a specific boss
 /datum/award/score

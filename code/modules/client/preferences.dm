@@ -104,6 +104,17 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	//Quirk list
 	var/list/all_quirks = list()
 
+	//Achievement rewards
+	var/list/unlocked_achievements = list()
+	var/update_achievements_list = FALSE
+	//Job
+	var/job_reward_name
+	var/job_reward_path
+	var/list/jobs_reward_is_restricted_to = list()
+	//General
+	var/general_reward_name
+	var/general_reward_path
+
 	//Job preferences 2.0 - indexed by job title , no key or value implies never
 	var/list/job_preferences = list()
 
@@ -239,6 +250,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				dat += "<center><h2>Quirk Setup</h2>"
 				dat += "<a href='?_src_=prefs;preference=trait;task=menu'>Configure Quirks</a><br></center>"
 				dat += "<center><b>Current Quirks:</b> [all_quirks.len ? all_quirks.Join(", ") : "None"]</center>"
+			if(CONFIG_GET(flag/allow_achievement_rewards))
+				dat += "<br><center><b>Job-Specific Reward:</b> <a href ='?_src_=prefs;preference=job_reward;task=input'>[job_reward_name ? job_reward_name : "None"]</a></center>"
+				dat += "<center><b>General Reward:</b> <a href ='?_src_=prefs;preference=general_reward;task=input'>[general_reward_name ? general_reward_name : "None"]</a></center><br>"
 			dat += "<h2>Identity</h2>"
 			dat += "<table width='100%'><tr><td width='75%' valign='top'>"
 			if(is_banned_from(user.ckey, "Appearance"))
@@ -1499,6 +1513,42 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					else
 						jumpsuit_style = PREF_SUIT
 
+				if("job_reward") //job rewards should be accompanied by job restrictions
+					fetch_unlocked_achievements()
+					var/list/selectable_job_rewards = list("None")
+					//uncomment and complete when we have some of these in the game
+					/*for(var/achievement in unlocked_achievements)
+						switch(achievement)
+							if()
+								selectable_job_rewards += ""*/
+					if(selectable_job_rewards.len == 1)
+						to_chat(user, "<span class='warning'>You don't have any achievements that grant a job-specific reward unlocked. Try again after unlocking one.</span>")
+					job_reward_name = input(user, "Choose a job-specific reward (if you spawn as that job, you get this reward):", "Job-Specific Reward") as anything in selectable_job_rewards
+					switch(job_reward_name)
+						if("None")
+							job_reward_path = null
+							jobs_reward_is_restricted_to = list()
+
+				if("general_reward") //and general rewards should not
+					fetch_unlocked_achievements()
+					var/list/selectable_general_rewards = list("None")
+					for(var/achievement in unlocked_achievements)
+						switch(achievement)
+							if(MEDAL_METEOR)
+								selectable_general_rewards += "Mini-Meteor"
+							if(MEDAL_FRENCHING)
+								selectable_general_rewards += "Bubblegum Gum - Lifetime Supply"
+					if(selectable_general_rewards.len == 1)
+						to_chat(user, "<span class='warning'>You don't have any achievements that grant a general reward unlocked. Try again after unlocking one.</span>")
+					general_reward_name = input(user, "Choose a general reward (if don't get a job-specific reward, you get this instead):", "General Reward") as anything in selectable_general_rewards
+					switch(general_reward_name)
+						if("None")
+							general_reward_path = null
+						if("Mini-Meteor")
+							general_reward_path = /obj/item/storage/box/reward/meteor
+						if("Bubblegum Gum - Lifetime Supply")
+							general_reward_path = /obj/item/storage/box/reward/bubblegum_gum
+
 				if("uplink_loc")
 					var/new_loc = input(user, "Choose your character's traitor uplink spawn location:", "Character Preference") as null|anything in GLOB.uplink_spawn_loc_list
 					if(new_loc)
@@ -2057,3 +2107,16 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		else
 			if(custom_names["bible"] == DEFAULT_BIBLE)
 				custom_names["bible"] = "The Holy Book of [religion]"
+
+/datum/preferences/proc/fetch_unlocked_achievements()
+	if(unlocked_achievements.len && !update_achievements_list)
+		return
+	unlocked_achievements = list() //reset the list before we populate it to avoid creating duplicate entries
+	var/datum/db_query/Q = SSdbcore.NewQuery("SELECT achievement_key FROM [format_table_name("achievements")] WHERE ckey='[parent.ckey]' AND value=1 ORDER BY achievement_key")
+	if(!Q.Execute(async = TRUE))
+		qdel(Q)
+		return
+	else
+		while(Q.NextRow())
+			unlocked_achievements += Q.item[1]
+		qdel(Q)

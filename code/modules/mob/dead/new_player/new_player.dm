@@ -363,6 +363,9 @@
 	if(humanc && CONFIG_GET(flag/roundstart_traits))
 		SSquirks.AssignQuirks(humanc, humanc.client)
 
+	if(humanc)
+		give_achievement_reward(humanc, TRUE) //give the latejoiner their achievement reward, if they have one selected
+
 	log_manifest(character.mind.key,character.mind,character,latejoin = TRUE)
 
 /mob/dead/new_player/proc/AddEmploymentContract(mob/living/carbon/human/employee)
