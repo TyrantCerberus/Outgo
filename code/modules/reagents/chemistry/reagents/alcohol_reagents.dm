@@ -2190,7 +2190,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 
 				if(metabolizer.age > 969) //Best not let people get older than this or i might incur G-ds wrath
 					metabolizer.client?.give_award(/datum/award/achievement/misc/divine_intervention, metabolizer)
-					metabolizer.visible_message(span_notice("[metabolizer] becomes older than any man should be.. and crumbles into dust!"))
+					metabolizer.visible_message(span_notice("[metabolizer] becomes older than any person should be... and crumbles into dust!"))
 					metabolizer.dust(just_ash = FALSE, drop_items = TRUE, force = FALSE)
 
 	return ..()
