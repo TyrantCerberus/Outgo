@@ -1035,6 +1035,8 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 			return
 		message_admins("[src] has consumed [key_name_admin(consumed_mob)] [ADMIN_JMP(src)].")
 		investigate_log("has consumed [key_name(consumed_mob)].", INVESTIGATE_SUPERMATTER)
+		consumed_mob.client?.give_award(/datum/award/achievement/misc/oops, consumed_mob)
+		sleep(0.3 SECONDS) //removing this will prevent the achievement from being awarded
 		consumed_mob.dust(force = TRUE)
 		if(power_changes)
 			matter_power += 200
@@ -1054,6 +1056,8 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 	//Some poor sod got eaten, go ahead and irradiate people nearby.
 	radiation_pulse(src, 3000, 2, TRUE)
 	for(var/mob/living/near_mob in range(10))
+		if(near_mob == consumed_object)
+			continue //this check is a consequence of needing to sleep earlier in the proc, you can safely remove it if you can find a way of removing that
 		investigate_log("has irradiated [key_name(near_mob)] after consuming [consumed_object].", INVESTIGATE_SUPERMATTER)
 		if(near_mob in view())
 			near_mob.show_message(span_danger("As \the [src] slowly stops resonating, you find your skin covered in new radiation burns."), MSG_VISUAL,

@@ -153,7 +153,7 @@
 	desc = "You've become the master of all duellists - the paragon of blades."
 	database_id = MEDAL_BLADE_ASCENSION
 	icon = "bladeascend"
-	
+
 /datum/award/achievement/misc/toolbox_soul
 	name = "SOUL'd Out"
 	desc = "My eternal soul was destroyed to make a toolbox look funny and all I got was this achievement..."
@@ -165,6 +165,21 @@
 	desc = "Sometimes you need to make some noise to make a point."
 	database_id = MEDAL_HOT_DAMN
 	icon = "hotdamn"
+
+/datum/award/achievement/misc/divine_intervention
+	name = "Divine Intervention"
+	desc = "Alcoholics Anonymous isn't normally this wrathful."
+	database_id = MEDAL_DIVINE_INTERVENTION
+
+/datum/award/achievement/misc/oops
+	name = "Oops!"
+	desc = "What a regrettable turn of events..."
+	database_id = MEDAL_OOPS
+
+/datum/award/achievement/misc/say_hey_kid
+	name = "Say 'Hey Kid'"
+	desc = "Don't you OD. Oh, too late."
+	database_id = MEDAL_SAY_HEY_KID
 
 /datum/award/achievement/misc/cayenne_disk
 	name = "Very Important Piscis"

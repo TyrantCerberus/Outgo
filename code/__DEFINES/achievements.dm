@@ -34,6 +34,9 @@
 #define MEDAL_TOOLBOX_SOUL "Toolsoul"
 #define MEDAL_CHEM_TUT          "Beginner Chemist"
 #define MEDAL_HOT_DAMN "Hot Damn!"
+#define MEDAL_DIVINE_INTERVENTION "Divine Intervention"
+#define MEDAL_OOPS "Oops!"
+#define MEDAL_SAY_HEY_KID "Say 'Hey Kid'"
 #define MEDAL_CAYENNE_DISK "Very Important Piscis"
 #define MEDAL_TRAM_SURFER "Tram Surfer"
 
