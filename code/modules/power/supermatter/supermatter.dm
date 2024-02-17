@@ -1035,6 +1035,7 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 			return
 		message_admins("[src] has consumed [key_name_admin(consumed_mob)] [ADMIN_JMP(src)].")
 		investigate_log("has consumed [key_name(consumed_mob)].", INVESTIGATE_SUPERMATTER)
+		consumed_mob.client?.give_award(/datum/award/achievement/misc/oops, consumed_mob)
 		consumed_mob.dust(force = TRUE)
 		if(power_changes)
 			matter_power += 200

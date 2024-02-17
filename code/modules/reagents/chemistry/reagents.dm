@@ -197,6 +197,7 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagent())
 /datum/reagent/proc/overdose_start(mob/living/M)
 	to_chat(M, span_userdanger("You feel like you took too much of [name]!"))
 	SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "[type]_overdose", /datum/mood_event/overdose, name)
+	M.client?.give_award(/datum/award/achievement/misc/say_hey_kid, M)
 	return
 
 /**
