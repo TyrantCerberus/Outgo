@@ -3,8 +3,8 @@
 	trainee_role = TRUE
 	department_head = list("Research Director")
 	faction = FACTION_STATION
-	total_positions = 5
-	spawn_positions = 3
+	total_positions = 1
+	spawn_positions = 1
 	supervisors = "the research director and senior researchers"
 	selection_color = "#ffeeff"
 
@@ -36,9 +36,9 @@
 
 	belt = /obj/item/pda/toxins
 	ears = /obj/item/radio/headset/headset_sci
-	uniform = /obj/item/clothing/under/rank/rnd/scientist
+	uniform = /obj/item/clothing/under/color/lightpurple
 	shoes = /obj/item/clothing/shoes/sneakers/white
-	suit = /obj/item/clothing/suit/toggle/labcoat/science
+	suit = /obj/item/clothing/suit/toggle/labcoat
 
 	backpack = /obj/item/storage/backpack/science
 	satchel = /obj/item/storage/backpack/satchel/tox
