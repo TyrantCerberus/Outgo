@@ -114,7 +114,8 @@ GLOBAL_DATUM_INIT(crewmonitor, /datum/crewmonitor, new)
 		"Security Officer (Engineering)" = 14,
 		"Security Officer (Science)" = 15,
 		"Security Officer (Cargo)" = 16,
-		"Detective" = 17,
+		"Cadet" = 17,
+		"Detective" = 18,
 		// 20-29: Medbay
 		"Chief Medical Officer" = 20,
 		"Chemist" = 21,

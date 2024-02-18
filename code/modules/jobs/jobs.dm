@@ -60,7 +60,8 @@ GLOBAL_LIST_INIT(security_positions, list(
 	"Head of Security",
 	"Warden",
 	"Detective",
-	"Security Officer"))
+	"Security Officer",
+	"Cadet"))
 
 /// These aren't defacto jobs, but are the special departmental variants for sec officers.
 GLOBAL_LIST_INIT(security_sub_positions, list(

@@ -213,6 +213,11 @@
 	minimal_access = list(ACCESS_RND, ACCESS_TOXINS, ACCESS_TOXINS_STORAGE, ACCESS_RESEARCH, ACCESS_XENOBIOLOGY, ACCESS_MECH_SCIENCE,
 							ACCESS_MINERAL_STOREROOM, ACCESS_AUX_BASE)
 
+/datum/card_access/job/security/cadet
+	assignment = "Cadet"
+	full_access = list(ACCESS_MAINT_TUNNELS, ACCESS_MORGUE, ACCESS_BRIG)
+	minimal_access = list(ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_COURT, ACCESS_WEAPONS, ACCESS_MECH_SECURITY)
+
 /datum/card_access/job/security/officer
 	assignment = "Security Officer"
 	full_access = list(ACCESS_MAINT_TUNNELS, ACCESS_MORGUE, ACCESS_FORENSICS_LOCKERS)
