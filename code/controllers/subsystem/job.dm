@@ -687,7 +687,7 @@ SUBSYSTEM_DEF(job)
 /// Builds various lists of jobs based on station, centcom and additional jobs with icons associated with them.
 /datum/controller/subsystem/job/proc/setup_job_lists()
 	station_jobs = list("Assistant", "Captain", "Head of Personnel", "Bartender", "Cook", "Botanist", "Quartermaster", "Cargo Technician", \
-		"Shaft Miner", "Clown", "Mime", "Janitor", "Curator", "Lawyer", "Chaplain", "Chief Engineer", "Station Engineer", \
+		"Shaft Miner", "Clown", "Mime", "Janitor", "Curator", "Lawyer", "Chaplain", "Chief Engineer", "Station Engineer", "Junior Engineer", \
 		"Atmospheric Technician", "Chief Medical Officer", "Medical Doctor", "Nurse", "Chemist", "Geneticist", "Virologist", "Psychologist", \
 		"Research Director", "Scientist", "Lab Technician", "Roboticist", "Head of Security", "Warden", "Detective", "Security Officer", "Cadet", "Prisoner")
 

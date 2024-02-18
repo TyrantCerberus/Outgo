@@ -119,7 +119,7 @@
 	name = "28 moles of plasma (full tank)."
 	targetitem = /obj/item/tank
 	difficulty = 3
-	excludefromjob = list("Chief Engineer","Research Director","Station Engineer","Scientist","Lab Technician","Atmospheric Technician")
+	excludefromjob = list("Chief Engineer","Research Director","Station Engineer","Junior Engineer","Scientist","Lab Technician","Atmospheric Technician")
 
 /datum/objective_item/steal/plasma/check_special_completion(obj/item/tank/T)
 	var/target_amount = text2num(name)
@@ -171,7 +171,7 @@
 	name = "The Blackbox."
 	targetitem = /obj/item/blackbox
 	difficulty = 10
-	excludefromjob = list("Chief Engineer","Station Engineer","Atmospheric Technician")
+	excludefromjob = list("Chief Engineer","Station Engineer","Junior Engineer","Atmospheric Technician")
 
 //Unique Objectives
 /datum/objective_item/special/New()
