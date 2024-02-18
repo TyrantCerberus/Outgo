@@ -168,6 +168,12 @@
 	region = REGION_GENERAL
 	minimal_access = list(ACCESS_THEATRE)
 
+/datum/card_access/job/nurse
+	assignment = "Nurse"
+	region = REGION_MEDBAY
+	full_access = list(ACCESS_PHARMACY)
+	minimal_access = list(ACCESS_MEDICAL, ACCESS_MORGUE, ACCESS_SURGERY, ACCESS_MECH_MEDICAL)
+
 /datum/card_access/job/prisoner
 	assignment = "Prisoner"
 	region = REGION_GENERAL
@@ -206,6 +212,17 @@
 	full_access = list(ACCESS_ROBOTICS, ACCESS_TECH_STORAGE, ACCESS_GENETICS)
 	minimal_access = list(ACCESS_RND, ACCESS_TOXINS, ACCESS_TOXINS_STORAGE, ACCESS_RESEARCH, ACCESS_XENOBIOLOGY, ACCESS_MECH_SCIENCE,
 							ACCESS_MINERAL_STOREROOM, ACCESS_AUX_BASE)
+
+/datum/card_access/job/lab_technician
+	assignment = "Lab Technician"
+	region = REGION_RESEARCH
+	minimal_access = list(ACCESS_RND, ACCESS_RESEARCH, ACCESS_XENOBIOLOGY, ACCESS_MECH_SCIENCE,
+							ACCESS_MINERAL_STOREROOM, ACCESS_AUX_BASE)
+
+/datum/card_access/job/security/cadet
+	assignment = "Cadet"
+	full_access = list(ACCESS_MAINT_TUNNELS, ACCESS_MORGUE, ACCESS_BRIG, ACCESS_SECURITY)
+	minimal_access = list(ACCESS_SEC_DOORS, ACCESS_COURT, ACCESS_WEAPONS, ACCESS_MECH_SECURITY)
 
 /datum/card_access/job/security/officer
 	assignment = "Security Officer"
@@ -254,6 +271,12 @@
 	full_access = list(ACCESS_ATMOSPHERICS)
 	minimal_access = list(ACCESS_ENGINE, ACCESS_ENGINE_EQUIP, ACCESS_TECH_STORAGE, ACCESS_MAINT_TUNNELS, ACCESS_MECH_ENGINE, ACCESS_AUX_BASE,
 						ACCESS_EXTERNAL_AIRLOCKS, ACCESS_CONSTRUCTION, ACCESS_TCOMSAT, ACCESS_MINERAL_STOREROOM)
+
+/datum/card_access/job/junior_engineer
+	assignment = "Junior Engineer"
+	region = REGION_ENGINEERING
+	minimal_access = list(ACCESS_ENGINE, ACCESS_ENGINE_EQUIP, ACCESS_TECH_STORAGE, ACCESS_MAINT_TUNNELS, ACCESS_MECH_ENGINE, ACCESS_AUX_BASE,
+						ACCESS_EXTERNAL_AIRLOCKS, ACCESS_CONSTRUCTION, ACCESS_MINERAL_STOREROOM)
 
 /datum/card_access/job/virologist
 	assignment = "Virologist"

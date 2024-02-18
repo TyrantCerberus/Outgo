@@ -53,7 +53,7 @@
 	name = "Syndicate Infiltrator"
 	antag_datum = /datum/antagonist/traitor
 	antag_flag = ROLE_TRAITOR
-	protected_roles = list("Security Officer", "Warden", "Head of Personnel", "Detective", "Head of Security", "Captain")
+	protected_roles = list("Security Officer", "Cadet", "Warden", "Head of Personnel", "Detective", "Head of Security", "Captain")
 	restricted_roles = list("AI","Cyborg")
 	required_candidates = 1
 	weight = 7
@@ -73,8 +73,8 @@
 	antag_datum = /datum/antagonist/rev/head
 	antag_flag = ROLE_REV_HEAD
 	antag_flag_override = ROLE_REV
-	restricted_roles = list("AI", "Cyborg", "Prisoner", "Security Officer", "Warden", "Detective", "Head of Security", "Captain", "Head of Personnel", "Chief Engineer", "Chief Medical Officer", "Research Director")
-	enemy_roles = list("AI", "Cyborg", "Security Officer","Detective","Head of Security", "Captain", "Warden")
+	restricted_roles = list("AI", "Cyborg", "Prisoner", "Security Officer", "Cadet", "Warden", "Detective", "Head of Security", "Captain", "Head of Personnel", "Chief Engineer", "Chief Medical Officer", "Research Director")
+	enemy_roles = list("AI", "Cyborg", "Security Officer", "Cadet", "Detective", "Head of Security", "Captain", "Warden")
 	required_enemies = list(2,2,1,1,1,1,1,0,0,0)
 	required_candidates = 1
 	weight = 2
@@ -148,7 +148,7 @@
 	name = "Changeling Infiltrator"   //Sorry no idea for a normal name
 	antag_datum = /datum/antagonist/changeling
 	antag_flag = ROLE_CHANGELING
-	protected_roles = list("Security Officer", "Warden", "Head of Personnel", "Detective", "Head of Security", "Captain")
+	protected_roles = list("Security Officer", "Cadet", "Warden", "Head of Personnel", "Detective", "Head of Security", "Captain")
 	restricted_roles = list("AI","Cyborg")
 	required_candidates = 1
 	weight = 4

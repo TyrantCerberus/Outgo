@@ -208,6 +208,16 @@
 	new /obj/item/reagent_containers/glass/bottle/formaldehyde(src)
 	update_appearance()
 
+/obj/item/storage/belt/medical/nurse/PopulateContents()
+	new /obj/item/stack/medical/suture(src)
+	new /obj/item/stack/medical/mesh(src)
+	new /obj/item/reagent_containers/pill/patch/colpisbital(src)
+	new /obj/item/reagent_containers/pill/patch/cremiisuri(src)
+	new /obj/item/reagent_containers/syringe(src)
+	new /obj/item/reagent_containers/glass/bottle/formaldehyde(src)
+	new /obj/item/storage/pill_bottle/tramadol(src)
+	update_appearance()
+
 /obj/item/storage/belt/security
 	name = "security belt"
 	desc = "Can hold security gear like handcuffs and flashes."
@@ -247,6 +257,14 @@
 	new /obj/item/grenade/flashbang(src)
 	new /obj/item/assembly/flash/handheld(src)
 	new /obj/item/melee/baton/loaded(src)
+	update_appearance()
+
+/obj/item/storage/belt/security/cadet/PopulateContents()
+	new /obj/item/food/donut(src)
+	new /obj/item/reagent_containers/spray/pepper(src)
+	new /obj/item/restraints/legcuffs/bola(src)
+	new /obj/item/restraints/handcuffs(src)
+	new /obj/item/assembly/flash/handheld(src)
 	update_appearance()
 
 /obj/item/storage/belt/security/webbing

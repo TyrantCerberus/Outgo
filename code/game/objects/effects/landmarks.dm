@@ -105,6 +105,10 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	name = "Security Officer"
 	icon_state = "Security Officer"
 
+/obj/effect/landmark/start/cadet
+	name = "Cadet"
+	icon_state = "Cadet"
+
 /obj/effect/landmark/start/botanist
 	name = "Botanist"
 	icon_state = "Botanist"
@@ -145,13 +149,25 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	name = "Station Engineer"
 	icon_state = "Station Engineer"
 
+/obj/effect/landmark/start/junior_engineer
+	name = "Junior Engineer"
+	icon_state = "Junior Engineer"
+
 /obj/effect/landmark/start/medical_doctor
 	name = "Medical Doctor"
 	icon_state = "Medical Doctor"
 
+/obj/effect/landmark/start/nurse
+	name = "Nurse"
+	icon_state = "Nurse"
+
 /obj/effect/landmark/start/scientist
 	name = "Scientist"
 	icon_state = "Scientist"
+
+/obj/effect/landmark/start/lab_technician
+	name = "Lab Technician"
+	icon_state = "Lab Technician"
 
 /obj/effect/landmark/start/chemist
 	name = "Chemist"
