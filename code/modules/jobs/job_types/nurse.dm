@@ -36,10 +36,12 @@
 	jobtype = /datum/job/nurse
 	card_access = /datum/card_access/job/nurse
 
-	belt = /obj/item/pda/medical
+	belt = /obj/item/storage/belt/medical/nurse
 	head = /obj/item/clothing/head/nursehat
 	ears = /obj/item/radio/headset/headset_med
 	uniform = /obj/item/clothing/under/rank/medical/doctor/blue
+	l_pocket = /obj/item/pda/medical
+	r_pocket = /obj/item/stack/medical/gauze
 	gloves = /obj/item/clothing/gloves/color/latex
 	shoes = /obj/item/clothing/shoes/sneakers/white
 
@@ -48,6 +50,6 @@
 	duffelbag = /obj/item/storage/backpack/duffelbag/med
 	box = /obj/item/storage/box/survival/medical
 
-	skillchips = list(/obj/item/skillchip/quicker_carry)
+	skillchips = list(/obj/item/skillchip/quicker_carry, /obj/item/skillchip/job/medical_doctor)
 
 	chameleon_extras = /obj/item/gun/syringe
