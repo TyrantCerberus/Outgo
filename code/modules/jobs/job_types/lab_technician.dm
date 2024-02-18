@@ -8,7 +8,7 @@
 	supervisors = "the research director and senior researchers"
 	selection_color = "#ffeeff"
 
-	outfit = /datum/outfit/job/scientist
+	outfit = /datum/outfit/job/lab_technician
 	plasmaman_outfit = /datum/outfit/plasmaman/science
 
 	paycheck = PAYCHECK_EASY
@@ -47,7 +47,7 @@
 	duffelbag = /obj/item/storage/backpack/duffelbag/toxins
 	backpack_contents = list(/obj/item/modular_computer/tablet/preset/science=1)
 
-/datum/outfit/job/scientist/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/lab_technician/pre_equip(mob/living/carbon/human/H)
 	..()
 	if(prob(0.4))
 		neck = /obj/item/clothing/neck/tie/horrible
