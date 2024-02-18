@@ -5744,6 +5744,7 @@
 /obj/structure/chair/office{
 	dir = 8
 	},
+/obj/effect/landmark/start/cadet,
 /turf/open/floor/iron/dark,
 /area/security/brig)
 "aoR" = (
@@ -8554,6 +8555,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
 	},
+/obj/effect/landmark/start/cadet,
 /turf/open/floor/iron/dark,
 /area/security/brig)
 "avE" = (
@@ -9251,6 +9253,7 @@
 "awZ" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
+/obj/effect/landmark/start/nurse,
 /turf/open/floor/iron/white,
 /area/medical/medbay/central)
 "axa" = (
@@ -24773,6 +24776,7 @@
 /area/science/xenobiology)
 "bpo" = (
 /obj/item/wrench,
+/obj/effect/landmark/start/lab_technician,
 /turf/open/floor/engine,
 /area/science/explab)
 "bpq" = (
@@ -41774,6 +41778,11 @@
 /obj/effect/turf_decal/bot,
 /turf/open/floor/iron/showroomfloor,
 /area/security/brig)
+"cnR" = (
+/obj/structure/chair/stool,
+/obj/effect/landmark/start/junior_engineer,
+/turf/open/floor/iron,
+/area/engineering/main)
 "cnT" = (
 /obj/structure/weightmachine/weightlifter,
 /turf/open/floor/iron/showroomfloor,
@@ -47357,6 +47366,16 @@
 /obj/effect/turf_decal/trimline/brown/filled/end,
 /turf/open/floor/iron,
 /area/cargo/storage)
+"ghf" = (
+/obj/effect/turf_decal/tile/purple{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/purple{
+	dir = 8
+	},
+/obj/effect/landmark/start/lab_technician,
+/turf/open/floor/iron/dark,
+/area/science/explab)
 "giI" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -52817,6 +52836,7 @@
 /obj/effect/turf_decal/trimline/blue/line{
 	dir = 4
 	},
+/obj/effect/landmark/start/nurse,
 /turf/open/floor/iron/white,
 /area/medical/medbay/lobby)
 "nZw" = (
@@ -54863,6 +54883,14 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/department/science)
+"qVo" = (
+/obj/structure/chair/stool,
+/obj/effect/turf_decal/tile/yellow{
+	dir = 1
+	},
+/obj/effect/landmark/start/junior_engineer,
+/turf/open/floor/iron,
+/area/engineering/break_room)
 "qVP" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/poddoor/preopen{
@@ -93658,7 +93686,7 @@ bMV
 bOd
 cCV
 bPK
-cCV
+qVo
 bRp
 bRY
 iqI
@@ -93930,7 +93958,7 @@ bZa
 bZH
 cbW
 cbp
-cci
+cnR
 cam
 cdI
 agP
@@ -99815,7 +99843,7 @@ bAC
 bBH
 bCT
 bDR
-bCT
+ghf
 bGj
 buz
 abI
