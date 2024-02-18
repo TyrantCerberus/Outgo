@@ -1,5 +1,6 @@
 /datum/job/nurse
 	title = "Nurse"
+	trainee_role = TRUE
 	department_head = list("Chief Medical Officer")
 	faction = FACTION_STATION
 	total_positions = 1
