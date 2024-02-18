@@ -39,6 +39,8 @@
 	uniform = /obj/item/clothing/under/color/lightpurple
 	shoes = /obj/item/clothing/shoes/sneakers/white
 	suit = /obj/item/clothing/suit/toggle/labcoat
+	l_pocket = /obj/item/pen/fourcolor
+	r_pocket = /obj/item/clipboard
 
 	backpack = /obj/item/storage/backpack/science
 	satchel = /obj/item/storage/backpack/satchel/tox
