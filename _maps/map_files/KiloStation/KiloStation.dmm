@@ -10541,6 +10541,7 @@
 	},
 /obj/machinery/power/apc/auto_name/east,
 /obj/structure/cable,
+/obj/effect/landmark/start/nurse,
 /turf/open/floor/iron/showroomfloor,
 /area/medical/exam_room)
 "aNX" = (
@@ -14088,6 +14089,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
+/obj/effect/landmark/start/lab_technician,
 /turf/open/floor/iron/dark,
 /area/science/research)
 "aXY" = (
@@ -16580,6 +16582,7 @@
 	dir = 1
 	},
 /obj/effect/mapping_helpers/simple_pipes/supply/hidden/layer4,
+/obj/effect/landmark/start/nurse,
 /turf/open/floor/iron/showroomfloor,
 /area/medical/medbay/central)
 "beQ" = (
@@ -31605,6 +31608,7 @@
 /obj/structure/chair/office{
 	dir = 1
 	},
+/obj/effect/landmark/start/cadet,
 /turf/open/floor/iron/dark,
 /area/hallway/primary/aft)
 "cpN" = (
@@ -38192,6 +38196,25 @@
 	},
 /turf/open/floor/iron,
 /area/hallway/primary/starboard)
+"duy" = (
+/obj/effect/turf_decal/tile/purple{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/purple{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/purple{
+	dir = 1
+	},
+/obj/effect/mapping_helpers/simple_pipes/supply/hidden/layer4,
+/obj/effect/mapping_helpers/simple_pipes/scrubbers/hidden/layer2,
+/obj/structure/cable,
+/obj/effect/turf_decal/siding/purple{
+	dir = 1
+	},
+/obj/effect/landmark/start/lab_technician,
+/turf/open/floor/iron/showroomfloor,
+/area/science/research)
 "duG" = (
 /obj/machinery/button/massdriver{
 	id = "trash";
@@ -50223,6 +50246,7 @@
 /obj/effect/turf_decal/siding/yellow{
 	dir = 5
 	},
+/obj/effect/landmark/start/junior_engineer,
 /turf/open/floor/iron,
 /area/engineering/break_room)
 "jgI" = (
@@ -80060,6 +80084,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
+/obj/effect/landmark/start/cadet,
 /turf/open/floor/iron,
 /area/security/brig)
 "wVh" = (
@@ -82844,6 +82869,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
+/obj/effect/landmark/start/junior_engineer,
 /turf/open/floor/iron/dark,
 /area/engineering/break_room)
 "ygB" = (
@@ -121237,7 +121263,7 @@ aXX
 aYS
 aZt
 bbl
-aOo
+duy
 cmg
 aYe
 aXQ
