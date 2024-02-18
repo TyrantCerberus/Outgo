@@ -318,7 +318,7 @@
 	name = "Malfunctioning AI"
 	antag_datum = /datum/antagonist/malf_ai
 	antag_flag = ROLE_MALF
-	enemy_roles = list("Security Officer", "Cadet", "Warden", "Detective", "Head of Security", "Captain", "Scientist", "Chemist", "Research Director", "Chief Engineer")
+	enemy_roles = list("Security Officer", "Cadet", "Warden", "Detective", "Head of Security", "Captain", "Scientist", "Lab Technician", "Chemist", "Research Director", "Chief Engineer")
 	exclusive_roles = list("AI")
 	required_enemies = list(4,4,4,4,4,4,2,2,2,0)
 	required_candidates = 1

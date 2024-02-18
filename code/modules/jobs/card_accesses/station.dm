@@ -213,6 +213,12 @@
 	minimal_access = list(ACCESS_RND, ACCESS_TOXINS, ACCESS_TOXINS_STORAGE, ACCESS_RESEARCH, ACCESS_XENOBIOLOGY, ACCESS_MECH_SCIENCE,
 							ACCESS_MINERAL_STOREROOM, ACCESS_AUX_BASE)
 
+/datum/card_access/job/lab_technician
+	assignment = "Lab Technician"
+	region = REGION_RESEARCH
+	minimal_access = list(ACCESS_RND, ACCESS_RESEARCH, ACCESS_XENOBIOLOGY, ACCESS_MECH_SCIENCE,
+							ACCESS_MINERAL_STOREROOM, ACCESS_AUX_BASE)
+
 /datum/card_access/job/security/cadet
 	assignment = "Cadet"
 	full_access = list(ACCESS_MAINT_TUNNELS, ACCESS_MORGUE, ACCESS_BRIG, ACCESS_SECURITY)

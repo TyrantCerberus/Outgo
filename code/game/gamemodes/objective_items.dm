@@ -119,7 +119,7 @@
 	name = "28 moles of plasma (full tank)."
 	targetitem = /obj/item/tank
 	difficulty = 3
-	excludefromjob = list("Chief Engineer","Research Director","Station Engineer","Scientist","Atmospheric Technician")
+	excludefromjob = list("Chief Engineer","Research Director","Station Engineer","Scientist","Lab Technician","Atmospheric Technician")
 
 /datum/objective_item/steal/plasma/check_special_completion(obj/item/tank/T)
 	var/target_amount = text2num(name)
@@ -160,7 +160,7 @@
 	name = "an unused sample of slime extract."
 	targetitem = /obj/item/slime_extract
 	difficulty = 3
-	excludefromjob = list("Research Director","Scientist")
+	excludefromjob = list("Research Director","Scientist","Lab Technician")
 
 /datum/objective_item/steal/slime/check_special_completion(obj/item/slime_extract/E)
 	if(E.Uses > 0)

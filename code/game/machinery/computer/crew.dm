@@ -125,8 +125,9 @@ GLOBAL_DATUM_INIT(crewmonitor, /datum/crewmonitor, new)
 		// 30-39: Science
 		"Research Director" = 30,
 		"Scientist" = 31,
-		"Roboticist" = 32,
-		"Geneticist" = 33,
+		"Lab Technician" = 32,
+		"Roboticist" = 33,
+		"Geneticist" = 34,
 		// 40-49: Engineering
 		"Chief Engineer" = 40,
 		"Station Engineer" = 41,
