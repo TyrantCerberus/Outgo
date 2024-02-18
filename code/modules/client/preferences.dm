@@ -913,7 +913,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 			HTML += "<tr bgcolor='[job.selection_color]'><td width='60%' align='right'>"
 			var/rank = job.title
-			var/rank_name = "[job.trainee_role ? "<span title='Trainee Role: Laxer responsibilites make this an ideal role for new players or those looking to learn a department.'>&#10047; [rank]</span>" : "[rank]"]"
+			var/rank_name = "[job.trainee_role ? "<span title='Trainee Role: Laxer responsibilites make this an ideal role for new players or those looking to learn a department.'>[rank]<sup>TR</sup></span>" : "[rank]"]"
 			lastJob = job
 			if(is_banned_from(user.ckey, rank))
 				HTML += "<font color=red>[rank_name]</font></td><td><a href='?_src_=prefs;bancheck=[rank]'> BANNED</a></td></tr>"
