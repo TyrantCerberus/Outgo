@@ -34,7 +34,7 @@
 	job_flags = JOB_ANNOUNCE_ARRIVAL | JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_CREW_MEMBER | JOB_NEW_PLAYER_JOINABLE
 
 
-/datum/outfit/job/security
+/datum/outfit/job/cadet
 	name = "Cadet"
 	jobtype = /datum/job/cadet
 	card_access = /datum/card_access/job/security/cadet
