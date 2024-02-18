@@ -215,7 +215,7 @@
 
 /datum/card_access/job/security/cadet
 	assignment = "Cadet"
-	full_access = list(ACCESS_MAINT_TUNNELS, ACCESS_MORGUE, ACCESS_BRIG)
+	full_access = list(ACCESS_MAINT_TUNNELS, ACCESS_MORGUE, ACCESS_BRIG, ACCESS_SECURITY)
 	minimal_access = list(ACCESS_SEC_DOORS, ACCESS_COURT, ACCESS_WEAPONS, ACCESS_MECH_SECURITY)
 
 /datum/card_access/job/security/officer
