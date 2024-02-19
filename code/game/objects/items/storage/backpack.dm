@@ -337,7 +337,7 @@
 	desc = "A large duffel bag for holding extra things."
 	icon_state = "duffel"
 	inhand_icon_state = "duffel"
-	slowdown = 0.5
+	slowdown = 0.25
 
 /obj/item/storage/backpack/duffelbag/ComponentInitialize()
 	. = ..()
@@ -349,7 +349,7 @@
 	desc = "A cursed clown duffel bag that hungers for food of any kind.\n A warning label suggests that it eats food inside. If that food happens to be a horribly ruined, burned mess the chef scrapped out of the microwave, then it might have negative effects on the bag..."
 	icon_state = "duffel-curse"
 	inhand_icon_state = "duffel-curse"
-	slowdown = 1
+	slowdown = 0.5
 	item_flags = DROPDEL
 	max_integrity = 100
 	///counts time passed since it ate food
