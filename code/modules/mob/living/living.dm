@@ -1989,3 +1989,16 @@
 		exp_list[mind.assigned_role.title] = minutes
 
 	return exp_list
+
+
+/mob/living/do_hurt_animation()
+	if(stat > HARD_CRIT)
+		return
+
+	var/pixel_x = src.pixel_x
+	var/pixel_y = src.pixel_y
+	var/offset_x = pixel_x + pick(-3, -2, -1, 1, 2, 3)
+	var/offset_y = pixel_y + pick(-3, -2, -1, 1, 2, 3)
+
+	animate(src, pixel_x = offset_x, pixel_y = offset_y, time = rand(2, 4))
+	animate(pixel_x = pixel_x, pixel_y = pixel_y, time = 2)
