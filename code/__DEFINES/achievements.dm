@@ -26,13 +26,7 @@
 #define MEDAL_GOTTEM "GOTTEM"
 #define MEDAL_ASCENSION "Ascension"
 #define MEDAL_FRENCHING "FrenchingTheBubble"
-#define MEDAL_ASH_ASCENSION "Ash"
-#define MEDAL_FLESH_ASCENSION "Flesh"
-#define MEDAL_RUST_ASCENSION "Rust"
-#define MEDAL_VOID_ASCENSION "Void"
-#define MEDAL_BLADE_ASCENSION "Blade"
 #define MEDAL_TOOLBOX_SOUL "Toolsoul"
-#define MEDAL_CHEM_TUT          "Beginner Chemist"
 #define MEDAL_HOT_DAMN "Hot Damn!"
 #define MEDAL_DIVINE_INTERVENTION "Divine Intervention"
 #define MEDAL_OOPS "Oops!"
@@ -64,8 +58,6 @@
 
 //Mafia medal hub IDs (misc stuff)
 #define MAFIA_MEDAL_HATED "Universally Hated"
-#define MAFIA_MEDAL_CHARISMATIC "Charismatic"
-#define MAFIA_MEDAL_VIP "VIP"
 
 //Boss medals
 
@@ -81,7 +73,6 @@
 #define BOSS_MEDAL_TENDRIL   "Tendril Exterminator"
 #define BOSS_MEDAL_SWARMERS   "Swarmer Beacon Killer"
 #define BOSS_MEDAL_WENDIGO    "Wendigo Killer"
-#define BOSS_MEDAL_KINGGOAT   "King Goat Killer"
 
 #define BOSS_MEDAL_MINER_CRUSHER "Blood-drunk Miner Crusher"
 #define BOSS_MEDAL_FROSTMINER_CRUSHER "Demonic-frost Miner Crusher"
@@ -92,7 +83,6 @@
 #define BOSS_MEDAL_LEGION_CRUSHER "Legion Crusher"
 #define BOSS_MEDAL_SWARMERS_CRUSHER "Swarmer Beacon Crusher"
 #define BOSS_MEDAL_WENDIGO_CRUSHER "Wendigo Crusher"
-#define BOSS_MEDAL_KINGGOAT_CRUSHER "King Goat Crusher"
 
 // Medal hub IDs for boss-kill scores
 #define BOSS_SCORE          "Bosses Killed"
@@ -105,7 +95,6 @@
 #define LEGION_SCORE      "Legion Killed"
 #define SWARMER_BEACON_SCORE "Swarmer Beacs Killed"
 #define WENDIGO_SCORE  "Wendigos Killed"
-#define KINGGOAT_SCORE      "King Goat Killed"
 #define TENDRIL_CLEAR_SCORE  "Tendrils Killed"
 
 // DB ID for hardcore random mode
@@ -116,16 +105,3 @@
 
 // DB ID for intento score
 #define INTENTO_SCORE "Intento Score"
-
-// Tourist related achievements and scores
-
-//centcom grades (achievement)
-
-#define MEDAL_BAD_SERVICE "Bad Service"
-#define MEDAL_OKAY_SERVICE "Okay Service"
-#define MEDAL_GOOD_SERVICE "Good Service"
-
-//scores
-
-#define CHEF_TOURISTS_SERVED "Tourists Served As Chef"
-#define BARTENDER_TOURISTS_SERVED "Tourists Served As Bartender"

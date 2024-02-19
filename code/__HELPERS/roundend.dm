@@ -513,22 +513,6 @@
 		parts += "Somehow, nobody made any money this shift! This'll result in some budget cuts...</div>"
 	return parts
 
-/**
- * Awards the service department an achievement and updates the chef and bartender's highscore for tourists served.
- *
- * Arguments:
- * * award: Achievement to give service department
- */
-/datum/controller/subsystem/ticker/proc/award_service(award)
-	for(var/mob/living/carbon/human/human as anything in GLOB.human_list)
-		if(!human.client || !human.mind)
-			continue
-		var/datum/job/human_job = human.mind.assigned_role
-		if(!(human_job.departments & DEPARTMENT_SERVICE))
-			continue
-		human_job.award_service(human.client, award)
-
-
 /datum/controller/subsystem/ticker/proc/medal_report()
 	if(GLOB.commendations.len)
 		var/list/parts = list()
