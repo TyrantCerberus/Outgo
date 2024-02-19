@@ -1,25 +1,29 @@
-/mob/living/var/lastclienttime = 0
-/obj/effect/decal/ssd_indicator
-		name = ""
-		mouse_opacity = FALSE
-		icon = 'icons/mob/ssd_indicator.dmi'
-		icon_state = "default0"
-		layer = FLY_LAYER
+GLOBAL_VAR_INIT(ssd_indicator_overlay, mutable_appearance('icons/mob/ssd_indicator.dmi', "default0", FLY_LAYER))
 
-/mob/living/var/obj/effect/decal/ssd_indicator/indicator
+/mob/living
+	var/ssd_indicator = FALSE
+	var/lastclienttime = 0
 
-/mob/living/proc/set_ssd_indicator(var/state)
-	if(!indicator)
-		indicator = new /obj/effect/decal/ssd_indicator
-	indicator.invisibility = invisibility
-	if(state && stat != DEAD)
-		vis_contents += indicator
+/mob/living/proc/set_ssd_indicator(state)
+	if(state == ssd_indicator)
+		return
+	ssd_indicator = state
+	if(ssd_indicator)
+		add_overlay(GLOB.ssd_indicator_overlay)
+		log_message("<font color='green'>has gone SSD and been given their indicator!</font>", LOG_ATTACK)
 	else
-		vis_contents -= indicator
-		qdel(indicator)
-	return state
+		cut_overlay(GLOB.ssd_indicator_overlay)
+		log_message("<font color='green'>is no longer SSD and has lost their indicator!</font>", LOG_ATTACK)
 
-//This proc should stop mobs from having the overlay when someone keeps jumping control of mobs, unfortunately it causes Aghosts to have their character without the SSD overlay, I wasn't able to find a better proc unfortunately
-/mob/living/transfer_ckey(mob/new_mob, send_signal = TRUE)
-	..()
+/mob/living/Login()
+	. = ..()
+	set_ssd_indicator(FALSE)
+
+/mob/living/Logout()
+	lastclienttime = world.time
+	set_ssd_indicator(TRUE)
+	. = ..()
+
+/mob/living/ghostize(can_reenter_corpse = TRUE)
+	. = ..()
 	set_ssd_indicator(FALSE)
