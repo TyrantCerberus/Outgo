@@ -1015,7 +1015,7 @@
 	animate(src, pixel_x = pixel_x + pixel_x_diff, pixel_y = pixel_y + pixel_y_diff, transform=rotated_transform, time = 1, easing=BACK_EASING|EASE_IN, flags = ANIMATION_PARALLEL)
 	animate(pixel_x = pixel_x - pixel_x_diff, pixel_y = pixel_y - pixel_y_diff, transform=initial_transform, time = 2, easing=SINE_EASING, flags = ANIMATION_PARALLEL)
 
-	attacked_atom.do_hurt_animation()
+	A.do_hurt_animation()
 
 /// Plays an animation for getting hit.
 /atom/proc/do_hurt_animation()
