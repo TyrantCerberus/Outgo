@@ -205,7 +205,7 @@
 /datum/controller/subsystem/ticker/proc/handle_skill_to_score_conversion()
 	if(!SSachievements.achievements_enabled || !SSskills.initialized)
 		return
-	for(var/mob/living/M in GLOB.player_list)
+	for(var/mob/M in GLOB.alive_player_list)
 		for(var/datum/skill/skill in GLOB.skill_types)
 			var/level = M.mind?.get_skill_level(skill)
 			if(level > 0)
