@@ -180,7 +180,7 @@
 	WRITE_FILE(json_file, json_encode(file_data))
 
 ///Handles random hardcore point rewarding if it applies.
-/datum/controller/subsystem/ticker/proc/HandleRandomHardcoreScore(client/player_client)
+/datum/controller/subsystem/ticker/proc/handle_random_hardcore_score(client/player_client)
 	if(!ishuman(player_client?.mob))
 		return FALSE
 	var/mob/living/carbon/human/human_mob = player_client.mob
@@ -201,6 +201,38 @@
 	else if(human_mob.onCentCom())
 		player_client.give_award(/datum/award/score/hardcore_random, human_mob, round(human_mob.hardcore_survival_score))
 
+//Handles converting skill experience earned during the round into persistent score, also checks score achievement eligibility
+/datum/controller/subsystem/ticker/proc/handle_skill_to_score_conversion()
+	if(!SSachievements.achievements_enabled || !SSskills.initialized)
+		return
+	for(var/mob/living/M in GLOB.player_list)
+		for(var/datum/skill/skill in GLOB.skill_types)
+			var/level = M.mind?.get_skill_level(skill)
+			if(level > 0)
+				var/score_to_add = level * ((level * 0.5) + 0.5)
+				var/score_path
+				var/medal_path
+				var/medal_ref
+				switch(skill.name)
+					if("Mining")
+						score_path = /datum/award/score/skill_level_miner
+						medal_path = /datum/award/achievement/skill/legendary_miner
+						medal_ref = MINER_MEDAL_EXP_TO_UNLOCK
+					if("Gaming")
+						score_path = /datum/award/score/skill_level_gamer
+						medal_path = /datum/award/achievement/skill/legendary_gamer
+						medal_ref = GAMER_MEDAL_EXP_TO_UNLOCK
+					if("Hacking")
+						score_path = /datum/award/score/skill_level_hacker
+						medal_path = /datum/award/achievement/skill/legendary_hacker
+						medal_ref = HACKER_MEDAL_EXP_TO_UNLOCK
+					if("Cleaning")
+						score_path = /datum/award/score/skill_level_cleaner
+						medal_path = /datum/award/achievement/skill/legendary_cleaner
+						medal_ref = CLEANER_MEDAL_EXP_TO_UNLOCK
+				M.client?.give_award(score_path, M, score_to_add)
+				if((M.client?.get_award_status(score_path) >= medal_ref) && !M.client?.get_award_status(medal_path))
+					M.client?.give_award(medal_path, M)
 
 /datum/controller/subsystem/ticker/proc/declare_completion()
 	set waitfor = FALSE
@@ -223,7 +255,7 @@
 		C?.playtitlemusic(40)
 		if(speed_round)
 			C?.give_award(/datum/award/achievement/misc/speed_round, C?.mob)
-		HandleRandomHardcoreScore(C)
+		handle_random_hardcore_score(C)
 
 	var/popcount = gather_roundend_feedback()
 	display_report(popcount)
