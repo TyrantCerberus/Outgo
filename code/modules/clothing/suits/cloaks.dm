@@ -156,7 +156,7 @@
 		COOLDOWN_START(src, effect_cooldown, effect_cooldown_time)
 
 /obj/item/clothing/neck/cloak/skill_reward
-	var/associated_skill_path = /datum/skill
+	var/associated_medal_path
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE
 
 /obj/item/clothing/neck/cloak/skill_reward/examine(mob/user)
@@ -164,22 +164,25 @@
 	. += span_notice("You notice a powerful aura about this cloak, suggesting that only the truly experienced may wield it.")
 
 /obj/item/clothing/neck/cloak/skill_reward/proc/check_wearable(mob/user)
-	return user.mind?.get_skill_level(associated_skill_path) < SKILL_LEVEL_LEGENDARY
+	var/wearable = FALSE
+	if(user.client?.get_award_status(associated_medal_path))
+		wearable = TRUE
+	return wearable
 
 /obj/item/clothing/neck/cloak/skill_reward/proc/unworthy_unequip(mob/user)
 	to_chat(user, "<span class = 'notice'>You feel completely and utterly unworthy to even touch \the [src].</span>")
 	var/hand_index = user.get_held_index_of_item(src)
-	if (hand_index)
+	if(hand_index)
 		user.dropItemToGround(src, TRUE)
 	return FALSE
 
 /obj/item/clothing/neck/cloak/skill_reward/equipped(mob/user, slot)
-	if (check_wearable(user))
+	if(!check_wearable(user))
 		unworthy_unequip(user)
 	return ..()
 
 /obj/item/clothing/neck/cloak/skill_reward/attack_hand(mob/user)
-	if (check_wearable(user))
+	if(!check_wearable(user))
 		unworthy_unequip(user)
 	return ..()
 
@@ -187,19 +190,25 @@
 	name = "legendary gamer's cloak"
 	desc = "Worn by the most skilled professional gamers on the station, this legendary cloak is only attainable by achieving true gaming enlightenment. This status symbol represents the awesome might of a being of focus, commitment, and sheer fucking will. Something casual gamers will never begin to understand."
 	icon_state = "gamercloak"
-	associated_skill_path = /datum/skill/gaming
+	associated_medal_path = /datum/award/achievement/skill/legendary_gamer
 
 /obj/item/clothing/neck/cloak/skill_reward/cleaning
 	name = "legendary cleaner's cloak"
 	desc = "Worn by the most skilled custodians, this legendary cloak is only attainable by achieving janitorial enlightenment. This status symbol represents a being not only extensively trained in grime combat, but one who is willing to use an entire aresenal of cleaning supplies to its full extent to wipe grime's miserable ass off the face of the station."
 	icon_state = "cleanercloak"
-	associated_skill_path = /datum/skill/cleaning
+	associated_medal_path = /datum/award/achievement/skill/legendary_cleaner
 
 /obj/item/clothing/neck/cloak/skill_reward/mining
 	name = "legendary miner's cloak"
 	desc = "Worn by the most skilled miners, this legendary cloak is only attainable by achieving true mineral enlightenment. This status symbol represents a being who has forgotten more about rocks than most miners will ever know, a being who has moved mountains and filled valleys."
 	icon_state = "minercloak"
-	associated_skill_path = /datum/skill/mining
+	associated_medal_path = /datum/award/achievement/skill/legendary_miner
+
+/obj/item/clothing/neck/cloak/skill_reward/hacker
+	name = "legendary hacker's cloak"
+	desc = "Worn by the most skilled of cybernetic hackers, wearing this proves you were able to conquer protocol, and hack any cybernetic. You are not sure if openly wearing an item of clothing that says 'I'm a master in breaking security protocols' is a good idea."
+	icon_state = "hackercloak"
+	associated_medal_path = /datum/award/achievement/skill/legendary_hacker
 
 /obj/item/clothing/neck/cloak/skill_reward/playing
 	name = "legendary veteran's cloak"
@@ -208,11 +217,5 @@
 
 /obj/item/clothing/neck/cloak/skill_reward/playing/check_wearable(mob/user)
 	return user.client?.get_exp_living(TRUE) >= PLAYTIME_VETERAN
-
-/obj/item/clothing/neck/cloak/skill_reward/hacker
-	name = "legendary hacker's cloak"
-	desc = "Worn by the most skilled of cybernetic hackers, wearing this proves you were able to conquer protocol, and hack any cybernetic. You are not sure if openly wearing an item of clothing that says 'I'm a master in breaking security protocols' is a good idea."
-	icon_state = "hackercloak"
-	associated_skill_path = /datum/skill/implant_hacking
 
 
