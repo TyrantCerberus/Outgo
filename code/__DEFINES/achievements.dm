@@ -36,6 +36,9 @@
 
 //Skill medal hub IDs
 #define MEDAL_LEGENDARY_MINER "Legendary Miner"
+#define MEDAL_LEGENDARY_GAMER "Game Genie"
+#define MEDAL_LEGENDARY_HACKER "1337 H4X0R"
+#define MEDAL_LEGENDARY_CLEANER "No Spill Too Small"
 
 //Mafia medal hub IDs (wins)
 #define MAFIA_MEDAL_ASSISTANT "Assistant"
