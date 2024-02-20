@@ -712,7 +712,6 @@ DEFINE_BITFIELD(turret_flags, list(
 	always_up = TRUE
 	use_power = NO_POWER_USE
 	has_cover = FALSE
-	scan_range = 9
 	req_access = list(ACCESS_SYNDICATE)
 	uses_stored = FALSE
 	mode = TURRET_LETHAL
@@ -765,7 +764,6 @@ DEFINE_BITFIELD(turret_flags, list(
 	lethal_projectile = /obj/projectile/bullet/syndicate_turret
 
 /obj/machinery/porta_turret/syndicate/shuttle
-	scan_range = 9
 	shot_delay = 3
 	stun_projectile = /obj/projectile/bullet/p50/penetrator/shuttle
 	lethal_projectile = /obj/projectile/bullet/p50/penetrator/shuttle
@@ -821,7 +819,6 @@ DEFINE_BITFIELD(turret_flags, list(
 	always_up = TRUE
 	use_power = NO_POWER_USE
 	has_cover = FALSE
-	scan_range = 9
 	stun_projectile = /obj/projectile/beam/laser
 	lethal_projectile = /obj/projectile/beam/laser
 	lethal_projectile_sound = 'sound/weapons/plasma_cutter.ogg'
