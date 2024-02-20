@@ -3,7 +3,6 @@
 	title = "Hacker"
 	desc = "My knowledge of cybernetic protocols, and how to make them compatible with eachother"
 	modifiers = list(SKILL_TIME_MODIFIER = list(-2, -1, 0, 1, 2, 4, 8))
-	skill_cape_path = /obj/item/clothing/neck/cloak/skill_reward/hacker
 
 /datum/skill/implant_hacking/New()
 	. = ..()
