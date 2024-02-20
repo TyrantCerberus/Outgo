@@ -222,7 +222,7 @@
 						score_path = /datum/award/score/skill_level/gamer
 						medal_path = /datum/award/achievement/skill/legendary_gamer
 						medal_ref = GAMER_MEDAL_EXP_TO_UNLOCK
-					if("Hacking")
+					if("Protocol Hijacking")
 						score_path = /datum/award/score/skill_level/hacker
 						medal_path = /datum/award/achievement/skill/legendary_hacker
 						medal_ref = HACKER_MEDAL_EXP_TO_UNLOCK
