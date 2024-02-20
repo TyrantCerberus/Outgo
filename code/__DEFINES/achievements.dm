@@ -97,6 +97,18 @@
 #define WENDIGO_SCORE  "Wendigos Killed"
 #define TENDRIL_CLEAR_SCORE  "Tendrils Killed"
 
+// Medal hub IDs for skill experience scores
+#define MINING_SKILL_LEVEL "Mining Skill Level"
+#define GAMING_SKILL_LEVEL "Gaming Skill Level"
+#define HACKING_SKILL_LEVEL "Hacking Skill Level"
+#define CLEANING_SKILL_LEVEL "Cleaning Skill Level"
+
+// Skill level thresholds for experience medals, ideally multiples of 28
+#define MINER_MEDAL_EXP_TO_UNLOCK 280
+#define GAMER_MEDAL_EXP_TO_UNLOCK 196
+#define HACKER_MEDAL_EXP_TO_UNLOCK 140
+#define CLEANER_MEDAL_EXP_TO_UNLOCK 364
+
 // DB ID for hardcore random mode
 #define HARDCORE_RANDOM_SCORE "Hardcore Random Score"
 
