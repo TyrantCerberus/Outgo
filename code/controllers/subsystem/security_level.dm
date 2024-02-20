@@ -13,5 +13,6 @@ SUBSYSTEM_DEF(security_level)
 /datum/controller/subsystem/security_level/proc/set_level(new_level)
 	SSsecurity_level.current_level = new_level
 	SEND_SIGNAL(src, COMSIG_SECURITY_LEVEL_CHANGED, new_level)
-	SSnightshift.check_nightshift()
+	if(SSnightshift.can_fire && (current_level >= SEC_LEVEL_RED))
+		SSnightshift.next_fire = world.time + 7 SECONDS // Fire nightshift after the security level announcement is complete
 	SSblackbox.record_feedback("tally", "security_level_changes", 1, get_security_level())

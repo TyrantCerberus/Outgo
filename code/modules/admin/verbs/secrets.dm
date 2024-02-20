@@ -183,13 +183,13 @@
 						SSnightshift.can_fire = TRUE
 						SSnightshift.fire()
 					else
-						SSnightshift.update_nightshift(FALSE, TRUE)
+						SSnightshift.update_nightshift(active = FALSE, announce = TRUE, forced = TRUE)
 				if("On")
 					SSnightshift.can_fire = FALSE
-					SSnightshift.update_nightshift(TRUE, TRUE)
+					SSnightshift.update_nightshift(active = TRUE, announce = TRUE, forced = TRUE)
 				if("Off")
 					SSnightshift.can_fire = FALSE
-					SSnightshift.update_nightshift(FALSE, TRUE)
+					SSnightshift.update_nightshift(active = FALSE, announce = TRUE, forced = TRUE)
 		if("moveferry")
 			SSblackbox.record_feedback("nested tally", "admin_secrets_fun_used", 1, list("Send CentCom Ferry"))
 			if(!SSshuttle.toggleShuttle("ferry","ferry_home","ferry_away"))
