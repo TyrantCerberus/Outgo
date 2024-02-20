@@ -215,19 +215,19 @@
 				var/medal_ref
 				switch(skill.name)
 					if("Mining")
-						score_path = /datum/award/score/skill_level_miner
+						score_path = /datum/award/score/skill_level/miner
 						medal_path = /datum/award/achievement/skill/legendary_miner
 						medal_ref = MINER_MEDAL_EXP_TO_UNLOCK
 					if("Gaming")
-						score_path = /datum/award/score/skill_level_gamer
+						score_path = /datum/award/score/skill_level/gamer
 						medal_path = /datum/award/achievement/skill/legendary_gamer
 						medal_ref = GAMER_MEDAL_EXP_TO_UNLOCK
 					if("Hacking")
-						score_path = /datum/award/score/skill_level_hacker
+						score_path = /datum/award/score/skill_level/hacker
 						medal_path = /datum/award/achievement/skill/legendary_hacker
 						medal_ref = HACKER_MEDAL_EXP_TO_UNLOCK
 					if("Cleaning")
-						score_path = /datum/award/score/skill_level_cleaner
+						score_path = /datum/award/score/skill_level/cleaner
 						medal_path = /datum/award/achievement/skill/legendary_cleaner
 						medal_ref = CLEANER_MEDAL_EXP_TO_UNLOCK
 				M.client?.give_award(score_path, M, score_to_add)
