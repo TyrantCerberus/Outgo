@@ -17,6 +17,8 @@
 	var/processing_quirk = FALSE
 	/// When making an abstract quirk (in OOP terms), don't forget to set this var to the type path for that abstract quirk.
 	var/abstract_parent_type = /datum/quirk
+	/// Is this quirk available at roundstart?/Will it appear in the prefs menu?
+	var/selectable = TRUE
 
 /datum/quirk/Destroy()
 	if(quirk_holder)

@@ -1081,6 +1081,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		dat += "<center>[GetPositiveQuirkCount()] / [MAX_QUIRKS] max positive quirks<br>\
 		<b>Quirk balance remaining:</b> [GetQuirkBalance()]</center><br>"
 		for(var/V in SSquirks.quirks)
+			if(!V.selectable)
+				continue
 			var/datum/quirk/T = SSquirks.quirks[V]
 			var/quirk_name = initial(T.name)
 			var/has_quirk
