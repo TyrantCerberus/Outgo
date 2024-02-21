@@ -209,7 +209,7 @@
 		for(var/datum/skill/skill in GLOB.skill_types)
 			var/level = M.mind?.get_skill_level(skill)
 			if(level > 0)
-				var/score_to_add = level * ((level * 0.5) + 0.5)
+				var/score_to_add = level * ((level * 0.5) + 0.5) //sum the positive integers up to and including the input value
 				var/score_path
 				var/medal_path
 				var/medal_ref
