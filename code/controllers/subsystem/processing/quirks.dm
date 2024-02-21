@@ -29,7 +29,7 @@ PROCESSING_SUBSYSTEM_DEF(quirks)
 							list("Clown Fan","Mime Fan"), \
 							list("Bad Touch", "Friendly"), \
 							list("Extrovert", "Introvert"), \
-							list("Bloodlust", "Harm-averse"))
+							list("Bloodlust", "Harm-averse", "Pacifism"))
 	return ..()
 
 /datum/controller/subsystem/processing/quirks/proc/SetupQuirks()
