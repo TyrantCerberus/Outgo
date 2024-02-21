@@ -182,7 +182,7 @@
 	if (cyclelinkeddir)
 		cyclelinkairlock()
 	if(abandoned)
-		var/outcome = rand(1,9)
+		var/outcome = rand(1,100)
 		switch(outcome)
 			if(1 to 9)
 				var/turf/here = get_turf(src)
