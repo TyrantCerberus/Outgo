@@ -188,12 +188,14 @@
 				var/turf/here = get_turf(src)
 				for(var/turf/closed/T in range(2, src))
 					here.PlaceOnTop(T.type)
+					qdel(airlock)
 					qdel(src)
 					return
 				here.PlaceOnTop(/turf/closed/wall)
+				qdel(airlock)
 				qdel(src)
 				return
-			if(9 to 11)
+			if(10 to 11)
 				lights = FALSE
 				locked = TRUE
 			if(12 to 15)

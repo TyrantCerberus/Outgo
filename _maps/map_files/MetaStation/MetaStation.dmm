@@ -31041,7 +31041,6 @@
 	name = "Warehouse";
 	req_one_access_txt = "31;48"
 	},
-/obj/effect/mapping_helpers/airlock/abandoned,
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron,
 /area/cargo/warehouse)
@@ -61356,13 +61355,6 @@
 /obj/effect/mapping_helpers/simple_pipes/supply/hidden/layer4,
 /turf/open/floor/iron/dark,
 /area/ai_monitored/aisat/exterior)
-"tRu" = (
-/obj/machinery/door/airlock/maintenance{
-	name = "Research Maintenance";
-	req_access_txt = "47"
-	},
-/turf/closed/wall,
-/area/maintenance/starboard/secondary)
 "tRy" = (
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{
@@ -110034,7 +110026,7 @@ kBo
 ouU
 oUQ
 ovj
-tRu
+ovj
 hQf
 ovj
 ovj
