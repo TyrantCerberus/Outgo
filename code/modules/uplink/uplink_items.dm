@@ -1595,6 +1595,13 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	surplus = 0
 	purchasable_from = UPLINK_NUKE_OPS
 
+/datum/uplink_item/implants/bloodlust
+	name = "Bloodlust Implant"
+	desc = "The Donk Co. 'Terrorgrind Endorphin Booster' is a revolutionary, passive-type implant that emboldens the user's stamina by forcing them to take pleasure in combat,\
+			however, it is only effective in those with a pre-existing inclination."
+	item = /obj/item/storage/box/syndie_kit/imp_bloodlust
+	cost = 1
+
 /datum/uplink_item/implants/freedom
 	name = "Freedom Implant"
 	desc = "An implant injected into the body and later activated at the user's will. It will attempt to free the \

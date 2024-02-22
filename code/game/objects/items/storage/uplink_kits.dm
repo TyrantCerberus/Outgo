@@ -424,6 +424,12 @@
 /obj/item/storage/box/syndie_kit/imp_stealth/PopulateContents()
 	new /obj/item/implanter/stealth(src)
 
+/obj/item/storage/box/syndie_kit/imp_bloodlust
+	name = "bloodlust implant box"
+
+/obj/item/storage/box/syndie_kit/imp_bloodlust/PopulateContents()
+	new /obj/item/implanter/bloodlust(src)
+
 /obj/item/storage/box/syndie_kit/imp_radio
 	name = "syndicate radio implant box"
 
