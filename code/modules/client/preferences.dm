@@ -1082,6 +1082,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		<b>Quirk balance remaining:</b> [GetQuirkBalance()]</center><br>"
 		for(var/V in SSquirks.quirks)
 			var/datum/quirk/T = SSquirks.quirks[V]
+			if(!initial(T.selectable))
+				continue
 			var/quirk_name = initial(T.name)
 			var/has_quirk
 			var/quirk_cost = initial(T.value) * -1
