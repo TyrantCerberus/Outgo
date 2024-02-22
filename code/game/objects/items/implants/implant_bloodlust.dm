@@ -8,13 +8,13 @@
 
 /obj/item/implant/bloodlust/implant(mob/living/target, mob/user, silent = FALSE, force = FALSE)
 	if(!ishuman(target))
-		to_chat(user, "<span class='warning'>The [src] smartly refuses to enter the non-humanoid organism.</span>")
+		to_chat(user, "<span class='warning'>[src] smartly refuses to enter the non-humanoid organism.</span>")
 		return
 	if(target.has_quirk(/datum/quirk/bloodlust))
-		to_chat(user, "<span class='warning'>The [src] detects \the [target] is already under the influence of an endorphin enhancer and refuses to implant.</span>")
+		to_chat(user, "<span class='warning'>[src] detects \the [target] is already under the influence of an endorphin enhancer and refuses to implant.</span>")
 		return
 	if(HAS_TRAIT(target, TRAIT_PACIFISM) && target.has_quirk(/datum/quirk/harm_averse))
-		to_chat(user, "<span class='warning'>The [src] detects factors within \the [target] that would negate its effectiveness and refuses to implant.</span>")
+		to_chat(user, "<span class='warning'>[src] detects factors within \the [target] that would negate its effectiveness and refuses to implant.</span>")
 		return
 	. = ..()
 
