@@ -247,7 +247,7 @@
 	. = ..()
 
 /datum/reagent/consumable/milk/moloko_plus/on_mob_end_metabolize(mob/living/L)
-	if(L.has_quirk(/datum/quirk/bloodlust) && L.implants.Find())
+	if(L.has_quirk(/datum/quirk/bloodlust) && !L.implants.Find(/obj/item/implant/bloodlust))
 		L.remove_quirk(/datum/quirk/bloodlust)
 	. = ..()
 
