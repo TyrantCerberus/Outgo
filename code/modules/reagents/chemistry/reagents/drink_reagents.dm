@@ -241,13 +241,14 @@
 	glass_desc = "Slooshy, bratty, <i>moloko plus</i> makes a droog bezoomny."
 
 /datum/reagent/consumable/milk/moloko_plus/on_mob_metabolize(mob/living/L)
-	if(ishuman(L))
-		if(!HAS_TRAIT(L, TRAIT_PACIFISM) && !L.has_quirk(/datum/quirk/harm_averse) && !L.has_quirk(/datum/quirk/bloodlust))
-			L.add_quirk(/datum/quirk/bloodlust)
+	if(!ishuman(L) || HAS_TRAIT(L, TRAIT_PACIFISM) || L.has_quirk(/datum/quirk/harm_averse) || L.has_quirk(/datum/quirk/bloodlust))
+		return
+	L.add_quirk(/datum/quirk/bloodlust)
 
 /datum/reagent/consumable/milk/moloko_plus/on_mob_end_metabolize(mob/living/L)
-	if(L.has_quirk(/datum/quirk/bloodlust) && !L.implants.Find(/obj/item/implant/bloodlust))
-		L.remove_quirk(/datum/quirk/bloodlust)
+	if(L.implants.Find(/obj/item/implant/bloodlust))
+		return
+	L.remove_quirk(/datum/quirk/bloodlust)
 
 /datum/reagent/consumable/soymilk
 	name = "Soy Milk"
