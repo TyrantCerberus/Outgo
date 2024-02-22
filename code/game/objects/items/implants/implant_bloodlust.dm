@@ -19,9 +19,18 @@
 	. = ..()
 
 /obj/item/implant/bloodlust/add_passive(mob/living/target)
-	target.add_quirk(/datum/quirk/bloodlust)
-	return TRUE
+	return target.add_quirk(/datum/quirk/bloodlust)
 
 /obj/item/implant/bloodlust/remove_passive(mob/living/source)
-	source.remove_quirk(/datum/quirk/bloodlust)
-	return TRUE
+	return source.remove_quirk(/datum/quirk/bloodlust)
+
+///Implanter that spawns with a bloodlust implant, as well as an appropriate name
+/obj/item/implanter/bloodlust
+	name = "implanter (bloodlust)"
+	imp_type = /obj/item/implant/bloodlust
+
+///Implant case that spawns with a bloodlust implant, as well as an appropriate name and description
+/obj/item/implantcase/bloodlust
+	name = "implant case - 'Bloodlust'"
+	desc = "A glass case containing a bloodlust implant."
+	imp_type = /obj/item/implant/bloodlust
