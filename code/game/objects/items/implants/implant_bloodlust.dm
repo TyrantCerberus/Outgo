@@ -3,13 +3,25 @@
 	desc = "Causes the implantee to become energized when engaging in melee combat."
 	icon_state = "reagents"
 	activated = FALSE
+	passive = TRUE
 	allow_multiple = FALSE
 
 /obj/item/implant/bloodlust/implant(mob/living/target, mob/user, silent = FALSE, force = FALSE)
 	if(!ishuman(target))
-		to_chat(user, "<span class='warning'>The [src] smartly refuses to enter the non-human organism.</span>")
+		to_chat(user, "<span class='warning'>The [src] smartly refuses to enter the non-humanoid organism.</span>")
 		return
 	if(target.has_quirk(/datum/quirk/bloodlust))
 		to_chat(user, "<span class='warning'>The [src] detects \the [target] is already under the influence of an endorphin enhancer and refuses to implant.</span>")
 		return
+	if(HAS_TRAIT(target, TRAIT_PACIFISM) && target.has_quirk(/datum/quirk/harm_averse))
+		to_chat(user, "<span class='warning'>The [src] detects factors within \the [target] that would negate its effectiveness and refuses to implant.</span>")
+		return
 	. = ..()
+
+/obj/item/implant/bloodlust/add_passive(mob/living/target)
+	target.add_quirk(/datum/quirk/bloodlust)
+	return TRUE
+
+/obj/item/implant/bloodlust/remove_passive(mob/living/source)
+	source.remove_quirk(/datum/quirk/bloodlust)
+	return TRUE

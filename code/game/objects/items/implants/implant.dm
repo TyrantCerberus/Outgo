@@ -8,6 +8,8 @@
 	actions_types = list(/datum/action/item_action/hands_free/activate)
 	///true for implant types that can be activated, false for ones that are "always on" like mindshield implants
 	var/activated = TRUE
+	///true for implants with a passive effect that needs to be added to the mob, e.g. adding traits
+	var/passive = FALSE
 	///the mob that's implanted with this
 	var/mob/living/imp_in = null
 	///implant color, used for selecting either the "b" version or the "r" version of the implant case sprite when the implant is in a case.
@@ -94,6 +96,8 @@
 		for(var/X in actions)
 			var/datum/action/implant_action = X
 			implant_action.Grant(target)
+	if(passive)
+		add_passive(target, user)
 	if(ishuman(target))
 		var/mob/living/carbon/human/target_human = target
 		target_human.sec_hud_set_implants()
@@ -120,6 +124,8 @@
 	for(var/X in actions)
 		var/datum/action/implant_action = X
 		implant_action.Grant(source)
+	if(passive)
+		remove_passive(source)
 	if(ishuman(source))
 		var/mob/living/carbon/human/human_source = source
 		human_source.sec_hud_set_implants()
@@ -131,6 +137,7 @@
 	if(imp_in)
 		removed(imp_in)
 	return ..()
+
 /**
  * Gets implant specifications for the implant pad
  */
@@ -140,3 +147,11 @@
 /obj/item/implant/dropped(mob/user)
 	. = TRUE
 	..()
+
+//override this proc for implant subtypes with passive effects; be sure to set the passive var to true
+/obj/item/implant/proc/add_passive(mob/living/target)
+	return
+
+//and this one
+/obj/item/implant/proc/remove_passive(mob/living/source)
+	return
