@@ -233,6 +233,24 @@
 		holder.remove_reagent(/datum/reagent/consumable/capsaicin, 1 * delta_time)
 	..()
 
+/datum/reagent/consumable/milk/moloko_plus
+	name = "Moloko Plus"
+	description = "Milk with a drop of synthmesc, perfect before a night of violence."
+	taste_description = "milk with a hint of something extra"
+	glass_name = "glass of moloko plus"
+	glass_desc = "Slooshy, bratty, <i>moloko plus</i> makes a droog bezoomny."
+
+/datum/reagent/consumable/milk/moloko_plus/on_mob_metabolize(mob/living/L)
+	if(ishuman(L))
+		if(!HAS_TRAIT(L, TRAIT_PACIFISM) && !L.has_quirk(/datum/quirk/harm_averse) && !L.has_quirk(/datum/quirk/bloodlust))
+			L.add_quirk(/datum/quirk/bloodlust)
+	. = ..()
+
+/datum/reagent/consumable/milk/moloko_plus/on_mob_end_metabolize(mob/living/L)
+	if(L.has_quirk(/datum/quirk/bloodlust))
+		L.remove_quirk(/datum/quirk/bloodlust)
+	. = ..()
+
 /datum/reagent/consumable/soymilk
 	name = "Soy Milk"
 	description = "An opaque white liquid made from soybeans."
