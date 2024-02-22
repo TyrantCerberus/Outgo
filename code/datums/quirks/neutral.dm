@@ -287,3 +287,12 @@
 
 /datum/quirk/item_quirk/colorist/add_unique()
 	give_item_to_holder(/obj/item/dyespray, list(LOCATION_BACKPACK = ITEM_SLOT_BACKPACK, LOCATION_HANDS = ITEM_SLOT_HANDS))
+
+/datum/quirk/item_quirk/felinid
+	name = "Felinid"
+	desc = "You like to signal your allegiance to 'felinid' subculture with a pair of false cat ears (tail included!)."
+	value = 0
+	medical_record_text = "Patient likes to wear a pair of cat ears."
+
+/datum/quirk/item_quirk/felinid/add_unique()
+	give_item_to_holder(/obj/item/clothing/head/kitty, list(LOCATION_HEAD = ITEM_SLOT_HEAD, LOCATION_BACKPACK = ITEM_SLOT_BACKPACK, LOCATION_HANDS = ITEM_SLOT_HANDS))
