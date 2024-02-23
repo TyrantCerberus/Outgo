@@ -231,7 +231,7 @@
 						medal_path = /datum/award/achievement/skill/legendary_cleaner
 						medal_ref = CLEANER_MEDAL_EXP_TO_UNLOCK
 				if(M.client?.give_award(score_path, M, score_to_add))
-					to_chat(M, "<span class='big bold'>Score updated successfully.</span>")
+					to_chat(M, "<span class='greenannounce'>[skill.name] score updated successfully!</span>")
 				if((M.client?.get_award_status(score_path) >= medal_ref) && !M.client?.get_award_status(medal_path))
 					M.client?.give_award(medal_path, M)
 
@@ -257,6 +257,8 @@
 		if(speed_round)
 			C?.give_award(/datum/award/achievement/misc/speed_round, C?.mob)
 		handle_random_hardcore_score(C)
+
+	handle_skill_to_score_conversion()
 
 	var/popcount = gather_roundend_feedback()
 	display_report(popcount)
