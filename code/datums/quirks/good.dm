@@ -215,6 +215,7 @@
 	value = 6
 	gain_text = "<span class='notice'> You feel energized by violence.</span>"
 	lose_text = "<span class='danger'> You no longer feel good about hurting others.</span>"
+	selectable = FALSE
 
 /datum/quirk/bloodlust/add()
 	. = ..()
