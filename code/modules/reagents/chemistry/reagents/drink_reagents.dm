@@ -246,7 +246,7 @@
 	L.add_quirk(/datum/quirk/bloodlust)
 
 /datum/reagent/consumable/milk/moloko_plus/on_mob_end_metabolize(mob/living/L)
-	if(/obj/item/implant/bloodlust in L.implants)
+	if(locate(/obj/item/implant/bloodlust) in L.implants)
 		return
 	L.remove_quirk(/datum/quirk/bloodlust)
 

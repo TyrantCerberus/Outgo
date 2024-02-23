@@ -13,7 +13,7 @@
 	if(target.has_quirk(/datum/quirk/bloodlust))
 		to_chat(user, "<span class='warning'>[src] detects \the [target] is already under the influence of an endorphin enhancer and refuses to implant.</span>")
 		return
-	if(HAS_TRAIT(target, TRAIT_PACIFISM) && target.has_quirk(/datum/quirk/harm_averse))
+	if(HAS_TRAIT(target, TRAIT_PACIFISM) || target.has_quirk(/datum/quirk/harm_averse))
 		to_chat(user, "<span class='warning'>[src] detects factors within \the [target] that would negate its effectiveness and refuses to implant.</span>")
 		return
 	. = ..()
