@@ -621,3 +621,7 @@
 /datum/chemical_reaction/drink/pilk
 	results = list(/datum/reagent/consumable/pilk = 2)
 	required_reagents = list(/datum/reagent/consumable/space_cola = 1, /datum/reagent/consumable/milk = 1)
+
+/datum/chemical_reaction/drink/moloko_plus
+	results = list(/datum/reagent/consumable/milk/moloko_plus = 2)
+	required_reagents = list(/datum/reagent/drug/space_drugs = 1, /datum/reagent/consumable/milk = 1)
