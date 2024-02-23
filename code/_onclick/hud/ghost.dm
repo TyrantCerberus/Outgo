@@ -114,10 +114,11 @@
 	using.hud = src
 	toggleable_inventory += using
 
-	using = new /atom/movable/screen/ghost/mafia()
+	//Players are currently not allowed to select mafia: remove these comments if/when it's fixed
+	/*using = new /atom/movable/screen/ghost/mafia()
 	using.screen_loc = ui_ghost_mafia
 	using.hud = src
-	toggleable_inventory += using
+	toggleable_inventory += using*/
 
 	using = new /atom/movable/screen/ghost/dm()
 	using.screen_loc = ui_ghost_dm
