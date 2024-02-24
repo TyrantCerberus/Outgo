@@ -62,6 +62,8 @@
 	var/buckle_message_cooldown = 0
 	///Last fingerprints to touch this atom
 	var/fingerprintslast
+	/// forensics datum, contains fingerprints, fibres, blood_dna and hiddenprints on this atom
+	var/datum/forensics/forensics
 
 	var/list/filter_data //For handling persistent filters
 
@@ -90,7 +92,6 @@
 	var/datum/wires/wires = null
 
 	var/list/alternate_appearances
-
 
 	/// Last appearance of the atom for demo saving purposes
 	var/image/demo_last_appearance
@@ -287,6 +288,9 @@
 
 	if(reagents)
 		QDEL_NULL(reagents)
+
+	if(forensics)
+		QDEL_NULL(forensics)
 
 	orbiters = null // The component is attached to us normaly and will be deleted elsewhere
 
@@ -861,9 +865,9 @@
 	var/new_blood_dna = L.get_blood_dna_list()
 	if(!new_blood_dna)
 		return FALSE
-	var/old_length = blood_DNA_length()
+	var/old_length = GET_ATOM_BLOOD_DNA_LENGTH(src)
 	add_blood_DNA(new_blood_dna)
-	if(blood_DNA_length() == old_length)
+	if(ET_ATOM_BLOOD_DNA_LENGTH(src) == old_length)
 		return FALSE
 	return TRUE
 
