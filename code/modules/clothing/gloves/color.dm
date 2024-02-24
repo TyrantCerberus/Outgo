@@ -87,7 +87,7 @@
 	name = "fingerless insulated gloves"
 	icon_state = "yellowcut"
 	inhand_icon_state = "ygloves"
-	transfer_prints = TRUE
+	clothing_traits = list(TRAIT_FINGERPRINT_PASSTHROUGH)
 
 /obj/item/clothing/gloves/cut/heirloom
 	desc = "The old gloves your great grandfather stole from Engineering, many moons ago. They've seen some tough times recently."
@@ -200,7 +200,7 @@
 	inhand_icon_state = "latex"
 	siemens_coefficient = 0.3
 	permeability_coefficient = 0.01
-	transfer_prints = TRUE
+	clothing_traits = list(TRAIT_FINGERPRINT_PASSTHROUGH)
 	resistance_flags = NONE
 
 /obj/item/clothing/gloves/color/latex/nitrile
@@ -208,7 +208,6 @@
 	desc = "Pricy sterile gloves that are thicker than latex. Look snazzy in cyan-chique."
 	icon_state = "nitrile"
 	inhand_icon_state = "nitrilegloves"
-	transfer_prints = FALSE
 
 /obj/item/clothing/gloves/color/infiltrator
 	name = "infiltrator gloves"
@@ -219,7 +218,6 @@
 	permeability_coefficient = 0.3
 	clothing_traits = list(TRAIT_QUICKER_CARRY)
 	resistance_flags = FIRE_PROOF | ACID_PROOF
-	transfer_prints = FALSE
 
 /obj/item/clothing/gloves/color/latex/engineering
 	name = "tinker's gloves"
