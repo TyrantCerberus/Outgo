@@ -867,7 +867,7 @@
 		return FALSE
 	var/old_length = GET_ATOM_BLOOD_DNA_LENGTH(src)
 	add_blood_DNA(new_blood_dna)
-	if(ET_ATOM_BLOOD_DNA_LENGTH(src) == old_length)
+	if(GET_ATOM_BLOOD_DNA_LENGTH(src) == old_length)
 		return FALSE
 	return TRUE
 
