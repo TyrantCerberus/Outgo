@@ -4,7 +4,6 @@
 	desc = "These clunky gauntlets allow you to drag things with more confidence on them not getting nabbed from you."
 	icon_state = "haul_gauntlet"
 	inhand_icon_state = "bgloves"
-	transfer_prints = FALSE
 	equip_delay_self = 3 SECONDS
 	equip_delay_other = 4 SECONDS
 	clothing_traits = list(TRAIT_CHUNKYFINGERS)

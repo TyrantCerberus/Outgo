@@ -4,7 +4,7 @@
 	desc = "Plain black gloves without fingertips for the hard working."
 	icon_state = "fingerless"
 	inhand_icon_state = "fingerless"
-	transfer_prints = TRUE
+	clothing_traits = list(TRAIT_FINGERPRINT_PASSTHROUGH)
 	strip_delay = 40
 	equip_delay_other = 20
 	cold_protection = HANDS
@@ -46,7 +46,7 @@
 	desc = "For when you're expecting to get slapped on the wrist. Offers modest protection to your arms."
 	icon_state = "bracers"
 	inhand_icon_state = "bracers"
-	transfer_prints = TRUE
+	clothing_traits = list(TRAIT_FINGERPRINT_PASSTHROUGH)
 	strip_delay = 40
 	equip_delay_other = 20
 	body_parts_covered = ARMS
@@ -61,7 +61,7 @@
 	desc = "Just looking at these fills you with an urge to beat the shit out of people."
 	icon_state = "rapid"
 	inhand_icon_state = "rapid"
-	transfer_prints = TRUE
+	clothing_traits = list(TRAIT_FINGERPRINT_PASSTHROUGH)
 
 /obj/item/clothing/gloves/rapid/ComponentInitialize()
 	. = ..()
@@ -91,7 +91,6 @@
 	desc = "Pricy nitrile gloves made for plasmamen."
 	icon_state = "nitrile"
 	inhand_icon_state = "nitrilegloves"
-	transfer_prints = FALSE
 
 /obj/item/clothing/gloves/color/plasmaman/white
 	name = "white envirogloves"
