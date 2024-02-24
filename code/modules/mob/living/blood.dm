@@ -246,6 +246,8 @@
 		return
 	if(!T)
 		T = get_turf(src)
+	if(isgroundlessturf(T))
+		return
 
 	var/list/temp_blood_DNA
 	if(small_drip)
