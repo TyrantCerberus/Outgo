@@ -206,7 +206,7 @@
 	if(!SSachievements.achievements_enabled || !SSskills.initialized)
 		return
 	for(var/mob/M in GLOB.alive_player_list)
-		for(var/V in GLOB.skill_types) //issue lies here
+		for(var/V in GLOB.skill_types)
 			var/datum/skill/skill = new V
 			var/level = M.mind?.get_skill_level(V)
 			if(level > 1)
