@@ -232,7 +232,7 @@
 						medal_path = /datum/award/achievement/skill/legendary_cleaner
 						medal_req = CLEANER_MEDAL_EXP_TO_UNLOCK
 				if(M.client?.give_award(score_path, M, score_to_add))
-					to_chat(M, "<span class='greenannounce'>[skill.name] score updated successfully! [score_to_add] points have been added!</span>")
+					to_chat(M, "<span class='nicegreen'>[skill.name] score updated successfully! [score_to_add] points have been added!</span>")
 				if((M.client?.get_award_status(score_path) >= medal_req) && !M.client?.get_award_status(medal_path))
 					M.client?.give_award(medal_path, M)
 
