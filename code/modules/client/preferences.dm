@@ -1519,11 +1519,12 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				if("job_reward") //job rewards should be accompanied by job restrictions
 					fetch_unlocked_achievements()
 					var/list/selectable_job_rewards = list("None")
-					//uncomment and complete when we have some of these in the game
-					/*for(var/achievement in unlocked_achievements)
+					for(var/achievement in unlocked_achievements)
 						switch(achievement)
-							if()
-								selectable_job_rewards += ""*/
+							if(MEDAL_LEGENDARY_MINER)
+								selectable_job_rewards += "Legendary Miner Cape"
+							if(MEDAL_LEGENDARY_CLEANER)
+								selectable_job_rewards += "Legendary Cleaner Cape"
 					if(selectable_job_rewards.len == 1)
 						to_chat(user, "<span class='warning'>You don't have any achievements that grant a job-specific reward unlocked. Try again after unlocking one.</span>")
 					job_reward_name = input(user, "Choose a job-specific reward (if you spawn as that job, you get this reward):", "Job-Specific Reward") as anything in selectable_job_rewards
@@ -1531,6 +1532,12 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						if("None")
 							job_reward_path = null
 							jobs_reward_is_restricted_to = list()
+						if("Legendary Miner Cape")
+							job_reward_path = /obj/item/storage/box/reward/skillcape_miner
+							jobs_reward_is_restricted_to = list("Shaft Miner")
+						if("Legendary Cleaner Cape")
+							job_reward_path = /obj/item/storage/box/reward/skillcape_cleaner
+							jobs_reward_is_restricted_to += "Janitor"
 
 				if("general_reward") //and general rewards should not
 					fetch_unlocked_achievements()
@@ -1541,6 +1548,10 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 								selectable_general_rewards += "Mini-Meteor"
 							if(MEDAL_FRENCHING)
 								selectable_general_rewards += "Bubblegum Gum - Lifetime Supply"
+							if(MEDAL_LEGENDARY_GAMER)
+								selectable_general_rewards += "Legendary Gamer Cape"
+							if(MEDAL_LEGENDARY_HACKER)
+								selectable_general_rewards += "Legendary Hacker Cape"
 					if(selectable_general_rewards.len == 1)
 						to_chat(user, "<span class='warning'>You don't have any achievements that grant a general reward unlocked. Try again after unlocking one.</span>")
 					general_reward_name = input(user, "Choose a general reward (if don't get a job-specific reward, you get this instead):", "General Reward") as anything in selectable_general_rewards
@@ -1551,6 +1562,10 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 							general_reward_path = /obj/item/storage/box/reward/meteor
 						if("Bubblegum Gum - Lifetime Supply")
 							general_reward_path = /obj/item/storage/box/reward/bubblegum_gum
+						if("Legendary Gamer Cape")
+							general_reward_path = /obj/item/storage/box/reward/skillcape_gamer
+						if("Legendary Hacker Cape")
+							general_reward_path = /obj/item/storage/box/reward/skillcape_hacker
 
 				if("uplink_loc")
 					var/new_loc = input(user, "Choose your character's traitor uplink spawn location:", "Character Preference") as null|anything in GLOB.uplink_spawn_loc_list

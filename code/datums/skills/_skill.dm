@@ -6,8 +6,6 @@ GLOBAL_LIST_INIT(skill_types, subtypesof(/datum/skill))
 	var/desc = "the art of doing things"
 	///Dictionary of modifier type - list of modifiers (indexed by level). 7 entries in each list for all 7 skill levels.
 	var/modifiers = list(SKILL_SPEED_MODIFIER = list(1, 1, 1, 1, 1, 1, 1)) //Dictionary of modifier type - list of modifiers (indexed by level). 7 entries in each list for all 7 skill levels.
-	///List Path pointing to the skill cape reward that will appear when a user finishes leveling up a skill
-	var/skill_cape_path
 	///List associating different messages that appear on level up with different levels
 	var/list/levelUpMessages = list()
 	///List associating different messages that appear on level up with different levels
@@ -29,7 +27,7 @@ GLOBAL_LIST_INIT(skill_types, subtypesof(/datum/skill))
 	span_nicegreen("I feel like I've become quite proficient at [name]!"),
 	"<span class='nicegreen'>After lots of practice, I've begun to truly understand the intricacies \
 	and surprising depth behind [name]. I now consider myself a master [title].</span>",
-	span_nicegreen("Through incredible determination and effort, I've reached the peak of my [name] abiltities. I'm finally able to consider myself a legendary [title]!") )
+	span_nicegreen("Through incredible determination and effort, I've reached the peak of my [name] abilities. I'm finally able to consider myself a legendary [title]!") )
 	levelDownMessages = list(span_nicegreen("I have somehow completely lost all understanding of [name]. Please tell an admin if you see this."),
 	span_nicegreen("I'm starting to forget what [name] really even is. I need more practice..."),
 	span_nicegreen("I'm getting a little worse at [name]. I'll need to keep practicing to get better at it..."),
@@ -54,30 +52,3 @@ GLOBAL_LIST_INIT(skill_types, subtypesof(/datum/skill))
  */
 /datum/skill/proc/level_lost(datum/mind/mind, new_level, old_level)
 	to_chat(mind.current, levelDownMessages[old_level]) //old_level will be a value from 1 to 6, so we get appropriate message from the 6-element levelUpMessages list
-
-/**
- * try_skill_reward: Checks to see if a user is eligable for a tangible reward for reaching a certain skill level
- *
- * Currently gives the user a special cloak when they reach a legendary level at any given skill
- * Arguments:
- * * mind - The mind that you'll want to send messages and rewards to
- * * new_level - The current level of the user. Used to check if it meets the requirements for a reward
- */
-/datum/skill/proc/try_skill_reward(datum/mind/mind, new_level)
-	if (new_level != SKILL_LEVEL_LEGENDARY)
-		return
-	if (!ispath(skill_cape_path))
-		to_chat(mind.current, span_nicegreen("My legendary [name] skill is quite impressive, though it seems the Professional [title] Association doesn't have any status symbols to commemorate my abilities with. I should let Centcom know of this travesty, maybe they can do something about it."))
-		return
-	if (LAZYFIND(mind.skills_rewarded, src.type))
-		to_chat(mind.current, span_nicegreen("It seems the Professional [title] Association won't send me another status symbol."))
-		return
-	podspawn(list(
-		"target" = get_turf(mind.current),
-		"path" = /obj/structure/closet/supplypod/mechpod,
-		"style" = STYLE_BLUESPACE,
-		"spawn" = skill_cape_path,
-		"delays" = list(POD_TRANSIT = 150, POD_FALLING = 4, POD_OPENING = 30, POD_LEAVING = 30)
-	))
-	to_chat(mind.current, span_nicegreen("My legendary skill has attracted the attention of the Professional [title] Association. It seems they are sending me a status symbol to commemorate my abilities."))
-	LAZYADD(mind.skills_rewarded, src.type)

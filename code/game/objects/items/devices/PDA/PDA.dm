@@ -269,7 +269,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 				dat += "<ul>"
 				dat += "<li><a href='byond://?src=[REF(src)];choice=1'>[PDAIMG(notes)]Notekeeper</a></li>"
 				dat += "<li><a href='byond://?src=[REF(src)];choice=2'>[PDAIMG(mail)]Messenger</a></li>"
-				dat += "<li><a href='byond://?src=[REF(src)];choice=6'>[PDAIMG(skills)]Skill Tracker</a></li>"
+				dat += "<li><a href='byond://?src=[REF(src)];choice=6'>[PDAIMG(skills)]Skill Growth Tracker</a></li>"
 
 				if (cartridge)
 					if (cartridge.access & CART_CLOWN)
@@ -379,7 +379,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 				else if(cartridge?.spam_enabled)
 					dat += "<a href='byond://?src=[REF(src)];choice=MessageAll'>Send To All</a>"
 			if(6)
-				dat += "<h4>[PDAIMG(mail)] ExperTrak® Skill Tracker V4.26.2</h4>"
+				dat += "<h4>[PDAIMG(mail)] ExperTrak® Skill Growth Tracker V4.26.2</h4>"
 				dat += "<i>Thank you for choosing ExperTrak® brand software! ExperTrak® inc. is proud to be a Nanotrasen employee expertise and effectiveness department subsidary!</i>"
 				dat += "<br><br>This software is designed to track and monitor your skill development as a Nanotrasen employee. Your job performance across different fields has been quantified and categorized below.<br>"
 				var/datum/mind/targetmind = user.mind
@@ -403,8 +403,6 @@ GLOBAL_LIST_EMPTY(PDAs)
 							dat += "<br>" + num2loadingbar(progress_percent) + "([progress_percent*100])%"
 							dat += "<br>OVERALL DEVELOPMENT PROGRESS:"
 							dat += "<br>" + num2loadingbar(overall_percent) + "([overall_percent*100])%"
-						if (lvl_num >= length(SKILL_EXP_LIST) && !(type in targetmind.skills_rewarded))
-							dat += "<br><a href='byond://?src=[REF(src)];choice=SkillReward;skill=[type]'>Contact the Professional [S.title] Association</a>"
 						dat += "</li></ul>"
 			if(21)
 				if(icon_alert && !istext(icon_alert))
@@ -675,15 +673,6 @@ GLOBAL_LIST_EMPTY(PDAs)
 					if("2") // Eject pAI device
 						usr.put_in_hands(pai)
 						to_chat(usr, span_notice("You remove the pAI from the [name]."))
-
-//SKILL FUNCTIONS===================================
-
-			if("SkillReward")
-				var/type = text2path(href_list["skill"])
-				var/datum/skill/S = GetSkillRef(type)
-				var/datum/mind/mind = U.mind
-				var/new_level = mind.get_skill_level(type)
-				S.try_skill_reward(mind, new_level)
 
 //LINK FUNCTIONS===================================
 
