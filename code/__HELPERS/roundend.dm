@@ -206,7 +206,7 @@
 	if(!SSachievements.achievements_enabled || !SSskills.initialized)
 		return
 	for(var/mob/M in GLOB.alive_player_list)
-		for(var/datum/skill/skill in GLOB.skill_types)
+		for(var/datum/skill/skill in GLOB.skill_types) //issue lies here
 			var/level = M.mind?.get_skill_level(skill)
 			if(level > 0)
 				var/score_to_add = level * ((level * 0.5) + 0.5) //sum the positive integers up to and including the input value
