@@ -209,31 +209,31 @@
 		for(var/V in GLOB.skill_types) //issue lies here
 			var/datum/skill/skill = new V
 			var/level = M.mind?.get_skill_level(V)
-			if(level > 0)
+			if(level > 1)
 				var/score_to_add = level * ((level * 0.5) + 0.5) //sum the positive integers up to and including the input value
 				var/score_path
 				var/medal_path
-				var/medal_ref
+				var/medal_req
 				switch(skill.name)
 					if("Mining")
 						score_path = /datum/award/score/skill_level/miner
 						medal_path = /datum/award/achievement/skill/legendary_miner
-						medal_ref = MINER_MEDAL_EXP_TO_UNLOCK
+						medal_req = MINER_MEDAL_EXP_TO_UNLOCK
 					if("Gaming")
 						score_path = /datum/award/score/skill_level/gamer
 						medal_path = /datum/award/achievement/skill/legendary_gamer
-						medal_ref = GAMER_MEDAL_EXP_TO_UNLOCK
+						medal_req = GAMER_MEDAL_EXP_TO_UNLOCK
 					if("Protocol Hijacking")
 						score_path = /datum/award/score/skill_level/hacker
 						medal_path = /datum/award/achievement/skill/legendary_hacker
-						medal_ref = HACKER_MEDAL_EXP_TO_UNLOCK
+						medal_req = HACKER_MEDAL_EXP_TO_UNLOCK
 					if("Cleaning")
 						score_path = /datum/award/score/skill_level/cleaner
 						medal_path = /datum/award/achievement/skill/legendary_cleaner
-						medal_ref = CLEANER_MEDAL_EXP_TO_UNLOCK
+						medal_req = CLEANER_MEDAL_EXP_TO_UNLOCK
 				if(M.client?.give_award(score_path, M, score_to_add))
 					to_chat(M, "<span class='greenannounce'>[skill.name] score updated successfully! [score_to_add] points have been added!</span>")
-				if((M.client?.get_award_status(score_path) >= medal_ref) && !M.client?.get_award_status(medal_path))
+				if((M.client?.get_award_status(score_path) >= medal_req) && !M.client?.get_award_status(medal_path))
 					M.client?.give_award(medal_path, M)
 
 /datum/controller/subsystem/ticker/proc/declare_completion()
