@@ -208,7 +208,7 @@
 	for(var/mob/M in GLOB.alive_player_list)
 		for(var/V in GLOB.skill_types) //issue lies here
 			var/datum/skill/skill = new V
-			var/level = M.mind?.get_skill_level(skill)
+			var/level = M.mind?.get_skill_level(V)
 			if(level > 0)
 				var/score_to_add = level * ((level * 0.5) + 0.5) //sum the positive integers up to and including the input value
 				var/score_path
