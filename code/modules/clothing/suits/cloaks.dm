@@ -210,6 +210,12 @@
 	icon_state = "hackercloak"
 	associated_medal_path = /datum/award/achievement/skill/legendary_hacker
 
+/obj/item/clothing/neck/cloak/skill_reward/doctor
+	name = "legendary doctor's cloak"
+	desc = "Worn by Nanotrasen's most expert doctors, this legendary cloak is only attainable through rigorous dedication to the surgical arts. "
+	icon_state = "healercloak"
+	associated_medal_path = /datum/award/achievement/experience/legendary_doctor
+
 /obj/item/clothing/neck/cloak/skill_reward/playing
 	name = "legendary veteran's cloak"
 	desc = "Worn by the wisest of veteran employees, this legendary cloak is only attainable by maintaining a living employment agreement with Nanotrasen for over <b>five thousand hours</b>. This status symbol represents a being is better than you in nearly every quantifiable way, simple as that."

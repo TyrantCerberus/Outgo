@@ -22,3 +22,8 @@
 	name = "No Spill Too Small"
 	desc = "Bring on bigger messes!"
 	database_id = MEDAL_LEGENDARY_CLEANER
+
+/datum/award/achievement/experience/legendary_doctor
+	name = "The Healing Touch"
+	desc = "I can do miracles, just let me."
+	database_id = MEDAL_LEGENDARY_DOCTOR

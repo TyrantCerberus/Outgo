@@ -17,3 +17,8 @@
 	name = "Cleaning Skill Level"
 	desc = "Your cumulative cleaning experience, derived from per-shift growth."
 	database_id = CLEANING_SKILL_LEVEL
+
+/datum/award/score/skill_level/doctor
+	name = "Medical Skill Level"
+	desc = "Your cumulative medical experience, derived from per-shift growth."
+	database_id = MEDICAL_SKILL_LEVEL

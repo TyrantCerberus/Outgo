@@ -45,3 +45,10 @@
 
 /obj/item/storage/box/reward/skillcape_cleaner/PopulateContents()
 	new /obj/item/clothing/neck/cloak/skill_reward/cleaning(src)
+
+/obj/item/storage/box/reward/skillcape_doctor
+	name = "\improper Legendary Doctor's cape reward box"
+	desc = "Awarded for prowess in the field of life-saving."
+
+/obj/item/storage/box/reward/skillcape_doctor/PopulateContents()
+	new /obj/item/clothing/neck/cloak/skill_reward/doctor(src)

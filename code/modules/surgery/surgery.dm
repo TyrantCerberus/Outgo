@@ -19,6 +19,8 @@
 	var/self_operable = FALSE //Can the surgery be performed on yourself.
 	var/requires_tech = FALSE //handles techweb-oriented surgeries, previously restricted to the /advanced subtype (You still need to add designs)
 	var/replaced_by //type; doesn't show up if this type exists. Set to /datum/surgery if you want to hide a "base" surgery (useful for typing parents IE healing.dm just make sure to null it out again)
+	var/medical_exp_reward = MEDICAL_SKILL_SURGERY_COMPLETION_XP //experience awarded to the surgeon on successful completion of the surgery, defined in __DEFINES > skills.dm
+	var/ignore_corpsework_penalty = FALSE //if this is set to true, the surgery will reward full experience even if being used on a dead or mindless mob
 
 /datum/surgery/New(surgery_target, surgery_location, surgery_bodypart)
 	..()
@@ -124,6 +126,7 @@
 /datum/surgery/advanced
 	name = "advanced surgery"
 	requires_tech = TRUE
+	medical_exp_reward = MEDICAL_SKILL_ADVANCED_SURGERY_COMPLETION_XP //advanced surgeries reward double the exp
 
 /obj/item/disk/surgery
 	name = "Surgery Procedure Disk"
