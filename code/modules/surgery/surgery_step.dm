@@ -112,6 +112,7 @@
 		if(advance && !repeatable)
 			surgery.status++
 			if(surgery.status > surgery.steps.len)
+				award_medical_skill_experience(user, target, surgery.medical_exp_reward, surgery.ignore_corpsework_penalty) //award medical skill experience
 				surgery.complete()
 
 	if(target.stat == DEAD && was_sleeping && user.client)
@@ -135,6 +136,7 @@
 		display_results(user, target, span_notice("You succeed."),
 				span_notice("[user] succeeds!"),
 				span_notice("[user] finishes."))
+	award_medical_skill_experience(user, target, MEDICAL_SKILL_SURGERY_STEP_SUCCESS_XP, surgery.ignore_corpsework_penalty) //per step skill experience gain
 	return TRUE
 
 /datum/surgery_step/proc/play_success_sound(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
@@ -155,6 +157,7 @@
 	display_results(user, target, span_warning("You screw up![screwedmessage]"),
 		span_warning("[user] screws up!"),
 		span_notice("[user] finishes."), TRUE) //By default the patient will notice if the wrong thing has been cut
+	award_medical_skill_experience(user, target, MEDICAL_SKILL_SURGERY_STEP_FAIL_XP, surgery.ignore_corpsework_penalty) //award some skill experience even on failure
 	return FALSE
 
 /datum/surgery_step/proc/play_failure_sound(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
@@ -197,3 +200,8 @@
 	if(!target_detailed)
 		var/you_feel = pick("a brief pain", "your body tense up", "an unnerving sensation")
 		target.show_message(vague_message, MSG_VISUAL, span_notice("You feel [you_feel] as you are operated on."))
+
+/datum/surgery_step/proc/award_medical_skill_experience(mob/user, mob/living/target, var/experience_to_award = 1, var/ignore_corpsework_penalty = FALSE)
+	if(!target.mind && !ignore_corpsework_penalty)
+		experience_to_award = clamp(CEILING((experience_to_award * MEDICAL_SKILL_CORPSEWORK_MULTIPLIER), 1), 1, INFINITY) //reduce exp if the body is mindless, to a minimum of 1, to discourage farming skill in the morgue
+	user.mind?.adjust_experience(/datum/skill/medical, experience_to_award)
