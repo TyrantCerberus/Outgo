@@ -12,6 +12,7 @@
 	requires_bodypart_type = FALSE
 	replaced_by = /datum/surgery
 	ignore_clothes = TRUE
+	medical_exp_reward = 0 //tend wounds surgeries are abusable otherwise for rapid experience gains as they can be successfully performed without the patient needing to be damaged
 	var/healing_step_type
 	var/antispam = FALSE
 

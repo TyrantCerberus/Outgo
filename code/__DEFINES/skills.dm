@@ -35,3 +35,9 @@
 //number defines
 #define CLEAN_SKILL_BEAUTY_ADJUSTMENT -15//It's a denominator so no 0. Higher number = less cleaning xp per cleanable. Negative value means cleanables with negative beauty give xp.
 #define CLEAN_SKILL_GENERIC_WASH_XP 1.5//Value. Higher number = more XP when cleaning non-cleanables (walls/floors/lips)
+
+#define MEDICAL_SKILL_SURGERY_STEP_SUCCESS_XP 2
+#define MEDICAL_SKILL_SURGERY_STEP_FAIL_XP 1
+#define MEDICAL_SKILL_SURGERY_COMPLETION_XP 50
+#define MEDICAL_SKILL_ADVANCED_SURGERY_COMPLETION_XP 100
+#define MEDICAL_SKILL_CORPSEWORK_MULTIPLIER 0.5 //what number do we multiply the exp gain by if the surgery is being performed on a dead or mindless mob, result is rounded up to next integer

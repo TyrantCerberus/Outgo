@@ -1525,6 +1525,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 								selectable_job_rewards += "Legendary Miner Cape"
 							if(MEDAL_LEGENDARY_CLEANER)
 								selectable_job_rewards += "Legendary Cleaner Cape"
+							if(MEDAL_LEGENDARY_DOCTOR)
+								selectable_job_rewards += "Legendary Doctor Cape"
 					if(selectable_job_rewards.len == 1)
 						to_chat(user, "<span class='warning'>You don't have any achievements that grant a job-specific reward unlocked. Try again after unlocking one.</span>")
 					job_reward_name = input(user, "Choose a job-specific reward (if you spawn as that job, you get this reward):", "Job-Specific Reward") as anything in selectable_job_rewards
@@ -1537,7 +1539,10 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 							jobs_reward_is_restricted_to = list("Shaft Miner")
 						if("Legendary Cleaner Cape")
 							job_reward_path = /obj/item/storage/box/reward/skillcape_cleaner
-							jobs_reward_is_restricted_to += "Janitor"
+							jobs_reward_is_restricted_to = list("Janitor")
+						if("Legendary Doctor Cape")
+							job_reward_path = /obj/item/storage/box/reward/skillcape_doctor
+							jobs_reward_is_restricted_to = list("Medical Doctor", "Chief Medical Officer")
 
 				if("general_reward") //and general rewards should not
 					fetch_unlocked_achievements()

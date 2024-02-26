@@ -39,6 +39,7 @@
 #define MEDAL_LEGENDARY_GAMER "Game Genie"
 #define MEDAL_LEGENDARY_HACKER "1337 H4X0R"
 #define MEDAL_LEGENDARY_CLEANER "No Spill Too Small"
+#define MEDAL_LEGENDARY_DOCTOR "The Healing Touch"
 
 //Mafia medal hub IDs (wins)
 #define MAFIA_MEDAL_ASSISTANT "Assistant"
@@ -105,12 +106,14 @@
 #define GAMING_SKILL_LEVEL "Gaming Skill Level"
 #define HACKING_SKILL_LEVEL "Hacking Skill Level"
 #define CLEANING_SKILL_LEVEL "Cleaning Skill Level"
+#define MEDICAL_SKILL_LEVEL "Medical Skill Level"
 
 // Skill level thresholds for experience medals, ideally multiples of 28
 #define MINER_MEDAL_EXP_TO_UNLOCK 280
 #define GAMER_MEDAL_EXP_TO_UNLOCK 196
 #define HACKER_MEDAL_EXP_TO_UNLOCK 140
 #define CLEANER_MEDAL_EXP_TO_UNLOCK 364
+#define DOCTOR_MEDAL_EXP_TO_UNLOCK 420
 
 // DB ID for hardcore random mode
 #define HARDCORE_RANDOM_SCORE "Hardcore Random Score"
