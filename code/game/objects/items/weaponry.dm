@@ -571,6 +571,31 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	icon_state = "hippocratic"
 	impressiveness = 50
 
+/obj/item/maneki_neko
+	name = "Maneki-Neko"
+	desc = "A figurine of a cat holding a coin, said to bring fortune and wealth, and perpetually moving its paw in a beckoning gesture."
+	icon = 'icons/obj/fluff/general.dmi'
+	icon_state = "maneki-neko"
+	w_class = WEIGHT_CLASS_SMALL
+	force = 5
+	throwforce = 5
+	throw_speed = 3
+	throw_range = 5
+	attack_verb_continuous = list("bashes", "swats", "hits")
+	attack_verb_simple = list("bash", "swat", "hit")
+
+/obj/item/maneki_neko/Initialize(mapload)
+	. = ..()
+	//Not compatible with greyscale configs because it's animated.
+	color = pick_weight(list(COLOR_WHITE = 3, COLOR_GOLD = 2, COLOR_DARK = 1))
+	var/mutable_appearance/neko_overlay = mutable_appearance(icon, "maneki-neko-overlay", appearance_flags = RESET_COLOR)
+	add_overlay(neko_overlay)
+	AddElement(/datum/element/art, GOOD_ART)
+	AddElement(/datum/element/beauty, 800)
+	if(color = COLOR_DARK)
+		//Rarely, it can spawn with the same anti-magic properties as a null rod.
+		AddComponent(/datum/component/anti_magic, TRUE, TRUE, FALSE, null, null, FALSE)
+
 /obj/item/tailclub
 	name = "tail club"
 	desc = "For the beating to death of lizards with their own tails."
