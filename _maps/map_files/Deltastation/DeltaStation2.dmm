@@ -53683,6 +53683,7 @@
 "jNZ" = (
 /obj/structure/table/wood/poker,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/maneki_neko,
 /turf/open/floor/plating,
 /area/service/abandoned_gambling_den)
 "jOq" = (

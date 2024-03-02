@@ -63561,6 +63561,7 @@
 "pqf" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/trimline/purple/filled/line,
+/obj/item/maneki_neko,
 /turf/open/floor/plating/plasma/rust,
 /area/maintenance/space_hut/plasmaman)
 "pqg" = (
