@@ -592,7 +592,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	add_overlay(neko_overlay)
 	AddElement(/datum/element/art, GOOD_ART)
 	AddElement(/datum/element/beauty, 800)
-	if(color = COLOR_DARK)
+	if(color == COLOR_DARK)
 		//Rarely, it can spawn with the same anti-magic properties as a null rod.
 		AddComponent(/datum/component/anti_magic, TRUE, TRUE, FALSE, null, null, FALSE)
 
