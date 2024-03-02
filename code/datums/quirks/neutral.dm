@@ -296,3 +296,10 @@
 
 /datum/quirk/item_quirk/felinid/add_unique()
 	give_item_to_holder(/obj/item/clothing/head/kitty, list(LOCATION_HEAD = ITEM_SLOT_HEAD, LOCATION_BACKPACK = ITEM_SLOT_BACKPACK, LOCATION_HANDS = ITEM_SLOT_HANDS))
+
+/datum/quirk/conscientious
+	name = "Conscientious"
+	desc = "You are known to consider the feelings and wellbeing of others and will act carefully as to avoid hurting them."
+	value = 0
+	mob_trait = TRAIT_CONSCIENTIOUS
+	medical_record_text = "Patient demonstrates careful movements, especially around small animals."
