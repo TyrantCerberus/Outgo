@@ -58249,6 +58249,11 @@
 /obj/effect/turf_decal/tile/green,
 /turf/open/floor/iron/dark,
 /area/science/xenobiology)
+"vpw" = (
+/obj/structure/table/wood/fancy,
+/obj/item/maneki_neko,
+/turf/open/floor/carpet,
+/area/service/library)
 "vpz" = (
 /obj/structure/girder,
 /turf/open/floor/plating{
@@ -74985,7 +74990,7 @@ ckH
 ckH
 ckH
 czl
-czr
+vpw
 czB
 czI
 czV

@@ -30682,6 +30682,7 @@
 /area/science/research)
 "iLj" = (
 /obj/structure/table,
+/obj/item/maneki_neko,
 /turf/open/floor/plating,
 /area/maintenance/port/aft)
 "iLp" = (
