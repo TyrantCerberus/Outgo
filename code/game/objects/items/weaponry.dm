@@ -572,9 +572,9 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	impressiveness = 50
 
 /obj/item/maneki_neko
-	name = "Maneki-Neko"
+	name = "maneki-neko"
 	desc = "A figurine of a cat holding a coin, said to bring fortune and wealth, and perpetually moving its paw in a beckoning gesture."
-	icon = 'icons/obj/fluff/general.dmi'
+	icon = 'icons/obj/statue.dmi'
 	icon_state = "maneki-neko"
 	w_class = WEIGHT_CLASS_SMALL
 	force = 5
