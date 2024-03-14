@@ -182,7 +182,7 @@
 	if (cyclelinkeddir)
 		cyclelinkairlock()
 	if(abandoned)
-		var/outcome = rand(1,100)
+		var/outcome = rand(31,39)
 		switch(outcome)
 			if(1 to 9)
 				var/turf/here = get_turf(src)
@@ -204,6 +204,11 @@
 				welded = TRUE
 			if(24 to 30)
 				panel_open = TRUE
+			if(31 to 39)
+				var/turf/here = get_turf(src)
+				here.PlaceOnTop(/obj/structure/barricade/wooden/crude)
+				layer = BELOW_OPEN_DOOR_LAYER
+				return
 	if(cutAiWire)
 		wires.cut(WIRE_AI)
 	update_appearance()
