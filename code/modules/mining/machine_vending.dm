@@ -62,7 +62,14 @@
 		new /datum/data/mining_equipment("KA Range Increase", /obj/item/borg/upgrade/modkit/range, 1000),
 		new /datum/data/mining_equipment("KA Damage Increase", /obj/item/borg/upgrade/modkit/damage, 1000),
 		new /datum/data/mining_equipment("KA Cooldown Decrease", /obj/item/borg/upgrade/modkit/cooldown, 1000),
-		new /datum/data/mining_equipment("KA AoE Damage", /obj/item/borg/upgrade/modkit/aoe/mobs, 2000)
+		new /datum/data/mining_equipment("KA AoE Damage", /obj/item/borg/upgrade/modkit/aoe/mobs, 2000),
+		new /datum/data/mining_equipment("Blaster Tubes", /obj/item/crusher_trophy/blaster_tubes, 1000),
+		new /datum/data/mining_equipment("Demon Claws", /obj/item/crusher_trophy/demon_claws, 2000),
+		new /datum/data/mining_equipment("Eye of a Blood Drunk Hunter", /obj/item/crusher_trophy/miner_eye, 1000),
+		new /datum/data/mining_equipment("Ice Block Talisman", /obj/item/crusher_trophy/ice_block_talisman, 2000),
+		new /datum/data/mining_equipment("Tail Spike", /obj/item/crusher_trophy/tail_spike, 1000),
+		new /datum/data/mining_equipment("Vortex Talisman", /obj/item/crusher_trophy/vortex_talisman, 1000),
+		new /datum/data/mining_equipment("Wendigo Horn", /obj/item/crusher_trophy/wendigo_horn, 1500)
 	)
 
 /datum/data/mining_equipment
