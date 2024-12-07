@@ -49,10 +49,6 @@
 
 /**
  * Shit that happens on reaction
- * Only procs at the START of a reaction
- * use reaction_step() for each step of a reaction
- * or reaction_end() when the reaction stops
- * If reaction_flags & REACTION_INSTANT then this is the only proc that is called.
  *
  * Proc where the additional magic happens.
  * You dont want to handle mob spawning in this since there is a dedicated proc for that.client

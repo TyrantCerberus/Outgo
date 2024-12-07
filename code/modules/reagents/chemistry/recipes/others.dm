@@ -671,3 +671,23 @@
 	for(var/i in rand(1, created_volume) to created_volume)
 		new /mob/living/simple_animal/ant(location)
 	..()
+
+/datum/chemical_reaction/eigenstate
+	results = list(/datum/reagent/eigenstate = 1)
+	required_reagents = list(/datum/reagent/bluespace = 1, /datum/reagent/stable_plasma = 1, /datum/reagent/consumable/caramel = 1)
+	required_temp = 350
+	mix_message = "the reaction zaps suddenly!"
+	mix_sound = 'sound/chemistry/bluespace.ogg'
+
+/datum/chemical_reaction/eigenstate/on_reaction(datum/reagents/holder, react_vol)
+	. = ..()
+	var/turf/open/location = get_turf(holder.my_atom)
+
+	var/datum/reagent/eigenstate/eigen = holder.has_reagent(/datum/reagent/eigenstate)
+	if(!eigen)
+		return
+	if(location)
+		eigen.location_created = location
+		eigen.data["location_created"] = location
+
+	do_sparks(5,FALSE,location)
