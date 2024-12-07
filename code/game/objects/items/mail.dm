@@ -123,7 +123,8 @@
 	user.temporarilyRemoveItemFromInventory(src, TRUE)
 	if(contents.len)
 		user.put_in_hands(contents[1])
-	SSeconomy.get_dep_account(ACCOUNT_CAR).adjust_money(50) //cargo gets some money for each piece of mail successfully opened
+	var/datum/bank_account/cargo = SSeconomy.get_dep_account(ACCOUNT_CAR)
+	cargo.adjust_money(50) //cargo gets some money for each piece of mail successfully opened
 	playsound(loc, 'sound/items/poster_ripped.ogg', 50, TRUE)
 	qdel(src)
 
