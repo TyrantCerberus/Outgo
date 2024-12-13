@@ -9336,12 +9336,10 @@
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/tcommsat/server)
 "bKS" = (
-/obj/item/kirbyplants{
-	icon_state = "plant-06"
-	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 9
 	},
+/obj/machinery/suit_storage_unit/softsuit,
 /turf/open/floor/iron,
 /area/hallway/secondary/entry)
 "bKU" = (
@@ -50721,6 +50719,13 @@
 /obj/machinery/iv_drip,
 /turf/open/floor/iron/white,
 /area/medical/virology)
+"qbA" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 10
+	},
+/obj/machinery/suit_storage_unit/softsuit,
+/turf/open/floor/iron,
+/area/hallway/secondary/entry)
 "qbF" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -54703,6 +54708,15 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron,
 /area/hallway/primary/aft)
+"rwp" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/item/kirbyplants{
+	icon_state = "plant-06"
+	},
+/turf/open/floor/iron,
+/area/hallway/secondary/entry)
 "rwt" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
@@ -83047,7 +83061,7 @@ quc
 aox
 aVs
 bKS
-aWT
+qbA
 aVs
 aVs
 aVs
@@ -84331,7 +84345,7 @@ aaa
 aaa
 aaa
 aRA
-aVu
+rwp
 aWU
 aVs
 aaa
