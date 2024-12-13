@@ -53487,6 +53487,13 @@
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/command/bridge)
+"oRb" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/machinery/suit_storage_unit/softsuit,
+/turf/open/floor/iron,
+/area/hallway/secondary/entry)
 "oRl" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_y = -32
@@ -81333,8 +81340,8 @@ bbR
 bbR
 bnp
 baK
-bbR
-bbR
+oRb
+oRb
 aZx
 bcX
 aZx

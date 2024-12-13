@@ -24455,6 +24455,7 @@
 	dir = 8
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/suit_storage_unit/softsuit,
 /turf/open/floor/iron,
 /area/hallway/secondary/exit/departure_lounge)
 "bSF" = (
@@ -42536,13 +42537,11 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/obj/item/kirbyplants{
-	icon_state = "plant-21"
-	},
 /obj/item/radio/intercom/directional/north,
 /obj/structure/disposalpipe/segment{
 	dir = 6
 	},
+/obj/machinery/suit_storage_unit/softsuit,
 /turf/open/floor/iron/dark,
 /area/hallway/secondary/exit/departure_lounge)
 "fwD" = (

@@ -1791,9 +1791,8 @@
 /turf/closed/wall/r_wall,
 /area/space/nearstation)
 "ajs" = (
-/obj/structure/table,
-/obj/item/storage/briefcase,
 /obj/effect/turf_decal/delivery,
+/obj/machinery/suit_storage_unit/softsuit,
 /turf/open/floor/iron,
 /area/hallway/secondary/entry)
 "ajt" = (
@@ -1845,10 +1844,8 @@
 /area/maintenance/starboard/fore)
 "ajR" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/kirbyplants{
-	icon_state = "plant-21"
-	},
 /obj/effect/turf_decal/delivery,
+/obj/machinery/suit_storage_unit/softsuit,
 /turf/open/floor/iron,
 /area/hallway/secondary/entry)
 "ajS" = (
